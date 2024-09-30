@@ -5,10 +5,34 @@
 	"runtime": "c3",
 	"useWorker": "auto",
 	"bundleAddons": false,
-	"usedAddons": [],
+	"usedAddons": [
+		{
+			"type": "plugin",
+			"id": "Sprite",
+			"name": "Sprite",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "TiledBg",
+			"name": "Tiled Background",
+			"author": "Scirra",
+			"bundled": false
+		}
+	],
 	"uniqueId": "fc99d19z2xz",
 	"objectTypes": {
-		"items": [],
+		"items": [
+			"PisoCocina",
+			"Mesada",
+			"Bacha",
+			"BasePlatos",
+			"Platos",
+			"HornoApagado",
+			"HornoPrendido",
+			"Personaje"
+		],
 		"subfolders": []
 	},
 	"autosaveData": null,
@@ -19,13 +43,13 @@
 	},
 	"layouts": {
 		"items": [
-			"Layout 1"
+			"Cocina"
 		],
 		"subfolders": []
 	},
 	"eventSheets": {
 		"items": [
-			"Event sheet 1"
+			"CocinaSheet"
 		],
 		"subfolders": []
 	},
