@@ -4,22 +4,40 @@
 	"sid": 167424590875716,
 	"isGlobal": false,
 	"instanceVariables": [],
-	"behaviorTypes": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "TileMovement",
+			"name": "TileMovement",
+			"sid": 458177595916064
+		}
+	],
 	"effectTypes": [],
 	"animations": {
 		"items": [
 			{
 				"frames": [
 					{
-						"width": 250,
-						"height": 250,
-						"originX": 0.5,
-						"originY": 0.5,
+						"width": 159,
+						"height": 251,
+						"originX": 0.5345911949685535,
+						"originY": 0.49800796812749004,
 						"originalSource": "",
 						"exportFormat": "lossless",
 						"exportQuality": 0.8,
 						"fileType": "image/png",
-						"imageSpriteId": 8417845,
+						"imageSpriteId": 7458816,
+						"collisionPoly": {
+							"points": [
+								0,
+								0.4243027888446217,
+								0.9842767295597481,
+								0.4243027888446218,
+								1,
+								0.9960159362549801,
+								0,
+								0.9960159362549801
+							]
+						},
 						"useCollisionPoly": true,
 						"duration": 1,
 						"tag": ""

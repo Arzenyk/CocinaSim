@@ -1,5 +1,142 @@
 {
 	"name": "CocinaSheet",
-	"events": [],
+	"events": [
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "key-is-down",
+					"objectClass": "Teclado",
+					"sid": 934677946223642,
+					"parameters": {
+						"key": 87
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-animation",
+					"objectClass": "Personaje",
+					"sid": 258782401138836,
+					"parameters": {
+						"animation": "\"Back\"",
+						"from": "beginning"
+					}
+				},
+				{
+					"id": "simulate-control",
+					"objectClass": "Personaje",
+					"sid": 359497518470293,
+					"behaviorType": "TileMovement",
+					"parameters": {
+						"control": "up"
+					}
+				}
+			],
+			"sid": 253121266468634
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "key-is-down",
+					"objectClass": "Teclado",
+					"sid": 699507656861473,
+					"parameters": {
+						"key": 65
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-animation",
+					"objectClass": "Personaje",
+					"sid": 375239100637523,
+					"parameters": {
+						"animation": "\"Left\"",
+						"from": "beginning"
+					}
+				},
+				{
+					"id": "simulate-control",
+					"objectClass": "Personaje",
+					"sid": 520550104855003,
+					"behaviorType": "TileMovement",
+					"parameters": {
+						"control": "left"
+					}
+				}
+			],
+			"sid": 220121491146860
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "key-is-down",
+					"objectClass": "Teclado",
+					"sid": 161966432153252,
+					"parameters": {
+						"key": 83
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-animation",
+					"objectClass": "Personaje",
+					"sid": 651948628431870,
+					"parameters": {
+						"animation": "\"Front\"",
+						"from": "beginning"
+					}
+				},
+				{
+					"id": "simulate-control",
+					"objectClass": "Personaje",
+					"sid": 327808059625549,
+					"behaviorType": "TileMovement",
+					"parameters": {
+						"control": "down"
+					}
+				}
+			],
+			"sid": 905741418385656
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "key-is-down",
+					"objectClass": "Teclado",
+					"sid": 494114646573343,
+					"parameters": {
+						"key": 68
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-animation",
+					"objectClass": "Personaje",
+					"sid": 825610777617343,
+					"parameters": {
+						"animation": "\"Right\"",
+						"from": "beginning"
+					}
+				},
+				{
+					"id": "simulate-control",
+					"objectClass": "Personaje",
+					"sid": 673975344129690,
+					"behaviorType": "TileMovement",
+					"parameters": {
+						"control": "right"
+					}
+				}
+			],
+			"sid": 467979418888741
+		}
+	],
 	"sid": 281322155169956
 }

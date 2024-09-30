@@ -4,7 +4,13 @@
 	"sid": 877615848045354,
 	"isGlobal": false,
 	"instanceVariables": [],
-	"behaviorTypes": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "solid",
+			"name": "Solid",
+			"sid": 610638898183411
+		}
+	],
 	"effectTypes": [],
 	"animations": {
 		"items": [
@@ -20,6 +26,18 @@
 						"exportQuality": 0.8,
 						"fileType": "image/png",
 						"imageSpriteId": 1852092,
+						"collisionPoly": {
+							"points": [
+								0,
+								0,
+								1,
+								0,
+								1,
+								0.14400000000000002,
+								0,
+								0.14
+							]
+						},
 						"useCollisionPoly": true,
 						"duration": 1,
 						"tag": ""
