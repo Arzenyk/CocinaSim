@@ -32,6 +32,16 @@
 			"sid": 858725228542751
 		},
 		{
+			"eventType": "variable",
+			"name": "Cortar",
+			"type": "boolean",
+			"initialValue": "false",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 932412209888604
+		},
+		{
 			"eventType": "group",
 			"disabled": false,
 			"title": "ControlJugador",
@@ -41,7 +51,7 @@
 				{
 					"eventType": "group",
 					"disabled": false,
-					"title": "Hamburguesa",
+					"title": "CebCor",
 					"description": "",
 					"isActiveOnStart": true,
 					"children": [
@@ -51,15 +61,15 @@
 								{
 									"id": "is-boolean-instance-variable-set",
 									"objectClass": "Personaje",
-									"sid": 503738047060748,
+									"sid": 507887040723782,
 									"parameters": {
-										"instance-variable": "Servido"
+										"instance-variable": "CebCor"
 									}
 								},
 								{
 									"id": "key-is-down",
 									"objectClass": "Teclado",
-									"sid": 883711681516936,
+									"sid": 303919233925316,
 									"parameters": {
 										"key": 87
 									}
@@ -69,23 +79,32 @@
 								{
 									"id": "set-animation",
 									"objectClass": "Personaje",
-									"sid": 943227972275504,
+									"sid": 637488674351197,
 									"parameters": {
-										"animation": "\"BPlaSer\"",
+										"animation": "\"BCebCor\"",
 										"from": "beginning"
 									}
 								},
 								{
 									"id": "simulate-control",
 									"objectClass": "Personaje",
-									"sid": 155927791090296,
+									"sid": 163309800589952,
 									"behaviorType": "TileMovement",
 									"parameters": {
 										"control": "up"
 									}
+								},
+								{
+									"id": "set-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 106254312244212,
+									"parameters": {
+										"variable": "Cortar",
+										"value": "false"
+									}
 								}
 							],
-							"sid": 758414378130417
+							"sid": 199101561626777
 						},
 						{
 							"eventType": "block",
@@ -93,15 +112,15 @@
 								{
 									"id": "is-boolean-instance-variable-set",
 									"objectClass": "Personaje",
-									"sid": 683324328375362,
+									"sid": 978505822364068,
 									"parameters": {
-										"instance-variable": "Servido"
+										"instance-variable": "CebCor"
 									}
 								},
 								{
 									"id": "key-is-down",
 									"objectClass": "Teclado",
-									"sid": 754373955917143,
+									"sid": 112584725838370,
 									"parameters": {
 										"key": 65
 									}
@@ -111,23 +130,32 @@
 								{
 									"id": "set-animation",
 									"objectClass": "Personaje",
-									"sid": 888935479601198,
+									"sid": 334346769615545,
 									"parameters": {
-										"animation": "\"LPlaSer\"",
+										"animation": "\"LCebCor\"",
 										"from": "beginning"
 									}
 								},
 								{
 									"id": "simulate-control",
 									"objectClass": "Personaje",
-									"sid": 770859694530089,
+									"sid": 361731217416153,
 									"behaviorType": "TileMovement",
 									"parameters": {
 										"control": "left"
 									}
+								},
+								{
+									"id": "set-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 739449656485942,
+									"parameters": {
+										"variable": "Cortar",
+										"value": "false"
+									}
 								}
 							],
-							"sid": 784242435606123
+							"sid": 179383830530975
 						},
 						{
 							"eventType": "block",
@@ -135,15 +163,15 @@
 								{
 									"id": "is-boolean-instance-variable-set",
 									"objectClass": "Personaje",
-									"sid": 797565988357396,
+									"sid": 179603983557844,
 									"parameters": {
-										"instance-variable": "Servido"
+										"instance-variable": "CebCor"
 									}
 								},
 								{
 									"id": "key-is-down",
 									"objectClass": "Teclado",
-									"sid": 483734272069499,
+									"sid": 351035025531445,
 									"parameters": {
 										"key": 83
 									}
@@ -153,23 +181,32 @@
 								{
 									"id": "set-animation",
 									"objectClass": "Personaje",
-									"sid": 423945597851691,
+									"sid": 576114241361369,
 									"parameters": {
-										"animation": "\"FPlaSer\"",
+										"animation": "\"FCebCor\"",
 										"from": "beginning"
 									}
 								},
 								{
 									"id": "simulate-control",
 									"objectClass": "Personaje",
-									"sid": 747980345430363,
+									"sid": 506143333670920,
 									"behaviorType": "TileMovement",
 									"parameters": {
 										"control": "down"
 									}
+								},
+								{
+									"id": "set-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 407604385246046,
+									"parameters": {
+										"variable": "Cortar",
+										"value": "false"
+									}
 								}
 							],
-							"sid": 622428203456846
+							"sid": 829706333325659
 						},
 						{
 							"eventType": "block",
@@ -177,15 +214,15 @@
 								{
 									"id": "is-boolean-instance-variable-set",
 									"objectClass": "Personaje",
-									"sid": 953210789300947,
+									"sid": 470542382804229,
 									"parameters": {
-										"instance-variable": "Servido"
+										"instance-variable": "CebCor"
 									}
 								},
 								{
 									"id": "key-is-down",
 									"objectClass": "Teclado",
-									"sid": 911611364064351,
+									"sid": 848969342572820,
 									"parameters": {
 										"key": 68
 									}
@@ -195,26 +232,290 @@
 								{
 									"id": "set-animation",
 									"objectClass": "Personaje",
-									"sid": 293214448646633,
+									"sid": 142307028314435,
 									"parameters": {
-										"animation": "\"RPlaSer\"",
+										"animation": "\"RCebCor\"",
 										"from": "beginning"
 									}
 								},
 								{
 									"id": "simulate-control",
 									"objectClass": "Personaje",
-									"sid": 289768255524909,
+									"sid": 565260393903016,
 									"behaviorType": "TileMovement",
 									"parameters": {
 										"control": "right"
 									}
+								},
+								{
+									"id": "set-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 761786869150709,
+									"parameters": {
+										"variable": "Cortar",
+										"value": "false"
+									}
 								}
 							],
-							"sid": 873111370982357
+							"sid": 979523851329894
 						}
 					],
-					"sid": 949275077730149
+					"sid": 230760553418208
+				},
+				{
+					"eventType": "group",
+					"disabled": false,
+					"title": "Plato",
+					"description": "",
+					"isActiveOnStart": true,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-boolean-instance-variable-set",
+									"objectClass": "Personaje",
+									"sid": 547245515098614,
+									"parameters": {
+										"instance-variable": "Plato"
+									}
+								},
+								{
+									"id": "key-is-down",
+									"objectClass": "Teclado",
+									"sid": 267073989034884,
+									"parameters": {
+										"key": 87
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-animation",
+									"objectClass": "Personaje",
+									"sid": 903029912249043,
+									"parameters": {
+										"animation": "\"BPlaVac\"",
+										"from": "beginning"
+									}
+								},
+								{
+									"id": "simulate-control",
+									"objectClass": "Personaje",
+									"sid": 173954556621714,
+									"behaviorType": "TileMovement",
+									"parameters": {
+										"control": "up"
+									}
+								},
+								{
+									"id": "set-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 505503859119388,
+									"parameters": {
+										"variable": "Cortar",
+										"value": "false"
+									}
+								}
+							],
+							"sid": 934752699527588
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-boolean-instance-variable-set",
+									"objectClass": "Personaje",
+									"sid": 423912523397721,
+									"parameters": {
+										"instance-variable": "Plato"
+									}
+								},
+								{
+									"id": "key-is-down",
+									"objectClass": "Teclado",
+									"sid": 173718390950417,
+									"parameters": {
+										"key": 65
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-animation",
+									"objectClass": "Personaje",
+									"sid": 220723172073849,
+									"parameters": {
+										"animation": "\"LPlaVac\"",
+										"from": "beginning"
+									}
+								},
+								{
+									"id": "simulate-control",
+									"objectClass": "Personaje",
+									"sid": 930832784684561,
+									"behaviorType": "TileMovement",
+									"parameters": {
+										"control": "left"
+									}
+								},
+								{
+									"id": "set-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 460708352451815,
+									"parameters": {
+										"variable": "Cortar",
+										"value": "false"
+									}
+								}
+							],
+							"sid": 195478266731918
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-boolean-instance-variable-set",
+									"objectClass": "Personaje",
+									"sid": 491208880292524,
+									"parameters": {
+										"instance-variable": "Plato"
+									}
+								},
+								{
+									"id": "key-is-down",
+									"objectClass": "Teclado",
+									"sid": 611576296103888,
+									"parameters": {
+										"key": 83
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-animation",
+									"objectClass": "Personaje",
+									"sid": 437967374613166,
+									"parameters": {
+										"animation": "\"FPlaVac\"",
+										"from": "beginning"
+									}
+								},
+								{
+									"id": "simulate-control",
+									"objectClass": "Personaje",
+									"sid": 350318395280295,
+									"behaviorType": "TileMovement",
+									"parameters": {
+										"control": "down"
+									}
+								},
+								{
+									"id": "set-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 587221331296854,
+									"parameters": {
+										"variable": "Cortar",
+										"value": "false"
+									}
+								}
+							],
+							"sid": 753737159748837
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-boolean-instance-variable-set",
+									"objectClass": "Personaje",
+									"sid": 768241663084746,
+									"parameters": {
+										"instance-variable": "Plato"
+									}
+								},
+								{
+									"id": "key-is-down",
+									"objectClass": "Teclado",
+									"sid": 691034733798935,
+									"parameters": {
+										"key": 68
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-animation",
+									"objectClass": "Personaje",
+									"sid": 863277831242341,
+									"parameters": {
+										"animation": "\"RPlaVac\"",
+										"from": "beginning"
+									}
+								},
+								{
+									"id": "simulate-control",
+									"objectClass": "Personaje",
+									"sid": 172251196932528,
+									"behaviorType": "TileMovement",
+									"parameters": {
+										"control": "right"
+									}
+								},
+								{
+									"id": "set-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 546931132251064,
+									"parameters": {
+										"variable": "Cortar",
+										"value": "false"
+									}
+								}
+							],
+							"sid": 459173261091130
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-key-pressed",
+									"objectClass": "Teclado",
+									"sid": 819542010160880,
+									"parameters": {
+										"key": 69
+									}
+								},
+								{
+									"id": "is-boolean-instance-variable-set",
+									"objectClass": "Personaje",
+									"sid": 904587701313663,
+									"parameters": {
+										"instance-variable": "Plato"
+									}
+								},
+								{
+									"id": "is-overlapping-another-object",
+									"objectClass": "Personaje",
+									"sid": 412597372070859,
+									"parameters": {
+										"object": "Mesa"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-animation",
+									"objectClass": "Mesa",
+									"sid": 444448976507185,
+									"parameters": {
+										"animation": "\"Plato\"",
+										"from": "beginning"
+									}
+								}
+							],
+							"sid": 167067794309754
+						}
+					],
+					"sid": 814093605670127
 				},
 				{
 					"eventType": "group",
@@ -229,7 +530,7 @@
 								{
 									"id": "is-boolean-instance-variable-set",
 									"objectClass": "Personaje",
-									"sid": 657020721935473,
+									"sid": 571581778617626,
 									"parameters": {
 										"instance-variable": "Pan"
 									}
@@ -237,7 +538,7 @@
 								{
 									"id": "key-is-down",
 									"objectClass": "Teclado",
-									"sid": 829912232038009,
+									"sid": 881758597626143,
 									"parameters": {
 										"key": 87
 									}
@@ -247,7 +548,7 @@
 								{
 									"id": "set-animation",
 									"objectClass": "Personaje",
-									"sid": 439192942724893,
+									"sid": 185349198035940,
 									"parameters": {
 										"animation": "\"BPan\"",
 										"from": "beginning"
@@ -256,14 +557,23 @@
 								{
 									"id": "simulate-control",
 									"objectClass": "Personaje",
-									"sid": 788771936851593,
+									"sid": 189266636888462,
 									"behaviorType": "TileMovement",
 									"parameters": {
 										"control": "up"
 									}
+								},
+								{
+									"id": "set-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 719962594179439,
+									"parameters": {
+										"variable": "Cortar",
+										"value": "false"
+									}
 								}
 							],
-							"sid": 829878558133842
+							"sid": 228711879424846
 						},
 						{
 							"eventType": "block",
@@ -271,7 +581,7 @@
 								{
 									"id": "is-boolean-instance-variable-set",
 									"objectClass": "Personaje",
-									"sid": 826083619688375,
+									"sid": 942215201015088,
 									"parameters": {
 										"instance-variable": "Pan"
 									}
@@ -279,7 +589,7 @@
 								{
 									"id": "key-is-down",
 									"objectClass": "Teclado",
-									"sid": 999956329933631,
+									"sid": 905454096118080,
 									"parameters": {
 										"key": 65
 									}
@@ -289,7 +599,7 @@
 								{
 									"id": "set-animation",
 									"objectClass": "Personaje",
-									"sid": 919493177918691,
+									"sid": 123648758234913,
 									"parameters": {
 										"animation": "\"LPan\"",
 										"from": "beginning"
@@ -298,14 +608,23 @@
 								{
 									"id": "simulate-control",
 									"objectClass": "Personaje",
-									"sid": 651303145956120,
+									"sid": 113954782968809,
 									"behaviorType": "TileMovement",
 									"parameters": {
 										"control": "left"
 									}
+								},
+								{
+									"id": "set-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 901374619259500,
+									"parameters": {
+										"variable": "Cortar",
+										"value": "false"
+									}
 								}
 							],
-							"sid": 694138670409658
+							"sid": 136799003877099
 						},
 						{
 							"eventType": "block",
@@ -313,7 +632,7 @@
 								{
 									"id": "is-boolean-instance-variable-set",
 									"objectClass": "Personaje",
-									"sid": 573053911217979,
+									"sid": 203019800910589,
 									"parameters": {
 										"instance-variable": "Pan"
 									}
@@ -321,7 +640,7 @@
 								{
 									"id": "key-is-down",
 									"objectClass": "Teclado",
-									"sid": 854720969562464,
+									"sid": 219529372063343,
 									"parameters": {
 										"key": 83
 									}
@@ -331,7 +650,7 @@
 								{
 									"id": "set-animation",
 									"objectClass": "Personaje",
-									"sid": 176878093219478,
+									"sid": 699117944437422,
 									"parameters": {
 										"animation": "\"FPan\"",
 										"from": "beginning"
@@ -340,14 +659,23 @@
 								{
 									"id": "simulate-control",
 									"objectClass": "Personaje",
-									"sid": 799492607393350,
+									"sid": 570547612150641,
 									"behaviorType": "TileMovement",
 									"parameters": {
 										"control": "down"
 									}
+								},
+								{
+									"id": "set-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 882022232412391,
+									"parameters": {
+										"variable": "Cortar",
+										"value": "false"
+									}
 								}
 							],
-							"sid": 266651852584476
+							"sid": 859368232549435
 						},
 						{
 							"eventType": "block",
@@ -355,7 +683,7 @@
 								{
 									"id": "is-boolean-instance-variable-set",
 									"objectClass": "Personaje",
-									"sid": 190879057500926,
+									"sid": 712823410735259,
 									"parameters": {
 										"instance-variable": "Pan"
 									}
@@ -363,7 +691,7 @@
 								{
 									"id": "key-is-down",
 									"objectClass": "Teclado",
-									"sid": 433287894875427,
+									"sid": 554504254143756,
 									"parameters": {
 										"key": 68
 									}
@@ -373,7 +701,7 @@
 								{
 									"id": "set-animation",
 									"objectClass": "Personaje",
-									"sid": 320940769978435,
+									"sid": 207274119277450,
 									"parameters": {
 										"animation": "\"RPan\"",
 										"from": "beginning"
@@ -382,373 +710,124 @@
 								{
 									"id": "simulate-control",
 									"objectClass": "Personaje",
-									"sid": 297859138868528,
+									"sid": 557670962468226,
 									"behaviorType": "TileMovement",
 									"parameters": {
 										"control": "right"
 									}
+								},
+								{
+									"id": "set-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 129015425734392,
+									"parameters": {
+										"variable": "Cortar",
+										"value": "false"
+									}
 								}
 							],
-							"sid": 653903208951247
+							"sid": 389495385034132
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-key-pressed",
+									"objectClass": "Teclado",
+									"sid": 680142085252685,
+									"parameters": {
+										"key": 69
+									}
+								},
+								{
+									"id": "is-animation-playing",
+									"objectClass": "Mesa",
+									"sid": 188784726405360,
+									"parameters": {
+										"animation": "\"Plato\""
+									}
+								},
+								{
+									"id": "is-boolean-instance-variable-set",
+									"objectClass": "Personaje",
+									"sid": 737632202503982,
+									"parameters": {
+										"instance-variable": "Pan"
+									}
+								},
+								{
+									"id": "is-overlapping-another-object",
+									"objectClass": "Personaje",
+									"sid": 715450810740501,
+									"parameters": {
+										"object": "Mesa"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-animation",
+									"objectClass": "Mesa",
+									"sid": 104186008707329,
+									"parameters": {
+										"animation": "\"Pan\"",
+										"from": "beginning"
+									}
+								}
+							],
+							"sid": 424063407785295
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-key-pressed",
+									"objectClass": "Teclado",
+									"sid": 603619796058689,
+									"parameters": {
+										"key": 69
+									}
+								},
+								{
+									"id": "is-animation-playing",
+									"objectClass": "Mesa",
+									"sid": 243993612314800,
+									"parameters": {
+										"animation": "\"Cebolla\""
+									}
+								},
+								{
+									"id": "is-boolean-instance-variable-set",
+									"objectClass": "Personaje",
+									"sid": 955419018290437,
+									"parameters": {
+										"instance-variable": "Pan"
+									}
+								},
+								{
+									"id": "is-overlapping-another-object",
+									"objectClass": "Personaje",
+									"sid": 867667762785298,
+									"parameters": {
+										"object": "Mesa"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-animation",
+									"objectClass": "Mesa",
+									"sid": 929157309863913,
+									"parameters": {
+										"animation": "\"Final\"",
+										"from": "beginning"
+									}
+								}
+							],
+							"sid": 746946030547944
 						}
 					],
-					"sid": 142768760713307
-				},
-				{
-					"eventType": "group",
-					"disabled": false,
-					"title": "CarneQuemada",
-					"description": "",
-					"isActiveOnStart": true,
-					"children": [
-						{
-							"eventType": "block",
-							"conditions": [
-								{
-									"id": "is-boolean-instance-variable-set",
-									"objectClass": "Personaje",
-									"sid": 339748238581334,
-									"parameters": {
-										"instance-variable": "CarneQuemada"
-									}
-								},
-								{
-									"id": "key-is-down",
-									"objectClass": "Teclado",
-									"sid": 205431889207887,
-									"parameters": {
-										"key": 87
-									}
-								}
-							],
-							"actions": [
-								{
-									"id": "set-animation",
-									"objectClass": "Personaje",
-									"sid": 956666087733349,
-									"parameters": {
-										"animation": "\"BCarQue\"",
-										"from": "beginning"
-									}
-								},
-								{
-									"id": "simulate-control",
-									"objectClass": "Personaje",
-									"sid": 630011915681482,
-									"behaviorType": "TileMovement",
-									"parameters": {
-										"control": "up"
-									}
-								}
-							],
-							"sid": 312958362785019
-						},
-						{
-							"eventType": "block",
-							"conditions": [
-								{
-									"id": "is-boolean-instance-variable-set",
-									"objectClass": "Personaje",
-									"sid": 579166082085746,
-									"parameters": {
-										"instance-variable": "CarneQuemada"
-									}
-								},
-								{
-									"id": "key-is-down",
-									"objectClass": "Teclado",
-									"sid": 858092302133716,
-									"parameters": {
-										"key": 65
-									}
-								}
-							],
-							"actions": [
-								{
-									"id": "set-animation",
-									"objectClass": "Personaje",
-									"sid": 109669131594936,
-									"parameters": {
-										"animation": "\"LCarQue\"",
-										"from": "beginning"
-									}
-								},
-								{
-									"id": "simulate-control",
-									"objectClass": "Personaje",
-									"sid": 672786466540826,
-									"behaviorType": "TileMovement",
-									"parameters": {
-										"control": "left"
-									}
-								}
-							],
-							"sid": 845324332769189
-						},
-						{
-							"eventType": "block",
-							"conditions": [
-								{
-									"id": "is-boolean-instance-variable-set",
-									"objectClass": "Personaje",
-									"sid": 645996855139681,
-									"parameters": {
-										"instance-variable": "CarneQuemada"
-									}
-								},
-								{
-									"id": "key-is-down",
-									"objectClass": "Teclado",
-									"sid": 795853690264719,
-									"parameters": {
-										"key": 83
-									}
-								}
-							],
-							"actions": [
-								{
-									"id": "set-animation",
-									"objectClass": "Personaje",
-									"sid": 783998988594921,
-									"parameters": {
-										"animation": "\"FCarQue\"",
-										"from": "beginning"
-									}
-								},
-								{
-									"id": "simulate-control",
-									"objectClass": "Personaje",
-									"sid": 646635124415777,
-									"behaviorType": "TileMovement",
-									"parameters": {
-										"control": "down"
-									}
-								}
-							],
-							"sid": 442850696900722
-						},
-						{
-							"eventType": "block",
-							"conditions": [
-								{
-									"id": "is-boolean-instance-variable-set",
-									"objectClass": "Personaje",
-									"sid": 583363685686822,
-									"parameters": {
-										"instance-variable": "CarneQuemada"
-									}
-								},
-								{
-									"id": "key-is-down",
-									"objectClass": "Teclado",
-									"sid": 390990439496679,
-									"parameters": {
-										"key": 68
-									}
-								}
-							],
-							"actions": [
-								{
-									"id": "set-animation",
-									"objectClass": "Personaje",
-									"sid": 784925115873203,
-									"parameters": {
-										"animation": "\"RCarQue\"",
-										"from": "beginning"
-									}
-								},
-								{
-									"id": "simulate-control",
-									"objectClass": "Personaje",
-									"sid": 319945805332419,
-									"behaviorType": "TileMovement",
-									"parameters": {
-										"control": "right"
-									}
-								}
-							],
-							"sid": 851162272230802
-						}
-					],
-					"sid": 952393584890842
-				},
-				{
-					"eventType": "group",
-					"disabled": false,
-					"title": "CarneCocida",
-					"description": "",
-					"isActiveOnStart": true,
-					"children": [
-						{
-							"eventType": "block",
-							"conditions": [
-								{
-									"id": "is-boolean-instance-variable-set",
-									"objectClass": "Personaje",
-									"sid": 478415692658952,
-									"parameters": {
-										"instance-variable": "CarneCocida"
-									}
-								},
-								{
-									"id": "key-is-down",
-									"objectClass": "Teclado",
-									"sid": 783078122894197,
-									"parameters": {
-										"key": 87
-									}
-								}
-							],
-							"actions": [
-								{
-									"id": "set-animation",
-									"objectClass": "Personaje",
-									"sid": 781553330041580,
-									"parameters": {
-										"animation": "\"BCarCoc\"",
-										"from": "beginning"
-									}
-								},
-								{
-									"id": "simulate-control",
-									"objectClass": "Personaje",
-									"sid": 792699297368126,
-									"behaviorType": "TileMovement",
-									"parameters": {
-										"control": "up"
-									}
-								}
-							],
-							"sid": 108304403982693
-						},
-						{
-							"eventType": "block",
-							"conditions": [
-								{
-									"id": "is-boolean-instance-variable-set",
-									"objectClass": "Personaje",
-									"sid": 417078311212713,
-									"parameters": {
-										"instance-variable": "CarneCocida"
-									}
-								},
-								{
-									"id": "key-is-down",
-									"objectClass": "Teclado",
-									"sid": 353908729720794,
-									"parameters": {
-										"key": 65
-									}
-								}
-							],
-							"actions": [
-								{
-									"id": "set-animation",
-									"objectClass": "Personaje",
-									"sid": 312106049085236,
-									"parameters": {
-										"animation": "\"LCarCoc\"",
-										"from": "beginning"
-									}
-								},
-								{
-									"id": "simulate-control",
-									"objectClass": "Personaje",
-									"sid": 255311254408700,
-									"behaviorType": "TileMovement",
-									"parameters": {
-										"control": "left"
-									}
-								}
-							],
-							"sid": 140222889305490
-						},
-						{
-							"eventType": "block",
-							"conditions": [
-								{
-									"id": "is-boolean-instance-variable-set",
-									"objectClass": "Personaje",
-									"sid": 591026729218807,
-									"parameters": {
-										"instance-variable": "CarneCocida"
-									}
-								},
-								{
-									"id": "key-is-down",
-									"objectClass": "Teclado",
-									"sid": 510672811732061,
-									"parameters": {
-										"key": 83
-									}
-								}
-							],
-							"actions": [
-								{
-									"id": "set-animation",
-									"objectClass": "Personaje",
-									"sid": 718275839304412,
-									"parameters": {
-										"animation": "\"FCarCoc\"",
-										"from": "beginning"
-									}
-								},
-								{
-									"id": "simulate-control",
-									"objectClass": "Personaje",
-									"sid": 486081304629945,
-									"behaviorType": "TileMovement",
-									"parameters": {
-										"control": "down"
-									}
-								}
-							],
-							"sid": 418415149262664
-						},
-						{
-							"eventType": "block",
-							"conditions": [
-								{
-									"id": "is-boolean-instance-variable-set",
-									"objectClass": "Personaje",
-									"sid": 865701303728244,
-									"parameters": {
-										"instance-variable": "CarneCocida"
-									}
-								},
-								{
-									"id": "key-is-down",
-									"objectClass": "Teclado",
-									"sid": 297508163333253,
-									"parameters": {
-										"key": 68
-									}
-								}
-							],
-							"actions": [
-								{
-									"id": "set-animation",
-									"objectClass": "Personaje",
-									"sid": 970860758567792,
-									"parameters": {
-										"animation": "\"RCarCoc\"",
-										"from": "beginning"
-									}
-								},
-								{
-									"id": "simulate-control",
-									"objectClass": "Personaje",
-									"sid": 562533230254578,
-									"behaviorType": "TileMovement",
-									"parameters": {
-										"control": "right"
-									}
-								}
-							],
-							"sid": 887547032430647
-						}
-					],
-					"sid": 716159528652398
+					"sid": 689354862440918
 				},
 				{
 					"eventType": "group",
@@ -763,7 +842,7 @@
 								{
 									"id": "is-boolean-instance-variable-set",
 									"objectClass": "Personaje",
-									"sid": 544478774673067,
+									"sid": 980377330754361,
 									"parameters": {
 										"instance-variable": "CarneCruda"
 									}
@@ -771,7 +850,7 @@
 								{
 									"id": "key-is-down",
 									"objectClass": "Teclado",
-									"sid": 368730361683404,
+									"sid": 719734371017532,
 									"parameters": {
 										"key": 87
 									}
@@ -781,7 +860,7 @@
 								{
 									"id": "set-animation",
 									"objectClass": "Personaje",
-									"sid": 204504116181923,
+									"sid": 579457312635532,
 									"parameters": {
 										"animation": "\"BCarCru\"",
 										"from": "beginning"
@@ -790,14 +869,23 @@
 								{
 									"id": "simulate-control",
 									"objectClass": "Personaje",
-									"sid": 899539094085600,
+									"sid": 394534511233095,
 									"behaviorType": "TileMovement",
 									"parameters": {
 										"control": "up"
 									}
+								},
+								{
+									"id": "set-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 683046511595143,
+									"parameters": {
+										"variable": "Cortar",
+										"value": "false"
+									}
 								}
 							],
-							"sid": 259346392891045
+							"sid": 852431052810984
 						},
 						{
 							"eventType": "block",
@@ -805,7 +893,7 @@
 								{
 									"id": "is-boolean-instance-variable-set",
 									"objectClass": "Personaje",
-									"sid": 741988675254101,
+									"sid": 714844663616150,
 									"parameters": {
 										"instance-variable": "CarneCruda"
 									}
@@ -813,7 +901,7 @@
 								{
 									"id": "key-is-down",
 									"objectClass": "Teclado",
-									"sid": 991740135937520,
+									"sid": 118580818312329,
 									"parameters": {
 										"key": 65
 									}
@@ -823,7 +911,7 @@
 								{
 									"id": "set-animation",
 									"objectClass": "Personaje",
-									"sid": 880856182854408,
+									"sid": 213227307502381,
 									"parameters": {
 										"animation": "\"LCarCru\"",
 										"from": "beginning"
@@ -832,14 +920,23 @@
 								{
 									"id": "simulate-control",
 									"objectClass": "Personaje",
-									"sid": 204601233716772,
+									"sid": 110968595871769,
 									"behaviorType": "TileMovement",
 									"parameters": {
 										"control": "left"
 									}
+								},
+								{
+									"id": "set-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 264302238631974,
+									"parameters": {
+										"variable": "Cortar",
+										"value": "false"
+									}
 								}
 							],
-							"sid": 332215214552606
+							"sid": 126031311597330
 						},
 						{
 							"eventType": "block",
@@ -847,7 +944,7 @@
 								{
 									"id": "is-boolean-instance-variable-set",
 									"objectClass": "Personaje",
-									"sid": 356789298190970,
+									"sid": 986185398325775,
 									"parameters": {
 										"instance-variable": "CarneCruda"
 									}
@@ -855,7 +952,7 @@
 								{
 									"id": "key-is-down",
 									"objectClass": "Teclado",
-									"sid": 615362997346704,
+									"sid": 166036074750963,
 									"parameters": {
 										"key": 83
 									}
@@ -865,7 +962,7 @@
 								{
 									"id": "set-animation",
 									"objectClass": "Personaje",
-									"sid": 555281614736814,
+									"sid": 969926297544817,
 									"parameters": {
 										"animation": "\"FCarCru\"",
 										"from": "beginning"
@@ -874,14 +971,23 @@
 								{
 									"id": "simulate-control",
 									"objectClass": "Personaje",
-									"sid": 100495916389770,
+									"sid": 277907621577140,
 									"behaviorType": "TileMovement",
 									"parameters": {
 										"control": "down"
 									}
+								},
+								{
+									"id": "set-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 379653650052990,
+									"parameters": {
+										"variable": "Cortar",
+										"value": "false"
+									}
 								}
 							],
-							"sid": 493982370618269
+							"sid": 495489143763040
 						},
 						{
 							"eventType": "block",
@@ -889,7 +995,7 @@
 								{
 									"id": "is-boolean-instance-variable-set",
 									"objectClass": "Personaje",
-									"sid": 918698200370086,
+									"sid": 546354049741176,
 									"parameters": {
 										"instance-variable": "CarneCruda"
 									}
@@ -897,7 +1003,7 @@
 								{
 									"id": "key-is-down",
 									"objectClass": "Teclado",
-									"sid": 525214735233219,
+									"sid": 759160977162091,
 									"parameters": {
 										"key": 68
 									}
@@ -907,7 +1013,7 @@
 								{
 									"id": "set-animation",
 									"objectClass": "Personaje",
-									"sid": 419121307356921,
+									"sid": 893528386205111,
 									"parameters": {
 										"animation": "\"RCarCru\"",
 										"from": "beginning"
@@ -916,17 +1022,1954 @@
 								{
 									"id": "simulate-control",
 									"objectClass": "Personaje",
-									"sid": 581067761925049,
+									"sid": 964809969593285,
 									"behaviorType": "TileMovement",
 									"parameters": {
 										"control": "right"
 									}
+								},
+								{
+									"id": "set-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 689034498934013,
+									"parameters": {
+										"variable": "Cortar",
+										"value": "false"
+									}
 								}
 							],
-							"sid": 369409232456697
+							"sid": 639094958052510
 						}
 					],
-					"sid": 382251318846547
+					"sid": 341421277515105
+				},
+				{
+					"eventType": "group",
+					"disabled": false,
+					"title": "CarneCocida",
+					"description": "",
+					"isActiveOnStart": true,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-boolean-instance-variable-set",
+									"objectClass": "Personaje",
+									"sid": 458778686025713,
+									"parameters": {
+										"instance-variable": "CarneCocida"
+									}
+								},
+								{
+									"id": "key-is-down",
+									"objectClass": "Teclado",
+									"sid": 780585733792019,
+									"parameters": {
+										"key": 87
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-animation",
+									"objectClass": "Personaje",
+									"sid": 168567802825484,
+									"parameters": {
+										"animation": "\"BCarCoc\"",
+										"from": "beginning"
+									}
+								},
+								{
+									"id": "simulate-control",
+									"objectClass": "Personaje",
+									"sid": 615442762387960,
+									"behaviorType": "TileMovement",
+									"parameters": {
+										"control": "up"
+									}
+								},
+								{
+									"id": "set-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 406649052450115,
+									"parameters": {
+										"variable": "Cortar",
+										"value": "false"
+									}
+								}
+							],
+							"sid": 912255381952793
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-boolean-instance-variable-set",
+									"objectClass": "Personaje",
+									"sid": 966577148384417,
+									"parameters": {
+										"instance-variable": "CarneCocida"
+									}
+								},
+								{
+									"id": "key-is-down",
+									"objectClass": "Teclado",
+									"sid": 542220370451612,
+									"parameters": {
+										"key": 65
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-animation",
+									"objectClass": "Personaje",
+									"sid": 788240445442255,
+									"parameters": {
+										"animation": "\"LCarCoc\"",
+										"from": "beginning"
+									}
+								},
+								{
+									"id": "simulate-control",
+									"objectClass": "Personaje",
+									"sid": 749458675341313,
+									"behaviorType": "TileMovement",
+									"parameters": {
+										"control": "left"
+									}
+								},
+								{
+									"id": "set-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 609895090394111,
+									"parameters": {
+										"variable": "Cortar",
+										"value": "false"
+									}
+								}
+							],
+							"sid": 624673499932185
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-boolean-instance-variable-set",
+									"objectClass": "Personaje",
+									"sid": 455843593180038,
+									"parameters": {
+										"instance-variable": "CarneCocida"
+									}
+								},
+								{
+									"id": "key-is-down",
+									"objectClass": "Teclado",
+									"sid": 989924090211303,
+									"parameters": {
+										"key": 83
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-animation",
+									"objectClass": "Personaje",
+									"sid": 519592582922303,
+									"parameters": {
+										"animation": "\"FCarCoc\"",
+										"from": "beginning"
+									}
+								},
+								{
+									"id": "simulate-control",
+									"objectClass": "Personaje",
+									"sid": 546710247955346,
+									"behaviorType": "TileMovement",
+									"parameters": {
+										"control": "down"
+									}
+								},
+								{
+									"id": "set-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 575090236070027,
+									"parameters": {
+										"variable": "Cortar",
+										"value": "false"
+									}
+								}
+							],
+							"sid": 855918431407785
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-boolean-instance-variable-set",
+									"objectClass": "Personaje",
+									"sid": 267558859946576,
+									"parameters": {
+										"instance-variable": "CarneCocida"
+									}
+								},
+								{
+									"id": "key-is-down",
+									"objectClass": "Teclado",
+									"sid": 476608056221150,
+									"parameters": {
+										"key": 68
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-animation",
+									"objectClass": "Personaje",
+									"sid": 935683895211434,
+									"parameters": {
+										"animation": "\"RCarCoc\"",
+										"from": "beginning"
+									}
+								},
+								{
+									"id": "simulate-control",
+									"objectClass": "Personaje",
+									"sid": 269950924125996,
+									"behaviorType": "TileMovement",
+									"parameters": {
+										"control": "right"
+									}
+								},
+								{
+									"id": "set-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 411928962582445,
+									"parameters": {
+										"variable": "Cortar",
+										"value": "false"
+									}
+								}
+							],
+							"sid": 550190011997593
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-key-pressed",
+									"objectClass": "Teclado",
+									"sid": 502772078784712,
+									"parameters": {
+										"key": 69
+									}
+								},
+								{
+									"id": "is-animation-playing",
+									"objectClass": "Mesa",
+									"sid": 877922899673181,
+									"parameters": {
+										"animation": "\"Pan\""
+									}
+								},
+								{
+									"id": "is-boolean-instance-variable-set",
+									"objectClass": "Personaje",
+									"sid": 374667584630074,
+									"parameters": {
+										"instance-variable": "CarneCocida"
+									}
+								},
+								{
+									"id": "is-overlapping-another-object",
+									"objectClass": "Personaje",
+									"sid": 962100174394657,
+									"parameters": {
+										"object": "Mesa"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-animation",
+									"objectClass": "Mesa",
+									"sid": 260501811263774,
+									"parameters": {
+										"animation": "\"Carne\"",
+										"from": "beginning"
+									}
+								}
+							],
+							"sid": 878030630038891
+						}
+					],
+					"sid": 515979486176264
+				},
+				{
+					"eventType": "group",
+					"disabled": false,
+					"title": "CarneQuemada",
+					"description": "",
+					"isActiveOnStart": true,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-boolean-instance-variable-set",
+									"objectClass": "Personaje",
+									"sid": 635653017272533,
+									"parameters": {
+										"instance-variable": "CarneQuemada"
+									}
+								},
+								{
+									"id": "key-is-down",
+									"objectClass": "Teclado",
+									"sid": 127744953357263,
+									"parameters": {
+										"key": 87
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-animation",
+									"objectClass": "Personaje",
+									"sid": 328093996828015,
+									"parameters": {
+										"animation": "\"BCarQue\"",
+										"from": "beginning"
+									}
+								},
+								{
+									"id": "simulate-control",
+									"objectClass": "Personaje",
+									"sid": 387860450969222,
+									"behaviorType": "TileMovement",
+									"parameters": {
+										"control": "up"
+									}
+								},
+								{
+									"id": "set-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 487381030242268,
+									"parameters": {
+										"variable": "Cortar",
+										"value": "false"
+									}
+								}
+							],
+							"sid": 449822192616279
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-boolean-instance-variable-set",
+									"objectClass": "Personaje",
+									"sid": 459222273507542,
+									"parameters": {
+										"instance-variable": "CarneQuemada"
+									}
+								},
+								{
+									"id": "key-is-down",
+									"objectClass": "Teclado",
+									"sid": 149305642831955,
+									"parameters": {
+										"key": 65
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-animation",
+									"objectClass": "Personaje",
+									"sid": 538291178271106,
+									"parameters": {
+										"animation": "\"LCarQue\"",
+										"from": "beginning"
+									}
+								},
+								{
+									"id": "simulate-control",
+									"objectClass": "Personaje",
+									"sid": 582588707675184,
+									"behaviorType": "TileMovement",
+									"parameters": {
+										"control": "left"
+									}
+								},
+								{
+									"id": "set-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 540239005390965,
+									"parameters": {
+										"variable": "Cortar",
+										"value": "false"
+									}
+								}
+							],
+							"sid": 977995004692830
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-boolean-instance-variable-set",
+									"objectClass": "Personaje",
+									"sid": 532322511563401,
+									"parameters": {
+										"instance-variable": "CarneQuemada"
+									}
+								},
+								{
+									"id": "key-is-down",
+									"objectClass": "Teclado",
+									"sid": 348594018871074,
+									"parameters": {
+										"key": 83
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-animation",
+									"objectClass": "Personaje",
+									"sid": 132496951095907,
+									"parameters": {
+										"animation": "\"FCarQue\"",
+										"from": "beginning"
+									}
+								},
+								{
+									"id": "simulate-control",
+									"objectClass": "Personaje",
+									"sid": 705360539158553,
+									"behaviorType": "TileMovement",
+									"parameters": {
+										"control": "down"
+									}
+								},
+								{
+									"id": "set-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 708574032832062,
+									"parameters": {
+										"variable": "Cortar",
+										"value": "false"
+									}
+								}
+							],
+							"sid": 650847175125540
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-boolean-instance-variable-set",
+									"objectClass": "Personaje",
+									"sid": 227323744138674,
+									"parameters": {
+										"instance-variable": "CarneQuemada"
+									}
+								},
+								{
+									"id": "key-is-down",
+									"objectClass": "Teclado",
+									"sid": 493578587862210,
+									"parameters": {
+										"key": 68
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-animation",
+									"objectClass": "Personaje",
+									"sid": 665715342326581,
+									"parameters": {
+										"animation": "\"RCarQue\"",
+										"from": "beginning"
+									}
+								},
+								{
+									"id": "simulate-control",
+									"objectClass": "Personaje",
+									"sid": 269704675681231,
+									"behaviorType": "TileMovement",
+									"parameters": {
+										"control": "right"
+									}
+								},
+								{
+									"id": "set-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 909973167212401,
+									"parameters": {
+										"variable": "Cortar",
+										"value": "false"
+									}
+								}
+							],
+							"sid": 829006267002303
+						}
+					],
+					"sid": 597920375254982
+				},
+				{
+					"eventType": "group",
+					"disabled": false,
+					"title": "Lechuga",
+					"description": "",
+					"isActiveOnStart": true,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-boolean-instance-variable-set",
+									"objectClass": "Personaje",
+									"sid": 781497087891288,
+									"parameters": {
+										"instance-variable": "Lechuga"
+									}
+								},
+								{
+									"id": "key-is-down",
+									"objectClass": "Teclado",
+									"sid": 169387672823925,
+									"parameters": {
+										"key": 87
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-animation",
+									"objectClass": "Personaje",
+									"sid": 923284174143254,
+									"parameters": {
+										"animation": "\"BLec\"",
+										"from": "beginning"
+									}
+								},
+								{
+									"id": "simulate-control",
+									"objectClass": "Personaje",
+									"sid": 761634274001859,
+									"behaviorType": "TileMovement",
+									"parameters": {
+										"control": "up"
+									}
+								},
+								{
+									"id": "set-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 843687890249055,
+									"parameters": {
+										"variable": "Cortar",
+										"value": "false"
+									}
+								}
+							],
+							"sid": 138424878446245
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-boolean-instance-variable-set",
+									"objectClass": "Personaje",
+									"sid": 390235165386688,
+									"parameters": {
+										"instance-variable": "Lechuga"
+									}
+								},
+								{
+									"id": "key-is-down",
+									"objectClass": "Teclado",
+									"sid": 443901085046513,
+									"parameters": {
+										"key": 65
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-animation",
+									"objectClass": "Personaje",
+									"sid": 809768579684202,
+									"parameters": {
+										"animation": "\"LLec\"",
+										"from": "beginning"
+									}
+								},
+								{
+									"id": "simulate-control",
+									"objectClass": "Personaje",
+									"sid": 819504428153847,
+									"behaviorType": "TileMovement",
+									"parameters": {
+										"control": "left"
+									}
+								},
+								{
+									"id": "set-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 848790654457136,
+									"parameters": {
+										"variable": "Cortar",
+										"value": "false"
+									}
+								}
+							],
+							"sid": 658641480467102
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-boolean-instance-variable-set",
+									"objectClass": "Personaje",
+									"sid": 754205620047209,
+									"parameters": {
+										"instance-variable": "Lechuga"
+									}
+								},
+								{
+									"id": "key-is-down",
+									"objectClass": "Teclado",
+									"sid": 891476610972758,
+									"parameters": {
+										"key": 83
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-animation",
+									"objectClass": "Personaje",
+									"sid": 477401754820852,
+									"parameters": {
+										"animation": "\"FLec\"",
+										"from": "beginning"
+									}
+								},
+								{
+									"id": "simulate-control",
+									"objectClass": "Personaje",
+									"sid": 218851254918718,
+									"behaviorType": "TileMovement",
+									"parameters": {
+										"control": "down"
+									}
+								},
+								{
+									"id": "set-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 351417727718139,
+									"parameters": {
+										"variable": "Cortar",
+										"value": "false"
+									}
+								}
+							],
+							"sid": 954631977354741
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-boolean-instance-variable-set",
+									"objectClass": "Personaje",
+									"sid": 180126243216307,
+									"parameters": {
+										"instance-variable": "Lechuga"
+									}
+								},
+								{
+									"id": "key-is-down",
+									"objectClass": "Teclado",
+									"sid": 753636313756485,
+									"parameters": {
+										"key": 68
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-animation",
+									"objectClass": "Personaje",
+									"sid": 116535582246673,
+									"parameters": {
+										"animation": "\"RLec\"",
+										"from": "beginning"
+									}
+								},
+								{
+									"id": "simulate-control",
+									"objectClass": "Personaje",
+									"sid": 138980063778050,
+									"behaviorType": "TileMovement",
+									"parameters": {
+										"control": "right"
+									}
+								},
+								{
+									"id": "set-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 155023170019891,
+									"parameters": {
+										"variable": "Cortar",
+										"value": "false"
+									}
+								}
+							],
+							"sid": 145736877375558
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-key-pressed",
+									"objectClass": "Teclado",
+									"sid": 298921377459062,
+									"parameters": {
+										"key": 69
+									}
+								},
+								{
+									"id": "is-animation-playing",
+									"objectClass": "Mesa",
+									"sid": 300266172926227,
+									"parameters": {
+										"animation": "\"Carne\""
+									}
+								},
+								{
+									"id": "is-boolean-instance-variable-set",
+									"objectClass": "Personaje",
+									"sid": 889114218421312,
+									"parameters": {
+										"instance-variable": "Lechuga"
+									}
+								},
+								{
+									"id": "is-overlapping-another-object",
+									"objectClass": "Personaje",
+									"sid": 803656387144870,
+									"parameters": {
+										"object": "Mesa"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-animation",
+									"objectClass": "Mesa",
+									"sid": 276781746533261,
+									"parameters": {
+										"animation": "\"Lechuga\"",
+										"from": "beginning"
+									}
+								}
+							],
+							"sid": 134018515816917
+						}
+					],
+					"sid": 114961657930913
+				},
+				{
+					"eventType": "group",
+					"disabled": false,
+					"title": "Tomate",
+					"description": "",
+					"isActiveOnStart": true,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-boolean-instance-variable-set",
+									"objectClass": "Personaje",
+									"sid": 980687266225462,
+									"parameters": {
+										"instance-variable": "Tomate"
+									}
+								},
+								{
+									"id": "key-is-down",
+									"objectClass": "Teclado",
+									"sid": 130821468340509,
+									"parameters": {
+										"key": 87
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-animation",
+									"objectClass": "Personaje",
+									"sid": 782207770382702,
+									"parameters": {
+										"animation": "\"BTom\"",
+										"from": "beginning"
+									}
+								},
+								{
+									"id": "simulate-control",
+									"objectClass": "Personaje",
+									"sid": 295890508991459,
+									"behaviorType": "TileMovement",
+									"parameters": {
+										"control": "up"
+									}
+								},
+								{
+									"id": "set-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 163350687169194,
+									"parameters": {
+										"variable": "Cortar",
+										"value": "false"
+									}
+								}
+							],
+							"sid": 700435960118625
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-boolean-instance-variable-set",
+									"objectClass": "Personaje",
+									"sid": 597243632552609,
+									"parameters": {
+										"instance-variable": "Tomate"
+									}
+								},
+								{
+									"id": "key-is-down",
+									"objectClass": "Teclado",
+									"sid": 519729096427573,
+									"parameters": {
+										"key": 65
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-animation",
+									"objectClass": "Personaje",
+									"sid": 668706783343524,
+									"parameters": {
+										"animation": "\"LTom\"",
+										"from": "beginning"
+									}
+								},
+								{
+									"id": "simulate-control",
+									"objectClass": "Personaje",
+									"sid": 357067066499041,
+									"behaviorType": "TileMovement",
+									"parameters": {
+										"control": "left"
+									}
+								},
+								{
+									"id": "set-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 143762257747545,
+									"parameters": {
+										"variable": "Cortar",
+										"value": "false"
+									}
+								}
+							],
+							"sid": 514014610781997
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-boolean-instance-variable-set",
+									"objectClass": "Personaje",
+									"sid": 165938817309587,
+									"parameters": {
+										"instance-variable": "Tomate"
+									}
+								},
+								{
+									"id": "key-is-down",
+									"objectClass": "Teclado",
+									"sid": 628092772323101,
+									"parameters": {
+										"key": 83
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-animation",
+									"objectClass": "Personaje",
+									"sid": 363137441415191,
+									"parameters": {
+										"animation": "\"FTom\"",
+										"from": "beginning"
+									}
+								},
+								{
+									"id": "simulate-control",
+									"objectClass": "Personaje",
+									"sid": 380738427074107,
+									"behaviorType": "TileMovement",
+									"parameters": {
+										"control": "down"
+									}
+								},
+								{
+									"id": "set-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 805048878306519,
+									"parameters": {
+										"variable": "Cortar",
+										"value": "false"
+									}
+								}
+							],
+							"sid": 114990372785798
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-boolean-instance-variable-set",
+									"objectClass": "Personaje",
+									"sid": 614126639625106,
+									"parameters": {
+										"instance-variable": "Tomate"
+									}
+								},
+								{
+									"id": "key-is-down",
+									"objectClass": "Teclado",
+									"sid": 192232868227705,
+									"parameters": {
+										"key": 68
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-animation",
+									"objectClass": "Personaje",
+									"sid": 359311197848301,
+									"parameters": {
+										"animation": "\"RTom\"",
+										"from": "beginning"
+									}
+								},
+								{
+									"id": "simulate-control",
+									"objectClass": "Personaje",
+									"sid": 847810526683039,
+									"behaviorType": "TileMovement",
+									"parameters": {
+										"control": "right"
+									}
+								},
+								{
+									"id": "set-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 194525424296175,
+									"parameters": {
+										"variable": "Cortar",
+										"value": "false"
+									}
+								}
+							],
+							"sid": 284717255630183
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-key-pressed",
+									"objectClass": "Teclado",
+									"sid": 413841375244240,
+									"parameters": {
+										"key": 69
+									}
+								},
+								{
+									"id": "is-boolean-instance-variable-set",
+									"objectClass": "Personaje",
+									"sid": 986387647863276,
+									"parameters": {
+										"instance-variable": "Tomate"
+									}
+								},
+								{
+									"id": "is-overlapping-another-object",
+									"objectClass": "Personaje",
+									"sid": 164681636553434,
+									"parameters": {
+										"object": "Mesa"
+									}
+								},
+								{
+									"id": "is-animation-playing",
+									"objectClass": "Mesa",
+									"sid": 213985152669704,
+									"parameters": {
+										"animation": "\"Lechuga\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-animation",
+									"objectClass": "Mesa",
+									"sid": 284898650610800,
+									"parameters": {
+										"animation": "\"Tomate\"",
+										"from": "beginning"
+									}
+								}
+							],
+							"sid": 156455069603884
+						}
+					],
+					"sid": 122239750052504
+				},
+				{
+					"eventType": "group",
+					"disabled": false,
+					"title": "Cebolla",
+					"description": "",
+					"isActiveOnStart": true,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-boolean-instance-variable-set",
+									"objectClass": "Personaje",
+									"sid": 846724950604842,
+									"parameters": {
+										"instance-variable": "Cebolla"
+									}
+								},
+								{
+									"id": "key-is-down",
+									"objectClass": "Teclado",
+									"sid": 305465158363643,
+									"parameters": {
+										"key": 87
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-animation",
+									"objectClass": "Personaje",
+									"sid": 216010027175342,
+									"parameters": {
+										"animation": "\"BCeb\"",
+										"from": "beginning"
+									}
+								},
+								{
+									"id": "simulate-control",
+									"objectClass": "Personaje",
+									"sid": 224080534298160,
+									"behaviorType": "TileMovement",
+									"parameters": {
+										"control": "up"
+									}
+								},
+								{
+									"id": "set-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 913964987906016,
+									"parameters": {
+										"variable": "Cortar",
+										"value": "false"
+									}
+								}
+							],
+							"sid": 845980682929599
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-boolean-instance-variable-set",
+									"objectClass": "Personaje",
+									"sid": 231822347489554,
+									"parameters": {
+										"instance-variable": "Cebolla"
+									}
+								},
+								{
+									"id": "key-is-down",
+									"objectClass": "Teclado",
+									"sid": 525892153809631,
+									"parameters": {
+										"key": 65
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-animation",
+									"objectClass": "Personaje",
+									"sid": 525761138914264,
+									"parameters": {
+										"animation": "\"LCeb\"",
+										"from": "beginning"
+									}
+								},
+								{
+									"id": "simulate-control",
+									"objectClass": "Personaje",
+									"sid": 443040607248210,
+									"behaviorType": "TileMovement",
+									"parameters": {
+										"control": "left"
+									}
+								},
+								{
+									"id": "set-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 438024178854677,
+									"parameters": {
+										"variable": "Cortar",
+										"value": "false"
+									}
+								}
+							],
+							"sid": 383330731966883
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-boolean-instance-variable-set",
+									"objectClass": "Personaje",
+									"sid": 100960096390614,
+									"parameters": {
+										"instance-variable": "Cebolla"
+									}
+								},
+								{
+									"id": "key-is-down",
+									"objectClass": "Teclado",
+									"sid": 198016249963100,
+									"parameters": {
+										"key": 83
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-animation",
+									"objectClass": "Personaje",
+									"sid": 723725322083792,
+									"parameters": {
+										"animation": "\"FCeb\"",
+										"from": "beginning"
+									}
+								},
+								{
+									"id": "simulate-control",
+									"objectClass": "Personaje",
+									"sid": 675999542857523,
+									"behaviorType": "TileMovement",
+									"parameters": {
+										"control": "down"
+									}
+								},
+								{
+									"id": "set-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 707603336735117,
+									"parameters": {
+										"variable": "Cortar",
+										"value": "false"
+									}
+								}
+							],
+							"sid": 241488294994792
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-boolean-instance-variable-set",
+									"objectClass": "Personaje",
+									"sid": 875770739718672,
+									"parameters": {
+										"instance-variable": "Cebolla"
+									}
+								},
+								{
+									"id": "key-is-down",
+									"objectClass": "Teclado",
+									"sid": 625574687287628,
+									"parameters": {
+										"key": 68
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-animation",
+									"objectClass": "Personaje",
+									"sid": 498722539649555,
+									"parameters": {
+										"animation": "\"RCeb\"",
+										"from": "beginning"
+									}
+								},
+								{
+									"id": "simulate-control",
+									"objectClass": "Personaje",
+									"sid": 290833097264345,
+									"behaviorType": "TileMovement",
+									"parameters": {
+										"control": "right"
+									}
+								},
+								{
+									"id": "set-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 830341249590340,
+									"parameters": {
+										"variable": "Cortar",
+										"value": "false"
+									}
+								}
+							],
+							"sid": 972413520849194
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-key-pressed",
+									"objectClass": "Teclado",
+									"sid": 292462033380672,
+									"parameters": {
+										"key": 69
+									}
+								},
+								{
+									"id": "is-boolean-instance-variable-set",
+									"objectClass": "Personaje",
+									"sid": 261974767334866,
+									"parameters": {
+										"instance-variable": "Cebolla"
+									}
+								},
+								{
+									"id": "is-overlapping-another-object",
+									"objectClass": "Personaje",
+									"sid": 333733392510893,
+									"parameters": {
+										"object": "Tabla"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-animation",
+									"objectClass": "Tabla",
+									"sid": 672069132191037,
+									"parameters": {
+										"animation": "\"Cebolla1\"",
+										"from": "beginning"
+									}
+								},
+								{
+									"id": "set-progress",
+									"objectClass": "CorteCebolla",
+									"sid": 265426792028735,
+									"parameters": {
+										"value": "CorteCebolla.Progress + 1"
+									}
+								},
+								{
+									"id": "set-boolean-instvar",
+									"objectClass": "Personaje",
+									"sid": 386092369339872,
+									"parameters": {
+										"instance-variable": "Cebolla",
+										"value": "false"
+									}
+								},
+								{
+									"id": "set-boolean-instvar",
+									"objectClass": "Personaje",
+									"sid": 855402488650362,
+									"parameters": {
+										"instance-variable": "Vacio",
+										"value": "true"
+									}
+								}
+							],
+							"sid": 226959080177911
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-key-pressed",
+									"objectClass": "Teclado",
+									"sid": 314046234234480,
+									"parameters": {
+										"key": 69
+									}
+								},
+								{
+									"id": "is-overlapping-another-object",
+									"objectClass": "Personaje",
+									"sid": 799609425854086,
+									"parameters": {
+										"object": "Tabla"
+									}
+								},
+								{
+									"id": "compare-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 388457344551230,
+									"parameters": {
+										"variable": "Cortar"
+									}
+								},
+								{
+									"id": "is-animation-playing",
+									"objectClass": "Tabla",
+									"sid": 428123607639441,
+									"parameters": {
+										"animation": "\"Cebolla1\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-progress",
+									"objectClass": "CorteCebolla",
+									"sid": 319160798629777,
+									"parameters": {
+										"value": "CorteCebolla.Progress + 1"
+									}
+								}
+							],
+							"sid": 248729862326753
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-progress",
+									"objectClass": "CorteCebolla",
+									"sid": 532146962518905,
+									"parameters": {
+										"comparison": 5,
+										"value": "10"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-animation",
+									"objectClass": "Tabla",
+									"sid": 593093815481293,
+									"parameters": {
+										"animation": "\"Cebolla2\"",
+										"from": "beginning"
+									}
+								}
+							],
+							"sid": 906295055979639
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-key-pressed",
+									"objectClass": "Teclado",
+									"sid": 193666702270092,
+									"parameters": {
+										"key": 69
+									}
+								},
+								{
+									"id": "is-animation-playing",
+									"objectClass": "Mesa",
+									"sid": 596103288225802,
+									"parameters": {
+										"animation": "\"Tomate\""
+									}
+								},
+								{
+									"id": "is-boolean-instance-variable-set",
+									"objectClass": "Personaje",
+									"sid": 780855205772749,
+									"parameters": {
+										"instance-variable": "Cebolla"
+									}
+								},
+								{
+									"id": "is-overlapping-another-object",
+									"objectClass": "Personaje",
+									"sid": 247500502651631,
+									"parameters": {
+										"object": "Mesa"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-animation",
+									"objectClass": "Mesa",
+									"sid": 140099180085980,
+									"parameters": {
+										"animation": "\"Cebolla\"",
+										"from": "beginning"
+									}
+								},
+								{
+									"id": "set-boolean-instvar",
+									"objectClass": "Personaje",
+									"sid": 183549024978166,
+									"parameters": {
+										"instance-variable": "Cebolla",
+										"value": "false"
+									}
+								}
+							],
+							"sid": 387232803133181
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-key-pressed",
+									"objectClass": "Teclado",
+									"sid": 331509493780734,
+									"parameters": {
+										"key": 69
+									}
+								},
+								{
+									"id": "is-boolean-instance-variable-set",
+									"objectClass": "Personaje",
+									"sid": 875895339833003,
+									"parameters": {
+										"instance-variable": "Plato"
+									}
+								},
+								{
+									"id": "is-overlapping-another-object",
+									"objectClass": "Personaje",
+									"sid": 532985312929616,
+									"parameters": {
+										"object": "Tabla"
+									}
+								},
+								{
+									"id": "is-animation-playing",
+									"objectClass": "Tabla",
+									"sid": 310477831341769,
+									"parameters": {
+										"animation": "\"Cebolla2\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-animation",
+									"objectClass": "Tabla",
+									"sid": 961383061925295,
+									"parameters": {
+										"animation": "\"Vacia\"",
+										"from": "beginning"
+									}
+								},
+								{
+									"id": "set-progress",
+									"objectClass": "CorteCebolla",
+									"sid": 130487855828946,
+									"parameters": {
+										"value": "0"
+									}
+								},
+								{
+									"id": "set-boolean-instvar",
+									"objectClass": "Personaje",
+									"sid": 896169910707779,
+									"parameters": {
+										"instance-variable": "CebCor",
+										"value": "true"
+									}
+								},
+								{
+									"id": "set-boolean-instvar",
+									"objectClass": "Personaje",
+									"sid": 530938393001059,
+									"parameters": {
+										"instance-variable": "Vacio",
+										"value": "false"
+									}
+								},
+								{
+									"id": "set-boolean-instvar",
+									"objectClass": "Personaje",
+									"sid": 909025471821946,
+									"parameters": {
+										"instance-variable": "Plato",
+										"value": "false"
+									}
+								}
+							],
+							"sid": 865458091133806
+						}
+					],
+					"sid": 167535815162552
+				},
+				{
+					"eventType": "group",
+					"disabled": false,
+					"title": "Hamburguesa",
+					"description": "",
+					"isActiveOnStart": true,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-boolean-instance-variable-set",
+									"objectClass": "Personaje",
+									"sid": 613696003556509,
+									"parameters": {
+										"instance-variable": "Servido"
+									}
+								},
+								{
+									"id": "key-is-down",
+									"objectClass": "Teclado",
+									"sid": 767618322010426,
+									"parameters": {
+										"key": 87
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-animation",
+									"objectClass": "Personaje",
+									"sid": 833423003927239,
+									"parameters": {
+										"animation": "\"BPlaSer\"",
+										"from": "beginning"
+									}
+								},
+								{
+									"id": "simulate-control",
+									"objectClass": "Personaje",
+									"sid": 672860894948401,
+									"behaviorType": "TileMovement",
+									"parameters": {
+										"control": "up"
+									}
+								},
+								{
+									"id": "set-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 251300502386134,
+									"parameters": {
+										"variable": "Cortar",
+										"value": "false"
+									}
+								}
+							],
+							"sid": 280155208434213
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-boolean-instance-variable-set",
+									"objectClass": "Personaje",
+									"sid": 403551183723557,
+									"parameters": {
+										"instance-variable": "Servido"
+									}
+								},
+								{
+									"id": "key-is-down",
+									"objectClass": "Teclado",
+									"sid": 325067541965381,
+									"parameters": {
+										"key": 65
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-animation",
+									"objectClass": "Personaje",
+									"sid": 786410585759522,
+									"parameters": {
+										"animation": "\"LPlaSer\"",
+										"from": "beginning"
+									}
+								},
+								{
+									"id": "simulate-control",
+									"objectClass": "Personaje",
+									"sid": 505719488880389,
+									"behaviorType": "TileMovement",
+									"parameters": {
+										"control": "left"
+									}
+								},
+								{
+									"id": "set-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 563328990840916,
+									"parameters": {
+										"variable": "Cortar",
+										"value": "false"
+									}
+								}
+							],
+							"sid": 862432760681566
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-boolean-instance-variable-set",
+									"objectClass": "Personaje",
+									"sid": 491571594572528,
+									"parameters": {
+										"instance-variable": "Servido"
+									}
+								},
+								{
+									"id": "key-is-down",
+									"objectClass": "Teclado",
+									"sid": 306040766606871,
+									"parameters": {
+										"key": 83
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-animation",
+									"objectClass": "Personaje",
+									"sid": 285880357883737,
+									"parameters": {
+										"animation": "\"FPlaSer\"",
+										"from": "beginning"
+									}
+								},
+								{
+									"id": "simulate-control",
+									"objectClass": "Personaje",
+									"sid": 520444522789245,
+									"behaviorType": "TileMovement",
+									"parameters": {
+										"control": "down"
+									}
+								},
+								{
+									"id": "set-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 870489858275500,
+									"parameters": {
+										"variable": "Cortar",
+										"value": "false"
+									}
+								}
+							],
+							"sid": 599792520670640
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-boolean-instance-variable-set",
+									"objectClass": "Personaje",
+									"sid": 342964994684664,
+									"parameters": {
+										"instance-variable": "Servido"
+									}
+								},
+								{
+									"id": "key-is-down",
+									"objectClass": "Teclado",
+									"sid": 980035522203565,
+									"parameters": {
+										"key": 68
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-animation",
+									"objectClass": "Personaje",
+									"sid": 466885512761086,
+									"parameters": {
+										"animation": "\"RPlaSer\"",
+										"from": "beginning"
+									}
+								},
+								{
+									"id": "simulate-control",
+									"objectClass": "Personaje",
+									"sid": 671847804168831,
+									"behaviorType": "TileMovement",
+									"parameters": {
+										"control": "right"
+									}
+								},
+								{
+									"id": "set-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 814126098809898,
+									"parameters": {
+										"variable": "Cortar",
+										"value": "false"
+									}
+								}
+							],
+							"sid": 881591177755055
+						}
+					],
+					"sid": 359118740635152
+				},
+				{
+					"eventType": "group",
+					"disabled": false,
+					"title": "Cuchillo",
+					"description": "",
+					"isActiveOnStart": true,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-boolean-instance-variable-set",
+									"objectClass": "Personaje",
+									"sid": 584365149940191,
+									"parameters": {
+										"instance-variable": "Cuchillo"
+									}
+								},
+								{
+									"id": "key-is-down",
+									"objectClass": "Teclado",
+									"sid": 520278717029510,
+									"parameters": {
+										"key": 87
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-animation",
+									"objectClass": "Personaje",
+									"sid": 685376702177222,
+									"parameters": {
+										"animation": "\"BackC\"",
+										"from": "beginning"
+									}
+								},
+								{
+									"id": "simulate-control",
+									"objectClass": "Personaje",
+									"sid": 718317460084359,
+									"behaviorType": "TileMovement",
+									"parameters": {
+										"control": "up"
+									}
+								},
+								{
+									"id": "set-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 532354344178903,
+									"parameters": {
+										"variable": "Cortar",
+										"value": "true"
+									}
+								}
+							],
+							"sid": 342281930233399
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-boolean-instance-variable-set",
+									"objectClass": "Personaje",
+									"sid": 603276751457685,
+									"parameters": {
+										"instance-variable": "Cuchillo"
+									}
+								},
+								{
+									"id": "key-is-down",
+									"objectClass": "Teclado",
+									"sid": 852597274075908,
+									"parameters": {
+										"key": 65
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-animation",
+									"objectClass": "Personaje",
+									"sid": 321948282346528,
+									"parameters": {
+										"animation": "\"LeftC\"",
+										"from": "beginning"
+									}
+								},
+								{
+									"id": "simulate-control",
+									"objectClass": "Personaje",
+									"sid": 656515633968028,
+									"behaviorType": "TileMovement",
+									"parameters": {
+										"control": "left"
+									}
+								},
+								{
+									"id": "set-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 920637918627238,
+									"parameters": {
+										"variable": "Cortar",
+										"value": "true"
+									}
+								}
+							],
+							"sid": 869947386049658
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-boolean-instance-variable-set",
+									"objectClass": "Personaje",
+									"sid": 582061446975915,
+									"parameters": {
+										"instance-variable": "Cuchillo"
+									}
+								},
+								{
+									"id": "key-is-down",
+									"objectClass": "Teclado",
+									"sid": 708317216765731,
+									"parameters": {
+										"key": 83
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-animation",
+									"objectClass": "Personaje",
+									"sid": 638952896412990,
+									"parameters": {
+										"animation": "\"FrontC\"",
+										"from": "beginning"
+									}
+								},
+								{
+									"id": "simulate-control",
+									"objectClass": "Personaje",
+									"sid": 518926108724106,
+									"behaviorType": "TileMovement",
+									"parameters": {
+										"control": "down"
+									}
+								},
+								{
+									"id": "set-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 651425012465734,
+									"parameters": {
+										"variable": "Cortar",
+										"value": "true"
+									}
+								}
+							],
+							"sid": 804663812995398
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-boolean-instance-variable-set",
+									"objectClass": "Personaje",
+									"sid": 570675253314753,
+									"parameters": {
+										"instance-variable": "Cuchillo"
+									}
+								},
+								{
+									"id": "key-is-down",
+									"objectClass": "Teclado",
+									"sid": 416995846418958,
+									"parameters": {
+										"key": 68
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-animation",
+									"objectClass": "Personaje",
+									"sid": 916425791992870,
+									"parameters": {
+										"animation": "\"RightC\"",
+										"from": "beginning"
+									}
+								},
+								{
+									"id": "simulate-control",
+									"objectClass": "Personaje",
+									"sid": 893326108656020,
+									"behaviorType": "TileMovement",
+									"parameters": {
+										"control": "right"
+									}
+								},
+								{
+									"id": "set-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 569667238780345,
+									"parameters": {
+										"variable": "Cortar",
+										"value": "true"
+									}
+								}
+							],
+							"sid": 512513536842726
+						}
+					],
+					"sid": 915611284223198
 				},
 				{
 					"eventType": "group",
@@ -1050,10 +3093,18 @@
 								{
 									"id": "compare-progress",
 									"objectClass": "ProgresoHorno",
-									"sid": 196689205332692,
+									"sid": 922121101782818,
 									"parameters": {
 										"comparison": 5,
 										"value": "5"
+									}
+								},
+								{
+									"id": "compare-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 884892540709584,
+									"parameters": {
+										"variable": "Cocido"
 									}
 								}
 							],
@@ -1149,6 +3200,14 @@
 										"comparison": 5,
 										"value": "10"
 									}
+								},
+								{
+									"id": "compare-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 186413752216464,
+									"parameters": {
+										"variable": "Quemado"
+									}
 								}
 							],
 							"actions": [
@@ -1203,6 +3262,15 @@
 									"sid": 816263600771820,
 									"parameters": {
 										"value": "0"
+									}
+								},
+								{
+									"id": "set-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 137698557858696,
+									"parameters": {
+										"variable": "Cocido",
+										"value": "false"
 									}
 								}
 							],
@@ -1617,979 +3685,6 @@
 				{
 					"eventType": "group",
 					"disabled": false,
-					"title": "Tomate",
-					"description": "",
-					"isActiveOnStart": true,
-					"children": [
-						{
-							"eventType": "block",
-							"conditions": [
-								{
-									"id": "is-boolean-instance-variable-set",
-									"objectClass": "Personaje",
-									"sid": 952079028684259,
-									"parameters": {
-										"instance-variable": "Tomate"
-									}
-								},
-								{
-									"id": "key-is-down",
-									"objectClass": "Teclado",
-									"sid": 691490704171378,
-									"parameters": {
-										"key": 87
-									}
-								}
-							],
-							"actions": [
-								{
-									"id": "set-animation",
-									"objectClass": "Personaje",
-									"sid": 298378032683690,
-									"parameters": {
-										"animation": "\"BTom\"",
-										"from": "beginning"
-									}
-								},
-								{
-									"id": "simulate-control",
-									"objectClass": "Personaje",
-									"sid": 282130976019283,
-									"behaviorType": "TileMovement",
-									"parameters": {
-										"control": "up"
-									}
-								}
-							],
-							"sid": 655285265720574
-						},
-						{
-							"eventType": "block",
-							"conditions": [
-								{
-									"id": "is-boolean-instance-variable-set",
-									"objectClass": "Personaje",
-									"sid": 974637962064832,
-									"parameters": {
-										"instance-variable": "Tomate"
-									}
-								},
-								{
-									"id": "key-is-down",
-									"objectClass": "Teclado",
-									"sid": 173920838755826,
-									"parameters": {
-										"key": 65
-									}
-								}
-							],
-							"actions": [
-								{
-									"id": "set-animation",
-									"objectClass": "Personaje",
-									"sid": 980826026628311,
-									"parameters": {
-										"animation": "\"LTom\"",
-										"from": "beginning"
-									}
-								},
-								{
-									"id": "simulate-control",
-									"objectClass": "Personaje",
-									"sid": 186013105969860,
-									"behaviorType": "TileMovement",
-									"parameters": {
-										"control": "left"
-									}
-								}
-							],
-							"sid": 994584125411786
-						},
-						{
-							"eventType": "block",
-							"conditions": [
-								{
-									"id": "is-boolean-instance-variable-set",
-									"objectClass": "Personaje",
-									"sid": 423952780002766,
-									"parameters": {
-										"instance-variable": "Tomate"
-									}
-								},
-								{
-									"id": "key-is-down",
-									"objectClass": "Teclado",
-									"sid": 834177376620834,
-									"parameters": {
-										"key": 83
-									}
-								}
-							],
-							"actions": [
-								{
-									"id": "set-animation",
-									"objectClass": "Personaje",
-									"sid": 944360157003183,
-									"parameters": {
-										"animation": "\"FTom\"",
-										"from": "beginning"
-									}
-								},
-								{
-									"id": "simulate-control",
-									"objectClass": "Personaje",
-									"sid": 338808369885572,
-									"behaviorType": "TileMovement",
-									"parameters": {
-										"control": "down"
-									}
-								}
-							],
-							"sid": 844599387982290
-						},
-						{
-							"eventType": "block",
-							"conditions": [
-								{
-									"id": "is-boolean-instance-variable-set",
-									"objectClass": "Personaje",
-									"sid": 140446745649724,
-									"parameters": {
-										"instance-variable": "Tomate"
-									}
-								},
-								{
-									"id": "key-is-down",
-									"objectClass": "Teclado",
-									"sid": 735682146748330,
-									"parameters": {
-										"key": 68
-									}
-								}
-							],
-							"actions": [
-								{
-									"id": "set-animation",
-									"objectClass": "Personaje",
-									"sid": 205096075854295,
-									"parameters": {
-										"animation": "\"RTom\"",
-										"from": "beginning"
-									}
-								},
-								{
-									"id": "simulate-control",
-									"objectClass": "Personaje",
-									"sid": 677103769967073,
-									"behaviorType": "TileMovement",
-									"parameters": {
-										"control": "right"
-									}
-								}
-							],
-							"sid": 926751457787791
-						}
-					],
-					"sid": 230268120390352
-				},
-				{
-					"eventType": "group",
-					"disabled": false,
-					"title": "Lechuga",
-					"description": "",
-					"isActiveOnStart": true,
-					"children": [
-						{
-							"eventType": "block",
-							"conditions": [
-								{
-									"id": "is-boolean-instance-variable-set",
-									"objectClass": "Personaje",
-									"sid": 112663018259978,
-									"parameters": {
-										"instance-variable": "Lechuga"
-									}
-								},
-								{
-									"id": "key-is-down",
-									"objectClass": "Teclado",
-									"sid": 355886502252904,
-									"parameters": {
-										"key": 87
-									}
-								}
-							],
-							"actions": [
-								{
-									"id": "set-animation",
-									"objectClass": "Personaje",
-									"sid": 478503980912532,
-									"parameters": {
-										"animation": "\"BLec\"",
-										"from": "beginning"
-									}
-								},
-								{
-									"id": "simulate-control",
-									"objectClass": "Personaje",
-									"sid": 248955411229416,
-									"behaviorType": "TileMovement",
-									"parameters": {
-										"control": "up"
-									}
-								}
-							],
-							"sid": 300200307857098
-						},
-						{
-							"eventType": "block",
-							"conditions": [
-								{
-									"id": "is-boolean-instance-variable-set",
-									"objectClass": "Personaje",
-									"sid": 556160566496320,
-									"parameters": {
-										"instance-variable": "Lechuga"
-									}
-								},
-								{
-									"id": "key-is-down",
-									"objectClass": "Teclado",
-									"sid": 218044926695665,
-									"parameters": {
-										"key": 65
-									}
-								}
-							],
-							"actions": [
-								{
-									"id": "set-animation",
-									"objectClass": "Personaje",
-									"sid": 748981438082249,
-									"parameters": {
-										"animation": "\"LLec\"",
-										"from": "beginning"
-									}
-								},
-								{
-									"id": "simulate-control",
-									"objectClass": "Personaje",
-									"sid": 636118105081787,
-									"behaviorType": "TileMovement",
-									"parameters": {
-										"control": "left"
-									}
-								}
-							],
-							"sid": 797982392781412
-						},
-						{
-							"eventType": "block",
-							"conditions": [
-								{
-									"id": "is-boolean-instance-variable-set",
-									"objectClass": "Personaje",
-									"sid": 128034694657778,
-									"parameters": {
-										"instance-variable": "Lechuga"
-									}
-								},
-								{
-									"id": "key-is-down",
-									"objectClass": "Teclado",
-									"sid": 948396079052604,
-									"parameters": {
-										"key": 83
-									}
-								}
-							],
-							"actions": [
-								{
-									"id": "set-animation",
-									"objectClass": "Personaje",
-									"sid": 640417227522465,
-									"parameters": {
-										"animation": "\"FLec\"",
-										"from": "beginning"
-									}
-								},
-								{
-									"id": "simulate-control",
-									"objectClass": "Personaje",
-									"sid": 162968469378968,
-									"behaviorType": "TileMovement",
-									"parameters": {
-										"control": "down"
-									}
-								}
-							],
-							"sid": 469499890371564
-						},
-						{
-							"eventType": "block",
-							"conditions": [
-								{
-									"id": "is-boolean-instance-variable-set",
-									"objectClass": "Personaje",
-									"sid": 292662251194526,
-									"parameters": {
-										"instance-variable": "Lechuga"
-									}
-								},
-								{
-									"id": "key-is-down",
-									"objectClass": "Teclado",
-									"sid": 238953891196172,
-									"parameters": {
-										"key": 68
-									}
-								}
-							],
-							"actions": [
-								{
-									"id": "set-animation",
-									"objectClass": "Personaje",
-									"sid": 401480752263650,
-									"parameters": {
-										"animation": "\"RLec\"",
-										"from": "beginning"
-									}
-								},
-								{
-									"id": "simulate-control",
-									"objectClass": "Personaje",
-									"sid": 353511939334659,
-									"behaviorType": "TileMovement",
-									"parameters": {
-										"control": "right"
-									}
-								}
-							],
-							"sid": 815688522204833
-						}
-					],
-					"sid": 828462554286389
-				},
-				{
-					"eventType": "group",
-					"disabled": false,
-					"title": "Cebolla",
-					"description": "",
-					"isActiveOnStart": true,
-					"children": [
-						{
-							"eventType": "block",
-							"conditions": [
-								{
-									"id": "is-boolean-instance-variable-set",
-									"objectClass": "Personaje",
-									"sid": 476789559986413,
-									"parameters": {
-										"instance-variable": "Cebolla"
-									}
-								},
-								{
-									"id": "key-is-down",
-									"objectClass": "Teclado",
-									"sid": 241767347222184,
-									"parameters": {
-										"key": 87
-									}
-								}
-							],
-							"actions": [
-								{
-									"id": "set-animation",
-									"objectClass": "Personaje",
-									"sid": 590841465404464,
-									"parameters": {
-										"animation": "\"BCeb\"",
-										"from": "beginning"
-									}
-								},
-								{
-									"id": "simulate-control",
-									"objectClass": "Personaje",
-									"sid": 469286511997283,
-									"behaviorType": "TileMovement",
-									"parameters": {
-										"control": "up"
-									}
-								}
-							],
-							"sid": 885733625527978
-						},
-						{
-							"eventType": "block",
-							"conditions": [
-								{
-									"id": "is-boolean-instance-variable-set",
-									"objectClass": "Personaje",
-									"sid": 270946928030196,
-									"parameters": {
-										"instance-variable": "Cebolla"
-									}
-								},
-								{
-									"id": "key-is-down",
-									"objectClass": "Teclado",
-									"sid": 733502128272154,
-									"parameters": {
-										"key": 65
-									}
-								}
-							],
-							"actions": [
-								{
-									"id": "set-animation",
-									"objectClass": "Personaje",
-									"sid": 502079939809607,
-									"parameters": {
-										"animation": "\"LCeb\"",
-										"from": "beginning"
-									}
-								},
-								{
-									"id": "simulate-control",
-									"objectClass": "Personaje",
-									"sid": 720652699378538,
-									"behaviorType": "TileMovement",
-									"parameters": {
-										"control": "left"
-									}
-								}
-							],
-							"sid": 567519880410032
-						},
-						{
-							"eventType": "block",
-							"conditions": [
-								{
-									"id": "is-boolean-instance-variable-set",
-									"objectClass": "Personaje",
-									"sid": 844033412752125,
-									"parameters": {
-										"instance-variable": "Cebolla"
-									}
-								},
-								{
-									"id": "key-is-down",
-									"objectClass": "Teclado",
-									"sid": 281231717884294,
-									"parameters": {
-										"key": 83
-									}
-								}
-							],
-							"actions": [
-								{
-									"id": "set-animation",
-									"objectClass": "Personaje",
-									"sid": 472742605065041,
-									"parameters": {
-										"animation": "\"FCeb\"",
-										"from": "beginning"
-									}
-								},
-								{
-									"id": "simulate-control",
-									"objectClass": "Personaje",
-									"sid": 890967954803392,
-									"behaviorType": "TileMovement",
-									"parameters": {
-										"control": "down"
-									}
-								}
-							],
-							"sid": 304106219839134
-						},
-						{
-							"eventType": "block",
-							"conditions": [
-								{
-									"id": "is-boolean-instance-variable-set",
-									"objectClass": "Personaje",
-									"sid": 762138749375484,
-									"parameters": {
-										"instance-variable": "Cebolla"
-									}
-								},
-								{
-									"id": "key-is-down",
-									"objectClass": "Teclado",
-									"sid": 107982101905632,
-									"parameters": {
-										"key": 68
-									}
-								}
-							],
-							"actions": [
-								{
-									"id": "set-animation",
-									"objectClass": "Personaje",
-									"sid": 745892052112914,
-									"parameters": {
-										"animation": "\"RCeb\"",
-										"from": "beginning"
-									}
-								},
-								{
-									"id": "simulate-control",
-									"objectClass": "Personaje",
-									"sid": 399691138396984,
-									"behaviorType": "TileMovement",
-									"parameters": {
-										"control": "right"
-									}
-								}
-							],
-							"sid": 561441686864972
-						},
-						{
-							"eventType": "block",
-							"conditions": [
-								{
-									"id": "on-key-pressed",
-									"objectClass": "Teclado",
-									"sid": 684391226190272,
-									"parameters": {
-										"key": 69
-									}
-								},
-								{
-									"id": "is-boolean-instance-variable-set",
-									"objectClass": "Personaje",
-									"sid": 333644973088240,
-									"parameters": {
-										"instance-variable": "Cebolla"
-									}
-								},
-								{
-									"id": "is-overlapping-another-object",
-									"objectClass": "Personaje",
-									"sid": 791150705368589,
-									"parameters": {
-										"object": "Tabla"
-									}
-								}
-							],
-							"actions": [
-								{
-									"id": "set-animation",
-									"objectClass": "Tabla",
-									"sid": 419016010067320,
-									"parameters": {
-										"animation": "\"Cebolla1\"",
-										"from": "beginning"
-									}
-								},
-								{
-									"id": "set-progress",
-									"objectClass": "CorteProgresoCebolla",
-									"sid": 242433596285537,
-									"parameters": {
-										"value": "CorteProgresoCebolla.Progress + 1"
-									}
-								}
-							],
-							"sid": 436476543366605
-						},
-						{
-							"eventType": "block",
-							"conditions": [
-								{
-									"id": "compare-progress",
-									"objectClass": "CorteProgresoCebolla",
-									"sid": 533611662394729,
-									"parameters": {
-										"comparison": 5,
-										"value": "10"
-									}
-								}
-							],
-							"actions": [
-								{
-									"id": "set-animation",
-									"objectClass": "Tabla",
-									"sid": 561810570278948,
-									"parameters": {
-										"animation": "\"Cebolla2\"",
-										"from": "beginning"
-									}
-								},
-								{
-									"id": "set-progress",
-									"objectClass": "CorteProgresoCebolla",
-									"sid": 174967858866941,
-									"parameters": {
-										"value": "0"
-									}
-								}
-							],
-							"sid": 636419033195430
-						}
-					],
-					"sid": 805489439014084
-				},
-				{
-					"eventType": "group",
-					"disabled": false,
-					"title": "Plato",
-					"description": "",
-					"isActiveOnStart": true,
-					"children": [
-						{
-							"eventType": "block",
-							"conditions": [
-								{
-									"id": "is-boolean-instance-variable-set",
-									"objectClass": "Personaje",
-									"sid": 999885588525828,
-									"parameters": {
-										"instance-variable": "Plato"
-									}
-								},
-								{
-									"id": "key-is-down",
-									"objectClass": "Teclado",
-									"sid": 608227608496066,
-									"parameters": {
-										"key": 87
-									}
-								}
-							],
-							"actions": [
-								{
-									"id": "set-animation",
-									"objectClass": "Personaje",
-									"sid": 172485294506570,
-									"parameters": {
-										"animation": "\"BPlaVac\"",
-										"from": "beginning"
-									}
-								},
-								{
-									"id": "simulate-control",
-									"objectClass": "Personaje",
-									"sid": 519766454584753,
-									"behaviorType": "TileMovement",
-									"parameters": {
-										"control": "up"
-									}
-								}
-							],
-							"sid": 852837086341145
-						},
-						{
-							"eventType": "block",
-							"conditions": [
-								{
-									"id": "is-boolean-instance-variable-set",
-									"objectClass": "Personaje",
-									"sid": 389873769726311,
-									"parameters": {
-										"instance-variable": "Plato"
-									}
-								},
-								{
-									"id": "key-is-down",
-									"objectClass": "Teclado",
-									"sid": 567217011306315,
-									"parameters": {
-										"key": 65
-									}
-								}
-							],
-							"actions": [
-								{
-									"id": "set-animation",
-									"objectClass": "Personaje",
-									"sid": 618828235490534,
-									"parameters": {
-										"animation": "\"LPlaVac\"",
-										"from": "beginning"
-									}
-								},
-								{
-									"id": "simulate-control",
-									"objectClass": "Personaje",
-									"sid": 479633119281833,
-									"behaviorType": "TileMovement",
-									"parameters": {
-										"control": "left"
-									}
-								}
-							],
-							"sid": 183588465790479
-						},
-						{
-							"eventType": "block",
-							"conditions": [
-								{
-									"id": "is-boolean-instance-variable-set",
-									"objectClass": "Personaje",
-									"sid": 287332528240157,
-									"parameters": {
-										"instance-variable": "Plato"
-									}
-								},
-								{
-									"id": "key-is-down",
-									"objectClass": "Teclado",
-									"sid": 767890653883858,
-									"parameters": {
-										"key": 83
-									}
-								}
-							],
-							"actions": [
-								{
-									"id": "set-animation",
-									"objectClass": "Personaje",
-									"sid": 604434017340985,
-									"parameters": {
-										"animation": "\"FPlaVac\"",
-										"from": "beginning"
-									}
-								},
-								{
-									"id": "simulate-control",
-									"objectClass": "Personaje",
-									"sid": 972027661915867,
-									"behaviorType": "TileMovement",
-									"parameters": {
-										"control": "down"
-									}
-								}
-							],
-							"sid": 459027489308896
-						},
-						{
-							"eventType": "block",
-							"conditions": [
-								{
-									"id": "is-boolean-instance-variable-set",
-									"objectClass": "Personaje",
-									"sid": 661582562774146,
-									"parameters": {
-										"instance-variable": "Plato"
-									}
-								},
-								{
-									"id": "key-is-down",
-									"objectClass": "Teclado",
-									"sid": 247256342553948,
-									"parameters": {
-										"key": 68
-									}
-								}
-							],
-							"actions": [
-								{
-									"id": "set-animation",
-									"objectClass": "Personaje",
-									"sid": 419646438312812,
-									"parameters": {
-										"animation": "\"RPlaVac\"",
-										"from": "beginning"
-									}
-								},
-								{
-									"id": "simulate-control",
-									"objectClass": "Personaje",
-									"sid": 274090067392711,
-									"behaviorType": "TileMovement",
-									"parameters": {
-										"control": "right"
-									}
-								}
-							],
-							"sid": 400574184290893
-						}
-					],
-					"sid": 582489118385379
-				},
-				{
-					"eventType": "group",
-					"disabled": false,
-					"title": "Cuchillo",
-					"description": "",
-					"isActiveOnStart": true,
-					"children": [
-						{
-							"eventType": "block",
-							"conditions": [
-								{
-									"id": "is-boolean-instance-variable-set",
-									"objectClass": "Personaje",
-									"sid": 858355441129443,
-									"parameters": {
-										"instance-variable": "Cuchillo"
-									}
-								},
-								{
-									"id": "key-is-down",
-									"objectClass": "Teclado",
-									"sid": 772250813710478,
-									"parameters": {
-										"key": 87
-									}
-								}
-							],
-							"actions": [
-								{
-									"id": "set-animation",
-									"objectClass": "Personaje",
-									"sid": 701450438934445,
-									"parameters": {
-										"animation": "\"BackC\"",
-										"from": "beginning"
-									}
-								},
-								{
-									"id": "simulate-control",
-									"objectClass": "Personaje",
-									"sid": 856421235874989,
-									"behaviorType": "TileMovement",
-									"parameters": {
-										"control": "up"
-									}
-								}
-							],
-							"sid": 160367442408204
-						},
-						{
-							"eventType": "block",
-							"conditions": [
-								{
-									"id": "is-boolean-instance-variable-set",
-									"objectClass": "Personaje",
-									"sid": 787472274745515,
-									"parameters": {
-										"instance-variable": "Cuchillo"
-									}
-								},
-								{
-									"id": "key-is-down",
-									"objectClass": "Teclado",
-									"sid": 221168473716217,
-									"parameters": {
-										"key": 65
-									}
-								}
-							],
-							"actions": [
-								{
-									"id": "set-animation",
-									"objectClass": "Personaje",
-									"sid": 917801135167096,
-									"parameters": {
-										"animation": "\"LeftC\"",
-										"from": "beginning"
-									}
-								},
-								{
-									"id": "simulate-control",
-									"objectClass": "Personaje",
-									"sid": 322802632137786,
-									"behaviorType": "TileMovement",
-									"parameters": {
-										"control": "left"
-									}
-								}
-							],
-							"sid": 253332932814505
-						},
-						{
-							"eventType": "block",
-							"conditions": [
-								{
-									"id": "is-boolean-instance-variable-set",
-									"objectClass": "Personaje",
-									"sid": 283270178024854,
-									"parameters": {
-										"instance-variable": "Cuchillo"
-									}
-								},
-								{
-									"id": "key-is-down",
-									"objectClass": "Teclado",
-									"sid": 881970122144966,
-									"parameters": {
-										"key": 83
-									}
-								}
-							],
-							"actions": [
-								{
-									"id": "set-animation",
-									"objectClass": "Personaje",
-									"sid": 783164342566463,
-									"parameters": {
-										"animation": "\"FrontC\"",
-										"from": "beginning"
-									}
-								},
-								{
-									"id": "simulate-control",
-									"objectClass": "Personaje",
-									"sid": 865825401939122,
-									"behaviorType": "TileMovement",
-									"parameters": {
-										"control": "down"
-									}
-								}
-							],
-							"sid": 831943756729128
-						},
-						{
-							"eventType": "block",
-							"conditions": [
-								{
-									"id": "is-boolean-instance-variable-set",
-									"objectClass": "Personaje",
-									"sid": 558237221412698,
-									"parameters": {
-										"instance-variable": "Cuchillo"
-									}
-								},
-								{
-									"id": "key-is-down",
-									"objectClass": "Teclado",
-									"sid": 519602305460251,
-									"parameters": {
-										"key": 68
-									}
-								}
-							],
-							"actions": [
-								{
-									"id": "set-animation",
-									"objectClass": "Personaje",
-									"sid": 208725001504692,
-									"parameters": {
-										"animation": "\"RightC\"",
-										"from": "beginning"
-									}
-								},
-								{
-									"id": "simulate-control",
-									"objectClass": "Personaje",
-									"sid": 624640720963852,
-									"behaviorType": "TileMovement",
-									"parameters": {
-										"control": "right"
-									}
-								}
-							],
-							"sid": 771159987713211
-						}
-					],
-					"sid": 220761467086156
-				},
-				{
-					"eventType": "group",
-					"disabled": false,
 					"title": "Vacio",
 					"description": "",
 					"isActiveOnStart": true,
@@ -2600,7 +3695,7 @@
 								{
 									"id": "is-boolean-instance-variable-set",
 									"objectClass": "Personaje",
-									"sid": 570245881817696,
+									"sid": 170854195777155,
 									"parameters": {
 										"instance-variable": "Vacio"
 									}
@@ -2608,7 +3703,7 @@
 								{
 									"id": "key-is-down",
 									"objectClass": "Teclado",
-									"sid": 502183532395542,
+									"sid": 112533950817359,
 									"parameters": {
 										"key": 87
 									}
@@ -2618,7 +3713,7 @@
 								{
 									"id": "set-animation",
 									"objectClass": "Personaje",
-									"sid": 880157631099658,
+									"sid": 504897618770159,
 									"parameters": {
 										"animation": "\"Back\"",
 										"from": "beginning"
@@ -2627,14 +3722,14 @@
 								{
 									"id": "simulate-control",
 									"objectClass": "Personaje",
-									"sid": 612709569234757,
+									"sid": 345764970495703,
 									"behaviorType": "TileMovement",
 									"parameters": {
 										"control": "up"
 									}
 								}
 							],
-							"sid": 751248480466949
+							"sid": 307041957721603
 						},
 						{
 							"eventType": "block",
@@ -2642,7 +3737,7 @@
 								{
 									"id": "is-boolean-instance-variable-set",
 									"objectClass": "Personaje",
-									"sid": 536238478062718,
+									"sid": 229819061979995,
 									"parameters": {
 										"instance-variable": "Vacio"
 									}
@@ -2650,7 +3745,7 @@
 								{
 									"id": "key-is-down",
 									"objectClass": "Teclado",
-									"sid": 514423939351988,
+									"sid": 226125770430128,
 									"parameters": {
 										"key": 65
 									}
@@ -2660,7 +3755,7 @@
 								{
 									"id": "set-animation",
 									"objectClass": "Personaje",
-									"sid": 390339526538438,
+									"sid": 374725057258065,
 									"parameters": {
 										"animation": "\"Left\"",
 										"from": "beginning"
@@ -2669,14 +3764,14 @@
 								{
 									"id": "simulate-control",
 									"objectClass": "Personaje",
-									"sid": 456915581975542,
+									"sid": 341741009227890,
 									"behaviorType": "TileMovement",
 									"parameters": {
 										"control": "left"
 									}
 								}
 							],
-							"sid": 466989459045917
+							"sid": 295787174185354
 						},
 						{
 							"eventType": "block",
@@ -2684,7 +3779,7 @@
 								{
 									"id": "is-boolean-instance-variable-set",
 									"objectClass": "Personaje",
-									"sid": 660034276828576,
+									"sid": 562678062072360,
 									"parameters": {
 										"instance-variable": "Vacio"
 									}
@@ -2692,7 +3787,7 @@
 								{
 									"id": "key-is-down",
 									"objectClass": "Teclado",
-									"sid": 548926862003279,
+									"sid": 519324639755116,
 									"parameters": {
 										"key": 83
 									}
@@ -2702,7 +3797,7 @@
 								{
 									"id": "set-animation",
 									"objectClass": "Personaje",
-									"sid": 153582300066101,
+									"sid": 790468011206349,
 									"parameters": {
 										"animation": "\"Front\"",
 										"from": "beginning"
@@ -2711,14 +3806,14 @@
 								{
 									"id": "simulate-control",
 									"objectClass": "Personaje",
-									"sid": 303422372486290,
+									"sid": 550999974481061,
 									"behaviorType": "TileMovement",
 									"parameters": {
 										"control": "down"
 									}
 								}
 							],
-							"sid": 307172006957477
+							"sid": 659853644145049
 						},
 						{
 							"eventType": "block",
@@ -2726,7 +3821,7 @@
 								{
 									"id": "is-boolean-instance-variable-set",
 									"objectClass": "Personaje",
-									"sid": 905826907926002,
+									"sid": 490498408366097,
 									"parameters": {
 										"instance-variable": "Vacio"
 									}
@@ -2734,7 +3829,7 @@
 								{
 									"id": "key-is-down",
 									"objectClass": "Teclado",
-									"sid": 699347360771865,
+									"sid": 388182384042813,
 									"parameters": {
 										"key": 68
 									}
@@ -2744,7 +3839,7 @@
 								{
 									"id": "set-animation",
 									"objectClass": "Personaje",
-									"sid": 830085464041605,
+									"sid": 589895700728947,
 									"parameters": {
 										"animation": "\"Right\"",
 										"from": "beginning"
@@ -2753,14 +3848,14 @@
 								{
 									"id": "simulate-control",
 									"objectClass": "Personaje",
-									"sid": 120577461846384,
+									"sid": 804078698026450,
 									"behaviorType": "TileMovement",
 									"parameters": {
 										"control": "right"
 									}
 								}
 							],
-							"sid": 783485238584657
+							"sid": 310102718416785
 						},
 						{
 							"eventType": "block",
@@ -2768,7 +3863,7 @@
 								{
 									"id": "is-boolean-instance-variable-set",
 									"objectClass": "Personaje",
-									"sid": 600985411582886,
+									"sid": 218285499675261,
 									"parameters": {
 										"instance-variable": "Vacio"
 									}
@@ -2776,7 +3871,7 @@
 								{
 									"id": "is-overlapping-another-object",
 									"objectClass": "Personaje",
-									"sid": 269947394538461,
+									"sid": 332071332215089,
 									"parameters": {
 										"object": "CuchilloMesada"
 									}
@@ -2784,7 +3879,7 @@
 								{
 									"id": "key-is-down",
 									"objectClass": "Teclado",
-									"sid": 242224057897410,
+									"sid": 596644033044844,
 									"parameters": {
 										"key": 69
 									}
@@ -2794,7 +3889,7 @@
 								{
 									"id": "set-animation",
 									"objectClass": "Personaje",
-									"sid": 820645567749877,
+									"sid": 369624174195719,
 									"parameters": {
 										"animation": "\"FrontC\"",
 										"from": "beginning"
@@ -2803,7 +3898,7 @@
 								{
 									"id": "set-boolean-instvar",
 									"objectClass": "Personaje",
-									"sid": 449663493817493,
+									"sid": 430386349346965,
 									"parameters": {
 										"instance-variable": "Cuchillo",
 										"value": "true"
@@ -2812,7 +3907,7 @@
 								{
 									"id": "set-boolean-instvar",
 									"objectClass": "Personaje",
-									"sid": 290639009561907,
+									"sid": 355982663350017,
 									"parameters": {
 										"instance-variable": "Ocupado",
 										"value": "true"
@@ -2821,14 +3916,14 @@
 								{
 									"id": "set-boolean-instvar",
 									"objectClass": "Personaje",
-									"sid": 287021018619366,
+									"sid": 348826920903393,
 									"parameters": {
 										"instance-variable": "Vacio",
 										"value": "false"
 									}
 								}
 							],
-							"sid": 313105589820262
+							"sid": 717956186257050
 						},
 						{
 							"eventType": "block",
@@ -2836,7 +3931,7 @@
 								{
 									"id": "is-boolean-instance-variable-set",
 									"objectClass": "Personaje",
-									"sid": 284450015131773,
+									"sid": 613169160132236,
 									"parameters": {
 										"instance-variable": "Vacio"
 									}
@@ -2844,7 +3939,7 @@
 								{
 									"id": "is-overlapping-another-object",
 									"objectClass": "Personaje",
-									"sid": 830548647855577,
+									"sid": 970501204018004,
 									"parameters": {
 										"object": "BasePlatos"
 									}
@@ -2852,7 +3947,7 @@
 								{
 									"id": "key-is-down",
 									"objectClass": "Teclado",
-									"sid": 721956594593295,
+									"sid": 746608739342264,
 									"parameters": {
 										"key": 69
 									}
@@ -2862,7 +3957,7 @@
 								{
 									"id": "set-animation",
 									"objectClass": "Personaje",
-									"sid": 498291015182309,
+									"sid": 150588153058671,
 									"parameters": {
 										"animation": "\"FPlacVac\"",
 										"from": "beginning"
@@ -2871,7 +3966,7 @@
 								{
 									"id": "set-boolean-instvar",
 									"objectClass": "Personaje",
-									"sid": 407221269724959,
+									"sid": 877519101573338,
 									"parameters": {
 										"instance-variable": "Plato",
 										"value": "true"
@@ -2880,7 +3975,7 @@
 								{
 									"id": "set-boolean-instvar",
 									"objectClass": "Personaje",
-									"sid": 277556598744048,
+									"sid": 921144928240376,
 									"parameters": {
 										"instance-variable": "Ocupado",
 										"value": "true"
@@ -2889,14 +3984,14 @@
 								{
 									"id": "set-boolean-instvar",
 									"objectClass": "Personaje",
-									"sid": 684884222079493,
+									"sid": 569052345591442,
 									"parameters": {
 										"instance-variable": "Vacio",
 										"value": "false"
 									}
 								}
 							],
-							"sid": 808077442320197
+							"sid": 735777171635998
 						},
 						{
 							"eventType": "block",
@@ -2904,7 +3999,7 @@
 								{
 									"id": "is-boolean-instance-variable-set",
 									"objectClass": "Personaje",
-									"sid": 841780415737602,
+									"sid": 725071192090241,
 									"parameters": {
 										"instance-variable": "Vacio"
 									}
@@ -2912,7 +4007,7 @@
 								{
 									"id": "is-overlapping-another-object",
 									"objectClass": "Personaje",
-									"sid": 569456751411369,
+									"sid": 845232517237349,
 									"parameters": {
 										"object": "CajaCebolla"
 									}
@@ -2920,7 +4015,7 @@
 								{
 									"id": "key-is-down",
 									"objectClass": "Teclado",
-									"sid": 983514952703108,
+									"sid": 919110580881786,
 									"parameters": {
 										"key": 69
 									}
@@ -2930,7 +4025,7 @@
 								{
 									"id": "set-animation",
 									"objectClass": "Personaje",
-									"sid": 543794497252861,
+									"sid": 598360515713714,
 									"parameters": {
 										"animation": "\"FCeb\"",
 										"from": "beginning"
@@ -2939,7 +4034,7 @@
 								{
 									"id": "set-boolean-instvar",
 									"objectClass": "Personaje",
-									"sid": 457888586200371,
+									"sid": 614970552091647,
 									"parameters": {
 										"instance-variable": "Cebolla",
 										"value": "true"
@@ -2948,7 +4043,7 @@
 								{
 									"id": "set-boolean-instvar",
 									"objectClass": "Personaje",
-									"sid": 941983630428320,
+									"sid": 393049604572115,
 									"parameters": {
 										"instance-variable": "Ocupado",
 										"value": "true"
@@ -2957,14 +4052,14 @@
 								{
 									"id": "set-boolean-instvar",
 									"objectClass": "Personaje",
-									"sid": 688100341391339,
+									"sid": 612328028713913,
 									"parameters": {
 										"instance-variable": "Vacio",
 										"value": "false"
 									}
 								}
 							],
-							"sid": 509832076467159
+							"sid": 348924244419416
 						},
 						{
 							"eventType": "block",
@@ -2972,7 +4067,7 @@
 								{
 									"id": "is-boolean-instance-variable-set",
 									"objectClass": "Personaje",
-									"sid": 729223061482812,
+									"sid": 972582914993076,
 									"parameters": {
 										"instance-variable": "Vacio"
 									}
@@ -2980,7 +4075,7 @@
 								{
 									"id": "is-overlapping-another-object",
 									"objectClass": "Personaje",
-									"sid": 291621109769708,
+									"sid": 809744379499231,
 									"parameters": {
 										"object": "CajonLechuga"
 									}
@@ -2988,7 +4083,7 @@
 								{
 									"id": "key-is-down",
 									"objectClass": "Teclado",
-									"sid": 396250287680441,
+									"sid": 686362892078369,
 									"parameters": {
 										"key": 69
 									}
@@ -2998,7 +4093,7 @@
 								{
 									"id": "set-animation",
 									"objectClass": "Personaje",
-									"sid": 469013189194103,
+									"sid": 940824432720086,
 									"parameters": {
 										"animation": "\"FLec\"",
 										"from": "beginning"
@@ -3007,7 +4102,7 @@
 								{
 									"id": "set-boolean-instvar",
 									"objectClass": "Personaje",
-									"sid": 245197814826941,
+									"sid": 897260841342281,
 									"parameters": {
 										"instance-variable": "Lechuga",
 										"value": "true"
@@ -3016,7 +4111,7 @@
 								{
 									"id": "set-boolean-instvar",
 									"objectClass": "Personaje",
-									"sid": 346518146661862,
+									"sid": 746375256386102,
 									"parameters": {
 										"instance-variable": "Ocupado",
 										"value": "true"
@@ -3025,14 +4120,14 @@
 								{
 									"id": "set-boolean-instvar",
 									"objectClass": "Personaje",
-									"sid": 705598124355987,
+									"sid": 340396981401670,
 									"parameters": {
 										"instance-variable": "Vacio",
 										"value": "false"
 									}
 								}
 							],
-							"sid": 142972589634788
+							"sid": 178043359122089
 						},
 						{
 							"eventType": "block",
@@ -3040,7 +4135,7 @@
 								{
 									"id": "is-boolean-instance-variable-set",
 									"objectClass": "Personaje",
-									"sid": 851388226425493,
+									"sid": 845259517757840,
 									"parameters": {
 										"instance-variable": "Vacio"
 									}
@@ -3048,7 +4143,7 @@
 								{
 									"id": "is-overlapping-another-object",
 									"objectClass": "Personaje",
-									"sid": 877608489068271,
+									"sid": 350156213606523,
 									"parameters": {
 										"object": "CajonTomate"
 									}
@@ -3056,7 +4151,7 @@
 								{
 									"id": "key-is-down",
 									"objectClass": "Teclado",
-									"sid": 235117464032128,
+									"sid": 714793029661656,
 									"parameters": {
 										"key": 69
 									}
@@ -3066,7 +4161,7 @@
 								{
 									"id": "set-animation",
 									"objectClass": "Personaje",
-									"sid": 661051446950133,
+									"sid": 908889798433211,
 									"parameters": {
 										"animation": "\"FTom\"",
 										"from": "beginning"
@@ -3075,7 +4170,7 @@
 								{
 									"id": "set-boolean-instvar",
 									"objectClass": "Personaje",
-									"sid": 875850204769449,
+									"sid": 190395541911829,
 									"parameters": {
 										"instance-variable": "Tomate",
 										"value": "true"
@@ -3084,7 +4179,7 @@
 								{
 									"id": "set-boolean-instvar",
 									"objectClass": "Personaje",
-									"sid": 688982537501823,
+									"sid": 788270680028765,
 									"parameters": {
 										"instance-variable": "Ocupado",
 										"value": "true"
@@ -3093,14 +4188,14 @@
 								{
 									"id": "set-boolean-instvar",
 									"objectClass": "Personaje",
-									"sid": 854801339287185,
+									"sid": 822419846392575,
 									"parameters": {
 										"instance-variable": "Vacio",
 										"value": "false"
 									}
 								}
 							],
-							"sid": 955150218274982
+							"sid": 562308938215909
 						},
 						{
 							"eventType": "block",
@@ -3108,7 +4203,7 @@
 								{
 									"id": "is-boolean-instance-variable-set",
 									"objectClass": "Personaje",
-									"sid": 634461998388351,
+									"sid": 912050703344769,
 									"parameters": {
 										"instance-variable": "Vacio"
 									}
@@ -3116,7 +4211,7 @@
 								{
 									"id": "is-overlapping-another-object",
 									"objectClass": "Personaje",
-									"sid": 284692497770100,
+									"sid": 830314816540478,
 									"parameters": {
 										"object": "CajonPan"
 									}
@@ -3124,7 +4219,7 @@
 								{
 									"id": "key-is-down",
 									"objectClass": "Teclado",
-									"sid": 704518238254353,
+									"sid": 229921755219859,
 									"parameters": {
 										"key": 69
 									}
@@ -3134,7 +4229,7 @@
 								{
 									"id": "set-animation",
 									"objectClass": "Personaje",
-									"sid": 615254647535448,
+									"sid": 239929946076492,
 									"parameters": {
 										"animation": "\"FPan\"",
 										"from": "beginning"
@@ -3143,7 +4238,7 @@
 								{
 									"id": "set-boolean-instvar",
 									"objectClass": "Personaje",
-									"sid": 808632838704482,
+									"sid": 215510985386873,
 									"parameters": {
 										"instance-variable": "Pan",
 										"value": "true"
@@ -3152,7 +4247,7 @@
 								{
 									"id": "set-boolean-instvar",
 									"objectClass": "Personaje",
-									"sid": 262259763732537,
+									"sid": 616979871483964,
 									"parameters": {
 										"instance-variable": "Ocupado",
 										"value": "true"
@@ -3161,14 +4256,14 @@
 								{
 									"id": "set-boolean-instvar",
 									"objectClass": "Personaje",
-									"sid": 383429232037427,
+									"sid": 953104248658043,
 									"parameters": {
 										"instance-variable": "Vacio",
 										"value": "false"
 									}
 								}
 							],
-							"sid": 942993793170230
+							"sid": 203049544764710
 						},
 						{
 							"eventType": "block",
@@ -3176,7 +4271,7 @@
 								{
 									"id": "is-boolean-instance-variable-set",
 									"objectClass": "Personaje",
-									"sid": 864169869662969,
+									"sid": 845221981544491,
 									"parameters": {
 										"instance-variable": "Vacio"
 									}
@@ -3184,7 +4279,7 @@
 								{
 									"id": "is-overlapping-another-object",
 									"objectClass": "Personaje",
-									"sid": 730410313909460,
+									"sid": 539214099741417,
 									"parameters": {
 										"object": "Heladera"
 									}
@@ -3192,7 +4287,7 @@
 								{
 									"id": "key-is-down",
 									"objectClass": "Teclado",
-									"sid": 919647252902514,
+									"sid": 187998924199152,
 									"parameters": {
 										"key": 69
 									}
@@ -3202,7 +4297,7 @@
 								{
 									"id": "set-animation",
 									"objectClass": "Personaje",
-									"sid": 594524159095142,
+									"sid": 527839134120286,
 									"parameters": {
 										"animation": "\"FCarCru\"",
 										"from": "beginning"
@@ -3211,7 +4306,7 @@
 								{
 									"id": "set-boolean-instvar",
 									"objectClass": "Personaje",
-									"sid": 385762475036375,
+									"sid": 534449123518551,
 									"parameters": {
 										"instance-variable": "CarneCruda",
 										"value": "true"
@@ -3220,7 +4315,7 @@
 								{
 									"id": "set-boolean-instvar",
 									"objectClass": "Personaje",
-									"sid": 622057910966977,
+									"sid": 468152689787765,
 									"parameters": {
 										"instance-variable": "Ocupado",
 										"value": "true"
@@ -3229,20 +4324,61 @@
 								{
 									"id": "set-boolean-instvar",
 									"objectClass": "Personaje",
-									"sid": 565383202270943,
+									"sid": 684588026686965,
 									"parameters": {
 										"instance-variable": "Vacio",
 										"value": "false"
 									}
 								}
 							],
-							"sid": 210626020386563
+							"sid": 414461267326090
 						}
 					],
-					"sid": 307474167185395
+					"sid": 789899528946289
 				}
 			],
 			"sid": 884826170135572
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 857893915113461
+				}
+			],
+			"actions": [],
+			"sid": 374386697606537
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-any-key-pressed",
+					"objectClass": "Teclado",
+					"sid": 701583767431440
+				}
+			],
+			"actions": [
+				{
+					"id": "set-visible",
+					"objectClass": "UI",
+					"sid": 261859779191172,
+					"parameters": {
+						"visibility": "invisible"
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "Tutorial",
+					"sid": 195562417466077,
+					"parameters": {
+						"visibility": "invisible"
+					}
+				}
+			],
+			"sid": 210370087290794
 		}
 	],
 	"sid": 281322155169956

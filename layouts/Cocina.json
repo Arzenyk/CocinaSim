@@ -777,10 +777,10 @@
 						"expanded": true
 					},
 					"world": {
-						"x": 1130,
-						"y": -241,
-						"width": 90,
-						"height": 73,
+						"x": 1138,
+						"y": -231,
+						"width": 52,
+						"height": 48,
 						"originX": 0.5,
 						"originY": 0.5,
 						"color": [
@@ -812,10 +812,10 @@
 						"expanded": true
 					},
 					"world": {
-						"x": 1142,
+						"x": 1144,
 						"y": -134,
-						"width": 98,
-						"height": 64,
+						"width": 51,
+						"height": 39,
 						"originX": 0.5,
 						"originY": 0.5,
 						"color": [
@@ -847,10 +847,10 @@
 						"expanded": true
 					},
 					"world": {
-						"x": 1145,
-						"y": -336,
-						"width": 121,
-						"height": 57,
+						"x": 1138.333333333333,
+						"y": -339.75000000000006,
+						"width": 39.31680440771334,
+						"height": 20.30409356725141,
 						"originX": 0.5,
 						"originY": 0.5,
 						"color": [
@@ -1545,7 +1545,10 @@
 						"Lechuga": false,
 						"Plato": false,
 						"Ocupado": false,
-						"Servido": false
+						"Servido": false,
+						"CebCor": false,
+						"TomCor": false,
+						"LecCor": false
 					},
 					"behaviors": {
 						"TileMovement": {
@@ -1567,8 +1570,8 @@
 						"expanded": true
 					},
 					"world": {
-						"x": 353,
-						"y": 305,
+						"x": 1384,
+						"y": 630,
 						"width": 159,
 						"height": 251,
 						"originX": 0.5345911949685535,
@@ -1619,7 +1622,7 @@
 			"subLayers": [],
 			"instances": [
 				{
-					"type": "CorteProgresoCebolla",
+					"type": "CorteCebolla",
 					"properties": {
 						"value": 0,
 						"maximum": 10,
@@ -1684,6 +1687,169 @@
 							1,
 							1
 						]
+					}
+				},
+				{
+					"type": "Mesa",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Vacia",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 47,
+					"sid": 108478489467091,
+					"tags": "",
+					"instanceVariables": {},
+					"behaviors": {},
+					"instanceFolderItem": {
+						"sid": 108478489467091,
+						"expanded": true
+					},
+					"world": {
+						"x": 1763,
+						"y": 826,
+						"width": 250,
+						"height": 250,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "Barrera",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 48,
+					"sid": 228364029620100,
+					"tags": "",
+					"instanceVariables": {},
+					"behaviors": {
+						"Solid": {
+							"properties": {
+								"enabled": true,
+								"tags": ""
+							}
+						}
+					},
+					"instanceFolderItem": {
+						"sid": 228364029620100,
+						"expanded": true
+					},
+					"world": {
+						"x": 1760,
+						"y": 886.5,
+						"width": 246.99999999999977,
+						"height": 155,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "UI",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": false,
+						"live-preview": false
+					},
+					"uid": 49,
+					"sid": 848449524883480,
+					"tags": "",
+					"instanceVariables": {},
+					"behaviors": {},
+					"instanceFolderItem": {
+						"sid": 848449524883480,
+						"expanded": true
+					},
+					"world": {
+						"x": 992,
+						"y": 538,
+						"width": 1297,
+						"height": 779,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "Tutorial",
+					"properties": {
+						"text": "Tutorial\n\nWASD = moverse\nE    = interactuar\nQ    = soltar item\n\nPresiona cualquier botón para comenzar",
+						"enable-bbcode": true,
+						"font": "Arial",
+						"size": 50,
+						"line-height": 0,
+						"bold": true,
+						"italic": false,
+						"color": [
+							0,
+							0,
+							0,
+							1
+						],
+						"horizontal-alignment": "center",
+						"vertical-alignment": "center",
+						"wrapping": "word",
+						"text-direction": "ltr",
+						"icon-set": -1,
+						"initially-visible": true,
+						"origin": "top-left",
+						"read-aloud": false
+					},
+					"uid": 50,
+					"sid": 479586668272251,
+					"tags": "",
+					"instanceVariables": {},
+					"behaviors": {},
+					"instanceFolderItem": {
+						"sid": 479586668272251,
+						"expanded": true
+					},
+					"world": {
+						"x": 687,
+						"y": 225,
+						"width": 682,
+						"height": 597,
+						"originX": 0,
+						"originY": 0,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
 					}
 				}
 			],

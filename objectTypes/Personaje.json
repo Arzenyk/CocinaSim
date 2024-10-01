@@ -87,6 +87,27 @@
 			"desc": "Hamburguesa en mano",
 			"show": true,
 			"sid": 139038050803949
+		},
+		{
+			"name": "CebCor",
+			"type": "boolean",
+			"desc": "",
+			"show": true,
+			"sid": 106300827941925
+		},
+		{
+			"name": "TomCor",
+			"type": "boolean",
+			"desc": "",
+			"show": true,
+			"sid": 946548550357237
+		},
+		{
+			"name": "LecCor",
+			"type": "boolean",
+			"desc": "",
+			"show": true,
+			"sid": 593702581402340
 		}
 	],
 	"behaviorTypes": [
@@ -822,7 +843,7 @@
 							}
 						],
 						"sid": 217236504794332,
-						"name": "LLEc",
+						"name": "LLec",
 						"isLooping": false,
 						"isPingPong": false,
 						"repeatCount": 1,
@@ -859,7 +880,7 @@
 							}
 						],
 						"sid": 779067134725124,
-						"name": "RLc",
+						"name": "RLec",
 						"isLooping": false,
 						"isPingPong": false,
 						"repeatCount": 1,
@@ -1800,8 +1821,476 @@
 								"speed": 5
 							}
 						],
-						"subfolders": [],
+						"subfolders": [
+							{
+								"items": [],
+								"subfolders": [],
+								"name": "New folder"
+							}
+						],
 						"name": "Servido"
+					},
+					{
+						"items": [
+							{
+								"frames": [
+									{
+										"width": 159,
+										"height": 251,
+										"originX": 0.5345911949685535,
+										"originY": 0.49800796812749004,
+										"originalSource": "",
+										"exportFormat": "lossless",
+										"exportQuality": 0.8,
+										"fileType": "image/png",
+										"imageSpriteId": 9695841,
+										"collisionPoly": {
+											"points": [
+												0,
+												0.4243027888446217,
+												0.9842767295597481,
+												0.4243027888446218,
+												1,
+												0.9960159362549801,
+												0,
+												0.9960159362549801
+											]
+										},
+										"useCollisionPoly": true,
+										"duration": 1,
+										"tag": ""
+									}
+								],
+								"sid": 730170525271364,
+								"name": "FCebCor",
+								"isLooping": false,
+								"isPingPong": false,
+								"repeatCount": 1,
+								"repeatTo": 0,
+								"speed": 5
+							},
+							{
+								"frames": [
+									{
+										"width": 159,
+										"height": 251,
+										"originX": 0.46540880503144655,
+										"originY": 0.49800796812749004,
+										"originalSource": "",
+										"exportFormat": "lossless",
+										"exportQuality": 0.8,
+										"fileType": "image/png",
+										"imageSpriteId": 836182,
+										"collisionPoly": {
+											"points": [
+												1,
+												0.9960159362549801,
+												0,
+												0.9960159362549801,
+												0,
+												0,
+												1,
+												0
+											]
+										},
+										"useCollisionPoly": true,
+										"duration": 1,
+										"tag": ""
+									}
+								],
+								"sid": 974121487638522,
+								"name": "BCebCor",
+								"isLooping": false,
+								"isPingPong": false,
+								"repeatCount": 1,
+								"repeatTo": 0,
+								"speed": 5
+							},
+							{
+								"frames": [
+									{
+										"width": 126,
+										"height": 251,
+										"originX": 0.5793650793650794,
+										"originY": 0.49800796812749004,
+										"originalSource": "",
+										"exportFormat": "lossless",
+										"exportQuality": 0.8,
+										"fileType": "image/png",
+										"imageSpriteId": 7990266,
+										"collisionPoly": {
+											"points": [
+												0,
+												0,
+												1,
+												0,
+												1,
+												0.9960159362549801,
+												0,
+												0.9960159362549801
+											]
+										},
+										"useCollisionPoly": true,
+										"duration": 1,
+										"tag": ""
+									}
+								],
+								"sid": 754414662308317,
+								"name": "LCebCor",
+								"isLooping": false,
+								"isPingPong": false,
+								"repeatCount": 1,
+								"repeatTo": 0,
+								"speed": 5
+							},
+							{
+								"frames": [
+									{
+										"width": 126,
+										"height": 251,
+										"originX": 0.42063492063492064,
+										"originY": 0.49800796812749004,
+										"originalSource": "",
+										"exportFormat": "lossless",
+										"exportQuality": 0.8,
+										"fileType": "image/png",
+										"imageSpriteId": 823269,
+										"collisionPoly": {
+											"points": [
+												0,
+												0,
+												1,
+												0,
+												1,
+												0.9960159362549801,
+												0,
+												0.9960159362549801
+											]
+										},
+										"useCollisionPoly": true,
+										"duration": 1,
+										"tag": ""
+									}
+								],
+								"sid": 590054321546720,
+								"name": "RCebCor",
+								"isLooping": false,
+								"isPingPong": false,
+								"repeatCount": 1,
+								"repeatTo": 0,
+								"speed": 5
+							}
+						],
+						"subfolders": [],
+						"name": "CebCort"
+					},
+					{
+						"items": [
+							{
+								"frames": [
+									{
+										"width": 159,
+										"height": 251,
+										"originX": 0.5345911949685535,
+										"originY": 0.49800796812749004,
+										"originalSource": "",
+										"exportFormat": "lossless",
+										"exportQuality": 0.8,
+										"fileType": "image/png",
+										"imageSpriteId": 7968395,
+										"collisionPoly": {
+											"points": [
+												0,
+												0.4243027888446217,
+												0.9842767295597481,
+												0.4243027888446218,
+												1,
+												0.9960159362549801,
+												0,
+												0.9960159362549801
+											]
+										},
+										"useCollisionPoly": true,
+										"duration": 1,
+										"tag": ""
+									}
+								],
+								"sid": 677731674576499,
+								"name": "FPlaVac2",
+								"isLooping": false,
+								"isPingPong": false,
+								"repeatCount": 1,
+								"repeatTo": 0,
+								"speed": 5
+							},
+							{
+								"frames": [
+									{
+										"width": 159,
+										"height": 251,
+										"originX": 0.46540880503144655,
+										"originY": 0.49800796812749004,
+										"originalSource": "",
+										"exportFormat": "lossless",
+										"exportQuality": 0.8,
+										"fileType": "image/png",
+										"imageSpriteId": 7953038,
+										"collisionPoly": {
+											"points": [
+												1,
+												0.9960159362549801,
+												0,
+												0.9960159362549801,
+												0,
+												0,
+												1,
+												0
+											]
+										},
+										"useCollisionPoly": true,
+										"duration": 1,
+										"tag": ""
+									}
+								],
+								"sid": 932011737239904,
+								"name": "BPlaVac2",
+								"isLooping": false,
+								"isPingPong": false,
+								"repeatCount": 1,
+								"repeatTo": 0,
+								"speed": 5
+							},
+							{
+								"frames": [
+									{
+										"width": 126,
+										"height": 251,
+										"originX": 0.5793650793650794,
+										"originY": 0.49800796812749004,
+										"originalSource": "",
+										"exportFormat": "lossless",
+										"exportQuality": 0.8,
+										"fileType": "image/png",
+										"imageSpriteId": 2137180,
+										"collisionPoly": {
+											"points": [
+												0,
+												0,
+												1,
+												0,
+												1,
+												0.9960159362549801,
+												0,
+												0.9960159362549801
+											]
+										},
+										"useCollisionPoly": true,
+										"duration": 1,
+										"tag": ""
+									}
+								],
+								"sid": 783620492260486,
+								"name": "LPlaVac2",
+								"isLooping": false,
+								"isPingPong": false,
+								"repeatCount": 1,
+								"repeatTo": 0,
+								"speed": 5
+							},
+							{
+								"frames": [
+									{
+										"width": 126,
+										"height": 251,
+										"originX": 0.42063492063492064,
+										"originY": 0.49800796812749004,
+										"originalSource": "",
+										"exportFormat": "lossless",
+										"exportQuality": 0.8,
+										"fileType": "image/png",
+										"imageSpriteId": 3154904,
+										"collisionPoly": {
+											"points": [
+												0,
+												0,
+												1,
+												0,
+												1,
+												0.9960159362549801,
+												0,
+												0.9960159362549801
+											]
+										},
+										"useCollisionPoly": true,
+										"duration": 1,
+										"tag": ""
+									}
+								],
+								"sid": 944542445221894,
+								"name": "RPlaVac2",
+								"isLooping": false,
+								"isPingPong": false,
+								"repeatCount": 1,
+								"repeatTo": 0,
+								"speed": 5
+							}
+						],
+						"subfolders": [],
+						"name": "TomCort"
+					},
+					{
+						"items": [
+							{
+								"frames": [
+									{
+										"width": 159,
+										"height": 251,
+										"originX": 0.5345911949685535,
+										"originY": 0.49800796812749004,
+										"originalSource": "",
+										"exportFormat": "lossless",
+										"exportQuality": 0.8,
+										"fileType": "image/png",
+										"imageSpriteId": 5647751,
+										"collisionPoly": {
+											"points": [
+												0,
+												0.4243027888446217,
+												0.9842767295597481,
+												0.4243027888446218,
+												1,
+												0.9960159362549801,
+												0,
+												0.9960159362549801
+											]
+										},
+										"useCollisionPoly": true,
+										"duration": 1,
+										"tag": ""
+									}
+								],
+								"sid": 256614096218590,
+								"name": "FLecCor",
+								"isLooping": false,
+								"isPingPong": false,
+								"repeatCount": 1,
+								"repeatTo": 0,
+								"speed": 5
+							},
+							{
+								"frames": [
+									{
+										"width": 159,
+										"height": 251,
+										"originX": 0.46540880503144655,
+										"originY": 0.49800796812749004,
+										"originalSource": "",
+										"exportFormat": "lossless",
+										"exportQuality": 0.8,
+										"fileType": "image/png",
+										"imageSpriteId": 2132157,
+										"collisionPoly": {
+											"points": [
+												1,
+												0.9960159362549801,
+												0,
+												0.9960159362549801,
+												0,
+												0,
+												1,
+												0
+											]
+										},
+										"useCollisionPoly": true,
+										"duration": 1,
+										"tag": ""
+									}
+								],
+								"sid": 157986214657776,
+								"name": "BLecCor",
+								"isLooping": false,
+								"isPingPong": false,
+								"repeatCount": 1,
+								"repeatTo": 0,
+								"speed": 5
+							},
+							{
+								"frames": [
+									{
+										"width": 126,
+										"height": 251,
+										"originX": 0.5793650793650794,
+										"originY": 0.49800796812749004,
+										"originalSource": "",
+										"exportFormat": "lossless",
+										"exportQuality": 0.8,
+										"fileType": "image/png",
+										"imageSpriteId": 8732793,
+										"collisionPoly": {
+											"points": [
+												0,
+												0,
+												1,
+												0,
+												1,
+												0.9960159362549801,
+												0,
+												0.9960159362549801
+											]
+										},
+										"useCollisionPoly": true,
+										"duration": 1,
+										"tag": ""
+									}
+								],
+								"sid": 378486669686476,
+								"name": "LLecCor",
+								"isLooping": false,
+								"isPingPong": false,
+								"repeatCount": 1,
+								"repeatTo": 0,
+								"speed": 5
+							},
+							{
+								"frames": [
+									{
+										"width": 126,
+										"height": 251,
+										"originX": 0.42063492063492064,
+										"originY": 0.49800796812749004,
+										"originalSource": "",
+										"exportFormat": "lossless",
+										"exportQuality": 0.8,
+										"fileType": "image/png",
+										"imageSpriteId": 4737857,
+										"collisionPoly": {
+											"points": [
+												0,
+												0,
+												1,
+												0,
+												1,
+												0.9960159362549801,
+												0,
+												0.9960159362549801
+											]
+										},
+										"useCollisionPoly": true,
+										"duration": 1,
+										"tag": ""
+									}
+								],
+								"sid": 446891224429149,
+								"name": "RLecCor",
+								"isLooping": false,
+								"isPingPong": false,
+								"repeatCount": 1,
+								"repeatTo": 0,
+								"speed": 5
+							}
+						],
+						"subfolders": [],
+						"name": "LecCort"
 					}
 				],
 				"name": "Plato"
