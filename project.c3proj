@@ -46,16 +46,78 @@
 	"objectTypes": {
 		"items": [
 			"PisoCocina",
-			"Mesada",
-			"Bacha",
-			"BasePlatos",
-			"Platos",
-			"HornoApagado",
-			"HornoPrendido",
 			"Personaje",
-			"Teclado"
+			"Teclado",
+			"Barrera"
 		],
-		"subfolders": []
+		"subfolders": [
+			{
+				"items": [
+					"Bacha",
+					"BasePlatos",
+					"CuchilloMesada",
+					"Tabla",
+					"Mesada"
+				],
+				"subfolders": [],
+				"name": "Mesada"
+			},
+			{
+				"items": [
+					"CajaCebolla",
+					"CajonLechuga",
+					"CajonPan",
+					"CajonTomate",
+					"CajonVacio"
+				],
+				"subfolders": [],
+				"name": "Cajones"
+			},
+			{
+				"items": [
+					"Carne",
+					"CarneCocida",
+					"CarneQuemada",
+					"Cebolla",
+					"Hamburguesa",
+					"Lechuga",
+					"Pan",
+					"Plato",
+					"Tomate"
+				],
+				"subfolders": [],
+				"name": "Ingredientes"
+			},
+			{
+				"items": [
+					"CarneCocida2",
+					"CarneCruda2",
+					"CarneQuemada2",
+					"Cebolla2",
+					"Cebolla3",
+					"Hamburguesa2",
+					"Lechuga2",
+					"Lechuga3",
+					"Pan2",
+					"Pan3",
+					"Plato2",
+					"Platos",
+					"Tomate2",
+					"Tomate3"
+				],
+				"subfolders": [],
+				"name": "Items"
+			},
+			{
+				"items": [
+					"Heladera",
+					"HornoApagado",
+					"HornoPrendido"
+				],
+				"subfolders": [],
+				"name": "Electrodomesticos"
+			}
+		]
 	},
 	"autosaveData": null,
 	"containers": [],

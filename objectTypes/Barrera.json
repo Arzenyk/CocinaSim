@@ -1,14 +1,14 @@
 {
-	"name": "Mesada",
+	"name": "Barrera",
 	"plugin-id": "Sprite",
-	"sid": 375303264404076,
+	"sid": 253756127362408,
 	"isGlobal": false,
 	"instanceVariables": [],
 	"behaviorTypes": [
 		{
 			"behaviorId": "solid",
 			"name": "Solid",
-			"sid": 506071104105781
+			"sid": 348072266782806
 		}
 	],
 	"effectTypes": [],
@@ -25,25 +25,13 @@
 						"exportFormat": "lossless",
 						"exportQuality": 0.8,
 						"fileType": "image/png",
-						"imageSpriteId": 1934739,
-						"collisionPoly": {
-							"points": [
-								0,
-								0,
-								1,
-								0,
-								1,
-								0.07799999999999961,
-								0,
-								0.07799999999999976
-							]
-						},
+						"imageSpriteId": 5523848,
 						"useCollisionPoly": true,
 						"duration": 1,
 						"tag": ""
 					}
 				],
-				"sid": 745700699881251,
+				"sid": 162794272060928,
 				"name": "Animation 1",
 				"isLooping": false,
 				"isPingPong": false,

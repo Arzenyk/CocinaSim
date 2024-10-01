@@ -1,16 +1,10 @@
 {
-	"name": "HornoApagado",
+	"name": "CajonTomate",
 	"plugin-id": "Sprite",
-	"sid": 107216459983290,
+	"sid": 180135468220140,
 	"isGlobal": false,
 	"instanceVariables": [],
-	"behaviorTypes": [
-		{
-			"behaviorId": "solid",
-			"name": "Solid",
-			"sid": 501310439425971
-		}
-	],
+	"behaviorTypes": [],
 	"effectTypes": [],
 	"animations": {
 		"items": [
@@ -25,25 +19,13 @@
 						"exportFormat": "lossless",
 						"exportQuality": 0.8,
 						"fileType": "image/png",
-						"imageSpriteId": 2237688,
-						"collisionPoly": {
-							"points": [
-								0,
-								0,
-								1,
-								0,
-								1,
-								0.059999999999999165,
-								0,
-								0.0639999999999995
-							]
-						},
+						"imageSpriteId": 2021152,
 						"useCollisionPoly": true,
 						"duration": 1,
 						"tag": ""
 					}
 				],
-				"sid": 519168850496330,
+				"sid": 557773940592731,
 				"name": "Animation 1",
 				"isLooping": false,
 				"isPingPong": false,

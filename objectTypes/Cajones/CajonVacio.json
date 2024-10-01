@@ -1,16 +1,10 @@
 {
-	"name": "Bacha",
+	"name": "CajonVacio",
 	"plugin-id": "Sprite",
-	"sid": 574618003463199,
+	"sid": 170864630031526,
 	"isGlobal": false,
 	"instanceVariables": [],
-	"behaviorTypes": [
-		{
-			"behaviorId": "solid",
-			"name": "Solid",
-			"sid": 857672948460377
-		}
-	],
+	"behaviorTypes": [],
 	"effectTypes": [],
 	"animations": {
 		"items": [
@@ -25,25 +19,13 @@
 						"exportFormat": "lossless",
 						"exportQuality": 0.8,
 						"fileType": "image/png",
-						"imageSpriteId": 7343732,
-						"collisionPoly": {
-							"points": [
-								0,
-								0,
-								1,
-								0,
-								1,
-								0.08799999999999919,
-								0,
-								0.08999999999999944
-							]
-						},
+						"imageSpriteId": 4644618,
 						"useCollisionPoly": true,
 						"duration": 1,
 						"tag": ""
 					}
 				],
-				"sid": 174111793975757,
+				"sid": 886207162599691,
 				"name": "Animation 1",
 				"isLooping": false,
 				"isPingPong": false,
