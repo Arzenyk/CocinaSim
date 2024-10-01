@@ -1,9 +1,24 @@
 {
-	"name": "HornoApagado",
+	"name": "Horno",
 	"plugin-id": "Sprite",
 	"sid": 107216459983290,
 	"isGlobal": false,
-	"instanceVariables": [],
+	"instanceVariables": [
+		{
+			"name": "Prendido",
+			"type": "boolean",
+			"desc": "",
+			"show": true,
+			"sid": 675830361584948
+		},
+		{
+			"name": "Apagado",
+			"type": "boolean",
+			"desc": "",
+			"show": true,
+			"sid": 982507042542079
+		}
+	],
 	"behaviorTypes": [],
 	"effectTypes": [],
 	"animations": {
@@ -27,9 +42,9 @@
 								1,
 								0,
 								1,
-								0.059999999999999165,
-								0,
-								0.0639999999999995
+								1,
+								0.002,
+								0.994
 							]
 						},
 						"useCollisionPoly": true,

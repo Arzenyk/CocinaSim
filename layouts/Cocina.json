@@ -122,7 +122,7 @@
 					}
 				},
 				{
-					"type": "HornoApagado",
+					"type": "Horno",
 					"properties": {
 						"initially-visible": true,
 						"initial-animation": "Apagado",
@@ -133,7 +133,10 @@
 					"uid": 7,
 					"sid": 750793107189555,
 					"tags": "",
-					"instanceVariables": {},
+					"instanceVariables": {
+						"Prendido": false,
+						"Apagado": false
+					},
 					"behaviors": {},
 					"instanceFolderItem": {
 						"sid": 750793107189555,
@@ -1554,8 +1557,8 @@
 								"grid-height": 50,
 								"grid-offset-x": 0,
 								"grid-offset-y": 0,
-								"speed-x": 200,
-								"speed-y": 200,
+								"speed-x": 300,
+								"speed-y": 300,
 								"enabled": true,
 								"default-controls": false,
 								"isometric": false
@@ -1567,8 +1570,8 @@
 						"expanded": true
 					},
 					"world": {
-						"x": 1494,
-						"y": 721,
+						"x": 353,
+						"y": 305,
 						"width": 159,
 						"height": 251,
 						"originX": 0.5345911949685535,
@@ -1585,6 +1588,75 @@
 				}
 			],
 			"sid": 842039038751668,
+			"effectTypes": [],
+			"isInitiallyVisible": true,
+			"isInitiallyInteractive": true,
+			"isHTMLElementsLayer": false,
+			"color": [
+				1,
+				1,
+				1,
+				1
+			],
+			"backgroundColor": [
+				0.3686274509803922,
+				0.3686274509803922,
+				0.3686274509803922,
+				1
+			],
+			"isTransparent": true,
+			"parallaxX": 1,
+			"parallaxY": 1,
+			"scaleRate": 1,
+			"forceOwnTexture": false,
+			"renderingMode": "3d",
+			"drawOrder": "z-order",
+			"useRenderCells": false,
+			"blendMode": "normal",
+			"zElevation": 0,
+			"global": false
+		},
+		{
+			"name": "HUD",
+			"overriden": 0,
+			"subLayers": [],
+			"instances": [
+				{
+					"type": "CorteProgreso",
+					"properties": {
+						"value": 0,
+						"maximum": 10,
+						"tooltip": "",
+						"initially-visible": true,
+						"id": "",
+						"class": ""
+					},
+					"uid": 45,
+					"sid": 204764973332058,
+					"tags": "",
+					"instanceVariables": {},
+					"behaviors": {},
+					"instanceFolderItem": {
+						"sid": 204764973332058,
+						"expanded": true
+					},
+					"world": {
+						"x": 750,
+						"y": 105,
+						"width": 200,
+						"height": 25,
+						"originX": 0,
+						"originY": 0,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						]
+					}
+				}
+			],
+			"sid": 831215477603155,
 			"effectTypes": [],
 			"isInitiallyVisible": true,
 			"isInitiallyInteractive": true,
