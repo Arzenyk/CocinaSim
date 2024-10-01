@@ -56,7 +56,8 @@
 			"Personaje",
 			"Teclado",
 			"Barrera",
-			"CorteProgreso"
+			"CorteProgresoCebolla",
+			"ProgresoHorno"
 		],
 		"subfolders": [
 			{

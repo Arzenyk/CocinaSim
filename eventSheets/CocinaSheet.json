@@ -2,6 +2,36 @@
 	"name": "CocinaSheet",
 	"events": [
 		{
+			"eventType": "variable",
+			"name": "Cocido",
+			"type": "boolean",
+			"initialValue": "false",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 291294084573865
+		},
+		{
+			"eventType": "variable",
+			"name": "Crudo",
+			"type": "boolean",
+			"initialValue": "true",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 559167528115849
+		},
+		{
+			"eventType": "variable",
+			"name": "Quemado",
+			"type": "boolean",
+			"initialValue": "false",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 858725228542751
+		},
+		{
 			"eventType": "group",
 			"disabled": false,
 			"title": "ControlJugador",
@@ -911,7 +941,7 @@
 								{
 									"id": "on-key-pressed",
 									"objectClass": "Teclado",
-									"sid": 337985609569550,
+									"sid": 874917968256679,
 									"parameters": {
 										"key": 69
 									}
@@ -926,11 +956,19 @@
 								},
 								{
 									"id": "is-boolean-instance-variable-set",
-									"objectClass": "Horno",
-									"sid": 125807536817247,
-									"disabled": true,
+									"objectClass": "Personaje",
+									"sid": 445882536126053,
 									"parameters": {
-										"instance-variable": "Apagado"
+										"instance-variable": "CarneCruda"
+									}
+								},
+								{
+									"id": "compare-progress",
+									"objectClass": "ProgresoHorno",
+									"sid": 309828975375998,
+									"parameters": {
+										"comparison": 3,
+										"value": "1"
 									}
 								}
 							],
@@ -938,29 +976,44 @@
 								{
 									"id": "set-animation",
 									"objectClass": "Horno",
-									"sid": 486369657565859,
+									"sid": 649180073648625,
 									"parameters": {
-										"animation": "\"Prendido\"",
+										"animation": "\"Prendido1\"",
 										"from": "beginning"
 									}
 								},
 								{
-									"id": "set-boolean-instvar",
-									"objectClass": "Horno",
-									"sid": 805589566246697,
-									"disabled": true,
+									"id": "set-progress",
+									"objectClass": "ProgresoHorno",
+									"sid": 600229151727533,
 									"parameters": {
-										"instance-variable": "Prendido",
+										"value": "ProgresoHorno.Progress + 1"
+									}
+								},
+								{
+									"id": "set-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 220453989437903,
+									"parameters": {
+										"variable": "Crudo",
 										"value": "true"
 									}
 								},
 								{
-									"id": "set-boolean-instvar",
-									"objectClass": "Horno",
-									"sid": 305227284975965,
-									"disabled": true,
+									"id": "set-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 218242756712819,
 									"parameters": {
-										"instance-variable": "Apagado",
+										"variable": "Cocido",
+										"value": "false"
+									}
+								},
+								{
+									"id": "set-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 241792221836067,
+									"parameters": {
+										"variable": "Quemado",
 										"value": "false"
 									}
 								}
@@ -988,11 +1041,19 @@
 								},
 								{
 									"id": "is-boolean-instance-variable-set",
-									"objectClass": "Horno",
-									"sid": 861239386433322,
-									"disabled": true,
+									"objectClass": "Personaje",
+									"sid": 593291514611777,
 									"parameters": {
-										"instance-variable": "Prendido"
+										"instance-variable": "Vacio"
+									}
+								},
+								{
+									"id": "compare-progress",
+									"objectClass": "ProgresoHorno",
+									"sid": 196689205332692,
+									"parameters": {
+										"comparison": 5,
+										"value": "5"
 									}
 								}
 							],
@@ -1007,27 +1068,406 @@
 									}
 								},
 								{
-									"id": "set-boolean-instvar",
-									"objectClass": "Horno",
-									"sid": 672316528735411,
-									"disabled": true,
+									"id": "set-animation",
+									"objectClass": "Personaje",
+									"sid": 153035101839967,
 									"parameters": {
-										"instance-variable": "Apagado",
+										"animation": "\"FCarCoc\"",
+										"from": "beginning"
+									}
+								},
+								{
+									"id": "set-boolean-instvar",
+									"objectClass": "Personaje",
+									"sid": 449429097204434,
+									"parameters": {
+										"instance-variable": "CarneCocida",
 										"value": "true"
 									}
 								},
 								{
 									"id": "set-boolean-instvar",
-									"objectClass": "Horno",
-									"sid": 919668547020867,
-									"disabled": true,
+									"objectClass": "Personaje",
+									"sid": 356739734225677,
 									"parameters": {
-										"instance-variable": "Prendido",
+										"instance-variable": "Vacio",
 										"value": "false"
+									}
+								},
+								{
+									"id": "set-boolean-instvar",
+									"objectClass": "Personaje",
+									"sid": 961510972069619,
+									"parameters": {
+										"instance-variable": "Ocupado",
+										"value": "true"
+									}
+								},
+								{
+									"id": "set-progress",
+									"objectClass": "ProgresoHorno",
+									"sid": 171033861895485,
+									"parameters": {
+										"value": "0"
 									}
 								}
 							],
 							"sid": 959105171100944
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-key-pressed",
+									"objectClass": "Teclado",
+									"sid": 538765373531770,
+									"parameters": {
+										"key": 69
+									}
+								},
+								{
+									"id": "is-overlapping-another-object",
+									"objectClass": "Personaje",
+									"sid": 613958321333264,
+									"parameters": {
+										"object": "Horno"
+									}
+								},
+								{
+									"id": "is-boolean-instance-variable-set",
+									"objectClass": "Personaje",
+									"sid": 558727190649923,
+									"parameters": {
+										"instance-variable": "Vacio"
+									}
+								},
+								{
+									"id": "compare-progress",
+									"objectClass": "ProgresoHorno",
+									"sid": 971883644689489,
+									"parameters": {
+										"comparison": 5,
+										"value": "10"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-animation",
+									"objectClass": "Horno",
+									"sid": 994723002094854,
+									"parameters": {
+										"animation": "\"Apagado\"",
+										"from": "beginning"
+									}
+								},
+								{
+									"id": "set-animation",
+									"objectClass": "Personaje",
+									"sid": 286756836752930,
+									"parameters": {
+										"animation": "\"FCarQue\"",
+										"from": "beginning"
+									}
+								},
+								{
+									"id": "set-boolean-instvar",
+									"objectClass": "Personaje",
+									"sid": 629002757316770,
+									"parameters": {
+										"instance-variable": "CarneQuemada",
+										"value": "true"
+									}
+								},
+								{
+									"id": "set-boolean-instvar",
+									"objectClass": "Personaje",
+									"sid": 581274529917172,
+									"parameters": {
+										"instance-variable": "Vacio",
+										"value": "false"
+									}
+								},
+								{
+									"id": "set-boolean-instvar",
+									"objectClass": "Personaje",
+									"sid": 830590486638317,
+									"parameters": {
+										"instance-variable": "Ocupado",
+										"value": "true"
+									}
+								},
+								{
+									"id": "set-progress",
+									"objectClass": "ProgresoHorno",
+									"sid": 816263600771820,
+									"parameters": {
+										"value": "0"
+									}
+								}
+							],
+							"sid": 928382587858486
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-progress",
+									"objectClass": "ProgresoHorno",
+									"sid": 163997964605350,
+									"parameters": {
+										"comparison": 0,
+										"value": "5"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-animation",
+									"objectClass": "Horno",
+									"sid": 721893783684298,
+									"parameters": {
+										"animation": "\"Prendido2\"",
+										"from": "beginning"
+									}
+								},
+								{
+									"id": "signal",
+									"objectClass": "System",
+									"sid": 674125436933863,
+									"parameters": {
+										"tag": "\"Cocido\""
+									}
+								}
+							],
+							"sid": 114136722491374
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-progress",
+									"objectClass": "ProgresoHorno",
+									"sid": 137159992473707,
+									"parameters": {
+										"comparison": 5,
+										"value": "10"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-animation",
+									"objectClass": "Horno",
+									"sid": 608932666385621,
+									"parameters": {
+										"animation": "\"Prendido3\"",
+										"from": "beginning"
+									}
+								},
+								{
+									"id": "signal",
+									"objectClass": "System",
+									"sid": 449684676826238,
+									"parameters": {
+										"tag": "\"Quemado\""
+									}
+								}
+							],
+							"sid": 216275487911627
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-overlapping-another-object",
+									"objectClass": "Personaje",
+									"sid": 434200088657332,
+									"parameters": {
+										"object": "Horno"
+									},
+									"isInverted": true
+								},
+								{
+									"id": "compare-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 338787771403487,
+									"parameters": {
+										"variable": "Crudo"
+									}
+								},
+								{
+									"id": "compare-progress",
+									"objectClass": "ProgresoHorno",
+									"sid": 694074423338449,
+									"parameters": {
+										"comparison": 5,
+										"value": "1"
+									}
+								},
+								{
+									"id": "every-x-seconds",
+									"objectClass": "System",
+									"sid": 885755178313114,
+									"parameters": {
+										"interval-seconds": "1.0"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-progress",
+									"objectClass": "ProgresoHorno",
+									"sid": 296157219869087,
+									"parameters": {
+										"value": "ProgresoHorno.Progress + 1"
+									}
+								},
+								{
+									"id": "wait",
+									"objectClass": "System",
+									"sid": 269779956133574,
+									"parameters": {
+										"seconds": "5"
+									}
+								}
+							],
+							"sid": 274687371150036
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 976744292169082,
+									"parameters": {
+										"variable": "Cocido"
+									}
+								},
+								{
+									"id": "compare-progress",
+									"objectClass": "ProgresoHorno",
+									"sid": 788365465674176,
+									"parameters": {
+										"comparison": 5,
+										"value": "5"
+									}
+								},
+								{
+									"id": "every-x-seconds",
+									"objectClass": "System",
+									"sid": 387741828372625,
+									"parameters": {
+										"interval-seconds": "1.0"
+									}
+								},
+								{
+									"id": "is-overlapping-another-object",
+									"objectClass": "Personaje",
+									"sid": 110381274827647,
+									"parameters": {
+										"object": "Horno"
+									},
+									"isInverted": true
+								}
+							],
+							"actions": [
+								{
+									"id": "set-progress",
+									"objectClass": "ProgresoHorno",
+									"sid": 990977223963645,
+									"parameters": {
+										"value": "ProgresoHorno.Progress + 1"
+									}
+								},
+								{
+									"id": "wait",
+									"objectClass": "System",
+									"sid": 509306902906886,
+									"parameters": {
+										"seconds": "5"
+									}
+								}
+							],
+							"sid": 218815738842407
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-signal",
+									"objectClass": "System",
+									"sid": 347034083237339,
+									"parameters": {
+										"tag": "\"Cocido\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 356628100216746,
+									"parameters": {
+										"variable": "Crudo",
+										"value": "false"
+									}
+								},
+								{
+									"id": "set-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 498538879794671,
+									"parameters": {
+										"variable": "Cocido",
+										"value": "true"
+									}
+								}
+							],
+							"sid": 206440911759406
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-signal",
+									"objectClass": "System",
+									"sid": 598786654993511,
+									"parameters": {
+										"tag": "\"Quemado\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 835647623465966,
+									"parameters": {
+										"variable": "Crudo",
+										"value": "false"
+									}
+								},
+								{
+									"id": "set-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 865766165828045,
+									"parameters": {
+										"variable": "Cocido",
+										"value": "false"
+									}
+								},
+								{
+									"id": "set-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 218936338552230,
+									"parameters": {
+										"variable": "Quemado",
+										"value": "true"
+									}
+								}
+							],
+							"sid": 435468040195720
 						}
 					],
 					"sid": 374090898614383
@@ -1745,10 +2185,10 @@
 								},
 								{
 									"id": "set-progress",
-									"objectClass": "CorteProgreso",
+									"objectClass": "CorteProgresoCebolla",
 									"sid": 242433596285537,
 									"parameters": {
-										"value": "CorteProgreso.Progress + 1"
+										"value": "CorteProgresoCebolla.Progress + 1"
 									}
 								}
 							],
@@ -1759,7 +2199,7 @@
 							"conditions": [
 								{
 									"id": "compare-progress",
-									"objectClass": "CorteProgreso",
+									"objectClass": "CorteProgresoCebolla",
 									"sid": 533611662394729,
 									"parameters": {
 										"comparison": 5,
@@ -1779,7 +2219,7 @@
 								},
 								{
 									"id": "set-progress",
-									"objectClass": "CorteProgreso",
+									"objectClass": "CorteProgresoCebolla",
 									"sid": 174967858866941,
 									"parameters": {
 										"value": "0"

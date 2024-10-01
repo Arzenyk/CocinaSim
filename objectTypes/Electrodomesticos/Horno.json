@@ -3,22 +3,7 @@
 	"plugin-id": "Sprite",
 	"sid": 107216459983290,
 	"isGlobal": false,
-	"instanceVariables": [
-		{
-			"name": "Prendido",
-			"type": "boolean",
-			"desc": "",
-			"show": true,
-			"sid": 675830361584948
-		},
-		{
-			"name": "Apagado",
-			"type": "boolean",
-			"desc": "",
-			"show": true,
-			"sid": 982507042542079
-		}
-	],
+	"instanceVariables": [],
 	"behaviorTypes": [],
 	"effectTypes": [],
 	"animations": {
@@ -71,14 +56,64 @@
 						"exportFormat": "lossless",
 						"exportQuality": 0.8,
 						"fileType": "image/png",
-						"imageSpriteId": 1252339,
+						"imageSpriteId": 9362769,
 						"useCollisionPoly": true,
 						"duration": 1,
 						"tag": ""
 					}
 				],
 				"sid": 137760066023302,
-				"name": "Prendido",
+				"name": "Prendido1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			},
+			{
+				"frames": [
+					{
+						"width": 250,
+						"height": 250,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"fileType": "image/png",
+						"imageSpriteId": 8185960,
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					}
+				],
+				"sid": 780931752499989,
+				"name": "Prendido2",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			},
+			{
+				"frames": [
+					{
+						"width": 250,
+						"height": 250,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"fileType": "image/png",
+						"imageSpriteId": 5707229,
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					}
+				],
+				"sid": 109025615960405,
+				"name": "Prendido3",
 				"isLooping": false,
 				"isPingPong": false,
 				"repeatCount": 1,

@@ -133,10 +133,7 @@
 					"uid": 7,
 					"sid": 750793107189555,
 					"tags": "",
-					"instanceVariables": {
-						"Prendido": false,
-						"Apagado": false
-					},
+					"instanceVariables": {},
 					"behaviors": {},
 					"instanceFolderItem": {
 						"sid": 750793107189555,
@@ -1097,7 +1094,7 @@
 					"world": {
 						"x": 1286,
 						"y": -390,
-						"width": 120,
+						"width": 120.00000000000001,
 						"height": 72,
 						"originX": 0.5025380710659898,
 						"originY": 0.5047619047619047,
@@ -1384,7 +1381,7 @@
 					"world": {
 						"x": 949,
 						"y": 129,
-						"width": 2042,
+						"width": 2041.9999999999998,
 						"height": 40,
 						"originX": 0.5,
 						"originY": 0.5,
@@ -1622,7 +1619,7 @@
 			"subLayers": [],
 			"instances": [
 				{
-					"type": "CorteProgreso",
+					"type": "CorteProgresoCebolla",
 					"properties": {
 						"value": 0,
 						"maximum": 10,
@@ -1643,6 +1640,40 @@
 					"world": {
 						"x": 750,
 						"y": 105,
+						"width": 200,
+						"height": 25,
+						"originX": 0,
+						"originY": 0,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						]
+					}
+				},
+				{
+					"type": "ProgresoHorno",
+					"properties": {
+						"value": 0,
+						"maximum": 10,
+						"tooltip": "",
+						"initially-visible": true,
+						"id": "",
+						"class": ""
+					},
+					"uid": 46,
+					"sid": 945343987155046,
+					"tags": "",
+					"instanceVariables": {},
+					"behaviors": {},
+					"instanceFolderItem": {
+						"sid": 945343987155046,
+						"expanded": true
+					},
+					"world": {
+						"x": 251,
+						"y": 96,
 						"width": 200,
 						"height": 25,
 						"originX": 0,
