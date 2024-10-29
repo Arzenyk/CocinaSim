@@ -1,7 +1,7 @@
 {
-	"name": "CajonVacio",
+	"name": "Basura",
 	"plugin-id": "Sprite",
-	"sid": 170864630031526,
+	"sid": 374033971864644,
 	"isGlobal": false,
 	"instanceVariables": [],
 	"behaviorTypes": [],
@@ -19,14 +19,26 @@
 						"exportFormat": "lossless",
 						"exportQuality": 0.8,
 						"fileType": "image/png",
-						"imageSpriteId": 4644618,
+						"imageSpriteId": 318585,
+						"collisionPoly": {
+							"points": [
+								0,
+								0.4700000000000001,
+								1,
+								0.45800000000000013,
+								1,
+								1,
+								0,
+								1
+							]
+						},
 						"useCollisionPoly": true,
 						"duration": 1,
 						"tag": ""
 					}
 				],
-				"sid": 886207162599691,
-				"name": "Vacio",
+				"sid": 105461522838671,
+				"name": "Animation 1",
 				"isLooping": false,
 				"isPingPong": false,
 				"repeatCount": 1,

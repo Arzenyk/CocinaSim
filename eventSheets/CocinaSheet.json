@@ -3675,9 +3675,24 @@
 										"instance-variable": "Tomate",
 										"value": "false"
 									}
+								},
+								{
+									"id": "set-animation",
+									"objectClass": "CuchilloMesada",
+									"sid": 592321355356639,
+									"parameters": {
+										"animation": "\"Cuchillo\"",
+										"from": "beginning"
+									}
 								}
 							],
 							"sid": 275762103531251
+						},
+						{
+							"eventType": "block",
+							"conditions": [],
+							"actions": [],
+							"sid": 399952363218210
 						}
 					],
 					"sid": 605071063360772
@@ -3921,6 +3936,15 @@
 										"instance-variable": "Vacio",
 										"value": "false"
 									}
+								},
+								{
+									"id": "set-animation",
+									"objectClass": "CuchilloMesada",
+									"sid": 860720604197522,
+									"parameters": {
+										"animation": "\"Vacio\"",
+										"from": "beginning"
+									}
 								}
 							],
 							"sid": 717956186257050
@@ -4019,6 +4043,16 @@
 									"parameters": {
 										"key": 69
 									}
+								},
+								{
+									"id": "compare-instance-variable",
+									"objectClass": "CajaCebolla",
+									"sid": 651520267168763,
+									"parameters": {
+										"instance-variable": "Cantidad",
+										"comparison": 5,
+										"value": "0"
+									}
 								}
 							],
 							"actions": [
@@ -4056,6 +4090,15 @@
 									"parameters": {
 										"instance-variable": "Vacio",
 										"value": "false"
+									}
+								},
+								{
+									"id": "subtract-from-instvar",
+									"objectClass": "CajaCebolla",
+									"sid": 873766114447619,
+									"parameters": {
+										"instance-variable": "Cantidad",
+										"value": "1"
 									}
 								}
 							],
@@ -4285,11 +4328,60 @@
 									}
 								},
 								{
+									"id": "is-animation-playing",
+									"objectClass": "Heladera",
+									"sid": 747288091592260,
+									"parameters": {
+										"animation": "\"Cerrada\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-animation",
+									"objectClass": "Heladera",
+									"sid": 178800903342792,
+									"parameters": {
+										"animation": "\"Abierta\"",
+										"from": "beginning"
+									}
+								}
+							],
+							"sid": 414461267326090
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-boolean-instance-variable-set",
+									"objectClass": "Personaje",
+									"sid": 880624664815320,
+									"parameters": {
+										"instance-variable": "Vacio"
+									}
+								},
+								{
+									"id": "is-overlapping-another-object",
+									"objectClass": "Personaje",
+									"sid": 730237530692228,
+									"parameters": {
+										"object": "Heladera"
+									}
+								},
+								{
 									"id": "key-is-down",
 									"objectClass": "Teclado",
-									"sid": 187998924199152,
+									"sid": 605288653804378,
 									"parameters": {
 										"key": 69
+									}
+								},
+								{
+									"id": "is-animation-playing",
+									"objectClass": "Heladera",
+									"sid": 246957351556439,
+									"parameters": {
+										"animation": "\"Abierta\""
 									}
 								}
 							],
@@ -4297,7 +4389,7 @@
 								{
 									"id": "set-animation",
 									"objectClass": "Personaje",
-									"sid": 527839134120286,
+									"sid": 847744563947326,
 									"parameters": {
 										"animation": "\"FCarCru\"",
 										"from": "beginning"
@@ -4306,7 +4398,7 @@
 								{
 									"id": "set-boolean-instvar",
 									"objectClass": "Personaje",
-									"sid": 534449123518551,
+									"sid": 251241612507969,
 									"parameters": {
 										"instance-variable": "CarneCruda",
 										"value": "true"
@@ -4315,7 +4407,7 @@
 								{
 									"id": "set-boolean-instvar",
 									"objectClass": "Personaje",
-									"sid": 468152689787765,
+									"sid": 295077260456184,
 									"parameters": {
 										"instance-variable": "Ocupado",
 										"value": "true"
@@ -4324,14 +4416,23 @@
 								{
 									"id": "set-boolean-instvar",
 									"objectClass": "Personaje",
-									"sid": 684588026686965,
+									"sid": 230762211810684,
 									"parameters": {
 										"instance-variable": "Vacio",
 										"value": "false"
 									}
+								},
+								{
+									"id": "set-animation",
+									"objectClass": "Heladera",
+									"sid": 946921335039297,
+									"parameters": {
+										"animation": "\"Cerrada\"",
+										"from": "beginning"
+									}
 								}
 							],
-							"sid": 414461267326090
+							"sid": 855855892441607
 						}
 					],
 					"sid": 789899528946289
@@ -4348,7 +4449,17 @@
 					"sid": 857893915113461
 				}
 			],
-			"actions": [],
+			"actions": [
+				{
+					"id": "set-animation",
+					"objectClass": "CajaCebolla",
+					"sid": 691570412021941,
+					"parameters": {
+						"animation": "\"Nivel6\"",
+						"from": "beginning"
+					}
+				}
+			],
 			"sid": 374386697606537
 		},
 		{
@@ -4379,6 +4490,229 @@
 				}
 			],
 			"sid": 210370087290794
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-instance-variable",
+					"objectClass": "CajaCebolla",
+					"sid": 825058091208175,
+					"parameters": {
+						"instance-variable": "Cantidad",
+						"comparison": 0,
+						"value": "6"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-animation",
+					"objectClass": "CajaCebolla",
+					"sid": 292123173549261,
+					"parameters": {
+						"animation": "\"Nivel6\"",
+						"from": "beginning"
+					}
+				}
+			],
+			"sid": 973655328314221,
+			"isOrBlock": true
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-instance-variable",
+					"objectClass": "CajaCebolla",
+					"sid": 450101933592117,
+					"parameters": {
+						"instance-variable": "Cantidad",
+						"comparison": 0,
+						"value": "5"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-animation",
+					"objectClass": "CajaCebolla",
+					"sid": 324713741432092,
+					"parameters": {
+						"animation": "\"Nivel5\"",
+						"from": "beginning"
+					}
+				}
+			],
+			"sid": 158674326517083,
+			"isOrBlock": true
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-instance-variable",
+					"objectClass": "CajaCebolla",
+					"sid": 101294370911963,
+					"parameters": {
+						"instance-variable": "Cantidad",
+						"comparison": 0,
+						"value": "4"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-animation",
+					"objectClass": "CajaCebolla",
+					"sid": 684914053199428,
+					"parameters": {
+						"animation": "\"Nivel4\"",
+						"from": "beginning"
+					}
+				}
+			],
+			"sid": 441245734824997,
+			"isOrBlock": true
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-instance-variable",
+					"objectClass": "CajaCebolla",
+					"sid": 131093025267573,
+					"parameters": {
+						"instance-variable": "Cantidad",
+						"comparison": 0,
+						"value": "3"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-animation",
+					"objectClass": "CajaCebolla",
+					"sid": 425329697185556,
+					"parameters": {
+						"animation": "\"Nivel3\"",
+						"from": "beginning"
+					}
+				}
+			],
+			"sid": 869145199482108,
+			"isOrBlock": true
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-instance-variable",
+					"objectClass": "CajaCebolla",
+					"sid": 745571960249490,
+					"parameters": {
+						"instance-variable": "Cantidad",
+						"comparison": 0,
+						"value": "2"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-animation",
+					"objectClass": "CajaCebolla",
+					"sid": 324303034974863,
+					"parameters": {
+						"animation": "\"Nivel2\"",
+						"from": "beginning"
+					}
+				}
+			],
+			"sid": 241367282666789,
+			"isOrBlock": true
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-instance-variable",
+					"objectClass": "CajaCebolla",
+					"sid": 165320841666454,
+					"parameters": {
+						"instance-variable": "Cantidad",
+						"comparison": 0,
+						"value": "1"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-animation",
+					"objectClass": "CajaCebolla",
+					"sid": 952803581422789,
+					"parameters": {
+						"animation": "\"Nivel1\"",
+						"from": "beginning"
+					}
+				}
+			],
+			"sid": 944583595775610,
+			"isOrBlock": true
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-instance-variable",
+					"objectClass": "CajaCebolla",
+					"sid": 901815591924632,
+					"parameters": {
+						"instance-variable": "Cantidad",
+						"comparison": 0,
+						"value": "0"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-animation",
+					"objectClass": "CajaCebolla",
+					"sid": 553885150487015,
+					"parameters": {
+						"animation": "\"Nivel0\"",
+						"from": "beginning"
+					}
+				}
+			],
+			"sid": 658795564361675,
+			"isOrBlock": true
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-instance-variable",
+					"objectClass": "CajaCebolla",
+					"sid": 583084862123909,
+					"parameters": {
+						"instance-variable": "Cantidad",
+						"comparison": 2,
+						"value": "0"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-animation",
+					"objectClass": "CajaCebolla",
+					"sid": 457024794900241,
+					"parameters": {
+						"animation": "\"Vacio\"",
+						"from": "beginning"
+					}
+				}
+			],
+			"sid": 908465414708120
 		}
 	],
 	"sid": 281322155169956

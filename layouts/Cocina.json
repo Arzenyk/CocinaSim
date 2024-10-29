@@ -70,8 +70,8 @@
 						"expanded": true
 					},
 					"world": {
-						"x": 1098.8458893973545,
-						"y": 127.56917787947094,
+						"x": 110.24242424242422,
+						"y": 125.24242424242422,
 						"width": 250,
 						"height": 250,
 						"originX": 0.5,
@@ -105,8 +105,8 @@
 						"expanded": true
 					},
 					"world": {
-						"x": 1348.569177879471,
-						"y": 127.56917787947089,
+						"x": 1100.084329394621,
+						"y": 126.81160212189513,
 						"width": 250,
 						"height": 250,
 						"originX": 0.5,
@@ -217,8 +217,8 @@
 						"expanded": true
 					},
 					"world": {
-						"x": 1583,
-						"y": 126,
+						"x": 1350,
+						"y": 127,
 						"width": 226,
 						"height": 252,
 						"originX": 0.5,
@@ -237,7 +237,7 @@
 					"type": "CajaCebolla",
 					"properties": {
 						"initially-visible": true,
-						"initial-animation": "Animation 1",
+						"initial-animation": "Nivel0",
 						"initial-frame": 0,
 						"enable-collisions": true,
 						"live-preview": false
@@ -245,7 +245,9 @@
 					"uid": 12,
 					"sid": 560368767038470,
 					"tags": "",
-					"instanceVariables": {},
+					"instanceVariables": {
+						"Cantidad": 6
+					},
 					"behaviors": {},
 					"instanceFolderItem": {
 						"sid": 560368767038470,
@@ -272,7 +274,7 @@
 					"type": "CajonVacio",
 					"properties": {
 						"initially-visible": true,
-						"initial-animation": "Animation 1",
+						"initial-animation": "Vacio",
 						"initial-frame": 0,
 						"enable-collisions": true,
 						"live-preview": false
@@ -361,41 +363,6 @@
 						"y": -244.625,
 						"width": 59.83333333333326,
 						"height": 54.91666666666657,
-						"originX": 0.5,
-						"originY": 0.5,
-						"color": [
-							1,
-							1,
-							1,
-							1
-						],
-						"angle": 0,
-						"zElevation": 0
-					}
-				},
-				{
-					"type": "Mesada",
-					"properties": {
-						"initially-visible": true,
-						"initial-animation": "Animation 1",
-						"initial-frame": 0,
-						"enable-collisions": true,
-						"live-preview": false
-					},
-					"uid": 16,
-					"sid": 976039429698576,
-					"tags": "",
-					"instanceVariables": {},
-					"behaviors": {},
-					"instanceFolderItem": {
-						"sid": 976039429698576,
-						"expanded": true
-					},
-					"world": {
-						"x": 105.75482093663913,
-						"y": 125.31129476584022,
-						"width": 250,
-						"height": 250,
 						"originX": 0.5,
 						"originY": 0.5,
 						"color": [
@@ -1282,6 +1249,76 @@
 						"angle": 0,
 						"zElevation": 0
 					}
+				},
+				{
+					"type": "Mesa",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Vacia",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 47,
+					"sid": 108478489467091,
+					"tags": "",
+					"instanceVariables": {},
+					"behaviors": {},
+					"instanceFolderItem": {
+						"sid": 108478489467091,
+						"expanded": true
+					},
+					"world": {
+						"x": 1763,
+						"y": 826,
+						"width": 250,
+						"height": 250,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "Basura",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 40,
+					"sid": 397339291168539,
+					"tags": "",
+					"instanceVariables": {},
+					"behaviors": {},
+					"instanceFolderItem": {
+						"sid": 397339291168539,
+						"expanded": true
+					},
+					"world": {
+						"x": 1770.7272727272727,
+						"y": 126.96969696969524,
+						"width": 250,
+						"height": 250,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
 				}
 			],
 			"sid": 439200466590796,
@@ -1318,41 +1355,6 @@
 			"overriden": 0,
 			"subLayers": [],
 			"instances": [
-				{
-					"type": "Mesada",
-					"properties": {
-						"initially-visible": true,
-						"initial-animation": "Animation 1",
-						"initial-frame": 0,
-						"enable-collisions": true,
-						"live-preview": false
-					},
-					"uid": 40,
-					"sid": 356725430138760,
-					"tags": "",
-					"instanceVariables": {},
-					"behaviors": {},
-					"instanceFolderItem": {
-						"sid": 356725430138760,
-						"expanded": true
-					},
-					"world": {
-						"x": 1817.1137460143113,
-						"y": 125.43896651461796,
-						"width": 250,
-						"height": 250,
-						"originX": 0.5,
-						"originY": 0.5,
-						"color": [
-							1,
-							1,
-							1,
-							1
-						],
-						"angle": 0,
-						"zElevation": 0
-					}
-				},
 				{
 					"type": "Barrera",
 					"properties": {
@@ -1557,8 +1559,8 @@
 								"grid-height": 50,
 								"grid-offset-x": 0,
 								"grid-offset-y": 0,
-								"speed-x": 300,
-								"speed-y": 300,
+								"speed-x": 600,
+								"speed-y": 600,
 								"enabled": true,
 								"default-controls": false,
 								"isometric": false
@@ -1570,8 +1572,8 @@
 						"expanded": true
 					},
 					"world": {
-						"x": 1384,
-						"y": 630,
+						"x": 1370,
+						"y": 563,
 						"width": 159,
 						"height": 251,
 						"originX": 0.5345911949685535,
@@ -1687,41 +1689,6 @@
 							1,
 							1
 						]
-					}
-				},
-				{
-					"type": "Mesa",
-					"properties": {
-						"initially-visible": true,
-						"initial-animation": "Vacia",
-						"initial-frame": 0,
-						"enable-collisions": true,
-						"live-preview": false
-					},
-					"uid": 47,
-					"sid": 108478489467091,
-					"tags": "",
-					"instanceVariables": {},
-					"behaviors": {},
-					"instanceFolderItem": {
-						"sid": 108478489467091,
-						"expanded": true
-					},
-					"world": {
-						"x": 1763,
-						"y": 826,
-						"width": 250,
-						"height": 250,
-						"originX": 0.5,
-						"originY": 0.5,
-						"color": [
-							1,
-							1,
-							1,
-							1
-						],
-						"angle": 0,
-						"zElevation": 0
 					}
 				},
 				{
