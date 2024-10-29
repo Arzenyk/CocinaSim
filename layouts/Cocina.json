@@ -55,7 +55,7 @@
 					"type": "Bacha",
 					"properties": {
 						"initially-visible": true,
-						"initial-animation": "Animation 1",
+						"initial-animation": "Apagada",
 						"initial-frame": 0,
 						"enable-collisions": true,
 						"live-preview": false
@@ -90,7 +90,7 @@
 					"type": "BasePlatos",
 					"properties": {
 						"initially-visible": true,
-						"initial-animation": "Animation 1",
+						"initial-animation": "0",
 						"initial-frame": 0,
 						"enable-collisions": true,
 						"live-preview": false
@@ -98,7 +98,9 @@
 					"uid": 6,
 					"sid": 615513165914496,
 					"tags": "",
-					"instanceVariables": {},
+					"instanceVariables": {
+						"Cantidad": 4
+					},
 					"behaviors": {},
 					"instanceFolderItem": {
 						"sid": 615513165914496,
@@ -221,43 +223,6 @@
 						"y": 127,
 						"width": 226,
 						"height": 252,
-						"originX": 0.5,
-						"originY": 0.5,
-						"color": [
-							1,
-							1,
-							1,
-							1
-						],
-						"angle": 0,
-						"zElevation": 0
-					}
-				},
-				{
-					"type": "CajaCebolla",
-					"properties": {
-						"initially-visible": true,
-						"initial-animation": "Nivel0",
-						"initial-frame": 0,
-						"enable-collisions": true,
-						"live-preview": false
-					},
-					"uid": 12,
-					"sid": 560368767038470,
-					"tags": "",
-					"instanceVariables": {
-						"Cantidad": 6
-					},
-					"behaviors": {},
-					"instanceFolderItem": {
-						"sid": 560368767038470,
-						"expanded": true
-					},
-					"world": {
-						"x": 957,
-						"y": 667,
-						"width": 250,
-						"height": 250,
 						"originX": 0.5,
 						"originY": 0.5,
 						"color": [
@@ -414,7 +379,7 @@
 					"type": "CajonTomate",
 					"properties": {
 						"initially-visible": true,
-						"initial-animation": "Animation 1",
+						"initial-animation": "Vacio",
 						"initial-frame": 0,
 						"enable-collisions": true,
 						"live-preview": false
@@ -422,7 +387,9 @@
 					"uid": 18,
 					"sid": 508002875924004,
 					"tags": "",
-					"instanceVariables": {},
+					"instanceVariables": {
+						"Cantidad": 6
+					},
 					"behaviors": {},
 					"instanceFolderItem": {
 						"sid": 508002875924004,
@@ -519,7 +486,7 @@
 					"type": "CajonLechuga",
 					"properties": {
 						"initially-visible": true,
-						"initial-animation": "Animation 1",
+						"initial-animation": "Vacio",
 						"initial-frame": 0,
 						"enable-collisions": true,
 						"live-preview": false
@@ -527,7 +494,9 @@
 					"uid": 21,
 					"sid": 909441349539500,
 					"tags": "",
-					"instanceVariables": {},
+					"instanceVariables": {
+						"Cantidad": 6
+					},
 					"behaviors": {},
 					"instanceFolderItem": {
 						"sid": 909441349539500,
@@ -589,7 +558,7 @@
 					"type": "CajonPan",
 					"properties": {
 						"initially-visible": true,
-						"initial-animation": "Animation 1",
+						"initial-animation": "Vacio",
 						"initial-frame": 0,
 						"enable-collisions": true,
 						"live-preview": false
@@ -597,7 +566,9 @@
 					"uid": 23,
 					"sid": 581263446800133,
 					"tags": "",
-					"instanceVariables": {},
+					"instanceVariables": {
+						"Cantidad": 6
+					},
 					"behaviors": {},
 					"instanceFolderItem": {
 						"sid": 581263446800133,
@@ -1306,6 +1277,43 @@
 					"world": {
 						"x": 1770.7272727272727,
 						"y": 126.96969696969524,
+						"width": 250,
+						"height": 250,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "CajaCebolla",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Nivel0",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 12,
+					"sid": 719566982678829,
+					"tags": "",
+					"instanceVariables": {
+						"Cantidad": 6
+					},
+					"behaviors": {},
+					"instanceFolderItem": {
+						"sid": 719566982678829,
+						"expanded": true
+					},
+					"world": {
+						"x": 985,
+						"y": 668,
 						"width": 250,
 						"height": 250,
 						"originX": 0.5,

@@ -3975,6 +3975,16 @@
 									"parameters": {
 										"key": 69
 									}
+								},
+								{
+									"id": "compare-instance-variable",
+									"objectClass": "BasePlatos",
+									"sid": 288638186090778,
+									"parameters": {
+										"instance-variable": "Cantidad",
+										"comparison": 5,
+										"value": "0"
+									}
 								}
 							],
 							"actions": [
@@ -4012,6 +4022,15 @@
 									"parameters": {
 										"instance-variable": "Vacio",
 										"value": "false"
+									}
+								},
+								{
+									"id": "subtract-from-instvar",
+									"objectClass": "BasePlatos",
+									"sid": 160515286479781,
+									"parameters": {
+										"instance-variable": "Cantidad",
+										"value": "1"
 									}
 								}
 							],
@@ -4130,6 +4149,16 @@
 									"parameters": {
 										"key": 69
 									}
+								},
+								{
+									"id": "compare-instance-variable",
+									"objectClass": "CajonLechuga",
+									"sid": 839575748012789,
+									"parameters": {
+										"instance-variable": "Cantidad",
+										"comparison": 5,
+										"value": "0"
+									}
 								}
 							],
 							"actions": [
@@ -4168,6 +4197,15 @@
 										"instance-variable": "Vacio",
 										"value": "false"
 									}
+								},
+								{
+									"id": "subtract-from-instvar",
+									"objectClass": "CajonLechuga",
+									"sid": 395035297612213,
+									"parameters": {
+										"instance-variable": "Cantidad",
+										"value": "1"
+									}
 								}
 							],
 							"sid": 178043359122089
@@ -4197,6 +4235,16 @@
 									"sid": 714793029661656,
 									"parameters": {
 										"key": 69
+									}
+								},
+								{
+									"id": "compare-instance-variable",
+									"objectClass": "CajonTomate",
+									"sid": 282590916289256,
+									"parameters": {
+										"instance-variable": "Cantidad",
+										"comparison": 5,
+										"value": "0"
 									}
 								}
 							],
@@ -4236,6 +4284,15 @@
 										"instance-variable": "Vacio",
 										"value": "false"
 									}
+								},
+								{
+									"id": "subtract-from-instvar",
+									"objectClass": "CajonTomate",
+									"sid": 994178559281265,
+									"parameters": {
+										"instance-variable": "Cantidad",
+										"value": "1"
+									}
 								}
 							],
 							"sid": 562308938215909
@@ -4265,6 +4322,16 @@
 									"sid": 229921755219859,
 									"parameters": {
 										"key": 69
+									}
+								},
+								{
+									"id": "compare-instance-variable",
+									"objectClass": "CajonPan",
+									"sid": 209430766960512,
+									"parameters": {
+										"instance-variable": "Cantidad",
+										"comparison": 5,
+										"value": "0"
 									}
 								}
 							],
@@ -4303,6 +4370,15 @@
 									"parameters": {
 										"instance-variable": "Vacio",
 										"value": "false"
+									}
+								},
+								{
+									"id": "subtract-from-instvar",
+									"objectClass": "CajonPan",
+									"sid": 388865547015336,
+									"parameters": {
+										"instance-variable": "Cantidad",
+										"value": "1"
 									}
 								}
 							],
@@ -4433,6 +4509,55 @@
 								}
 							],
 							"sid": 855855892441607
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-boolean-instance-variable-set",
+									"objectClass": "Personaje",
+									"sid": 426580906912576,
+									"parameters": {
+										"instance-variable": "Vacio"
+									}
+								},
+								{
+									"id": "is-overlapping-another-object",
+									"objectClass": "Personaje",
+									"sid": 194525618508675,
+									"parameters": {
+										"object": "Bacha"
+									}
+								},
+								{
+									"id": "key-is-down",
+									"objectClass": "Teclado",
+									"sid": 118638978611548,
+									"parameters": {
+										"key": 69
+									}
+								},
+								{
+									"id": "is-animation-playing",
+									"objectClass": "Bacha",
+									"sid": 282408744525625,
+									"parameters": {
+										"animation": "\"Apagada\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-animation",
+									"objectClass": "Bacha",
+									"sid": 949835218773231,
+									"parameters": {
+										"animation": "\"Prendida\"",
+										"from": "beginning"
+									}
+								}
+							],
+							"sid": 962555314228181
 						}
 					],
 					"sid": 789899528946289
@@ -4456,6 +4581,42 @@
 					"sid": 691570412021941,
 					"parameters": {
 						"animation": "\"Nivel6\"",
+						"from": "beginning"
+					}
+				},
+				{
+					"id": "set-animation",
+					"objectClass": "CajonTomate",
+					"sid": 318393210278272,
+					"parameters": {
+						"animation": "\"Nivel6\"",
+						"from": "beginning"
+					}
+				},
+				{
+					"id": "set-animation",
+					"objectClass": "CajonLechuga",
+					"sid": 946432706425973,
+					"parameters": {
+						"animation": "\"Nivel6\"",
+						"from": "beginning"
+					}
+				},
+				{
+					"id": "set-animation",
+					"objectClass": "CajonPan",
+					"sid": 693557595333834,
+					"parameters": {
+						"animation": "\"Nivel6\"",
+						"from": "beginning"
+					}
+				},
+				{
+					"id": "set-animation",
+					"objectClass": "BasePlatos",
+					"sid": 660741128515359,
+					"parameters": {
+						"animation": "\"4\"",
 						"from": "beginning"
 					}
 				}
@@ -4492,227 +4653,1113 @@
 			"sid": 210370087290794
 		},
 		{
-			"eventType": "block",
-			"conditions": [
+			"eventType": "group",
+			"disabled": false,
+			"title": "Ceb.Cajon",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
 				{
-					"id": "compare-instance-variable",
-					"objectClass": "CajaCebolla",
-					"sid": 825058091208175,
-					"parameters": {
-						"instance-variable": "Cantidad",
-						"comparison": 0,
-						"value": "6"
-					}
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "CajaCebolla",
+							"sid": 710228597032929,
+							"parameters": {
+								"instance-variable": "Cantidad",
+								"comparison": 0,
+								"value": "6"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation",
+							"objectClass": "CajaCebolla",
+							"sid": 437872995984029,
+							"parameters": {
+								"animation": "\"Nivel6\"",
+								"from": "beginning"
+							}
+						}
+					],
+					"sid": 617631916289578,
+					"isOrBlock": true
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "CajaCebolla",
+							"sid": 709186539569261,
+							"parameters": {
+								"instance-variable": "Cantidad",
+								"comparison": 0,
+								"value": "5"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation",
+							"objectClass": "CajaCebolla",
+							"sid": 339295425733121,
+							"parameters": {
+								"animation": "\"Nivel5\"",
+								"from": "beginning"
+							}
+						}
+					],
+					"sid": 778183150996237,
+					"isOrBlock": true
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "CajaCebolla",
+							"sid": 531165666783730,
+							"parameters": {
+								"instance-variable": "Cantidad",
+								"comparison": 0,
+								"value": "4"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation",
+							"objectClass": "CajaCebolla",
+							"sid": 923528461184064,
+							"parameters": {
+								"animation": "\"Nivel4\"",
+								"from": "beginning"
+							}
+						}
+					],
+					"sid": 965386039686106,
+					"isOrBlock": true
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "CajaCebolla",
+							"sid": 427232154310579,
+							"parameters": {
+								"instance-variable": "Cantidad",
+								"comparison": 0,
+								"value": "3"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation",
+							"objectClass": "CajaCebolla",
+							"sid": 487342833674493,
+							"parameters": {
+								"animation": "\"Nivel3\"",
+								"from": "beginning"
+							}
+						}
+					],
+					"sid": 302275533204500,
+					"isOrBlock": true
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "CajaCebolla",
+							"sid": 353770035006412,
+							"parameters": {
+								"instance-variable": "Cantidad",
+								"comparison": 0,
+								"value": "2"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation",
+							"objectClass": "CajaCebolla",
+							"sid": 906775664597952,
+							"parameters": {
+								"animation": "\"Nivel2\"",
+								"from": "beginning"
+							}
+						}
+					],
+					"sid": 566543640630152,
+					"isOrBlock": true
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "CajaCebolla",
+							"sid": 354172207767691,
+							"parameters": {
+								"instance-variable": "Cantidad",
+								"comparison": 0,
+								"value": "1"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation",
+							"objectClass": "CajaCebolla",
+							"sid": 692724155969302,
+							"parameters": {
+								"animation": "\"Nivel1\"",
+								"from": "beginning"
+							}
+						}
+					],
+					"sid": 424298245543652,
+					"isOrBlock": true
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "CajaCebolla",
+							"sid": 172341956981782,
+							"parameters": {
+								"instance-variable": "Cantidad",
+								"comparison": 0,
+								"value": "0"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation",
+							"objectClass": "CajaCebolla",
+							"sid": 817244777754169,
+							"parameters": {
+								"animation": "\"Nivel0\"",
+								"from": "beginning"
+							}
+						}
+					],
+					"sid": 854505855666645,
+					"isOrBlock": true
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "CajaCebolla",
+							"sid": 870679516526592,
+							"parameters": {
+								"instance-variable": "Cantidad",
+								"comparison": 2,
+								"value": "0"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation",
+							"objectClass": "CajaCebolla",
+							"sid": 615830159224008,
+							"parameters": {
+								"animation": "\"Vacio\"",
+								"from": "beginning"
+							}
+						}
+					],
+					"sid": 844599918153038
 				}
 			],
-			"actions": [
-				{
-					"id": "set-animation",
-					"objectClass": "CajaCebolla",
-					"sid": 292123173549261,
-					"parameters": {
-						"animation": "\"Nivel6\"",
-						"from": "beginning"
-					}
-				}
-			],
-			"sid": 973655328314221,
-			"isOrBlock": true
+			"sid": 165592781761935
 		},
 		{
-			"eventType": "block",
-			"conditions": [
+			"eventType": "group",
+			"disabled": false,
+			"title": "Tom.Cajon",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
 				{
-					"id": "compare-instance-variable",
-					"objectClass": "CajaCebolla",
-					"sid": 450101933592117,
-					"parameters": {
-						"instance-variable": "Cantidad",
-						"comparison": 0,
-						"value": "5"
-					}
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "CajonTomate",
+							"sid": 403515738088409,
+							"parameters": {
+								"instance-variable": "Cantidad",
+								"comparison": 0,
+								"value": "6"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation",
+							"objectClass": "CajonTomate",
+							"sid": 556767324577488,
+							"parameters": {
+								"animation": "\"Nivel6\"",
+								"from": "beginning"
+							}
+						}
+					],
+					"sid": 584452388405788,
+					"isOrBlock": true
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "CajonTomate",
+							"sid": 349901864890150,
+							"parameters": {
+								"instance-variable": "Cantidad",
+								"comparison": 0,
+								"value": "5"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation",
+							"objectClass": "CajonTomate",
+							"sid": 951692886879788,
+							"parameters": {
+								"animation": "\"Nivel5\"",
+								"from": "beginning"
+							}
+						}
+					],
+					"sid": 884954787305355,
+					"isOrBlock": true
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "CajonTomate",
+							"sid": 714911597237643,
+							"parameters": {
+								"instance-variable": "Cantidad",
+								"comparison": 0,
+								"value": "4"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation",
+							"objectClass": "CajonTomate",
+							"sid": 897423456699604,
+							"parameters": {
+								"animation": "\"Nivel4\"",
+								"from": "beginning"
+							}
+						}
+					],
+					"sid": 237739690563091,
+					"isOrBlock": true
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "CajonTomate",
+							"sid": 130889596805367,
+							"parameters": {
+								"instance-variable": "Cantidad",
+								"comparison": 0,
+								"value": "3"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation",
+							"objectClass": "CajonTomate",
+							"sid": 232261972429516,
+							"parameters": {
+								"animation": "\"Nivel3\"",
+								"from": "beginning"
+							}
+						}
+					],
+					"sid": 132858438891848,
+					"isOrBlock": true
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "CajonTomate",
+							"sid": 313412191970875,
+							"parameters": {
+								"instance-variable": "Cantidad",
+								"comparison": 0,
+								"value": "2"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation",
+							"objectClass": "CajonTomate",
+							"sid": 638455716047394,
+							"parameters": {
+								"animation": "\"Nivel2\"",
+								"from": "beginning"
+							}
+						}
+					],
+					"sid": 980080932152807,
+					"isOrBlock": true
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "CajonTomate",
+							"sid": 589663151581420,
+							"parameters": {
+								"instance-variable": "Cantidad",
+								"comparison": 0,
+								"value": "1"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation",
+							"objectClass": "CajonTomate",
+							"sid": 830763983430236,
+							"parameters": {
+								"animation": "\"Nivel1\"",
+								"from": "beginning"
+							}
+						}
+					],
+					"sid": 480556366106274,
+					"isOrBlock": true
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "CajonTomate",
+							"sid": 444261410489567,
+							"parameters": {
+								"instance-variable": "Cantidad",
+								"comparison": 0,
+								"value": "0"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation",
+							"objectClass": "CajonTomate",
+							"sid": 490411080155051,
+							"parameters": {
+								"animation": "\"Nivel0\"",
+								"from": "beginning"
+							}
+						}
+					],
+					"sid": 382401157554255,
+					"isOrBlock": true
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "CajonTomate",
+							"sid": 390859274356029,
+							"parameters": {
+								"instance-variable": "Cantidad",
+								"comparison": 2,
+								"value": "0"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation",
+							"objectClass": "CajonTomate",
+							"sid": 748804735772785,
+							"parameters": {
+								"animation": "\"Vacio\"",
+								"from": "beginning"
+							}
+						}
+					],
+					"sid": 678961310993041
 				}
 			],
-			"actions": [
-				{
-					"id": "set-animation",
-					"objectClass": "CajaCebolla",
-					"sid": 324713741432092,
-					"parameters": {
-						"animation": "\"Nivel5\"",
-						"from": "beginning"
-					}
-				}
-			],
-			"sid": 158674326517083,
-			"isOrBlock": true
+			"sid": 622950989916673
 		},
 		{
-			"eventType": "block",
-			"conditions": [
+			"eventType": "group",
+			"disabled": false,
+			"title": "Lec.Cajon",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
 				{
-					"id": "compare-instance-variable",
-					"objectClass": "CajaCebolla",
-					"sid": 101294370911963,
-					"parameters": {
-						"instance-variable": "Cantidad",
-						"comparison": 0,
-						"value": "4"
-					}
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "CajonLechuga",
+							"sid": 879340307914278,
+							"parameters": {
+								"instance-variable": "Cantidad",
+								"comparison": 0,
+								"value": "6"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation",
+							"objectClass": "CajonLechuga",
+							"sid": 997484339476422,
+							"parameters": {
+								"animation": "\"Nivel6\"",
+								"from": "beginning"
+							}
+						}
+					],
+					"sid": 748417144874156,
+					"isOrBlock": true
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "CajonLechuga",
+							"sid": 764764976949970,
+							"parameters": {
+								"instance-variable": "Cantidad",
+								"comparison": 0,
+								"value": "5"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation",
+							"objectClass": "CajonLechuga",
+							"sid": 747079502677929,
+							"parameters": {
+								"animation": "\"Nivel5\"",
+								"from": "beginning"
+							}
+						}
+					],
+					"sid": 680391494152760,
+					"isOrBlock": true
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "CajonLechuga",
+							"sid": 743304772357973,
+							"parameters": {
+								"instance-variable": "Cantidad",
+								"comparison": 0,
+								"value": "4"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation",
+							"objectClass": "CajonLechuga",
+							"sid": 117666620076310,
+							"parameters": {
+								"animation": "\"Nivel4\"",
+								"from": "beginning"
+							}
+						}
+					],
+					"sid": 890771944792538,
+					"isOrBlock": true
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "CajonLechuga",
+							"sid": 749360991094152,
+							"parameters": {
+								"instance-variable": "Cantidad",
+								"comparison": 0,
+								"value": "3"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation",
+							"objectClass": "CajonLechuga",
+							"sid": 302333014209642,
+							"parameters": {
+								"animation": "\"Nivel3\"",
+								"from": "beginning"
+							}
+						}
+					],
+					"sid": 741034796725913,
+					"isOrBlock": true
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "CajonLechuga",
+							"sid": 395680977924196,
+							"parameters": {
+								"instance-variable": "Cantidad",
+								"comparison": 0,
+								"value": "2"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation",
+							"objectClass": "CajonLechuga",
+							"sid": 872203185695808,
+							"parameters": {
+								"animation": "\"Nivel2\"",
+								"from": "beginning"
+							}
+						}
+					],
+					"sid": 696930641939589,
+					"isOrBlock": true
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "CajonLechuga",
+							"sid": 426624375765970,
+							"parameters": {
+								"instance-variable": "Cantidad",
+								"comparison": 0,
+								"value": "1"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation",
+							"objectClass": "CajonLechuga",
+							"sid": 586222920804907,
+							"parameters": {
+								"animation": "\"Nivel1\"",
+								"from": "beginning"
+							}
+						}
+					],
+					"sid": 295226217390659,
+					"isOrBlock": true
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "CajonLechuga",
+							"sid": 846424236894512,
+							"parameters": {
+								"instance-variable": "Cantidad",
+								"comparison": 0,
+								"value": "0"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation",
+							"objectClass": "CajonLechuga",
+							"sid": 666494029366148,
+							"parameters": {
+								"animation": "\"Nivel0\"",
+								"from": "beginning"
+							}
+						}
+					],
+					"sid": 711133043432416,
+					"isOrBlock": true
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "CajonLechuga",
+							"sid": 460695858290241,
+							"parameters": {
+								"instance-variable": "Cantidad",
+								"comparison": 2,
+								"value": "0"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation",
+							"objectClass": "CajonLechuga",
+							"sid": 882185967518805,
+							"parameters": {
+								"animation": "\"Vacio\"",
+								"from": "beginning"
+							}
+						}
+					],
+					"sid": 831193029505784
 				}
 			],
-			"actions": [
-				{
-					"id": "set-animation",
-					"objectClass": "CajaCebolla",
-					"sid": 684914053199428,
-					"parameters": {
-						"animation": "\"Nivel4\"",
-						"from": "beginning"
-					}
-				}
-			],
-			"sid": 441245734824997,
-			"isOrBlock": true
+			"sid": 426978710285827
 		},
 		{
-			"eventType": "block",
-			"conditions": [
+			"eventType": "group",
+			"disabled": false,
+			"title": "Pan.Cajon",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
 				{
-					"id": "compare-instance-variable",
-					"objectClass": "CajaCebolla",
-					"sid": 131093025267573,
-					"parameters": {
-						"instance-variable": "Cantidad",
-						"comparison": 0,
-						"value": "3"
-					}
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "CajonPan",
+							"sid": 254748917252147,
+							"parameters": {
+								"instance-variable": "Cantidad",
+								"comparison": 0,
+								"value": "6"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation",
+							"objectClass": "CajonPan",
+							"sid": 660847702641158,
+							"parameters": {
+								"animation": "\"Nivel6\"",
+								"from": "beginning"
+							}
+						}
+					],
+					"sid": 574538866540133,
+					"isOrBlock": true
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "CajonPan",
+							"sid": 418593142531553,
+							"parameters": {
+								"instance-variable": "Cantidad",
+								"comparison": 0,
+								"value": "5"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation",
+							"objectClass": "CajonPan",
+							"sid": 476482460750951,
+							"parameters": {
+								"animation": "\"Nivel5\"",
+								"from": "beginning"
+							}
+						}
+					],
+					"sid": 985355149854531,
+					"isOrBlock": true
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "CajonPan",
+							"sid": 352212497134711,
+							"parameters": {
+								"instance-variable": "Cantidad",
+								"comparison": 0,
+								"value": "4"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation",
+							"objectClass": "CajonPan",
+							"sid": 754906829067383,
+							"parameters": {
+								"animation": "\"Nivel4\"",
+								"from": "beginning"
+							}
+						}
+					],
+					"sid": 989068181877983,
+					"isOrBlock": true
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "CajonPan",
+							"sid": 872243911353878,
+							"parameters": {
+								"instance-variable": "Cantidad",
+								"comparison": 0,
+								"value": "3"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation",
+							"objectClass": "CajonPan",
+							"sid": 185881547936362,
+							"parameters": {
+								"animation": "\"Nivel3\"",
+								"from": "beginning"
+							}
+						}
+					],
+					"sid": 671138177245627,
+					"isOrBlock": true
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "CajonPan",
+							"sid": 290570330572063,
+							"parameters": {
+								"instance-variable": "Cantidad",
+								"comparison": 0,
+								"value": "2"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation",
+							"objectClass": "CajonPan",
+							"sid": 915336299082992,
+							"parameters": {
+								"animation": "\"Nivel2\"",
+								"from": "beginning"
+							}
+						}
+					],
+					"sid": 543249737363371,
+					"isOrBlock": true
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "CajonPan",
+							"sid": 427423899980444,
+							"parameters": {
+								"instance-variable": "Cantidad",
+								"comparison": 0,
+								"value": "1"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation",
+							"objectClass": "CajonPan",
+							"sid": 361176254506165,
+							"parameters": {
+								"animation": "\"Nivel1\"",
+								"from": "beginning"
+							}
+						}
+					],
+					"sid": 468833901591636,
+					"isOrBlock": true
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "CajonPan",
+							"sid": 484148287713124,
+							"parameters": {
+								"instance-variable": "Cantidad",
+								"comparison": 0,
+								"value": "0"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation",
+							"objectClass": "CajonPan",
+							"sid": 447674779207761,
+							"parameters": {
+								"animation": "\"Nivel0\"",
+								"from": "beginning"
+							}
+						}
+					],
+					"sid": 569912738552252,
+					"isOrBlock": true
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "CajonPan",
+							"sid": 793074347338649,
+							"parameters": {
+								"instance-variable": "Cantidad",
+								"comparison": 2,
+								"value": "0"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation",
+							"objectClass": "CajonPan",
+							"sid": 176663330436879,
+							"parameters": {
+								"animation": "\"Vacio\"",
+								"from": "beginning"
+							}
+						}
+					],
+					"sid": 220342358246029
 				}
 			],
-			"actions": [
-				{
-					"id": "set-animation",
-					"objectClass": "CajaCebolla",
-					"sid": 425329697185556,
-					"parameters": {
-						"animation": "\"Nivel3\"",
-						"from": "beginning"
-					}
-				}
-			],
-			"sid": 869145199482108,
-			"isOrBlock": true
+			"sid": 606388833331323
 		},
 		{
-			"eventType": "block",
-			"conditions": [
+			"eventType": "group",
+			"disabled": false,
+			"title": "Platos",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
 				{
-					"id": "compare-instance-variable",
-					"objectClass": "CajaCebolla",
-					"sid": 745571960249490,
-					"parameters": {
-						"instance-variable": "Cantidad",
-						"comparison": 0,
-						"value": "2"
-					}
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "BasePlatos",
+							"sid": 999426389250698,
+							"parameters": {
+								"instance-variable": "Cantidad",
+								"comparison": 0,
+								"value": "4"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation",
+							"objectClass": "BasePlatos",
+							"sid": 666676102161311,
+							"parameters": {
+								"animation": "\"Nivel4\"",
+								"from": "beginning"
+							}
+						}
+					],
+					"sid": 673060751830886,
+					"isOrBlock": true
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "BasePlatos",
+							"sid": 173733156094566,
+							"parameters": {
+								"instance-variable": "Cantidad",
+								"comparison": 0,
+								"value": "3"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation",
+							"objectClass": "BasePlatos",
+							"sid": 208372175793608,
+							"parameters": {
+								"animation": "\"Nivel3\"",
+								"from": "beginning"
+							}
+						}
+					],
+					"sid": 410291938350722,
+					"isOrBlock": true
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "BasePlatos",
+							"sid": 799677488488730,
+							"parameters": {
+								"instance-variable": "Cantidad",
+								"comparison": 0,
+								"value": "2"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation",
+							"objectClass": "BasePlatos",
+							"sid": 983650159730796,
+							"parameters": {
+								"animation": "\"Nivel2\"",
+								"from": "beginning"
+							}
+						}
+					],
+					"sid": 241307234738211,
+					"isOrBlock": true
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "BasePlatos",
+							"sid": 640386141196636,
+							"parameters": {
+								"instance-variable": "Cantidad",
+								"comparison": 0,
+								"value": "1"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation",
+							"objectClass": "BasePlatos",
+							"sid": 598736728110805,
+							"parameters": {
+								"animation": "\"Nivel1\"",
+								"from": "beginning"
+							}
+						}
+					],
+					"sid": 872503972900513,
+					"isOrBlock": true
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "BasePlatos",
+							"sid": 833069212270037,
+							"parameters": {
+								"instance-variable": "Cantidad",
+								"comparison": 0,
+								"value": "0"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation",
+							"objectClass": "BasePlatos",
+							"sid": 370506533062930,
+							"parameters": {
+								"animation": "\"Nivel0\"",
+								"from": "beginning"
+							}
+						}
+					],
+					"sid": 779276044754343,
+					"isOrBlock": true
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "BasePlatos",
+							"sid": 543191641069772,
+							"parameters": {
+								"instance-variable": "Cantidad",
+								"comparison": 2,
+								"value": "0"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation",
+							"objectClass": "BasePlatos",
+							"sid": 984337504833228,
+							"parameters": {
+								"animation": "\"Vacio\"",
+								"from": "beginning"
+							}
+						}
+					],
+					"sid": 380707791799760
 				}
 			],
-			"actions": [
-				{
-					"id": "set-animation",
-					"objectClass": "CajaCebolla",
-					"sid": 324303034974863,
-					"parameters": {
-						"animation": "\"Nivel2\"",
-						"from": "beginning"
-					}
-				}
-			],
-			"sid": 241367282666789,
-			"isOrBlock": true
-		},
-		{
-			"eventType": "block",
-			"conditions": [
-				{
-					"id": "compare-instance-variable",
-					"objectClass": "CajaCebolla",
-					"sid": 165320841666454,
-					"parameters": {
-						"instance-variable": "Cantidad",
-						"comparison": 0,
-						"value": "1"
-					}
-				}
-			],
-			"actions": [
-				{
-					"id": "set-animation",
-					"objectClass": "CajaCebolla",
-					"sid": 952803581422789,
-					"parameters": {
-						"animation": "\"Nivel1\"",
-						"from": "beginning"
-					}
-				}
-			],
-			"sid": 944583595775610,
-			"isOrBlock": true
-		},
-		{
-			"eventType": "block",
-			"conditions": [
-				{
-					"id": "compare-instance-variable",
-					"objectClass": "CajaCebolla",
-					"sid": 901815591924632,
-					"parameters": {
-						"instance-variable": "Cantidad",
-						"comparison": 0,
-						"value": "0"
-					}
-				}
-			],
-			"actions": [
-				{
-					"id": "set-animation",
-					"objectClass": "CajaCebolla",
-					"sid": 553885150487015,
-					"parameters": {
-						"animation": "\"Nivel0\"",
-						"from": "beginning"
-					}
-				}
-			],
-			"sid": 658795564361675,
-			"isOrBlock": true
-		},
-		{
-			"eventType": "block",
-			"conditions": [
-				{
-					"id": "compare-instance-variable",
-					"objectClass": "CajaCebolla",
-					"sid": 583084862123909,
-					"parameters": {
-						"instance-variable": "Cantidad",
-						"comparison": 2,
-						"value": "0"
-					}
-				}
-			],
-			"actions": [
-				{
-					"id": "set-animation",
-					"objectClass": "CajaCebolla",
-					"sid": 457024794900241,
-					"parameters": {
-						"animation": "\"Vacio\"",
-						"from": "beginning"
-					}
-				}
-			],
-			"sid": 908465414708120
+			"sid": 851926226923651
 		}
 	],
 	"sid": 281322155169956
