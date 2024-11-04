@@ -2320,6 +2320,14 @@
 										"instance-variable": "Vacio",
 										"value": "true"
 									}
+								},
+								{
+									"id": "set-visible",
+									"objectClass": "CorteCebolla",
+									"sid": 940478801221089,
+									"parameters": {
+										"visibility": "visible"
+									}
 								}
 							],
 							"sid": 226959080177911
@@ -2535,6 +2543,14 @@
 									"parameters": {
 										"instance-variable": "Plato",
 										"value": "false"
+									}
+								},
+								{
+									"id": "set-visible",
+									"objectClass": "CorteCebolla",
+									"sid": 140523522632890,
+									"parameters": {
+										"visibility": "invisible"
 									}
 								}
 							],
