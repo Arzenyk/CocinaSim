@@ -42,6 +42,26 @@
 			"sid": 932412209888604
 		},
 		{
+			"eventType": "variable",
+			"name": "spawnCliente",
+			"type": "boolean",
+			"initialValue": "false",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 270961996290443
+		},
+		{
+			"eventType": "variable",
+			"name": "hayCliente",
+			"type": "boolean",
+			"initialValue": "false",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 290762656061492
+		},
+		{
 			"eventType": "group",
 			"disabled": false,
 			"title": "ControlJugador",
@@ -4861,6 +4881,24 @@
 						"animation": "\"4\"",
 						"from": "beginning"
 					}
+				},
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 499597013462639,
+					"disabled": true,
+					"parameters": {
+						"seconds": "10"
+					}
+				},
+				{
+					"id": "set-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 721223421249608,
+					"parameters": {
+						"variable": "spawnCliente",
+						"value": "true"
+					}
 				}
 			],
 			"sid": 374386697606537
@@ -6031,6 +6069,79 @@
 				}
 			],
 			"sid": 851926226923651
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "trigger-once-while-true",
+					"objectClass": "System",
+					"sid": 344216302071173
+				},
+				{
+					"id": "compare-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 786403000297479,
+					"parameters": {
+						"variable": "spawnCliente"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-collisions-enabled",
+					"objectClass": "spr_espacio_cliente",
+					"sid": 571085773900422,
+					"parameters": {
+						"collisions": "enabled"
+					}
+				},
+				{
+					"id": "spawn-another-object",
+					"objectClass": "spr_spawner_clientes",
+					"sid": 175482125351470,
+					"parameters": {
+						"object": "spr_cliente",
+						"layer": "4",
+						"image-point": "0",
+						"create-hierarchy": false,
+						"template-name": "\"\""
+					}
+				},
+				{
+					"id": "move-to-position",
+					"objectClass": "spr_cliente",
+					"sid": 836402605451476,
+					"behaviorType": "MoveTo",
+					"parameters": {
+						"x": "spr_espacio_cliente.X",
+						"y": "spr_espacio_cliente.Y",
+						"mode": "direct"
+					}
+				}
+			],
+			"sid": 954973990085984
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-arrived",
+					"objectClass": "spr_cliente",
+					"sid": 218519492653449,
+					"behaviorType": "MoveTo"
+				},
+				{
+					"id": "compare-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 282257421546934,
+					"parameters": {
+						"variable": "hayCliente"
+					}
+				}
+			],
+			"actions": [],
+			"sid": 919591883272378
 		}
 	],
 	"sid": 281322155169956
