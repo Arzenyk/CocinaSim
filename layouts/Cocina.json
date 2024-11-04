@@ -1637,7 +1637,7 @@
 						"value": 0,
 						"maximum": 10,
 						"tooltip": "",
-						"initially-visible": true,
+						"initially-visible": false,
 						"id": "",
 						"class": ""
 					},
@@ -1671,7 +1671,7 @@
 						"value": 0,
 						"maximum": 10,
 						"tooltip": "",
-						"initially-visible": true,
+						"initially-visible": false,
 						"id": "",
 						"class": ""
 					},
