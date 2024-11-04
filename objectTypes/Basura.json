@@ -4,7 +4,13 @@
 	"sid": 374033971864644,
 	"isGlobal": false,
 	"instanceVariables": [],
-	"behaviorTypes": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "Flash",
+			"name": "Flash",
+			"sid": 966992431112184
+		}
+	],
 	"effectTypes": [],
 	"animations": {
 		"items": [
@@ -38,7 +44,44 @@
 					}
 				],
 				"sid": 105461522838671,
-				"name": "Animation 1",
+				"name": "Abierto",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			},
+			{
+				"frames": [
+					{
+						"width": 250,
+						"height": 250,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"fileType": "image/png",
+						"imageSpriteId": 6550628,
+						"collisionPoly": {
+							"points": [
+								0,
+								0.4700000000000001,
+								1,
+								0.45800000000000013,
+								1,
+								1,
+								0,
+								1
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					}
+				],
+				"sid": 262116606817931,
+				"name": "Cerrado",
 				"isLooping": false,
 				"isPingPong": false,
 				"repeatCount": 1,

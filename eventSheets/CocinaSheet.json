@@ -3050,6 +3050,32 @@
 									}
 								},
 								{
+									"id": "set-visible",
+									"objectClass": "ProgresoHorno",
+									"sid": 420896614092576,
+									"parameters": {
+										"visibility": "visible"
+									}
+								},
+								{
+									"id": "set-boolean-instvar",
+									"objectClass": "Personaje",
+									"sid": 177619656404377,
+									"parameters": {
+										"instance-variable": "CarneCruda",
+										"value": "false"
+									}
+								},
+								{
+									"id": "set-boolean-instvar",
+									"objectClass": "Personaje",
+									"sid": 458419369417648,
+									"parameters": {
+										"instance-variable": "Vacio",
+										"value": "true"
+									}
+								},
+								{
 									"id": "set-boolean-eventvar",
 									"objectClass": "System",
 									"sid": 220453989437903,
@@ -3177,6 +3203,14 @@
 									"parameters": {
 										"value": "0"
 									}
+								},
+								{
+									"id": "set-visible",
+									"objectClass": "ProgresoHorno",
+									"sid": 505999351767244,
+									"parameters": {
+										"visibility": "invisible"
+									}
 								}
 							],
 							"sid": 959105171100944
@@ -3270,6 +3304,14 @@
 									"parameters": {
 										"instance-variable": "Ocupado",
 										"value": "true"
+									}
+								},
+								{
+									"id": "set-visible",
+									"objectClass": "ProgresoHorno",
+									"sid": 863543170945178,
+									"parameters": {
+										"visibility": "invisible"
 									}
 								},
 								{
@@ -4577,6 +4619,190 @@
 						}
 					],
 					"sid": 789899528946289
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-overlapping-another-object",
+							"objectClass": "Personaje",
+							"sid": 143682225003535,
+							"parameters": {
+								"object": "Basura"
+							}
+						},
+						{
+							"id": "key-is-down",
+							"objectClass": "Teclado",
+							"sid": 448786069185289,
+							"parameters": {
+								"key": 69
+							}
+						},
+						{
+							"id": "is-boolean-instance-variable-set",
+							"objectClass": "Personaje",
+							"sid": 366357358984780,
+							"parameters": {
+								"instance-variable": "Ocupado"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation",
+							"objectClass": "Basura",
+							"sid": 332443026580297,
+							"parameters": {
+								"animation": "\"Cerrado\"",
+								"from": "beginning"
+							}
+						},
+						{
+							"id": "set-boolean-instvar",
+							"objectClass": "Personaje",
+							"sid": 581213161825597,
+							"parameters": {
+								"instance-variable": "CarneCocida",
+								"value": "false"
+							}
+						},
+						{
+							"id": "set-boolean-instvar",
+							"objectClass": "Personaje",
+							"sid": 785249111388271,
+							"parameters": {
+								"instance-variable": "CarneCruda",
+								"value": "false"
+							}
+						},
+						{
+							"id": "set-boolean-instvar",
+							"objectClass": "Personaje",
+							"sid": 408491716171881,
+							"parameters": {
+								"instance-variable": "CarneQuemada",
+								"value": "false"
+							}
+						},
+						{
+							"id": "set-boolean-instvar",
+							"objectClass": "Personaje",
+							"sid": 218778210401807,
+							"parameters": {
+								"instance-variable": "CebCor",
+								"value": "false"
+							}
+						},
+						{
+							"id": "set-boolean-instvar",
+							"objectClass": "Personaje",
+							"sid": 920491589989758,
+							"parameters": {
+								"instance-variable": "Cebolla",
+								"value": "false"
+							}
+						},
+						{
+							"id": "set-boolean-instvar",
+							"objectClass": "Personaje",
+							"sid": 433154004084572,
+							"parameters": {
+								"instance-variable": "Cuchillo",
+								"value": "false"
+							}
+						},
+						{
+							"id": "set-boolean-instvar",
+							"objectClass": "Personaje",
+							"sid": 169495688069389,
+							"parameters": {
+								"instance-variable": "LecCor",
+								"value": "false"
+							}
+						},
+						{
+							"id": "set-boolean-instvar",
+							"objectClass": "Personaje",
+							"sid": 424996161766379,
+							"parameters": {
+								"instance-variable": "Lechuga",
+								"value": "false"
+							}
+						},
+						{
+							"id": "set-boolean-instvar",
+							"objectClass": "Personaje",
+							"sid": 236339289576726,
+							"parameters": {
+								"instance-variable": "Pan",
+								"value": "false"
+							}
+						},
+						{
+							"id": "set-boolean-instvar",
+							"objectClass": "Personaje",
+							"sid": 865399024474670,
+							"parameters": {
+								"instance-variable": "Plato",
+								"value": "false"
+							}
+						},
+						{
+							"id": "set-boolean-instvar",
+							"objectClass": "Personaje",
+							"sid": 738409420278177,
+							"parameters": {
+								"instance-variable": "Servido",
+								"value": "false"
+							}
+						},
+						{
+							"id": "set-boolean-instvar",
+							"objectClass": "Personaje",
+							"sid": 508311912173324,
+							"parameters": {
+								"instance-variable": "Tomate",
+								"value": "false"
+							}
+						},
+						{
+							"id": "set-boolean-instvar",
+							"objectClass": "Personaje",
+							"sid": 448423405430826,
+							"parameters": {
+								"instance-variable": "TomCor",
+								"value": "false"
+							}
+						},
+						{
+							"id": "set-boolean-instvar",
+							"objectClass": "Personaje",
+							"sid": 386521495721163,
+							"parameters": {
+								"instance-variable": "Vacio",
+								"value": "true"
+							}
+						},
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 129239435301394,
+							"parameters": {
+								"seconds": "0.5"
+							}
+						},
+						{
+							"id": "set-animation",
+							"objectClass": "Basura",
+							"sid": 705039165037341,
+							"parameters": {
+								"animation": "\"Abierto\"",
+								"from": "beginning"
+							}
+						}
+					],
+					"sid": 318628318463268
 				}
 			],
 			"sid": 884826170135572
@@ -4667,6 +4893,35 @@
 				}
 			],
 			"sid": 210370087290794
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-key-pressed",
+					"objectClass": "Teclado",
+					"sid": 128800671857585,
+					"parameters": {
+						"key": 82
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "restart-layout",
+					"objectClass": "System",
+					"sid": 965604670523522
+				},
+				{
+					"id": "reset-global-variables",
+					"objectClass": "System",
+					"sid": 150775866656008,
+					"parameters": {
+						"reset-static": false
+					}
+				}
+			],
+			"sid": 946817806714626
 		},
 		{
 			"eventType": "group",

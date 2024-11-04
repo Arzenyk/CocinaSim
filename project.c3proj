@@ -43,8 +43,22 @@
 		},
 		{
 			"type": "behavior",
+			"id": "Flash",
+			"name": "Flash",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
 			"id": "TileMovement",
 			"name": "Tile movement",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "bound",
+			"name": "Bound to layout",
 			"author": "Scirra",
 			"bundled": false
 		},
@@ -69,7 +83,8 @@
 			"UI",
 			"Tutorial",
 			"Basura",
-			"spr_orden"
+			"spr_orden",
+			"spr_tubo"
 		],
 		"subfolders": [
 			{

@@ -1,7 +1,7 @@
 {
-	"name": "spr_orden",
+	"name": "spr_tubo",
 	"plugin-id": "Sprite",
-	"sid": 925355593543596,
+	"sid": 313670545531658,
 	"isGlobal": false,
 	"instanceVariables": [],
 	"behaviorTypes": [],
@@ -19,13 +19,13 @@
 						"exportFormat": "lossless",
 						"exportQuality": 0.8,
 						"fileType": "image/png",
-						"imageSpriteId": 4949282,
+						"imageSpriteId": 316495,
 						"useCollisionPoly": true,
 						"duration": 1,
 						"tag": ""
 					}
 				],
-				"sid": 501191702149601,
+				"sid": 274289634050326,
 				"name": "Animation 1",
 				"isLooping": false,
 				"isPingPong": false,

@@ -115,6 +115,11 @@
 			"behaviorId": "TileMovement",
 			"name": "TileMovement",
 			"sid": 458177595916064
+		},
+		{
+			"behaviorId": "bound",
+			"name": "BoundToLayout",
+			"sid": 190833308443340
 		}
 	],
 	"effectTypes": [],
