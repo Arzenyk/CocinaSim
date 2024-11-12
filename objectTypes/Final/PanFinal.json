@@ -1,0 +1,53 @@
+{
+	"name": "PanFinal",
+	"plugin-id": "Sprite",
+	"sid": 741879603612749,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 250,
+						"height": 250,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"fileType": "image/png",
+						"imageSpriteId": 7041001,
+						"collisionPoly": {
+							"points": [
+								0.476,
+								0.188,
+								0.556,
+								0.192,
+								0.616,
+								0.308,
+								0.548,
+								0.328,
+								0.452,
+								0.328
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					}
+				],
+				"sid": 950080209515237,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

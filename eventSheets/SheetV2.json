@@ -1,0 +1,95 @@
+{
+	"name": "SheetV2",
+	"events": [
+		{
+			"eventType": "variable",
+			"name": "Cebolla",
+			"type": "boolean",
+			"initialValue": "false",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 865896305098981
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "cursor-is-over-object",
+					"objectClass": "Mouse",
+					"sid": 921443481347446,
+					"parameters": {
+						"object": "CajaCebolla"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-cursor-style",
+					"objectClass": "Mouse",
+					"sid": 986151656931050,
+					"parameters": {
+						"cursor-style": "hand"
+					}
+				}
+			],
+			"sid": 364519690502085
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-object-clicked",
+					"objectClass": "Mouse",
+					"sid": 439283729671448,
+					"parameters": {
+						"mouse-button": "left",
+						"click-type": "clicked",
+						"object-clicked": "CajaCebolla"
+					}
+				},
+				{
+					"id": "compare-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 948434279123582,
+					"parameters": {
+						"variable": "Cebolla"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-cursor-from-sprite",
+					"objectClass": "Mouse",
+					"sid": 482513009497317,
+					"parameters": {
+						"sprite": "Cebolla"
+					}
+				},
+				{
+					"id": "spawn-another-object",
+					"objectClass": "Cebolla",
+					"sid": 492643023658846,
+					"parameters": {
+						"object": "Cebolla",
+						"layer": "1",
+						"image-point": "0",
+						"create-hierarchy": false,
+						"template-name": "\"\""
+					}
+				},
+				{
+					"id": "set-position",
+					"objectClass": "Cebolla",
+					"sid": 644834516455024,
+					"parameters": {
+						"x": "Mouse.AbsoluteX",
+						"y": "Mouse.AbsoluteY"
+					}
+				}
+			],
+			"sid": 887372245917632
+		}
+	],
+	"sid": 133011898230684
+}

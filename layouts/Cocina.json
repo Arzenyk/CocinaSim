@@ -214,7 +214,14 @@
 					"sid": 751405300323756,
 					"tags": "",
 					"instanceVariables": {},
-					"behaviors": {},
+					"behaviors": {
+						"DragDrop": {
+							"properties": {
+								"axes": "both",
+								"enabled": true
+							}
+						}
+					},
 					"instanceFolderItem": {
 						"sid": 751405300323756,
 						"expanded": true
@@ -284,14 +291,26 @@
 					"sid": 726976672000747,
 					"tags": "",
 					"instanceVariables": {},
-					"behaviors": {},
+					"behaviors": {
+						"DragDrop": {
+							"properties": {
+								"axes": "both",
+								"enabled": true
+							}
+						},
+						"Pin": {
+							"properties": {
+								"destroy": false
+							}
+						}
+					},
 					"instanceFolderItem": {
 						"sid": 726976672000747,
 						"expanded": true
 					},
 					"world": {
-						"x": 899,
-						"y": -135,
+						"x": 900,
+						"y": -116,
 						"width": 118,
 						"height": 107,
 						"originX": 0.5,
@@ -1246,8 +1265,8 @@
 						"expanded": true
 					},
 					"world": {
-						"x": 767,
-						"y": 1539,
+						"x": 804,
+						"y": 937,
 						"width": 250,
 						"height": 250,
 						"originX": 0.5,
@@ -1283,8 +1302,8 @@
 						"expanded": true
 					},
 					"world": {
-						"x": 481,
-						"y": 1540,
+						"x": 518,
+						"y": 938,
 						"width": 250,
 						"height": 250,
 						"originX": 0.5,
@@ -1320,8 +1339,8 @@
 						"expanded": true
 					},
 					"world": {
-						"x": 196,
-						"y": 1542,
+						"x": 233,
+						"y": 940,
 						"width": 250,
 						"height": 250,
 						"originX": 0.5,
@@ -1357,8 +1376,8 @@
 						"expanded": true
 					},
 					"world": {
-						"x": 1062,
-						"y": 1539,
+						"x": 1099,
+						"y": 937,
 						"width": 250,
 						"height": 250,
 						"originX": 0.5,
@@ -1620,9 +1639,9 @@
 						"expanded": true
 					},
 					"world": {
-						"x": -630,
-						"y": 1503,
-						"width": 847.9999999999998,
+						"x": 658,
+						"y": 840,
+						"width": 1094.9999999999998,
 						"height": 40,
 						"originX": 0.5,
 						"originY": 0.5,
@@ -1666,6 +1685,41 @@
 						"y": 1791,
 						"width": 254.99999999999977,
 						"height": 150,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "Mesada",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Vacio",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 44,
+					"sid": 815129263227421,
+					"tags": "",
+					"instanceVariables": {},
+					"behaviors": {},
+					"instanceFolderItem": {
+						"sid": 815129263227421,
+						"expanded": true
+					},
+					"world": {
+						"x": 1675,
+						"y": 221,
+						"width": 250,
+						"height": 250,
 						"originX": 0.5,
 						"originY": 0.5,
 						"color": [
@@ -1854,8 +1908,8 @@
 						"expanded": true
 					},
 					"world": {
-						"x": 1766,
-						"y": 990,
+						"x": 509,
+						"y": 646,
 						"width": 159,
 						"height": 251,
 						"originX": 0.5345911949685535,
@@ -2200,7 +2254,7 @@
 					}
 				},
 				{
-					"type": "Mesada",
+					"type": "PlatoFinal",
 					"properties": {
 						"initially-visible": true,
 						"initial-animation": "Animation 1",
@@ -2208,18 +2262,298 @@
 						"enable-collisions": true,
 						"live-preview": false
 					},
-					"uid": 44,
-					"sid": 815129263227421,
+					"uid": 83,
+					"sid": 701233755786649,
 					"tags": "",
 					"instanceVariables": {},
 					"behaviors": {},
 					"instanceFolderItem": {
-						"sid": 815129263227421,
+						"sid": 701233755786649,
 						"expanded": true
 					},
 					"world": {
-						"x": 1675,
-						"y": 221,
+						"x": -204,
+						"y": 135,
+						"width": 250,
+						"height": 250,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "PanFinal",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 84,
+					"sid": 409619867159210,
+					"tags": "",
+					"instanceVariables": {},
+					"behaviors": {},
+					"instanceFolderItem": {
+						"sid": 409619867159210,
+						"expanded": true
+					},
+					"world": {
+						"x": -206,
+						"y": 274,
+						"width": 250,
+						"height": 250,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "CarneCocidaFinal",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 85,
+					"sid": 398117091092765,
+					"tags": "",
+					"instanceVariables": {},
+					"behaviors": {},
+					"instanceFolderItem": {
+						"sid": 398117091092765,
+						"expanded": true
+					},
+					"world": {
+						"x": -203,
+						"y": 415,
+						"width": 250,
+						"height": 250,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "CarneCrudaFinal",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 86,
+					"sid": 803552484581788,
+					"tags": "",
+					"instanceVariables": {},
+					"behaviors": {},
+					"instanceFolderItem": {
+						"sid": 803552484581788,
+						"expanded": true
+					},
+					"world": {
+						"x": -200,
+						"y": 540,
+						"width": 250,
+						"height": 250,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "CarneQuemadaFinal",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 87,
+					"sid": 255671189638421,
+					"tags": "",
+					"instanceVariables": {},
+					"behaviors": {},
+					"instanceFolderItem": {
+						"sid": 255671189638421,
+						"expanded": true
+					},
+					"world": {
+						"x": -199,
+						"y": 667,
+						"width": 250,
+						"height": 250,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "LechugaFinal",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 88,
+					"sid": 539524781954618,
+					"tags": "",
+					"instanceVariables": {},
+					"behaviors": {},
+					"instanceFolderItem": {
+						"sid": 539524781954618,
+						"expanded": true
+					},
+					"world": {
+						"x": -199,
+						"y": 788,
+						"width": 250,
+						"height": 250,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "TomateFinal",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 89,
+					"sid": 214077460404945,
+					"tags": "",
+					"instanceVariables": {},
+					"behaviors": {},
+					"instanceFolderItem": {
+						"sid": 214077460404945,
+						"expanded": true
+					},
+					"world": {
+						"x": -202,
+						"y": 905,
+						"width": 250,
+						"height": 250,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "CebollaFinal",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 90,
+					"sid": 403864322466427,
+					"tags": "",
+					"instanceVariables": {},
+					"behaviors": {},
+					"instanceFolderItem": {
+						"sid": 403864322466427,
+						"expanded": true
+					},
+					"world": {
+						"x": -206,
+						"y": 998,
+						"width": 250,
+						"height": 250,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "PanArriba",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 91,
+					"sid": 505839768628308,
+					"tags": "",
+					"instanceVariables": {},
+					"behaviors": {},
+					"instanceFolderItem": {
+						"sid": 505839768628308,
+						"expanded": true
+					},
+					"world": {
+						"x": -208,
+						"y": 1106,
 						"width": 250,
 						"height": 250,
 						"originX": 0.5,
@@ -2316,7 +2650,7 @@
 					}
 				},
 				{
-					"type": "CorteCebolla",
+					"type": "BarraTabla",
 					"properties": {
 						"value": 0,
 						"maximum": 10,
@@ -2336,7 +2670,7 @@
 					},
 					"world": {
 						"x": 830,
-						"y": 196,
+						"y": 62,
 						"width": 200,
 						"height": 25,
 						"originX": 0,
@@ -2369,8 +2703,8 @@
 						"expanded": true
 					},
 					"world": {
-						"x": 331,
-						"y": 187,
+						"x": 334,
+						"y": 62,
 						"width": 200,
 						"height": 25,
 						"originX": 0,
@@ -2457,6 +2791,63 @@
 						"y": 292,
 						"width": 682,
 						"height": 597,
+						"originX": 0,
+						"originY": 0,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "txt_debug",
+					"properties": {
+						"text": "Debug",
+						"enable-bbcode": true,
+						"font": "Arial",
+						"size": 30,
+						"line-height": 0,
+						"bold": false,
+						"italic": false,
+						"color": [
+							0,
+							0,
+							0,
+							1
+						],
+						"horizontal-alignment": "left",
+						"vertical-alignment": "top",
+						"wrapping": "word",
+						"text-direction": "ltr",
+						"icon-set": -1,
+						"initially-visible": true,
+						"origin": "top-left",
+						"read-aloud": false
+					},
+					"uid": 92,
+					"sid": 882223022678869,
+					"tags": "",
+					"instanceVariables": {},
+					"behaviors": {
+						"Pin": {
+							"properties": {
+								"destroy": false
+							}
+						}
+					},
+					"instanceFolderItem": {
+						"sid": 882223022678869,
+						"expanded": true
+					},
+					"world": {
+						"x": 581,
+						"y": 394,
+						"width": 734,
+						"height": 134,
 						"originX": 0,
 						"originY": 0,
 						"color": [

@@ -1,0 +1,55 @@
+{
+	"name": "PanArriba",
+	"plugin-id": "Sprite",
+	"sid": 329231793634254,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 250,
+						"height": 250,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"fileType": "image/png",
+						"imageSpriteId": 3695044,
+						"collisionPoly": {
+							"points": [
+								0.46,
+								0.04,
+								0.548,
+								0.04,
+								0.6,
+								0.184,
+								0.528,
+								0.2,
+								0.484,
+								0.2,
+								0.412,
+								0.052
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					}
+				],
+				"sid": 224153562752511,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}
