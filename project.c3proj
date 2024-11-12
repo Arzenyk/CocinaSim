@@ -43,13 +43,6 @@
 		},
 		{
 			"type": "behavior",
-			"id": "Anchor",
-			"name": "Anchor",
-			"author": "Scirra",
-			"bundled": false
-		},
-		{
-			"type": "behavior",
 			"id": "Flash",
 			"name": "Flash",
 			"author": "Scirra",

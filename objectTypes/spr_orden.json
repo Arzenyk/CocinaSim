@@ -6,19 +6,9 @@
 	"instanceVariables": [],
 	"behaviorTypes": [
 		{
-			"behaviorId": "Pin",
-			"name": "Pin",
-			"sid": 516670809190844
-		},
-		{
 			"behaviorId": "bound",
 			"name": "BoundToLayout",
 			"sid": 427683534111949
-		},
-		{
-			"behaviorId": "Anchor",
-			"name": "Anchor",
-			"sid": 737964811196907
 		}
 	],
 	"effectTypes": [],

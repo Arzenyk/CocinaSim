@@ -4148,9 +4148,17 @@
 							"eventType": "block",
 							"conditions": [
 								{
+									"id": "on-key-pressed",
+									"objectClass": "Teclado",
+									"sid": 325732248588769,
+									"parameters": {
+										"key": 69
+									}
+								},
+								{
 									"id": "is-boolean-instance-variable-set",
 									"objectClass": "Personaje",
-									"sid": 725071192090241,
+									"sid": 439330688783648,
 									"parameters": {
 										"instance-variable": "Vacio"
 									}
@@ -4161,14 +4169,6 @@
 									"sid": 845232517237349,
 									"parameters": {
 										"object": "CajaCebolla"
-									}
-								},
-								{
-									"id": "key-is-down",
-									"objectClass": "Teclado",
-									"sid": 919110580881786,
-									"parameters": {
-										"key": 69
 									}
 								},
 								{
@@ -4622,6 +4622,14 @@
 							"eventType": "block",
 							"conditions": [
 								{
+									"id": "on-key-pressed",
+									"objectClass": "Teclado",
+									"sid": 182298854170009,
+									"parameters": {
+										"key": 69
+									}
+								},
+								{
 									"id": "is-boolean-instance-variable-set",
 									"objectClass": "Personaje",
 									"sid": 426580906912576,
@@ -4635,14 +4643,6 @@
 									"sid": 194525618508675,
 									"parameters": {
 										"object": "Bacha"
-									}
-								},
-								{
-									"id": "key-is-down",
-									"objectClass": "Teclado",
-									"sid": 118638978611548,
-									"parameters": {
-										"key": 69
 									}
 								},
 								{
@@ -4661,6 +4661,40 @@
 									"sid": 949835218773231,
 									"parameters": {
 										"animation": "\"Prendida\"",
+										"from": "beginning"
+									}
+								},
+								{
+									"id": "wait",
+									"objectClass": "System",
+									"sid": 344559951006338,
+									"parameters": {
+										"seconds": "6"
+									}
+								},
+								{
+									"id": "set-animation",
+									"objectClass": "Bacha",
+									"sid": 189987104090756,
+									"parameters": {
+										"animation": "\"Apagando\"",
+										"from": "beginning"
+									}
+								},
+								{
+									"id": "wait",
+									"objectClass": "System",
+									"sid": 644265251382772,
+									"parameters": {
+										"seconds": "5"
+									}
+								},
+								{
+									"id": "set-animation",
+									"objectClass": "Bacha",
+									"sid": 954461315416116,
+									"parameters": {
+										"animation": "\"Apagada\"",
 										"from": "beginning"
 									}
 								}
@@ -4953,51 +4987,6 @@
 					"behaviorType": "Pin",
 					"parameters": {
 						"pin-to": "Personaje",
-						"x": true,
-						"y": true,
-						"angle": false,
-						"width-type": "no",
-						"height-type": "no",
-						"z": false
-					}
-				},
-				{
-					"id": "pin-to-object-properties",
-					"objectClass": "spr_tubo",
-					"sid": 756637055455960,
-					"behaviorType": "Pin",
-					"parameters": {
-						"pin-to": "spr_hud",
-						"x": true,
-						"y": true,
-						"angle": false,
-						"width-type": "no",
-						"height-type": "no",
-						"z": false
-					}
-				},
-				{
-					"id": "pin-to-object-properties",
-					"objectClass": "spr_orden",
-					"sid": 252824364238082,
-					"behaviorType": "Pin",
-					"parameters": {
-						"pin-to": "spr_hud",
-						"x": true,
-						"y": true,
-						"angle": false,
-						"width-type": "no",
-						"height-type": "no",
-						"z": false
-					}
-				},
-				{
-					"id": "pin-to-object-properties",
-					"objectClass": "spr_pedido",
-					"sid": 492559750689754,
-					"behaviorType": "Pin",
-					"parameters": {
-						"pin-to": "spr_hud",
 						"x": true,
 						"y": true,
 						"angle": false,
@@ -6343,31 +6332,6 @@
 				}
 			],
 			"sid": 496255807040387
-		},
-		{
-			"eventType": "block",
-			"conditions": [
-				{
-					"id": "is-overlapping-another-object",
-					"objectClass": "Personaje",
-					"sid": 374748692550467,
-					"parameters": {
-						"object": "spr_puerta"
-					}
-				}
-			],
-			"actions": [
-				{
-					"id": "set-animation",
-					"objectClass": "spr_puerta",
-					"sid": 109548272026869,
-					"parameters": {
-						"animation": "\"Abierto\"",
-						"from": "beginning"
-					}
-				}
-			],
-			"sid": 505430801115555
 		}
 	],
 	"sid": 281322155169956
