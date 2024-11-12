@@ -25,7 +25,7 @@
 						"exportFormat": "lossless",
 						"exportQuality": 0.8,
 						"fileType": "image/png",
-						"imageSpriteId": 2826619,
+						"imageSpriteId": 412637,
 						"useCollisionPoly": true,
 						"duration": 1,
 						"tag": ""
@@ -50,7 +50,7 @@
 						"exportFormat": "lossless",
 						"exportQuality": 0.8,
 						"fileType": "image/png",
-						"imageSpriteId": 693614,
+						"imageSpriteId": 836058,
 						"useCollisionPoly": true,
 						"duration": 1,
 						"tag": ""
@@ -64,7 +64,7 @@
 						"exportFormat": "lossless",
 						"exportQuality": 0.8,
 						"fileType": "image/png",
-						"imageSpriteId": 7323363,
+						"imageSpriteId": 9941294,
 						"useCollisionPoly": true,
 						"duration": 1,
 						"tag": ""
@@ -78,7 +78,7 @@
 						"exportFormat": "lossless",
 						"exportQuality": 0.8,
 						"fileType": "image/png",
-						"imageSpriteId": 9480215,
+						"imageSpriteId": 727009,
 						"useCollisionPoly": true,
 						"duration": 1,
 						"tag": ""
@@ -92,7 +92,7 @@
 						"exportFormat": "lossless",
 						"exportQuality": 0.8,
 						"fileType": "image/png",
-						"imageSpriteId": 200645,
+						"imageSpriteId": 626132,
 						"useCollisionPoly": true,
 						"duration": 1,
 						"tag": ""
@@ -102,7 +102,7 @@
 				"name": "Pensando",
 				"isLooping": true,
 				"isPingPong": false,
-				"repeatCount": 1,
+				"repeatCount": 2,
 				"repeatTo": 0,
 				"speed": 2
 			},
@@ -117,7 +117,7 @@
 						"exportFormat": "lossless",
 						"exportQuality": 0.8,
 						"fileType": "image/png",
-						"imageSpriteId": 3770074,
+						"imageSpriteId": 1602673,
 						"useCollisionPoly": true,
 						"duration": 1,
 						"tag": ""
@@ -142,7 +142,7 @@
 						"exportFormat": "lossless",
 						"exportQuality": 0.8,
 						"fileType": "image/png",
-						"imageSpriteId": 499514,
+						"imageSpriteId": 9142220,
 						"useCollisionPoly": true,
 						"duration": 1,
 						"tag": ""
@@ -150,6 +150,31 @@
 				],
 				"sid": 863543522688907,
 				"name": "Enojado",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			},
+			{
+				"frames": [
+					{
+						"width": 250,
+						"height": 250,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"fileType": "image/png",
+						"imageSpriteId": 6987169,
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					}
+				],
+				"sid": 842021696972935,
+				"name": "Pedido",
 				"isLooping": false,
 				"isPingPong": false,
 				"repeatCount": 1,

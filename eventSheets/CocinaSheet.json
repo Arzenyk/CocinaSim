@@ -62,6 +62,36 @@
 			"sid": 290762656061492
 		},
 		{
+			"eventType": "variable",
+			"name": "Pedidos",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 175549607973299
+		},
+		{
+			"eventType": "variable",
+			"name": "Pin",
+			"type": "boolean",
+			"initialValue": "true",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 749396061886244
+		},
+		{
+			"eventType": "variable",
+			"name": "Position",
+			"type": "boolean",
+			"initialValue": "true",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 105355860148702
+		},
+		{
 			"eventType": "group",
 			"disabled": false,
 			"title": "ControlJugador",
@@ -4838,6 +4868,22 @@
 			],
 			"actions": [
 				{
+					"id": "set-x",
+					"objectClass": "spr_hud",
+					"sid": 477877502847091,
+					"parameters": {
+						"x": "Personaje.X"
+					}
+				},
+				{
+					"id": "set-y",
+					"objectClass": "spr_hud",
+					"sid": 155363140314406,
+					"parameters": {
+						"y": "Personaje.Y"
+					}
+				},
+				{
 					"id": "set-animation",
 					"objectClass": "CajaCebolla",
 					"sid": 691570412021941,
@@ -4898,6 +4944,66 @@
 					"parameters": {
 						"variable": "spawnCliente",
 						"value": "true"
+					}
+				},
+				{
+					"id": "pin-to-object-properties",
+					"objectClass": "spr_hud",
+					"sid": 253776284458503,
+					"behaviorType": "Pin",
+					"parameters": {
+						"pin-to": "Personaje",
+						"x": true,
+						"y": true,
+						"angle": false,
+						"width-type": "no",
+						"height-type": "no",
+						"z": false
+					}
+				},
+				{
+					"id": "pin-to-object-properties",
+					"objectClass": "spr_tubo",
+					"sid": 756637055455960,
+					"behaviorType": "Pin",
+					"parameters": {
+						"pin-to": "spr_hud",
+						"x": true,
+						"y": true,
+						"angle": false,
+						"width-type": "no",
+						"height-type": "no",
+						"z": false
+					}
+				},
+				{
+					"id": "pin-to-object-properties",
+					"objectClass": "spr_orden",
+					"sid": 252824364238082,
+					"behaviorType": "Pin",
+					"parameters": {
+						"pin-to": "spr_hud",
+						"x": true,
+						"y": true,
+						"angle": false,
+						"width-type": "no",
+						"height-type": "no",
+						"z": false
+					}
+				},
+				{
+					"id": "pin-to-object-properties",
+					"objectClass": "spr_pedido",
+					"sid": 492559750689754,
+					"behaviorType": "Pin",
+					"parameters": {
+						"pin-to": "spr_hud",
+						"x": true,
+						"y": true,
+						"angle": false,
+						"width-type": "no",
+						"height-type": "no",
+						"z": false
 					}
 				}
 			],
@@ -6130,18 +6236,138 @@
 					"objectClass": "spr_cliente",
 					"sid": 218519492653449,
 					"behaviorType": "MoveTo"
+				}
+			],
+			"actions": [
+				{
+					"id": "set-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 962120350042406,
+					"parameters": {
+						"variable": "hayCliente",
+						"value": "true"
+					}
+				}
+			],
+			"sid": 919591883272378
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-key-pressed",
+					"objectClass": "Teclado",
+					"sid": 616760136119477,
+					"parameters": {
+						"key": 69
+					}
 				},
 				{
 					"id": "compare-boolean-eventvar",
 					"objectClass": "System",
-					"sid": 282257421546934,
+					"sid": 410593724332860,
 					"parameters": {
 						"variable": "hayCliente"
 					}
+				},
+				{
+					"id": "is-overlapping-another-object",
+					"objectClass": "Personaje",
+					"sid": 727230345057591,
+					"parameters": {
+						"object": "spr_espacio_cliente"
+					}
 				}
 			],
-			"actions": [],
-			"sid": 919591883272378
+			"actions": [
+				{
+					"id": "set-animation",
+					"objectClass": "spr_cliente",
+					"sid": 350963286424704,
+					"parameters": {
+						"animation": "\"Pensando\"",
+						"from": "beginning"
+					}
+				},
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 302146792036292,
+					"parameters": {
+						"seconds": "5"
+					}
+				},
+				{
+					"id": "set-animation",
+					"objectClass": "spr_cliente",
+					"sid": 927284252219661,
+					"parameters": {
+						"animation": "\"Pedido\"",
+						"from": "beginning"
+					}
+				},
+				{
+					"id": "add-to-eventvar",
+					"objectClass": "System",
+					"sid": 571226401249825,
+					"parameters": {
+						"variable": "Pedidos",
+						"value": "1"
+					}
+				}
+			],
+			"sid": 211386966936828
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 500130249429083,
+					"parameters": {
+						"variable": "Pedidos",
+						"comparison": 4,
+						"value": "0"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-visible",
+					"objectClass": "spr_pedido",
+					"sid": 209961786588812,
+					"parameters": {
+						"visibility": "visible"
+					}
+				}
+			],
+			"sid": 496255807040387
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "is-overlapping-another-object",
+					"objectClass": "Personaje",
+					"sid": 374748692550467,
+					"parameters": {
+						"object": "spr_puerta"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-animation",
+					"objectClass": "spr_puerta",
+					"sid": 109548272026869,
+					"parameters": {
+						"animation": "\"Abierto\"",
+						"from": "beginning"
+					}
+				}
+			],
+			"sid": 505430801115555
 		}
 	],
 	"sid": 281322155169956

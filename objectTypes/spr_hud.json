@@ -4,7 +4,18 @@
 	"sid": 438312879620126,
 	"isGlobal": false,
 	"instanceVariables": [],
-	"behaviorTypes": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "Pin",
+			"name": "Pin",
+			"sid": 364008741282919
+		},
+		{
+			"behaviorId": "bound",
+			"name": "BoundToLayout",
+			"sid": 530615036559768
+		}
+	],
 	"effectTypes": [],
 	"animations": {
 		"items": [
@@ -19,7 +30,7 @@
 						"exportFormat": "lossless",
 						"exportQuality": 0.8,
 						"fileType": "image/png",
-						"imageSpriteId": 3169881,
+						"imageSpriteId": 9411418,
 						"useCollisionPoly": true,
 						"duration": 1,
 						"tag": ""
