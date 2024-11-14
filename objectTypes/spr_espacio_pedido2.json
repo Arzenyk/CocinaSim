@@ -1,37 +1,31 @@
 {
-	"name": "spr_tubo",
+	"name": "spr_espacio_pedido2",
 	"plugin-id": "Sprite",
-	"sid": 313670545531658,
+	"sid": 100038692358005,
 	"isGlobal": false,
 	"instanceVariables": [],
-	"behaviorTypes": [
-		{
-			"behaviorId": "bound",
-			"name": "BoundToLayout",
-			"sid": 841268618298519
-		}
-	],
+	"behaviorTypes": [],
 	"effectTypes": [],
 	"animations": {
 		"items": [
 			{
 				"frames": [
 					{
-						"width": 1000,
-						"height": 1000,
+						"width": 250,
+						"height": 250,
 						"originX": 0.5,
 						"originY": 0.5,
 						"originalSource": "",
 						"exportFormat": "lossless",
 						"exportQuality": 0.8,
 						"fileType": "image/png",
-						"imageSpriteId": 8065832,
+						"imageSpriteId": 3799733,
 						"useCollisionPoly": true,
 						"duration": 1,
 						"tag": ""
 					}
 				],
-				"sid": 274289634050326,
+				"sid": 663894423238951,
 				"name": "Animation 1",
 				"isLooping": false,
 				"isPingPong": false,

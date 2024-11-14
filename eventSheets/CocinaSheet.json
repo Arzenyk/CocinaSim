@@ -65,7 +65,7 @@
 			"eventType": "variable",
 			"name": "Pedidos",
 			"type": "number",
-			"initialValue": "0",
+			"initialValue": "4",
 			"comment": "",
 			"isStatic": false,
 			"isConstant": false,
@@ -210,6 +210,96 @@
 			"isStatic": false,
 			"isConstant": false,
 			"sid": 345895595043481
+		},
+		{
+			"eventType": "variable",
+			"name": "Ped_Completa",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 801342348634357
+		},
+		{
+			"eventType": "variable",
+			"name": "Ped_SLech",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 147297404485989
+		},
+		{
+			"eventType": "variable",
+			"name": "Ped_STom",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 883532413419954
+		},
+		{
+			"eventType": "variable",
+			"name": "Ped_SCeb",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 762018570725811
+		},
+		{
+			"eventType": "variable",
+			"name": "RandPedido",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 218430397862754
+		},
+		{
+			"eventType": "variable",
+			"name": "Espacio01",
+			"type": "boolean",
+			"initialValue": "false",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 592231182150235
+		},
+		{
+			"eventType": "variable",
+			"name": "Espacio02",
+			"type": "boolean",
+			"initialValue": "false",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 753409940273009
+		},
+		{
+			"eventType": "variable",
+			"name": "Espacio03",
+			"type": "boolean",
+			"initialValue": "false",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 239545496636805
+		},
+		{
+			"eventType": "variable",
+			"name": "Espacio04",
+			"type": "boolean",
+			"initialValue": "false",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 793351595131325
 		},
 		{
 			"eventType": "group",
@@ -3598,6 +3688,10 @@
 					"isActiveOnStart": true,
 					"children": [
 						{
+							"eventType": "comment",
+							"text": "Completa"
+						},
+						{
 							"eventType": "block",
 							"conditions": [
 								{
@@ -3800,6 +3894,630 @@
 								}
 							],
 							"sid": 881591177755055
+						},
+						{
+							"eventType": "comment",
+							"text": "Sin Lechuga"
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-boolean-instance-variable-set",
+									"objectClass": "Personaje",
+									"sid": 561408520971294,
+									"parameters": {
+										"instance-variable": "SinLechuga"
+									}
+								},
+								{
+									"id": "key-is-down",
+									"objectClass": "Teclado",
+									"sid": 774219344855197,
+									"parameters": {
+										"key": 87
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-animation",
+									"objectClass": "Personaje",
+									"sid": 648345940784900,
+									"parameters": {
+										"animation": "\"BSSLech\"",
+										"from": "beginning"
+									}
+								},
+								{
+									"id": "simulate-control",
+									"objectClass": "Personaje",
+									"sid": 227993580172197,
+									"behaviorType": "TileMovement",
+									"parameters": {
+										"control": "up"
+									}
+								},
+								{
+									"id": "set-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 383265131134792,
+									"parameters": {
+										"variable": "Cortar",
+										"value": "false"
+									}
+								}
+							],
+							"sid": 495250933485634
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-boolean-instance-variable-set",
+									"objectClass": "Personaje",
+									"sid": 876512523836739,
+									"parameters": {
+										"instance-variable": "SinLechuga"
+									}
+								},
+								{
+									"id": "key-is-down",
+									"objectClass": "Teclado",
+									"sid": 955395124568523,
+									"parameters": {
+										"key": 65
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-animation",
+									"objectClass": "Personaje",
+									"sid": 240823365096398,
+									"parameters": {
+										"animation": "\"LSSLech\"",
+										"from": "beginning"
+									}
+								},
+								{
+									"id": "simulate-control",
+									"objectClass": "Personaje",
+									"sid": 629416032533829,
+									"behaviorType": "TileMovement",
+									"parameters": {
+										"control": "left"
+									}
+								},
+								{
+									"id": "set-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 313520632263093,
+									"parameters": {
+										"variable": "Cortar",
+										"value": "false"
+									}
+								}
+							],
+							"sid": 320066748847412
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-boolean-instance-variable-set",
+									"objectClass": "Personaje",
+									"sid": 776151338026517,
+									"parameters": {
+										"instance-variable": "SinLechuga"
+									}
+								},
+								{
+									"id": "key-is-down",
+									"objectClass": "Teclado",
+									"sid": 200376270487859,
+									"parameters": {
+										"key": 83
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-animation",
+									"objectClass": "Personaje",
+									"sid": 207656943949658,
+									"parameters": {
+										"animation": "\"FSSLech\"",
+										"from": "beginning"
+									}
+								},
+								{
+									"id": "simulate-control",
+									"objectClass": "Personaje",
+									"sid": 456752918547595,
+									"behaviorType": "TileMovement",
+									"parameters": {
+										"control": "down"
+									}
+								},
+								{
+									"id": "set-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 982259890761227,
+									"parameters": {
+										"variable": "Cortar",
+										"value": "false"
+									}
+								}
+							],
+							"sid": 522646195625786
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-boolean-instance-variable-set",
+									"objectClass": "Personaje",
+									"sid": 465223518214713,
+									"parameters": {
+										"instance-variable": "SinLechuga"
+									}
+								},
+								{
+									"id": "key-is-down",
+									"objectClass": "Teclado",
+									"sid": 884900439963689,
+									"parameters": {
+										"key": 68
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-animation",
+									"objectClass": "Personaje",
+									"sid": 281869170941948,
+									"parameters": {
+										"animation": "\"RSSLech\"",
+										"from": "beginning"
+									}
+								},
+								{
+									"id": "simulate-control",
+									"objectClass": "Personaje",
+									"sid": 579438740021665,
+									"behaviorType": "TileMovement",
+									"parameters": {
+										"control": "right"
+									}
+								},
+								{
+									"id": "set-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 979707645676022,
+									"parameters": {
+										"variable": "Cortar",
+										"value": "false"
+									}
+								}
+							],
+							"sid": 678737445785984
+						},
+						{
+							"eventType": "comment",
+							"text": "Sin Tomate"
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-boolean-instance-variable-set",
+									"objectClass": "Personaje",
+									"sid": 462812017364077,
+									"parameters": {
+										"instance-variable": "SinTomate"
+									}
+								},
+								{
+									"id": "key-is-down",
+									"objectClass": "Teclado",
+									"sid": 229016016781832,
+									"parameters": {
+										"key": 87
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-animation",
+									"objectClass": "Personaje",
+									"sid": 274974363217595,
+									"parameters": {
+										"animation": "\"BSSTom\"",
+										"from": "beginning"
+									}
+								},
+								{
+									"id": "simulate-control",
+									"objectClass": "Personaje",
+									"sid": 390311680659774,
+									"behaviorType": "TileMovement",
+									"parameters": {
+										"control": "up"
+									}
+								},
+								{
+									"id": "set-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 693796009786816,
+									"parameters": {
+										"variable": "Cortar",
+										"value": "false"
+									}
+								}
+							],
+							"sid": 713532840099211
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-boolean-instance-variable-set",
+									"objectClass": "Personaje",
+									"sid": 215832313684765,
+									"parameters": {
+										"instance-variable": "SinTomate"
+									}
+								},
+								{
+									"id": "key-is-down",
+									"objectClass": "Teclado",
+									"sid": 747465004622990,
+									"parameters": {
+										"key": 65
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-animation",
+									"objectClass": "Personaje",
+									"sid": 756665450343875,
+									"parameters": {
+										"animation": "\"LSSTom\"",
+										"from": "beginning"
+									}
+								},
+								{
+									"id": "simulate-control",
+									"objectClass": "Personaje",
+									"sid": 482960527759893,
+									"behaviorType": "TileMovement",
+									"parameters": {
+										"control": "left"
+									}
+								},
+								{
+									"id": "set-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 181102077224019,
+									"parameters": {
+										"variable": "Cortar",
+										"value": "false"
+									}
+								}
+							],
+							"sid": 392611013055640
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-boolean-instance-variable-set",
+									"objectClass": "Personaje",
+									"sid": 813061542498941,
+									"parameters": {
+										"instance-variable": "SinTomate"
+									}
+								},
+								{
+									"id": "key-is-down",
+									"objectClass": "Teclado",
+									"sid": 471484194556416,
+									"parameters": {
+										"key": 83
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-animation",
+									"objectClass": "Personaje",
+									"sid": 845707520503037,
+									"parameters": {
+										"animation": "\"FSSTom\"",
+										"from": "beginning"
+									}
+								},
+								{
+									"id": "simulate-control",
+									"objectClass": "Personaje",
+									"sid": 764455677684387,
+									"behaviorType": "TileMovement",
+									"parameters": {
+										"control": "down"
+									}
+								},
+								{
+									"id": "set-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 830595364257431,
+									"parameters": {
+										"variable": "Cortar",
+										"value": "false"
+									}
+								}
+							],
+							"sid": 395849026265761
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-boolean-instance-variable-set",
+									"objectClass": "Personaje",
+									"sid": 605679049432402,
+									"parameters": {
+										"instance-variable": "SinTomate"
+									}
+								},
+								{
+									"id": "key-is-down",
+									"objectClass": "Teclado",
+									"sid": 872795032746473,
+									"parameters": {
+										"key": 68
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-animation",
+									"objectClass": "Personaje",
+									"sid": 826971382158854,
+									"parameters": {
+										"animation": "\"RSSTom\"",
+										"from": "beginning"
+									}
+								},
+								{
+									"id": "simulate-control",
+									"objectClass": "Personaje",
+									"sid": 111464837331956,
+									"behaviorType": "TileMovement",
+									"parameters": {
+										"control": "right"
+									}
+								},
+								{
+									"id": "set-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 911163387386106,
+									"parameters": {
+										"variable": "Cortar",
+										"value": "false"
+									}
+								}
+							],
+							"sid": 347573202963370
+						},
+						{
+							"eventType": "comment",
+							"text": "Sin Cebolla"
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-boolean-instance-variable-set",
+									"objectClass": "Personaje",
+									"sid": 615026351537366,
+									"parameters": {
+										"instance-variable": "SinCebolla"
+									}
+								},
+								{
+									"id": "key-is-down",
+									"objectClass": "Teclado",
+									"sid": 543886780092982,
+									"parameters": {
+										"key": 87
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-animation",
+									"objectClass": "Personaje",
+									"sid": 472406445238887,
+									"parameters": {
+										"animation": "\"BSSCeb\"",
+										"from": "beginning"
+									}
+								},
+								{
+									"id": "simulate-control",
+									"objectClass": "Personaje",
+									"sid": 713525275004326,
+									"behaviorType": "TileMovement",
+									"parameters": {
+										"control": "up"
+									}
+								},
+								{
+									"id": "set-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 946064384938065,
+									"parameters": {
+										"variable": "Cortar",
+										"value": "false"
+									}
+								}
+							],
+							"sid": 618189839928289
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-boolean-instance-variable-set",
+									"objectClass": "Personaje",
+									"sid": 716350281292853,
+									"parameters": {
+										"instance-variable": "SinCebolla"
+									}
+								},
+								{
+									"id": "key-is-down",
+									"objectClass": "Teclado",
+									"sid": 679157047804253,
+									"parameters": {
+										"key": 65
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-animation",
+									"objectClass": "Personaje",
+									"sid": 618746833832060,
+									"parameters": {
+										"animation": "\"LSSCeb\"",
+										"from": "beginning"
+									}
+								},
+								{
+									"id": "simulate-control",
+									"objectClass": "Personaje",
+									"sid": 887778636674696,
+									"behaviorType": "TileMovement",
+									"parameters": {
+										"control": "left"
+									}
+								},
+								{
+									"id": "set-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 872046865744603,
+									"parameters": {
+										"variable": "Cortar",
+										"value": "false"
+									}
+								}
+							],
+							"sid": 892926668116664
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-boolean-instance-variable-set",
+									"objectClass": "Personaje",
+									"sid": 224349728991624,
+									"parameters": {
+										"instance-variable": "SinCebolla"
+									}
+								},
+								{
+									"id": "key-is-down",
+									"objectClass": "Teclado",
+									"sid": 229111129971296,
+									"parameters": {
+										"key": 83
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-animation",
+									"objectClass": "Personaje",
+									"sid": 293256748975769,
+									"parameters": {
+										"animation": "\"FSSCeb\"",
+										"from": "beginning"
+									}
+								},
+								{
+									"id": "simulate-control",
+									"objectClass": "Personaje",
+									"sid": 313974394192936,
+									"behaviorType": "TileMovement",
+									"parameters": {
+										"control": "down"
+									}
+								},
+								{
+									"id": "set-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 104053871722371,
+									"parameters": {
+										"variable": "Cortar",
+										"value": "false"
+									}
+								}
+							],
+							"sid": 166289900875527
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-boolean-instance-variable-set",
+									"objectClass": "Personaje",
+									"sid": 432266695531353,
+									"parameters": {
+										"instance-variable": "SinCebolla"
+									}
+								},
+								{
+									"id": "key-is-down",
+									"objectClass": "Teclado",
+									"sid": 581545027632384,
+									"parameters": {
+										"key": 68
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-animation",
+									"objectClass": "Personaje",
+									"sid": 462429406008105,
+									"parameters": {
+										"animation": "\"RSSCeb\"",
+										"from": "beginning"
+									}
+								},
+								{
+									"id": "simulate-control",
+									"objectClass": "Personaje",
+									"sid": 451249377025954,
+									"behaviorType": "TileMovement",
+									"parameters": {
+										"control": "right"
+									}
+								},
+								{
+									"id": "set-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 910567855302911,
+									"parameters": {
+										"variable": "Cortar",
+										"value": "false"
+									}
+								}
+							],
+							"sid": 499231111940035
 						}
 					],
 					"sid": 359118740635152
@@ -6100,6 +6818,7 @@
 					"id": "pin-to-object-properties",
 					"objectClass": "spr_hud",
 					"sid": 253776284458503,
+					"disabled": true,
 					"behaviorType": "Pin",
 					"parameters": {
 						"pin-to": "Personaje",
@@ -7365,6 +8084,16 @@
 					"parameters": {
 						"object": "spr_espacio_cliente"
 					}
+				},
+				{
+					"id": "compare-at-x",
+					"objectClass": "PedidosArray",
+					"sid": 338696311234811,
+					"parameters": {
+						"x": "RandPedido",
+						"comparison": 2,
+						"value": "4"
+					}
 				}
 			],
 			"actions": [
@@ -7395,12 +8124,31 @@
 					}
 				},
 				{
-					"id": "add-to-eventvar",
+					"id": "set-eventvar-value",
 					"objectClass": "System",
-					"sid": 571226401249825,
+					"sid": 487224760960687,
+					"parameters": {
+						"variable": "RandPedido",
+						"value": "int(random(0, 4))"
+					}
+				},
+				{
+					"id": "subtract-from-eventvar",
+					"objectClass": "System",
+					"sid": 941278927547131,
 					"parameters": {
 						"variable": "Pedidos",
 						"value": "1"
+					}
+				},
+				{
+					"id": "push",
+					"objectClass": "PedidosArray",
+					"sid": 524207489134723,
+					"parameters": {
+						"where": "back",
+						"value": "RandPedido",
+						"axis": "x"
 					}
 				}
 			],
@@ -7412,97 +8160,324 @@
 				{
 					"id": "compare-eventvar",
 					"objectClass": "System",
-					"sid": 500130249429083,
+					"sid": 669049467092087,
 					"parameters": {
-						"variable": "Pedidos",
-						"comparison": 4,
+						"variable": "RandPedido",
+						"comparison": 5,
 						"value": "0"
 					}
 				}
 			],
 			"actions": [
 				{
-					"id": "set-visible",
-					"objectClass": "spr_pedido",
-					"sid": 209961786588812,
+					"id": "add-to-eventvar",
+					"objectClass": "System",
+					"sid": 878020215605100,
 					"parameters": {
-						"visibility": "visible"
+						"variable": "Ped_Completa",
+						"value": "1"
 					}
 				}
 			],
-			"sid": 496255807040387
+			"sid": 136971136805178
 		},
 		{
 			"eventType": "block",
 			"conditions": [
 				{
-					"id": "is-dragging",
-					"objectClass": "Tomate",
-					"sid": 391340283594128,
-					"behaviorType": "DragDrop"
-				}
-			],
-			"actions": [],
-			"sid": 497484882499360
-		},
-		{
-			"eventType": "block",
-			"conditions": [
-				{
-					"id": "cursor-is-over-object",
-					"objectClass": "Mouse",
-					"sid": 245635857521479,
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 815443889242420,
 					"parameters": {
-						"object": "CajonTomate"
+						"variable": "RandPedido",
+						"comparison": 5,
+						"value": "1"
 					}
 				}
 			],
 			"actions": [
 				{
-					"id": "set-cursor-style",
-					"objectClass": "Mouse",
-					"sid": 977581247962333,
+					"id": "add-to-eventvar",
+					"objectClass": "System",
+					"sid": 191581906908952,
 					"parameters": {
-						"cursor-style": "hand"
+						"variable": "Ped_SCeb",
+						"value": "1"
 					}
 				}
 			],
-			"sid": 986448501284896
+			"sid": 370867367038974
 		},
 		{
 			"eventType": "block",
 			"conditions": [
 				{
-					"id": "on-object-clicked",
-					"objectClass": "Mouse",
-					"sid": 877502191245497,
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 210007489975100,
 					"parameters": {
-						"mouse-button": "left",
-						"click-type": "clicked",
-						"object-clicked": "CajonTomate"
+						"variable": "RandPedido",
+						"comparison": 5,
+						"value": "2"
 					}
 				}
 			],
 			"actions": [
 				{
-					"id": "set-cursor-from-sprite",
-					"objectClass": "Mouse",
-					"sid": 754868776747966,
+					"id": "add-to-eventvar",
+					"objectClass": "System",
+					"sid": 249317916698815,
 					"parameters": {
-						"sprite": "Tomate"
+						"variable": "Ped_SLech",
+						"value": "1"
 					}
+				}
+			],
+			"sid": 609169502272401
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 138199325010105,
+					"parameters": {
+						"variable": "RandPedido",
+						"comparison": 5,
+						"value": "3"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "add-to-eventvar",
+					"objectClass": "System",
+					"sid": 862189834901451,
+					"parameters": {
+						"variable": "Ped_STom",
+						"value": "1"
+					}
+				}
+			],
+			"sid": 669628769565938
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Pedidos",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 501581256645588,
+							"parameters": {
+								"variable": "Pedidos",
+								"comparison": 0,
+								"value": "1"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-visible",
+							"objectClass": "spr_espacio_pedido1",
+							"sid": 302021917363230,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						}
+					],
+					"sid": 548417944032339
 				},
 				{
-					"id": "set-position",
-					"objectClass": "Tomate",
-					"sid": 649279534141940,
-					"parameters": {
-						"x": "Mouse.MovementX",
-						"y": "Mouse.MovementY"
-					}
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 952741218403226,
+							"parameters": {
+								"variable": "Pedidos",
+								"comparison": 0,
+								"value": "2"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-visible",
+							"objectClass": "spr_espacio_pedido2",
+							"sid": 592119035174607,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						}
+					],
+					"sid": 113993269128075
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 792961125482976,
+							"parameters": {
+								"variable": "Pedidos",
+								"comparison": 0,
+								"value": "3"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-visible",
+							"objectClass": "spr_espacio_pedido3",
+							"sid": 600367786377486,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						}
+					],
+					"sid": 143778478051892
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 919370151398134,
+							"parameters": {
+								"variable": "Pedidos",
+								"comparison": 0,
+								"value": "4"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-visible",
+							"objectClass": "spr_espacio_pedido4",
+							"sid": 871195045903506,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						}
+					],
+					"sid": 318929709913187
+				},
+				{
+					"eventType": "comment",
+					"text": "Completa 1"
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 118862627295357,
+							"parameters": {
+								"variable": "Ped_Completa",
+								"comparison": 4,
+								"value": "0"
+							}
+						},
+						{
+							"id": "compare-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 361466942673722,
+							"parameters": {
+								"variable": "Espacio01"
+							},
+							"isInverted": true
+						}
+					],
+					"actions": [
+						{
+							"id": "set-position",
+							"objectClass": "spr_pedidoCompleta",
+							"sid": 318479715371332,
+							"parameters": {
+								"x": "spr_espacio_pedido1.X",
+								"y": "spr_espacio_pedido1.Y"
+							}
+						}
+					],
+					"sid": 751282633241577
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 924587205216383,
+							"parameters": {
+								"variable": "Ped_Completa",
+								"comparison": 4,
+								"value": "0"
+							}
+						},
+						{
+							"id": "compare-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 168275897104856,
+							"parameters": {
+								"variable": "Espacio02"
+							},
+							"isInverted": true
+						}
+					],
+					"actions": [
+						{
+							"id": "set-position",
+							"objectClass": "spr_pedidoCompleta",
+							"sid": 718117369505924,
+							"parameters": {
+								"x": "spr_espacio_pedido2.X",
+								"y": "spr_espacio_pedido2.Y"
+							}
+						}
+					],
+					"sid": 971048785683965
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 349446535710587,
+							"parameters": {
+								"variable": "Pedidos",
+								"comparison": 0,
+								"value": "1"
+							}
+						},
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 601869820743568,
+							"parameters": {
+								"variable": "Ped_Completa",
+								"comparison": 5,
+								"value": "1"
+							}
+						}
+					],
+					"actions": [],
+					"sid": 508013712620649
 				}
 			],
-			"sid": 532853131841606
+			"sid": 946254625382433
 		},
 		{
 			"eventType": "group",
@@ -7590,7 +8565,8 @@
 							}
 						}
 					],
-					"sid": 127664529181509
+					"sid": 127664529181509,
+					"disabled": true
 				},
 				{
 					"eventType": "comment",
@@ -8222,6 +9198,7 @@
 							"id": "compare-boolean-eventvar",
 							"objectClass": "System",
 							"sid": 971503079268550,
+							"disabled": true,
 							"parameters": {
 								"variable": "Mes_Plato"
 							}
@@ -8269,9 +9246,9 @@
 						{
 							"id": "is-boolean-instance-variable-set",
 							"objectClass": "Personaje",
-							"sid": 485840196871609,
+							"sid": 486995107807881,
 							"parameters": {
-								"instance-variable": "Vacio"
+								"instance-variable": "Plato"
 							}
 						}
 					],
@@ -8332,6 +9309,137 @@
 						}
 					],
 					"sid": 447436336526970
+				},
+				{
+					"eventType": "comment",
+					"text": "S/Lechuga"
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-key-pressed",
+							"objectClass": "Teclado",
+							"sid": 599970196485746,
+							"parameters": {
+								"key": 69
+							}
+						},
+						{
+							"id": "is-overlapping-another-object",
+							"objectClass": "Personaje",
+							"sid": 566808233214435,
+							"parameters": {
+								"object": "Mesada"
+							}
+						},
+						{
+							"id": "compare-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 823631821400236,
+							"disabled": true,
+							"parameters": {
+								"variable": "Mes_Plato"
+							}
+						},
+						{
+							"id": "compare-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 185789468266146,
+							"parameters": {
+								"variable": "Mes_Pan"
+							}
+						},
+						{
+							"id": "compare-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 107472412985379,
+							"parameters": {
+								"variable": "Mes_CarCoc"
+							}
+						},
+						{
+							"id": "compare-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 865300952324441,
+							"parameters": {
+								"variable": "Mes_Tom"
+							}
+						},
+						{
+							"id": "compare-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 464333565720969,
+							"parameters": {
+								"variable": "Mes_Ceb"
+							}
+						},
+						{
+							"id": "is-boolean-instance-variable-set",
+							"objectClass": "Personaje",
+							"sid": 844042580522710,
+							"parameters": {
+								"instance-variable": "Plato"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-boolean-instvar",
+							"objectClass": "Personaje",
+							"sid": 966823031595099,
+							"parameters": {
+								"instance-variable": "SinLechuga",
+								"value": "true"
+							}
+						},
+						{
+							"id": "set-animation",
+							"objectClass": "Personaje",
+							"sid": 913491615278282,
+							"parameters": {
+								"animation": "\"FSSLech\"",
+								"from": "beginning"
+							}
+						},
+						{
+							"id": "set-boolean-instvar",
+							"objectClass": "Personaje",
+							"sid": 915732137083745,
+							"parameters": {
+								"instance-variable": "Vacio",
+								"value": "false"
+							}
+						},
+						{
+							"id": "set-boolean-instvar",
+							"objectClass": "Personaje",
+							"sid": 486079733919924,
+							"parameters": {
+								"instance-variable": "Ocupado",
+								"value": "true"
+							}
+						},
+						{
+							"id": "set-animation",
+							"objectClass": "Mesada",
+							"sid": 235325885155367,
+							"parameters": {
+								"animation": "\"Vacio\"",
+								"from": "beginning"
+							}
+						},
+						{
+							"id": "set-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 744858177028793,
+							"parameters": {
+								"variable": "MesadaVacia",
+								"value": "true"
+							}
+						}
+					],
+					"sid": 444312881033586
 				},
 				{
 					"eventType": "block",
@@ -8465,6 +9573,534 @@
 						}
 					],
 					"sid": 830067588004172
+				},
+				{
+					"eventType": "comment",
+					"text": "S/Tomate"
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-key-pressed",
+							"objectClass": "Teclado",
+							"sid": 749815407484095,
+							"parameters": {
+								"key": 69
+							}
+						},
+						{
+							"id": "is-overlapping-another-object",
+							"objectClass": "Personaje",
+							"sid": 336628113645095,
+							"parameters": {
+								"object": "Mesada"
+							}
+						},
+						{
+							"id": "compare-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 526944929203338,
+							"disabled": true,
+							"parameters": {
+								"variable": "Mes_Plato"
+							}
+						},
+						{
+							"id": "compare-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 616628400433700,
+							"parameters": {
+								"variable": "Mes_Pan"
+							}
+						},
+						{
+							"id": "compare-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 434340605665816,
+							"parameters": {
+								"variable": "Mes_CarCoc"
+							}
+						},
+						{
+							"id": "compare-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 426594106051494,
+							"parameters": {
+								"variable": "Mes_Lech"
+							}
+						},
+						{
+							"id": "compare-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 288009214902033,
+							"parameters": {
+								"variable": "Mes_Ceb"
+							}
+						},
+						{
+							"id": "is-boolean-instance-variable-set",
+							"objectClass": "Personaje",
+							"sid": 452956969395739,
+							"parameters": {
+								"instance-variable": "Plato"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-boolean-instvar",
+							"objectClass": "Personaje",
+							"sid": 318914278429726,
+							"parameters": {
+								"instance-variable": "SinTomate",
+								"value": "true"
+							}
+						},
+						{
+							"id": "set-animation",
+							"objectClass": "Personaje",
+							"sid": 892047400464838,
+							"parameters": {
+								"animation": "\"FSSTom\"",
+								"from": "beginning"
+							}
+						},
+						{
+							"id": "set-boolean-instvar",
+							"objectClass": "Personaje",
+							"sid": 322429350861900,
+							"parameters": {
+								"instance-variable": "Vacio",
+								"value": "false"
+							}
+						},
+						{
+							"id": "set-boolean-instvar",
+							"objectClass": "Personaje",
+							"sid": 697036562694772,
+							"parameters": {
+								"instance-variable": "Ocupado",
+								"value": "true"
+							}
+						},
+						{
+							"id": "set-animation",
+							"objectClass": "Mesada",
+							"sid": 350121722018462,
+							"parameters": {
+								"animation": "\"Vacio\"",
+								"from": "beginning"
+							}
+						},
+						{
+							"id": "set-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 549117762583187,
+							"parameters": {
+								"variable": "MesadaVacia",
+								"value": "true"
+							}
+						}
+					],
+					"sid": 510298856687364
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 443860398063413,
+							"parameters": {
+								"variable": "MesadaVacia"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 360310699133493,
+							"parameters": {
+								"variable": "Mes_Plato",
+								"value": "false"
+							}
+						},
+						{
+							"id": "set-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 335865563934927,
+							"parameters": {
+								"variable": "Mes_Ceb",
+								"value": "false"
+							}
+						},
+						{
+							"id": "set-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 905675739799546,
+							"parameters": {
+								"variable": "Mes_Lech",
+								"value": "false"
+							}
+						},
+						{
+							"id": "set-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 468951046845807,
+							"parameters": {
+								"variable": "Mes_Tom",
+								"value": "false"
+							}
+						},
+						{
+							"id": "set-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 538854795823150,
+							"parameters": {
+								"variable": "Mes_Pan",
+								"value": "false"
+							}
+						},
+						{
+							"id": "set-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 969142273077112,
+							"parameters": {
+								"variable": "Mes_CarCoc",
+								"value": "false"
+							}
+						},
+						{
+							"id": "set-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 311158891645215,
+							"parameters": {
+								"variable": "Mes_CarCru",
+								"value": "false"
+							}
+						},
+						{
+							"id": "set-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 391578373217318,
+							"parameters": {
+								"variable": "Mes_CarQue",
+								"value": "false"
+							}
+						},
+						{
+							"id": "destroy",
+							"objectClass": "PlatoFinal",
+							"sid": 634621400692645
+						},
+						{
+							"id": "destroy",
+							"objectClass": "PanFinal",
+							"sid": 891660837302190
+						},
+						{
+							"id": "destroy",
+							"objectClass": "PanArriba",
+							"sid": 267815779982176
+						},
+						{
+							"id": "destroy",
+							"objectClass": "CarneCocidaFinal",
+							"sid": 658394888917173
+						},
+						{
+							"id": "destroy",
+							"objectClass": "CarneCrudaFinal",
+							"sid": 853471894447439
+						},
+						{
+							"id": "destroy",
+							"objectClass": "CarneQuemadaFinal",
+							"sid": 232621936133827
+						},
+						{
+							"id": "destroy",
+							"objectClass": "LechugaFinal",
+							"sid": 779171984326507
+						},
+						{
+							"id": "destroy",
+							"objectClass": "TomateFinal",
+							"sid": 149717546624963
+						},
+						{
+							"id": "destroy",
+							"objectClass": "CebollaFinal",
+							"sid": 363633619413047
+						}
+					],
+					"sid": 735349369394314
+				},
+				{
+					"eventType": "comment",
+					"text": "S/Cebolla"
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-key-pressed",
+							"objectClass": "Teclado",
+							"sid": 169149571914065,
+							"parameters": {
+								"key": 69
+							}
+						},
+						{
+							"id": "is-overlapping-another-object",
+							"objectClass": "Personaje",
+							"sid": 880426466779355,
+							"parameters": {
+								"object": "Mesada"
+							}
+						},
+						{
+							"id": "compare-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 518053688294187,
+							"disabled": true,
+							"parameters": {
+								"variable": "Mes_Plato"
+							}
+						},
+						{
+							"id": "compare-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 478720354903578,
+							"parameters": {
+								"variable": "Mes_Pan"
+							}
+						},
+						{
+							"id": "compare-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 449425583916983,
+							"parameters": {
+								"variable": "Mes_CarCoc"
+							}
+						},
+						{
+							"id": "compare-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 991401165574096,
+							"parameters": {
+								"variable": "Mes_Lech"
+							}
+						},
+						{
+							"id": "compare-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 201029522679496,
+							"parameters": {
+								"variable": "Mes_Tom"
+							}
+						},
+						{
+							"id": "is-boolean-instance-variable-set",
+							"objectClass": "Personaje",
+							"sid": 501780918277963,
+							"parameters": {
+								"instance-variable": "Plato"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-boolean-instvar",
+							"objectClass": "Personaje",
+							"sid": 869423936363752,
+							"parameters": {
+								"instance-variable": "SinCebolla",
+								"value": "true"
+							}
+						},
+						{
+							"id": "set-animation",
+							"objectClass": "Personaje",
+							"sid": 815903509468529,
+							"parameters": {
+								"animation": "\"FSSCeb\"",
+								"from": "beginning"
+							}
+						},
+						{
+							"id": "set-boolean-instvar",
+							"objectClass": "Personaje",
+							"sid": 247731532249742,
+							"parameters": {
+								"instance-variable": "Vacio",
+								"value": "false"
+							}
+						},
+						{
+							"id": "set-boolean-instvar",
+							"objectClass": "Personaje",
+							"sid": 673270188875550,
+							"parameters": {
+								"instance-variable": "Ocupado",
+								"value": "true"
+							}
+						},
+						{
+							"id": "set-animation",
+							"objectClass": "Mesada",
+							"sid": 101604423504790,
+							"parameters": {
+								"animation": "\"Vacio\"",
+								"from": "beginning"
+							}
+						},
+						{
+							"id": "set-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 918052275737666,
+							"parameters": {
+								"variable": "MesadaVacia",
+								"value": "true"
+							}
+						}
+					],
+					"sid": 994763952770626
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 494386826256542,
+							"parameters": {
+								"variable": "MesadaVacia"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 262978304955198,
+							"parameters": {
+								"variable": "Mes_Plato",
+								"value": "false"
+							}
+						},
+						{
+							"id": "set-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 428679881796687,
+							"parameters": {
+								"variable": "Mes_Ceb",
+								"value": "false"
+							}
+						},
+						{
+							"id": "set-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 340406871757671,
+							"parameters": {
+								"variable": "Mes_Lech",
+								"value": "false"
+							}
+						},
+						{
+							"id": "set-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 533359820005948,
+							"parameters": {
+								"variable": "Mes_Tom",
+								"value": "false"
+							}
+						},
+						{
+							"id": "set-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 938016389825849,
+							"parameters": {
+								"variable": "Mes_Pan",
+								"value": "false"
+							}
+						},
+						{
+							"id": "set-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 845030819560847,
+							"parameters": {
+								"variable": "Mes_CarCoc",
+								"value": "false"
+							}
+						},
+						{
+							"id": "set-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 952249395995811,
+							"parameters": {
+								"variable": "Mes_CarCru",
+								"value": "false"
+							}
+						},
+						{
+							"id": "set-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 540794718256133,
+							"parameters": {
+								"variable": "Mes_CarQue",
+								"value": "false"
+							}
+						},
+						{
+							"id": "destroy",
+							"objectClass": "PlatoFinal",
+							"sid": 423279715579805
+						},
+						{
+							"id": "destroy",
+							"objectClass": "PanFinal",
+							"sid": 187655709616770
+						},
+						{
+							"id": "destroy",
+							"objectClass": "PanArriba",
+							"sid": 183180895174517
+						},
+						{
+							"id": "destroy",
+							"objectClass": "CarneCocidaFinal",
+							"sid": 765999984926859
+						},
+						{
+							"id": "destroy",
+							"objectClass": "CarneCrudaFinal",
+							"sid": 702191196581180
+						},
+						{
+							"id": "destroy",
+							"objectClass": "CarneQuemadaFinal",
+							"sid": 479537603473826
+						},
+						{
+							"id": "destroy",
+							"objectClass": "LechugaFinal",
+							"sid": 638853542211335
+						},
+						{
+							"id": "destroy",
+							"objectClass": "TomateFinal",
+							"sid": 388638942145806
+						},
+						{
+							"id": "destroy",
+							"objectClass": "CebollaFinal",
+							"sid": 440964853274141
+						}
+					],
+					"sid": 674383585752105
 				}
 			],
 			"sid": 195657890576686
@@ -8482,9 +10118,9 @@
 				{
 					"id": "set-text",
 					"objectClass": "txt_debug",
-					"sid": 131606752745933,
+					"sid": 623372928299982,
 					"parameters": {
-						"text": "Personaje.Vacio"
+						"text": "RandPedido"
 					}
 				}
 			],

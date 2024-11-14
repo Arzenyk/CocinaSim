@@ -1,16 +1,10 @@
 {
-	"name": "spr_pedido",
+	"name": "spr_pedidoSinLechuga",
 	"plugin-id": "Sprite",
-	"sid": 707426862067845,
+	"sid": 905240690464268,
 	"isGlobal": false,
 	"instanceVariables": [],
-	"behaviorTypes": [
-		{
-			"behaviorId": "bound",
-			"name": "BoundToLayout",
-			"sid": 587852584248238
-		}
-	],
+	"behaviorTypes": [],
 	"effectTypes": [],
 	"animations": {
 		"items": [
@@ -25,14 +19,14 @@
 						"exportFormat": "lossless",
 						"exportQuality": 0.8,
 						"fileType": "image/png",
-						"imageSpriteId": 9648759,
+						"imageSpriteId": 1904284,
 						"useCollisionPoly": true,
 						"duration": 1,
 						"tag": ""
 					}
 				],
-				"sid": 212103264935251,
-				"name": "Animation 1",
+				"sid": 285942738261824,
+				"name": "Animation 2",
 				"isLooping": false,
 				"isPingPong": false,
 				"repeatCount": 1,

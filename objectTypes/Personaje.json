@@ -108,6 +108,27 @@
 			"desc": "",
 			"show": true,
 			"sid": 593702581402340
+		},
+		{
+			"name": "SinLechuga",
+			"type": "boolean",
+			"desc": "",
+			"show": true,
+			"sid": 577889583660776
+		},
+		{
+			"name": "SinTomate",
+			"type": "boolean",
+			"desc": "",
+			"show": true,
+			"sid": 854363921115162
+		},
+		{
+			"name": "SinCebolla",
+			"type": "boolean",
+			"desc": "",
+			"show": true,
+			"sid": 828456632595467
 		}
 	],
 	"behaviorTypes": [
@@ -1831,14 +1852,470 @@
 								"speed": 5
 							}
 						],
-						"subfolders": [
+						"subfolders": [],
+						"name": "Servido"
+					},
+					{
+						"items": [
 							{
-								"items": [],
-								"subfolders": [],
-								"name": "New folder"
+								"frames": [
+									{
+										"width": 159,
+										"height": 251,
+										"originX": 0.5345911949685535,
+										"originY": 0.49800796812749004,
+										"originalSource": "",
+										"exportFormat": "lossless",
+										"exportQuality": 0.8,
+										"fileType": "image/png",
+										"imageSpriteId": 2293552,
+										"collisionPoly": {
+											"points": [
+												0.0031446540880503146,
+												0.4960159362549799,
+												1,
+												0.4860557768924303,
+												1,
+												0.7509960159362552,
+												0,
+												0.7350597609561755
+											]
+										},
+										"useCollisionPoly": true,
+										"duration": 1,
+										"tag": ""
+									}
+								],
+								"sid": 253555700730417,
+								"name": "FSSTom",
+								"isLooping": false,
+								"isPingPong": false,
+								"repeatCount": 1,
+								"repeatTo": 0,
+								"speed": 5
+							},
+							{
+								"frames": [
+									{
+										"width": 159,
+										"height": 251,
+										"originX": 0.46540880503144655,
+										"originY": 0.49800796812749004,
+										"originalSource": "",
+										"exportFormat": "lossless",
+										"exportQuality": 0.8,
+										"fileType": "image/png",
+										"imageSpriteId": 3876472,
+										"collisionPoly": {
+											"points": [
+												0.0031446540880503146,
+												0.4960159362549799,
+												1,
+												0.4860557768924303,
+												1,
+												0.7509960159362552,
+												0,
+												0.7350597609561755
+											]
+										},
+										"useCollisionPoly": true,
+										"duration": 1,
+										"tag": ""
+									}
+								],
+								"sid": 891332117364555,
+								"name": "BSSTom",
+								"isLooping": false,
+								"isPingPong": false,
+								"repeatCount": 1,
+								"repeatTo": 0,
+								"speed": 5
+							},
+							{
+								"frames": [
+									{
+										"width": 126,
+										"height": 251,
+										"originX": 0.5793650793650794,
+										"originY": 0.49800796812749004,
+										"originalSource": "",
+										"exportFormat": "lossless",
+										"exportQuality": 0.8,
+										"fileType": "image/png",
+										"imageSpriteId": 3778890,
+										"collisionPoly": {
+											"points": [
+												0.0031446540880503146,
+												0.4960159362549799,
+												1,
+												0.4860557768924303,
+												1,
+												0.7509960159362552,
+												0,
+												0.7350597609561755
+											]
+										},
+										"useCollisionPoly": true,
+										"duration": 1,
+										"tag": ""
+									}
+								],
+								"sid": 371673343032450,
+								"name": "LSSTom",
+								"isLooping": false,
+								"isPingPong": false,
+								"repeatCount": 1,
+								"repeatTo": 0,
+								"speed": 5
+							},
+							{
+								"frames": [
+									{
+										"width": 126,
+										"height": 251,
+										"originX": 0.5793650793650794,
+										"originY": 0.49800796812749004,
+										"originalSource": "",
+										"exportFormat": "lossless",
+										"exportQuality": 0.8,
+										"fileType": "image/png",
+										"imageSpriteId": 5064004,
+										"collisionPoly": {
+											"points": [
+												0.0031446540880503146,
+												0.4960159362549799,
+												1,
+												0.4860557768924303,
+												1,
+												0.7509960159362552,
+												0,
+												0.7350597609561755
+											]
+										},
+										"useCollisionPoly": true,
+										"duration": 1,
+										"tag": ""
+									}
+								],
+								"sid": 456866615501087,
+								"name": "RSSTom",
+								"isLooping": false,
+								"isPingPong": false,
+								"repeatCount": 1,
+								"repeatTo": 0,
+								"speed": 5
 							}
 						],
-						"name": "Servido"
+						"subfolders": [],
+						"name": "sinTomate"
+					},
+					{
+						"items": [
+							{
+								"frames": [
+									{
+										"width": 159,
+										"height": 251,
+										"originX": 0.5345911949685535,
+										"originY": 0.49800796812749004,
+										"originalSource": "",
+										"exportFormat": "lossless",
+										"exportQuality": 0.8,
+										"fileType": "image/png",
+										"imageSpriteId": 4147954,
+										"collisionPoly": {
+											"points": [
+												0.0031446540880503146,
+												0.4960159362549799,
+												1,
+												0.4860557768924303,
+												1,
+												0.7509960159362552,
+												0,
+												0.7350597609561755
+											]
+										},
+										"useCollisionPoly": true,
+										"duration": 1,
+										"tag": ""
+									}
+								],
+								"sid": 426766453322633,
+								"name": "FSSCeb",
+								"isLooping": false,
+								"isPingPong": false,
+								"repeatCount": 1,
+								"repeatTo": 0,
+								"speed": 5
+							},
+							{
+								"frames": [
+									{
+										"width": 159,
+										"height": 251,
+										"originX": 0.46540880503144655,
+										"originY": 0.49800796812749004,
+										"originalSource": "",
+										"exportFormat": "lossless",
+										"exportQuality": 0.8,
+										"fileType": "image/png",
+										"imageSpriteId": 8352038,
+										"collisionPoly": {
+											"points": [
+												0.0031446540880503146,
+												0.4960159362549799,
+												1,
+												0.4860557768924303,
+												1,
+												0.7509960159362552,
+												0,
+												0.7350597609561755
+											]
+										},
+										"useCollisionPoly": true,
+										"duration": 1,
+										"tag": ""
+									}
+								],
+								"sid": 848884634645567,
+								"name": "BSSCeb",
+								"isLooping": false,
+								"isPingPong": false,
+								"repeatCount": 1,
+								"repeatTo": 0,
+								"speed": 5
+							},
+							{
+								"frames": [
+									{
+										"width": 126,
+										"height": 251,
+										"originX": 0.5793650793650794,
+										"originY": 0.49800796812749004,
+										"originalSource": "",
+										"exportFormat": "lossless",
+										"exportQuality": 0.8,
+										"fileType": "image/png",
+										"imageSpriteId": 4818427,
+										"collisionPoly": {
+											"points": [
+												0.0031446540880503146,
+												0.4960159362549799,
+												1,
+												0.4860557768924303,
+												1,
+												0.7509960159362552,
+												0,
+												0.7350597609561755
+											]
+										},
+										"useCollisionPoly": true,
+										"duration": 1,
+										"tag": ""
+									}
+								],
+								"sid": 365484124067782,
+								"name": "LSSCeb",
+								"isLooping": false,
+								"isPingPong": false,
+								"repeatCount": 1,
+								"repeatTo": 0,
+								"speed": 5
+							},
+							{
+								"frames": [
+									{
+										"width": 126,
+										"height": 251,
+										"originX": 0.5793650793650794,
+										"originY": 0.49800796812749004,
+										"originalSource": "",
+										"exportFormat": "lossless",
+										"exportQuality": 0.8,
+										"fileType": "image/png",
+										"imageSpriteId": 3471147,
+										"collisionPoly": {
+											"points": [
+												0.0031446540880503146,
+												0.4960159362549799,
+												1,
+												0.4860557768924303,
+												1,
+												0.7509960159362552,
+												0,
+												0.7350597609561755
+											]
+										},
+										"useCollisionPoly": true,
+										"duration": 1,
+										"tag": ""
+									}
+								],
+								"sid": 649390145051979,
+								"name": "RSSCeb",
+								"isLooping": false,
+								"isPingPong": false,
+								"repeatCount": 1,
+								"repeatTo": 0,
+								"speed": 5
+							}
+						],
+						"subfolders": [],
+						"name": "sinCebolla"
+					},
+					{
+						"items": [
+							{
+								"frames": [
+									{
+										"width": 159,
+										"height": 251,
+										"originX": 0.5345911949685535,
+										"originY": 0.49800796812749004,
+										"originalSource": "",
+										"exportFormat": "lossless",
+										"exportQuality": 0.8,
+										"fileType": "image/png",
+										"imageSpriteId": 5741137,
+										"collisionPoly": {
+											"points": [
+												0.0031446540880503146,
+												0.4960159362549799,
+												1,
+												0.4860557768924303,
+												1,
+												0.7509960159362552,
+												0,
+												0.7350597609561755
+											]
+										},
+										"useCollisionPoly": true,
+										"duration": 1,
+										"tag": ""
+									}
+								],
+								"sid": 642542469925605,
+								"name": "FSSLech",
+								"isLooping": false,
+								"isPingPong": false,
+								"repeatCount": 1,
+								"repeatTo": 0,
+								"speed": 5
+							},
+							{
+								"frames": [
+									{
+										"width": 159,
+										"height": 251,
+										"originX": 0.46540880503144655,
+										"originY": 0.49800796812749004,
+										"originalSource": "",
+										"exportFormat": "lossless",
+										"exportQuality": 0.8,
+										"fileType": "image/png",
+										"imageSpriteId": 1672648,
+										"collisionPoly": {
+											"points": [
+												0.0031446540880503146,
+												0.4960159362549799,
+												1,
+												0.4860557768924303,
+												1,
+												0.7509960159362552,
+												0,
+												0.7350597609561755
+											]
+										},
+										"useCollisionPoly": true,
+										"duration": 1,
+										"tag": ""
+									}
+								],
+								"sid": 622058247414059,
+								"name": "BSSLech",
+								"isLooping": false,
+								"isPingPong": false,
+								"repeatCount": 1,
+								"repeatTo": 0,
+								"speed": 5
+							},
+							{
+								"frames": [
+									{
+										"width": 126,
+										"height": 251,
+										"originX": 0.5793650793650794,
+										"originY": 0.49800796812749004,
+										"originalSource": "",
+										"exportFormat": "lossless",
+										"exportQuality": 0.8,
+										"fileType": "image/png",
+										"imageSpriteId": 7211801,
+										"collisionPoly": {
+											"points": [
+												0.0031446540880503146,
+												0.4960159362549799,
+												1,
+												0.4860557768924303,
+												1,
+												0.7509960159362552,
+												0,
+												0.7350597609561755
+											]
+										},
+										"useCollisionPoly": true,
+										"duration": 1,
+										"tag": ""
+									}
+								],
+								"sid": 635717612076284,
+								"name": "LSSLech",
+								"isLooping": false,
+								"isPingPong": false,
+								"repeatCount": 1,
+								"repeatTo": 0,
+								"speed": 5
+							},
+							{
+								"frames": [
+									{
+										"width": 126,
+										"height": 251,
+										"originX": 0.5793650793650794,
+										"originY": 0.49800796812749004,
+										"originalSource": "",
+										"exportFormat": "lossless",
+										"exportQuality": 0.8,
+										"fileType": "image/png",
+										"imageSpriteId": 5239193,
+										"collisionPoly": {
+											"points": [
+												0.0031446540880503146,
+												0.4960159362549799,
+												1,
+												0.4860557768924303,
+												1,
+												0.7509960159362552,
+												0,
+												0.7350597609561755
+											]
+										},
+										"useCollisionPoly": true,
+										"duration": 1,
+										"tag": ""
+									}
+								],
+								"sid": 728329733204066,
+								"name": "RSSLech",
+								"isLooping": false,
+								"isPingPong": false,
+								"repeatCount": 1,
+								"repeatTo": 0,
+								"speed": 5
+							}
+						],
+						"subfolders": [],
+						"name": "sinLechuga"
 					},
 					{
 						"items": [
