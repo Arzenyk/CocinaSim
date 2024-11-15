@@ -151,7 +151,9 @@
 			"spr_espacio_pedido2",
 			"spr_espacio_pedido3",
 			"spr_espacio_pedido4",
-			"PedidosArray"
+			"PedidosArray",
+			"spr_pedidoSinTomate",
+			"spr_pedidoSinCebolla"
 		],
 		"subfolders": [
 			{
