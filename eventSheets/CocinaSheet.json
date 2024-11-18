@@ -8255,116 +8255,7 @@
 			"title": "Pedidos",
 			"description": "",
 			"isActiveOnStart": true,
-			"children": [
-				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "compare-eventvar",
-							"objectClass": "System",
-							"sid": 501581256645588,
-							"parameters": {
-								"variable": "Pedidos",
-								"comparison": 0,
-								"value": "1"
-							}
-						}
-					],
-					"actions": [
-						{
-							"id": "set-visible",
-							"objectClass": "spr_espacio_pedido1",
-							"sid": 302021917363230,
-							"parameters": {
-								"visibility": "invisible"
-							}
-						}
-					],
-					"sid": 548417944032339,
-					"disabled": true
-				},
-				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "compare-eventvar",
-							"objectClass": "System",
-							"sid": 952741218403226,
-							"parameters": {
-								"variable": "Pedidos",
-								"comparison": 0,
-								"value": "2"
-							}
-						}
-					],
-					"actions": [
-						{
-							"id": "set-visible",
-							"objectClass": "spr_espacio_pedido2",
-							"sid": 592119035174607,
-							"parameters": {
-								"visibility": "invisible"
-							}
-						}
-					],
-					"sid": 113993269128075,
-					"disabled": true
-				},
-				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "compare-eventvar",
-							"objectClass": "System",
-							"sid": 792961125482976,
-							"parameters": {
-								"variable": "Pedidos",
-								"comparison": 0,
-								"value": "3"
-							}
-						}
-					],
-					"actions": [
-						{
-							"id": "set-visible",
-							"objectClass": "spr_espacio_pedido3",
-							"sid": 600367786377486,
-							"parameters": {
-								"visibility": "invisible"
-							}
-						}
-					],
-					"sid": 143778478051892,
-					"disabled": true
-				},
-				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "compare-eventvar",
-							"objectClass": "System",
-							"sid": 919370151398134,
-							"parameters": {
-								"variable": "Pedidos",
-								"comparison": 0,
-								"value": "4"
-							}
-						}
-					],
-					"actions": [
-						{
-							"id": "set-visible",
-							"objectClass": "spr_espacio_pedido4",
-							"sid": 871195045903506,
-							"parameters": {
-								"visibility": "invisible"
-							}
-						}
-					],
-					"sid": 318929709913187,
-					"disabled": true
-				}
-			],
+			"children": [],
 			"sid": 946254625382433
 		},
 		{
@@ -10006,9 +9897,9 @@
 				{
 					"id": "set-text",
 					"objectClass": "txt_debug",
-					"sid": 742825853772067,
+					"sid": 632187176034849,
 					"parameters": {
-						"text": "\"Array Pedidos: \" & PedidosArray.At(0) & \", \" & PedidosArray.At(1) & \", \" & PedidosArray.At(2) & \", \" & PedidosArray.At(3) & \" | Largo: \" & PedidosArray.Width & \" | RandPedido: \" & RandPedido"
+						"text": "\"Array Pedidos: \" & PedidosArray.At(0) & \", \" & PedidosArray.At(1) & \", \" & PedidosArray.At(2) & \", \" & PedidosArray.At(3) & \" | Largo: \" & PedidosArray.Width & \" | RandPedido: \" & pedidoString"
 					}
 				}
 			],
@@ -10029,6 +9920,7 @@
 					"id": "compare-at-x",
 					"objectClass": "PedidosArray",
 					"sid": 737486092526855,
+					"disabled": true,
 					"parameters": {
 						"x": "RandPedido",
 						"comparison": 2,
@@ -10060,10 +9952,10 @@
 				{
 					"id": "push",
 					"objectClass": "PedidosArray",
-					"sid": 531403394707893,
+					"sid": 307481840068110,
 					"parameters": {
 						"where": "back",
-						"value": "RandPedido",
+						"value": "pedidoString",
 						"axis": "x"
 					}
 				},
@@ -10081,6 +9973,129 @@
 			"sid": 172794633016857,
 			"children": [
 				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 910320278400805,
+							"parameters": {
+								"variable": "RandPedido",
+								"comparison": 0,
+								"value": "1"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 375080586043804,
+							"parameters": {
+								"variable": "pedidoString",
+								"value": "\"Completa\""
+							}
+						}
+					],
+					"sid": 169550882445653
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "else",
+							"objectClass": "System",
+							"sid": 889906902423332
+						},
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 795763502794555,
+							"parameters": {
+								"variable": "RandPedido",
+								"comparison": 0,
+								"value": "2"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 461310628617605,
+							"parameters": {
+								"variable": "pedidoString",
+								"value": "\"SinLechuga\""
+							}
+						}
+					],
+					"sid": 843835847055379
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "else",
+							"objectClass": "System",
+							"sid": 886225540526034
+						},
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 938234091104753,
+							"parameters": {
+								"variable": "RandPedido",
+								"comparison": 0,
+								"value": "3"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 850026378458244,
+							"parameters": {
+								"variable": "pedidoString",
+								"value": "\"SinTomate\""
+							}
+						}
+					],
+					"sid": 889662995555180
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "else",
+							"objectClass": "System",
+							"sid": 566425556117539
+						},
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 462712754419497,
+							"parameters": {
+								"variable": "RandPedido",
+								"comparison": 0,
+								"value": "4"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 520465387687759,
+							"parameters": {
+								"variable": "pedidoString",
+								"value": "\"SinCebolla\""
+							}
+						}
+					],
+					"sid": 478607449632102
+				},
+				{
 					"eventType": "comment",
 					"text": "Primer pedido"
 				},
@@ -10090,11 +10105,11 @@
 						{
 							"id": "compare-at-x",
 							"objectClass": "PedidosArray",
-							"sid": 496100509018582,
+							"sid": 744526107667077,
 							"parameters": {
 								"x": "0",
 								"comparison": 0,
-								"value": "1"
+								"value": "\"Completa\""
 							}
 						}
 					],
@@ -10102,7 +10117,7 @@
 						{
 							"id": "spawn-another-object",
 							"objectClass": "spr_espacio_pedido1",
-							"sid": 177008755570361,
+							"sid": 861045285125982,
 							"parameters": {
 								"object": "spr_pedidoCompleta",
 								"layer": "6",
@@ -10114,13 +10129,13 @@
 						{
 							"id": "set-visible",
 							"objectClass": "spr_espacio_pedido1",
-							"sid": 833864573588279,
+							"sid": 828558651389060,
 							"parameters": {
 								"visibility": "invisible"
 							}
 						}
 					],
-					"sid": 824356757108982
+					"sid": 775852078424581
 				},
 				{
 					"eventType": "block",
@@ -10128,11 +10143,11 @@
 						{
 							"id": "compare-at-x",
 							"objectClass": "PedidosArray",
-							"sid": 923252151322528,
+							"sid": 198835806024919,
 							"parameters": {
 								"x": "0",
 								"comparison": 0,
-								"value": "2"
+								"value": "\"SinLechuga\""
 							}
 						}
 					],
@@ -10140,7 +10155,7 @@
 						{
 							"id": "spawn-another-object",
 							"objectClass": "spr_espacio_pedido1",
-							"sid": 471788087032630,
+							"sid": 842250532731902,
 							"parameters": {
 								"object": "spr_pedidoSinLechuga",
 								"layer": "6",
@@ -10152,13 +10167,13 @@
 						{
 							"id": "set-visible",
 							"objectClass": "spr_espacio_pedido1",
-							"sid": 890418145816869,
+							"sid": 359058340607205,
 							"parameters": {
 								"visibility": "invisible"
 							}
 						}
 					],
-					"sid": 544281887203648
+					"sid": 522360738473138
 				},
 				{
 					"eventType": "block",
@@ -10166,11 +10181,11 @@
 						{
 							"id": "compare-at-x",
 							"objectClass": "PedidosArray",
-							"sid": 340384423027943,
+							"sid": 404377411468265,
 							"parameters": {
 								"x": "0",
 								"comparison": 0,
-								"value": "3"
+								"value": "\"SinTomate\""
 							}
 						}
 					],
@@ -10178,7 +10193,7 @@
 						{
 							"id": "spawn-another-object",
 							"objectClass": "spr_espacio_pedido1",
-							"sid": 504324537489903,
+							"sid": 848119605337578,
 							"parameters": {
 								"object": "spr_pedidoSinTomate",
 								"layer": "6",
@@ -10190,13 +10205,13 @@
 						{
 							"id": "set-visible",
 							"objectClass": "spr_espacio_pedido1",
-							"sid": 953251868212447,
+							"sid": 533439479686132,
 							"parameters": {
 								"visibility": "invisible"
 							}
 						}
 					],
-					"sid": 494377418749342
+					"sid": 422412261439951
 				},
 				{
 					"eventType": "block",
@@ -10204,11 +10219,11 @@
 						{
 							"id": "compare-at-x",
 							"objectClass": "PedidosArray",
-							"sid": 664785706819824,
+							"sid": 790220007454879,
 							"parameters": {
 								"x": "0",
 								"comparison": 0,
-								"value": "4"
+								"value": "\"SinCebolla\""
 							}
 						}
 					],
@@ -10216,7 +10231,7 @@
 						{
 							"id": "spawn-another-object",
 							"objectClass": "spr_espacio_pedido1",
-							"sid": 743751653746655,
+							"sid": 941517418809138,
 							"parameters": {
 								"object": "spr_pedidoSinCebolla",
 								"layer": "6",
@@ -10228,13 +10243,13 @@
 						{
 							"id": "set-visible",
 							"objectClass": "spr_espacio_pedido1",
-							"sid": 179600862173633,
+							"sid": 440983488087512,
 							"parameters": {
 								"visibility": "invisible"
 							}
 						}
 					],
-					"sid": 129844292513729
+					"sid": 883355059151071
 				},
 				{
 					"eventType": "comment",
@@ -10276,7 +10291,8 @@
 							}
 						}
 					],
-					"sid": 617590203443201
+					"sid": 617590203443201,
+					"disabled": true
 				},
 				{
 					"eventType": "block",
@@ -10314,7 +10330,8 @@
 							}
 						}
 					],
-					"sid": 971086174371288
+					"sid": 971086174371288,
+					"disabled": true
 				},
 				{
 					"eventType": "block",
@@ -10352,7 +10369,8 @@
 							}
 						}
 					],
-					"sid": 338873044567545
+					"sid": 338873044567545,
+					"disabled": true
 				},
 				{
 					"eventType": "block",
@@ -10390,7 +10408,8 @@
 							}
 						}
 					],
-					"sid": 999485003924082
+					"sid": 999485003924082,
+					"disabled": true
 				},
 				{
 					"eventType": "comment",
@@ -10432,7 +10451,8 @@
 							}
 						}
 					],
-					"sid": 869181921948951
+					"sid": 869181921948951,
+					"disabled": true
 				},
 				{
 					"eventType": "block",
@@ -10470,7 +10490,8 @@
 							}
 						}
 					],
-					"sid": 834064667397149
+					"sid": 834064667397149,
+					"disabled": true
 				},
 				{
 					"eventType": "block",
@@ -10508,7 +10529,8 @@
 							}
 						}
 					],
-					"sid": 846111871121705
+					"sid": 846111871121705,
+					"disabled": true
 				},
 				{
 					"eventType": "block",
@@ -10546,7 +10568,8 @@
 							}
 						}
 					],
-					"sid": 334270876542527
+					"sid": 334270876542527,
+					"disabled": true
 				},
 				{
 					"eventType": "comment",
@@ -10588,7 +10611,8 @@
 							}
 						}
 					],
-					"sid": 204341156100831
+					"sid": 204341156100831,
+					"disabled": true
 				},
 				{
 					"eventType": "block",
@@ -10626,7 +10650,8 @@
 							}
 						}
 					],
-					"sid": 506296352259855
+					"sid": 506296352259855,
+					"disabled": true
 				},
 				{
 					"eventType": "block",
@@ -10664,7 +10689,8 @@
 							}
 						}
 					],
-					"sid": 877789948192621
+					"sid": 877789948192621,
+					"disabled": true
 				},
 				{
 					"eventType": "block",
@@ -10702,68 +10728,10 @@
 							}
 						}
 					],
-					"sid": 114805600906040
+					"sid": 114805600906040,
+					"disabled": true
 				}
 			]
-		},
-		{
-			"eventType": "block",
-			"conditions": [
-				{
-					"id": "compare-eventvar",
-					"objectClass": "System",
-					"sid": 903571237241474,
-					"parameters": {
-						"variable": "RandPedido",
-						"comparison": 0,
-						"value": "1"
-					}
-				}
-			],
-			"actions": [
-				{
-					"id": "set-eventvar-value",
-					"objectClass": "System",
-					"sid": 282782509850771,
-					"parameters": {
-						"variable": "pedidoString",
-						"value": "\"Completa\""
-					}
-				}
-			],
-			"sid": 954574990369221
-		},
-		{
-			"eventType": "block",
-			"conditions": [
-				{
-					"id": "else",
-					"objectClass": "System",
-					"sid": 615957613472375
-				},
-				{
-					"id": "compare-eventvar",
-					"objectClass": "System",
-					"sid": 980890398626740,
-					"parameters": {
-						"variable": "RandPedido",
-						"comparison": 0,
-						"value": "2"
-					}
-				}
-			],
-			"actions": [
-				{
-					"id": "set-eventvar-value",
-					"objectClass": "System",
-					"sid": 707630941067635,
-					"parameters": {
-						"variable": "pedidoString",
-						"value": "\"Completa\""
-					}
-				}
-			],
-			"sid": 436451253212798
 		}
 	],
 	"sid": 281322155169956
