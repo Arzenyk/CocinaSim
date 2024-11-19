@@ -959,7 +959,7 @@
 					"type": "Plato2",
 					"properties": {
 						"initially-visible": true,
-						"initial-animation": "Animation 1",
+						"initial-animation": "Sucio",
 						"initial-frame": 0,
 						"enable-collisions": true,
 						"live-preview": false
@@ -1044,8 +1044,8 @@
 						"expanded": true
 					},
 					"world": {
-						"x": 190,
-						"y": 216,
+						"x": 184,
+						"y": 327,
 						"width": 250,
 						"height": 250,
 						"originX": 0.5,
@@ -1081,8 +1081,8 @@
 						"expanded": true
 					},
 					"world": {
-						"x": 1180,
-						"y": 218,
+						"x": 1174,
+						"y": 329,
 						"width": 250,
 						"height": 250,
 						"originX": 0.5,
@@ -1116,8 +1116,8 @@
 						"expanded": true
 					},
 					"world": {
-						"x": 434,
-						"y": 217,
+						"x": 428,
+						"y": 328,
 						"width": 250,
 						"height": 250,
 						"originX": 0.5,
@@ -1193,8 +1193,8 @@
 						"expanded": true
 					},
 					"world": {
-						"x": 1430,
-						"y": 218,
+						"x": 1424,
+						"y": 329,
 						"width": 226,
 						"height": 252,
 						"originX": 0.5,
@@ -1411,8 +1411,8 @@
 						"expanded": true
 					},
 					"world": {
-						"x": 932,
-						"y": 218,
+						"x": 926,
+						"y": 329,
 						"width": 250,
 						"height": 250,
 						"originX": 0.5,
@@ -1446,8 +1446,8 @@
 						"expanded": true
 					},
 					"world": {
-						"x": 684,
-						"y": 217,
+						"x": 678,
+						"y": 328,
 						"width": 250,
 						"height": 250,
 						"originX": 0.5,
@@ -1590,8 +1590,8 @@
 						"expanded": true
 					},
 					"world": {
-						"x": 1932,
-						"y": 221,
+						"x": 1926,
+						"y": 332,
 						"width": 250,
 						"height": 250,
 						"originX": 0.5,
@@ -1632,8 +1632,8 @@
 						"expanded": true
 					},
 					"world": {
-						"x": 1053,
-						"y": 131,
+						"x": 1047,
+						"y": 242,
 						"width": 2041.9999999999998,
 						"height": 40,
 						"originX": 0.5,
@@ -1751,8 +1751,8 @@
 						"expanded": true
 					},
 					"world": {
-						"x": 1675,
-						"y": 221,
+						"x": 1669,
+						"y": 332,
 						"width": 250,
 						"height": 250,
 						"originX": 0.5,
@@ -1937,7 +1937,8 @@
 						"LecCor": false,
 						"SinLechuga": false,
 						"SinTomate": false,
-						"SinCebolla": false
+						"SinCebolla": false,
+						"PlatoSucio": false
 					},
 					"behaviors": {
 						"TileMovement": {
@@ -1946,8 +1947,8 @@
 								"grid-height": 50,
 								"grid-offset-x": 0,
 								"grid-offset-y": 0,
-								"speed-x": 600,
-								"speed-y": 600,
+								"speed-x": 1000,
+								"speed-y": 1000,
 								"enabled": true,
 								"default-controls": false,
 								"isometric": false
@@ -2894,8 +2895,8 @@
 						"expanded": true
 					},
 					"world": {
-						"x": 830,
-						"y": 62,
+						"x": 824,
+						"y": 173,
 						"width": 200,
 						"height": 25,
 						"originX": 0,
@@ -2928,8 +2929,8 @@
 						"expanded": true
 					},
 					"world": {
-						"x": 334,
-						"y": 62,
+						"x": 328,
+						"y": 173,
 						"width": 200,
 						"height": 25,
 						"originX": 0,
@@ -2961,8 +2962,8 @@
 						"expanded": true
 					},
 					"world": {
-						"x": 3553,
-						"y": -452,
+						"x": 991,
+						"y": 593,
 						"width": 1297,
 						"height": 779,
 						"originX": 0.5,
@@ -2980,7 +2981,7 @@
 				{
 					"type": "Tutorial",
 					"properties": {
-						"text": "Tutorial\n\nWASD = moverse\nE    = interactuar\nQ    = soltar item\n\nPresiona cualquier botón para comenzar",
+						"text": "Tutorial\n\nWASD = moverse\nE    = interactuar\nO    = abrir tienda\n\nPresiona cualquier botón para comenzar",
 						"enable-bbcode": true,
 						"font": "Arial",
 						"size": 50,
@@ -3012,8 +3013,8 @@
 						"expanded": true
 					},
 					"world": {
-						"x": 3248,
-						"y": -765,
+						"x": 686,
+						"y": 280,
 						"width": 682,
 						"height": 597,
 						"originX": 0,
@@ -3630,6 +3631,127 @@
 						"height": 95,
 						"originX": 0.5,
 						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "spr_monedas",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 112,
+					"sid": 155351225240199,
+					"tags": "",
+					"instanceVariables": {},
+					"behaviors": {},
+					"instanceFolderItem": {
+						"sid": 155351225240199,
+						"expanded": true
+					},
+					"world": {
+						"x": 1833,
+						"y": 68.68434343434342,
+						"width": 122,
+						"height": 112.36868686868684,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "spr_fondoMonedas",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 114,
+					"sid": 608689496048041,
+					"tags": "",
+					"instanceVariables": {},
+					"behaviors": {},
+					"instanceFolderItem": {
+						"sid": 608689496048041,
+						"expanded": true
+					},
+					"world": {
+						"x": 1834.8476500848335,
+						"y": 83.58718440508738,
+						"width": 168.56060606060555,
+						"height": 170.4545454545448,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "txt_monedas",
+					"properties": {
+						"text": "0",
+						"enable-bbcode": true,
+						"font": "Arial",
+						"size": 30,
+						"line-height": 0,
+						"bold": true,
+						"italic": false,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"horizontal-alignment": "center",
+						"vertical-alignment": "top",
+						"wrapping": "word",
+						"text-direction": "ltr",
+						"icon-set": -1,
+						"initially-visible": true,
+						"origin": "top-left",
+						"read-aloud": false
+					},
+					"uid": 113,
+					"sid": 400130226686136,
+					"tags": "",
+					"instanceVariables": {},
+					"behaviors": {},
+					"instanceFolderItem": {
+						"sid": 400130226686136,
+						"expanded": true
+					},
+					"world": {
+						"x": 1735.9949494949499,
+						"y": 93.74242424242408,
+						"width": 171.23737373737322,
+						"height": 47.045454545454675,
+						"originX": 0,
+						"originY": 0,
 						"color": [
 							1,
 							1,

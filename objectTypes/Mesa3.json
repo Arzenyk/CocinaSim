@@ -33,6 +33,13 @@
 							]
 						},
 						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "Completa",
+								"x": 0.5,
+								"y": 0.24
+							}
+						],
 						"duration": 1,
 						"tag": ""
 					}

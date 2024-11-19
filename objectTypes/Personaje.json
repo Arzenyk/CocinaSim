@@ -129,6 +129,13 @@
 			"desc": "",
 			"show": true,
 			"sid": 828456632595467
+		},
+		{
+			"name": "PlatoSucio",
+			"type": "boolean",
+			"desc": "",
+			"show": true,
+			"sid": 541126807351423
 		}
 	],
 	"behaviorTypes": [
@@ -1700,6 +1707,160 @@
 						],
 						"subfolders": [],
 						"name": "Vacio"
+					},
+					{
+						"items": [
+							{
+								"frames": [
+									{
+										"width": 159,
+										"height": 251,
+										"originX": 0.5345911949685535,
+										"originY": 0.49800796812749004,
+										"originalSource": "",
+										"exportFormat": "lossless",
+										"exportQuality": 0.8,
+										"fileType": "image/png",
+										"imageSpriteId": 8879737,
+										"collisionPoly": {
+											"points": [
+												0.0031446540880503146,
+												0.4960159362549799,
+												1,
+												0.4860557768924303,
+												1,
+												0.9940239043824701,
+												0,
+												1
+											]
+										},
+										"useCollisionPoly": true,
+										"duration": 1,
+										"tag": ""
+									}
+								],
+								"sid": 701442960372328,
+								"name": "FPlaSuc",
+								"isLooping": false,
+								"isPingPong": false,
+								"repeatCount": 1,
+								"repeatTo": 0,
+								"speed": 5
+							},
+							{
+								"frames": [
+									{
+										"width": 159,
+										"height": 251,
+										"originX": 0.46540880503144655,
+										"originY": 0.49800796812749004,
+										"originalSource": "",
+										"exportFormat": "lossless",
+										"exportQuality": 0.8,
+										"fileType": "image/png",
+										"imageSpriteId": 2385027,
+										"collisionPoly": {
+											"points": [
+												0.0031446540880503146,
+												0.4960159362549799,
+												1,
+												0.4860557768924303,
+												1,
+												0.9940239043824701,
+												0,
+												1
+											]
+										},
+										"useCollisionPoly": true,
+										"duration": 1,
+										"tag": ""
+									}
+								],
+								"sid": 342111904933075,
+								"name": "BPlaSuc",
+								"isLooping": false,
+								"isPingPong": false,
+								"repeatCount": 1,
+								"repeatTo": 0,
+								"speed": 5
+							},
+							{
+								"frames": [
+									{
+										"width": 126,
+										"height": 251,
+										"originX": 0.5793650793650794,
+										"originY": 0.49800796812749004,
+										"originalSource": "",
+										"exportFormat": "lossless",
+										"exportQuality": 0.8,
+										"fileType": "image/png",
+										"imageSpriteId": 9632229,
+										"collisionPoly": {
+											"points": [
+												0.0031446540880503146,
+												0.4960159362549799,
+												1,
+												0.4860557768924303,
+												1,
+												0.9940239043824701,
+												0,
+												1
+											]
+										},
+										"useCollisionPoly": true,
+										"duration": 1,
+										"tag": ""
+									}
+								],
+								"sid": 950331992138160,
+								"name": "LPlaSuc",
+								"isLooping": false,
+								"isPingPong": false,
+								"repeatCount": 1,
+								"repeatTo": 0,
+								"speed": 5
+							},
+							{
+								"frames": [
+									{
+										"width": 126,
+										"height": 251,
+										"originX": 0.42063492063492064,
+										"originY": 0.49800796812749004,
+										"originalSource": "",
+										"exportFormat": "lossless",
+										"exportQuality": 0.8,
+										"fileType": "image/png",
+										"imageSpriteId": 3101166,
+										"collisionPoly": {
+											"points": [
+												0.0031446540880503146,
+												0.4960159362549799,
+												1,
+												0.4860557768924303,
+												1,
+												0.9940239043824701,
+												0,
+												1
+											]
+										},
+										"useCollisionPoly": true,
+										"duration": 1,
+										"tag": ""
+									}
+								],
+								"sid": 113244622230002,
+								"name": "RPlaSuc",
+								"isLooping": false,
+								"isPingPong": false,
+								"repeatCount": 1,
+								"repeatTo": 0,
+								"speed": 5
+							}
+						],
+						"subfolders": [],
+						"name": "Sucio"
 					},
 					{
 						"items": [

@@ -173,7 +173,10 @@
 			"spr_cartel",
 			"spr_sinlechuga",
 			"spr_sintomate",
-			"spr_sincebolla"
+			"spr_sincebolla",
+			"spr_monedas",
+			"txt_monedas",
+			"spr_fondoMonedas"
 		],
 		"subfolders": [
 			{

@@ -382,6 +382,16 @@
 			"sid": 304948047181891
 		},
 		{
+			"eventType": "variable",
+			"name": "Monedas",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 777805172905016
+		},
+		{
 			"eventType": "group",
 			"disabled": false,
 			"title": "ControlJugador",
@@ -1248,6 +1258,220 @@
 						}
 					],
 					"sid": 814093605670127
+				},
+				{
+					"eventType": "group",
+					"disabled": false,
+					"title": "PlatoSucio",
+					"description": "",
+					"isActiveOnStart": true,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-boolean-instance-variable-set",
+									"objectClass": "Personaje",
+									"sid": 511477073723787,
+									"parameters": {
+										"instance-variable": "PlatoSucio"
+									}
+								},
+								{
+									"id": "key-is-down",
+									"objectClass": "Teclado",
+									"sid": 980999981103286,
+									"parameters": {
+										"key": 87
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-animation",
+									"objectClass": "Personaje",
+									"sid": 487886749533163,
+									"parameters": {
+										"animation": "\"BPlaSuc\"",
+										"from": "beginning"
+									}
+								},
+								{
+									"id": "simulate-control",
+									"objectClass": "Personaje",
+									"sid": 298719880644206,
+									"behaviorType": "TileMovement",
+									"parameters": {
+										"control": "up"
+									}
+								},
+								{
+									"id": "set-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 323030060702684,
+									"parameters": {
+										"variable": "Cortar",
+										"value": "false"
+									}
+								}
+							],
+							"sid": 144765053600080
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-boolean-instance-variable-set",
+									"objectClass": "Personaje",
+									"sid": 168427719560795,
+									"parameters": {
+										"instance-variable": "PlatoSucio"
+									}
+								},
+								{
+									"id": "key-is-down",
+									"objectClass": "Teclado",
+									"sid": 311486451458571,
+									"parameters": {
+										"key": 65
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-animation",
+									"objectClass": "Personaje",
+									"sid": 721557937613695,
+									"parameters": {
+										"animation": "\"LPlaSuc\"",
+										"from": "beginning"
+									}
+								},
+								{
+									"id": "simulate-control",
+									"objectClass": "Personaje",
+									"sid": 655408860601252,
+									"behaviorType": "TileMovement",
+									"parameters": {
+										"control": "left"
+									}
+								},
+								{
+									"id": "set-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 423418208110371,
+									"parameters": {
+										"variable": "Cortar",
+										"value": "false"
+									}
+								}
+							],
+							"sid": 854652359402222
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-boolean-instance-variable-set",
+									"objectClass": "Personaje",
+									"sid": 777394538673623,
+									"parameters": {
+										"instance-variable": "PlatoSucio"
+									}
+								},
+								{
+									"id": "key-is-down",
+									"objectClass": "Teclado",
+									"sid": 888772933136583,
+									"parameters": {
+										"key": 83
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-animation",
+									"objectClass": "Personaje",
+									"sid": 968086895803695,
+									"parameters": {
+										"animation": "\"FPlaSuc\"",
+										"from": "beginning"
+									}
+								},
+								{
+									"id": "simulate-control",
+									"objectClass": "Personaje",
+									"sid": 232248061677545,
+									"behaviorType": "TileMovement",
+									"parameters": {
+										"control": "down"
+									}
+								},
+								{
+									"id": "set-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 216688834250610,
+									"parameters": {
+										"variable": "Cortar",
+										"value": "false"
+									}
+								}
+							],
+							"sid": 378068977910094
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-boolean-instance-variable-set",
+									"objectClass": "Personaje",
+									"sid": 675768850673030,
+									"parameters": {
+										"instance-variable": "PlatoSucio"
+									}
+								},
+								{
+									"id": "key-is-down",
+									"objectClass": "Teclado",
+									"sid": 424965344567458,
+									"parameters": {
+										"key": 68
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-animation",
+									"objectClass": "Personaje",
+									"sid": 119900636645030,
+									"parameters": {
+										"animation": "\"RPlaSuc\"",
+										"from": "beginning"
+									}
+								},
+								{
+									"id": "simulate-control",
+									"objectClass": "Personaje",
+									"sid": 247020654219529,
+									"behaviorType": "TileMovement",
+									"parameters": {
+										"control": "right"
+									}
+								},
+								{
+									"id": "set-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 283793855872224,
+									"parameters": {
+										"variable": "Cortar",
+										"value": "false"
+									}
+								}
+							],
+							"sid": 469310175446234
+						}
+					],
+					"sid": 613822120661185
 				},
 				{
 					"eventType": "group",
@@ -5975,88 +6199,173 @@
 							"eventType": "block",
 							"conditions": [
 								{
-									"id": "is-boolean-instance-variable-set",
-									"objectClass": "Personaje",
-									"sid": 613169160132236,
-									"parameters": {
-										"instance-variable": "Vacio"
-									}
-								},
-								{
-									"id": "is-overlapping-another-object",
-									"objectClass": "Personaje",
-									"sid": 970501204018004,
-									"parameters": {
-										"object": "BasePlatos"
-									}
-								},
-								{
-									"id": "key-is-down",
+									"id": "on-key-pressed",
 									"objectClass": "Teclado",
-									"sid": 746608739342264,
+									"sid": 331313958712874,
 									"parameters": {
 										"key": 69
 									}
 								},
 								{
-									"id": "compare-eventvar",
-									"objectClass": "System",
-									"sid": 515644924420339,
+									"id": "is-overlapping-another-object",
+									"objectClass": "Personaje",
+									"sid": 872218585391680,
 									"parameters": {
-										"variable": "Cant_platos",
-										"comparison": 4,
-										"value": "0"
+										"object": "BasePlatos"
 									}
 								}
 							],
-							"actions": [
+							"actions": [],
+							"sid": 735777171635998,
+							"children": [
 								{
-									"id": "subtract-from-eventvar",
-									"objectClass": "System",
-									"sid": 992694665512311,
-									"parameters": {
-										"variable": "Cant_platos",
-										"value": "1"
-									}
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-eventvar",
+											"objectClass": "System",
+											"sid": 971020104411387,
+											"parameters": {
+												"variable": "Cant_platos",
+												"comparison": 3,
+												"value": "3"
+											}
+										},
+										{
+											"id": "is-boolean-instance-variable-set",
+											"objectClass": "Personaje",
+											"sid": 980054803955839,
+											"parameters": {
+												"instance-variable": "Plato"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "add-to-eventvar",
+											"objectClass": "System",
+											"sid": 619071486136976,
+											"parameters": {
+												"variable": "Cant_platos",
+												"value": "1"
+											}
+										},
+										{
+											"id": "set-animation",
+											"objectClass": "Personaje",
+											"sid": 401256609024471,
+											"parameters": {
+												"animation": "\"Front\"",
+												"from": "beginning"
+											}
+										},
+										{
+											"id": "set-boolean-instvar",
+											"objectClass": "Personaje",
+											"sid": 900224399662579,
+											"parameters": {
+												"instance-variable": "Vacio",
+												"value": "true"
+											}
+										},
+										{
+											"id": "set-boolean-instvar",
+											"objectClass": "Personaje",
+											"sid": 155096228315187,
+											"parameters": {
+												"instance-variable": "Plato",
+												"value": "false"
+											}
+										},
+										{
+											"id": "set-boolean-instvar",
+											"objectClass": "Personaje",
+											"sid": 343612966403656,
+											"parameters": {
+												"instance-variable": "Ocupado",
+												"value": "false"
+											}
+										}
+									],
+									"sid": 524078811334717
 								},
 								{
-									"id": "set-animation",
-									"objectClass": "Personaje",
-									"sid": 150588153058671,
-									"parameters": {
-										"animation": "\"FPlacVac\"",
-										"from": "beginning"
-									}
-								},
-								{
-									"id": "set-boolean-instvar",
-									"objectClass": "Personaje",
-									"sid": 877519101573338,
-									"parameters": {
-										"instance-variable": "Plato",
-										"value": "true"
-									}
-								},
-								{
-									"id": "set-boolean-instvar",
-									"objectClass": "Personaje",
-									"sid": 921144928240376,
-									"parameters": {
-										"instance-variable": "Ocupado",
-										"value": "true"
-									}
-								},
-								{
-									"id": "set-boolean-instvar",
-									"objectClass": "Personaje",
-									"sid": 569052345591442,
-									"parameters": {
-										"instance-variable": "Vacio",
-										"value": "false"
-									}
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "else",
+											"objectClass": "System",
+											"sid": 612028255723198
+										},
+										{
+											"id": "is-boolean-instance-variable-set",
+											"objectClass": "Personaje",
+											"sid": 358624214882641,
+											"parameters": {
+												"instance-variable": "Vacio"
+											}
+										},
+										{
+											"id": "compare-eventvar",
+											"objectClass": "System",
+											"sid": 844944185943524,
+											"parameters": {
+												"variable": "Cant_platos",
+												"comparison": 4,
+												"value": "0"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "subtract-from-eventvar",
+											"objectClass": "System",
+											"sid": 355592015823284,
+											"parameters": {
+												"variable": "Cant_platos",
+												"value": "1"
+											}
+										},
+										{
+											"id": "set-animation",
+											"objectClass": "Personaje",
+											"sid": 993082467925287,
+											"parameters": {
+												"animation": "\"FPlacVac\"",
+												"from": "beginning"
+											}
+										},
+										{
+											"id": "set-boolean-instvar",
+											"objectClass": "Personaje",
+											"sid": 479997347555865,
+											"parameters": {
+												"instance-variable": "Vacio",
+												"value": "false"
+											}
+										},
+										{
+											"id": "set-boolean-instvar",
+											"objectClass": "Personaje",
+											"sid": 837368222273932,
+											"parameters": {
+												"instance-variable": "Ocupado",
+												"value": "true"
+											}
+										},
+										{
+											"id": "set-boolean-instvar",
+											"objectClass": "Personaje",
+											"sid": 549278315868082,
+											"parameters": {
+												"instance-variable": "Plato",
+												"value": "true"
+											}
+										}
+									],
+									"sid": 649395007491822
 								}
-							],
-							"sid": 735777171635998
+							]
 						},
 						{
 							"eventType": "block",
@@ -6424,28 +6733,60 @@
 									"parameters": {
 										"object": "Heladera"
 									}
+								}
+							],
+							"actions": [],
+							"sid": 414461267326090,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "is-animation-playing",
+											"objectClass": "Heladera",
+											"sid": 544438409144447,
+											"parameters": {
+												"animation": "\"Cerrada\""
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-animation",
+											"objectClass": "Heladera",
+											"sid": 813965398565074,
+											"parameters": {
+												"animation": "\"Abierta\"",
+												"from": "beginning"
+											}
+										}
+									],
+									"sid": 964671549782850
 								},
 								{
-									"id": "is-animation-playing",
-									"objectClass": "Heladera",
-									"sid": 747288091592260,
-									"parameters": {
-										"animation": "\"Cerrada\""
-									}
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "else",
+											"objectClass": "System",
+											"sid": 195073680330515
+										}
+									],
+									"actions": [
+										{
+											"id": "set-animation",
+											"objectClass": "Heladera",
+											"sid": 684932226230200,
+											"disabled": true,
+											"parameters": {
+												"animation": "\"Cerrada\"",
+												"from": "beginning"
+											}
+										}
+									],
+									"sid": 318556133122009
 								}
-							],
-							"actions": [
-								{
-									"id": "set-animation",
-									"objectClass": "Heladera",
-									"sid": 178800903342792,
-									"parameters": {
-										"animation": "\"Abierta\"",
-										"from": "beginning"
-									}
-								}
-							],
-							"sid": 414461267326090
+							]
 						},
 						{
 							"eventType": "block",
@@ -6546,9 +6887,9 @@
 								{
 									"id": "is-boolean-instance-variable-set",
 									"objectClass": "Personaje",
-									"sid": 426580906912576,
+									"sid": 358588383970509,
 									"parameters": {
-										"instance-variable": "Vacio"
+										"instance-variable": "PlatoSucio"
 									}
 								},
 								{
@@ -6570,6 +6911,15 @@
 							],
 							"actions": [
 								{
+									"id": "set-ignoring-input",
+									"objectClass": "Personaje",
+									"sid": 111614506351261,
+									"behaviorType": "TileMovement",
+									"parameters": {
+										"input": "start-ignoring"
+									}
+								},
+								{
 									"id": "set-animation",
 									"objectClass": "Bacha",
 									"sid": 949835218773231,
@@ -6581,9 +6931,9 @@
 								{
 									"id": "wait",
 									"objectClass": "System",
-									"sid": 344559951006338,
+									"sid": 276695163849314,
 									"parameters": {
-										"seconds": "6"
+										"seconds": "3"
 									}
 								},
 								{
@@ -6598,9 +6948,9 @@
 								{
 									"id": "wait",
 									"objectClass": "System",
-									"sid": 644265251382772,
+									"sid": 349574175630103,
 									"parameters": {
-										"seconds": "5"
+										"seconds": "3"
 									}
 								},
 								{
@@ -6610,6 +6960,42 @@
 									"parameters": {
 										"animation": "\"Apagada\"",
 										"from": "beginning"
+									}
+								},
+								{
+									"id": "set-boolean-instvar",
+									"objectClass": "Personaje",
+									"sid": 678599190014523,
+									"parameters": {
+										"instance-variable": "PlatoSucio",
+										"value": "false"
+									}
+								},
+								{
+									"id": "set-boolean-instvar",
+									"objectClass": "Personaje",
+									"sid": 700655280872802,
+									"parameters": {
+										"instance-variable": "Plato",
+										"value": "true"
+									}
+								},
+								{
+									"id": "set-animation",
+									"objectClass": "Personaje",
+									"sid": 564120988797849,
+									"parameters": {
+										"animation": "\"FPlaVac\"",
+										"from": "beginning"
+									}
+								},
+								{
+									"id": "set-ignoring-input",
+									"objectClass": "Personaje",
+									"sid": 479576898397089,
+									"behaviorType": "TileMovement",
+									"parameters": {
+										"input": "stop-ignoring"
 									}
 								}
 							],
@@ -9732,13 +10118,21 @@
 					"id": "set-text",
 					"objectClass": "txt_debug",
 					"sid": 632187176034849,
+					"disabled": true,
 					"parameters": {
 						"text": "\"Array Pedidos: \" & PedidosArray.At(0) & \", \" & PedidosArray.At(1) & \", \" & PedidosArray.At(2) & \", \" & PedidosArray.At(3) & \" | Largo: \" & PedidosArray.Width & \" | RandPedido: \" & pedidoString"
 					}
+				},
+				{
+					"id": "set-text",
+					"objectClass": "txt_monedas",
+					"sid": 807872500189572,
+					"parameters": {
+						"text": "Monedas"
+					}
 				}
 			],
-			"sid": 431050244202281,
-			"disabled": true
+			"sid": 431050244202281
 		},
 		{
 			"eventType": "group",
@@ -11025,7 +11419,6 @@
 									"id": "set-animation",
 									"objectClass": "spr_cliente",
 									"sid": 826393585816964,
-									"disabled": true,
 									"parameters": {
 										"animation": "\"Impaciente\"",
 										"from": "beginning"
@@ -11035,7 +11428,6 @@
 									"id": "wait",
 									"objectClass": "System",
 									"sid": 908074728375478,
-									"disabled": true,
 									"parameters": {
 										"seconds": "5"
 									}
@@ -11044,7 +11436,6 @@
 									"id": "set-animation",
 									"objectClass": "spr_cliente",
 									"sid": 733435260234983,
-									"disabled": true,
 									"parameters": {
 										"animation": "\"Enojado\"",
 										"from": "beginning"
@@ -11128,7 +11519,6 @@
 									"id": "wait",
 									"objectClass": "System",
 									"sid": 631480203305550,
-									"disabled": true,
 									"parameters": {
 										"seconds": "5"
 									}
@@ -11137,7 +11527,6 @@
 									"id": "set-animation",
 									"objectClass": "spr_cliente",
 									"sid": 221403171499852,
-									"disabled": true,
 									"parameters": {
 										"animation": "\"Impaciente\"",
 										"from": "beginning"
@@ -11147,7 +11536,6 @@
 									"id": "wait",
 									"objectClass": "System",
 									"sid": 142165256947092,
-									"disabled": true,
 									"parameters": {
 										"seconds": "5"
 									}
@@ -11156,7 +11544,6 @@
 									"id": "set-animation",
 									"objectClass": "spr_cliente",
 									"sid": 369375436035342,
-									"disabled": true,
 									"parameters": {
 										"animation": "\"Enojado\"",
 										"from": "beginning"
@@ -11240,7 +11627,6 @@
 									"id": "wait",
 									"objectClass": "System",
 									"sid": 631773395606248,
-									"disabled": true,
 									"parameters": {
 										"seconds": "5"
 									}
@@ -11249,7 +11635,6 @@
 									"id": "set-animation",
 									"objectClass": "spr_cliente",
 									"sid": 966982725374780,
-									"disabled": true,
 									"parameters": {
 										"animation": "\"Impaciente\"",
 										"from": "beginning"
@@ -11259,7 +11644,6 @@
 									"id": "wait",
 									"objectClass": "System",
 									"sid": 585740790751552,
-									"disabled": true,
 									"parameters": {
 										"seconds": "5"
 									}
@@ -11268,7 +11652,6 @@
 									"id": "set-animation",
 									"objectClass": "spr_cliente",
 									"sid": 255659202837755,
-									"disabled": true,
 									"parameters": {
 										"animation": "\"Enojado\"",
 										"from": "beginning"
@@ -11352,7 +11735,6 @@
 									"id": "wait",
 									"objectClass": "System",
 									"sid": 321673099637902,
-									"disabled": true,
 									"parameters": {
 										"seconds": "5"
 									}
@@ -11361,7 +11743,6 @@
 									"id": "set-animation",
 									"objectClass": "spr_cliente",
 									"sid": 792766000172138,
-									"disabled": true,
 									"parameters": {
 										"animation": "\"Impaciente\"",
 										"from": "beginning"
@@ -11371,7 +11752,6 @@
 									"id": "wait",
 									"objectClass": "System",
 									"sid": 847956844190854,
-									"disabled": true,
 									"parameters": {
 										"seconds": "5"
 									}
@@ -11380,7 +11760,6 @@
 									"id": "set-animation",
 									"objectClass": "spr_cliente",
 									"sid": 247930531744058,
-									"disabled": true,
 									"parameters": {
 										"animation": "\"Enojado\"",
 										"from": "beginning"
@@ -12606,6 +12985,10 @@
 					]
 				},
 				{
+					"eventType": "comment",
+					"text": "Servir 1"
+				},
+				{
 					"eventType": "block",
 					"conditions": [
 						{
@@ -12650,13 +13033,22 @@
 							],
 							"actions": [
 								{
+									"id": "add-to-eventvar",
+									"objectClass": "System",
+									"sid": 638996459600341,
+									"parameters": {
+										"variable": "Monedas",
+										"value": "1"
+									}
+								},
+								{
 									"id": "spawn-another-object",
 									"objectClass": "Mesa",
-									"sid": 111473167650608,
+									"sid": 713623570169546,
 									"parameters": {
 										"object": "Hamburguesa2",
 										"layer": "4",
-										"image-point": "0",
+										"image-point": "1",
 										"create-hierarchy": false,
 										"template-name": "\"\""
 									}
@@ -12700,6 +13092,18 @@
 									"id": "destroy",
 									"objectClass": "Hamburguesa2",
 									"sid": 511486104812757
+								},
+								{
+									"id": "spawn-another-object",
+									"objectClass": "Mesa",
+									"sid": 356999454658492,
+									"parameters": {
+										"object": "Plato2",
+										"layer": "4",
+										"image-point": "1",
+										"create-hierarchy": false,
+										"template-name": "\"\""
+									}
 								},
 								{
 									"id": "set-flipped",
@@ -12763,6 +13167,15 @@
 							],
 							"actions": [
 								{
+									"id": "add-to-eventvar",
+									"objectClass": "System",
+									"sid": 683022046921471,
+									"parameters": {
+										"variable": "Monedas",
+										"value": "1"
+									}
+								},
+								{
 									"id": "spawn-another-object",
 									"objectClass": "Mesa",
 									"sid": 464362915408788,
@@ -12813,6 +13226,18 @@
 									"id": "destroy",
 									"objectClass": "spr_sinlechuga",
 									"sid": 191787899542065
+								},
+								{
+									"id": "spawn-another-object",
+									"objectClass": "Mesa",
+									"sid": 296545200787671,
+									"parameters": {
+										"object": "Plato2",
+										"layer": "4",
+										"image-point": "1",
+										"create-hierarchy": false,
+										"template-name": "\"\""
+									}
 								},
 								{
 									"id": "set-flipped",
@@ -12876,6 +13301,15 @@
 							],
 							"actions": [
 								{
+									"id": "add-to-eventvar",
+									"objectClass": "System",
+									"sid": 945050293154549,
+									"parameters": {
+										"variable": "Monedas",
+										"value": "1"
+									}
+								},
+								{
 									"id": "spawn-another-object",
 									"objectClass": "Mesa",
 									"sid": 619099891209593,
@@ -12926,6 +13360,18 @@
 									"id": "destroy",
 									"objectClass": "spr_sintomate",
 									"sid": 341115450722755
+								},
+								{
+									"id": "spawn-another-object",
+									"objectClass": "Mesa",
+									"sid": 446259520489818,
+									"parameters": {
+										"object": "Plato2",
+										"layer": "4",
+										"image-point": "1",
+										"create-hierarchy": false,
+										"template-name": "\"\""
+									}
 								},
 								{
 									"id": "set-flipped",
@@ -12989,6 +13435,15 @@
 							],
 							"actions": [
 								{
+									"id": "add-to-eventvar",
+									"objectClass": "System",
+									"sid": 175360746776679,
+									"parameters": {
+										"variable": "Monedas",
+										"value": "1"
+									}
+								},
+								{
 									"id": "spawn-another-object",
 									"objectClass": "Mesa",
 									"sid": 330248785679630,
@@ -13041,6 +13496,18 @@
 									"sid": 736458190011152
 								},
 								{
+									"id": "spawn-another-object",
+									"objectClass": "Mesa",
+									"sid": 803521767127446,
+									"parameters": {
+										"object": "Plato2",
+										"layer": "4",
+										"image-point": "1",
+										"create-hierarchy": false,
+										"template-name": "\"\""
+									}
+								},
+								{
 									"id": "set-flipped",
 									"objectClass": "spr_cliente",
 									"sid": 561280521865988,
@@ -13074,6 +13541,1126 @@
 								}
 							],
 							"sid": 910884905583714
+						}
+					]
+				},
+				{
+					"eventType": "comment",
+					"text": "Servir 2"
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-key-pressed",
+							"objectClass": "Teclado",
+							"sid": 992444643890020,
+							"parameters": {
+								"key": 69
+							}
+						},
+						{
+							"id": "is-overlapping-another-object",
+							"objectClass": "Personaje",
+							"sid": 687767399114298,
+							"parameters": {
+								"object": "spr_espacio_cliente2"
+							}
+						}
+					],
+					"actions": [],
+					"sid": 979743915451212,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-boolean-instance-variable-set",
+									"objectClass": "Personaje",
+									"sid": 294596804048851,
+									"parameters": {
+										"instance-variable": "Servido"
+									}
+								},
+								{
+									"id": "is-animation-playing",
+									"objectClass": "spr_cliente2",
+									"sid": 952256661614828,
+									"parameters": {
+										"animation": "\"Completa\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "add-to-eventvar",
+									"objectClass": "System",
+									"sid": 784227098331248,
+									"parameters": {
+										"variable": "Monedas",
+										"value": "1"
+									}
+								},
+								{
+									"id": "spawn-another-object",
+									"objectClass": "Mesa2",
+									"sid": 944294248871971,
+									"parameters": {
+										"object": "Hamburguesa2",
+										"layer": "4",
+										"image-point": "1",
+										"create-hierarchy": false,
+										"template-name": "\"\""
+									}
+								},
+								{
+									"id": "set-boolean-instvar",
+									"objectClass": "Personaje",
+									"sid": 583666902658763,
+									"parameters": {
+										"instance-variable": "Servido",
+										"value": "false"
+									}
+								},
+								{
+									"id": "set-animation",
+									"objectClass": "Personaje",
+									"sid": 899804878327550,
+									"parameters": {
+										"animation": "\"Front\"",
+										"from": "beginning"
+									}
+								},
+								{
+									"id": "set-animation",
+									"objectClass": "spr_cliente2",
+									"sid": 389920603815556,
+									"parameters": {
+										"animation": "\"Normal\"",
+										"from": "beginning"
+									}
+								},
+								{
+									"id": "wait",
+									"objectClass": "System",
+									"sid": 685391680835401,
+									"parameters": {
+										"seconds": "10"
+									}
+								},
+								{
+									"id": "destroy",
+									"objectClass": "Hamburguesa2",
+									"sid": 766373482230430
+								},
+								{
+									"id": "spawn-another-object",
+									"objectClass": "Mesa2",
+									"sid": 721534193444436,
+									"parameters": {
+										"object": "Plato2",
+										"layer": "4",
+										"image-point": "1",
+										"create-hierarchy": false,
+										"template-name": "\"\""
+									}
+								},
+								{
+									"id": "set-flipped",
+									"objectClass": "spr_cliente2",
+									"sid": 710431200836842,
+									"parameters": {
+										"state": "flipped"
+									}
+								},
+								{
+									"id": "move-to-position",
+									"objectClass": "spr_cliente2",
+									"sid": 157564825406083,
+									"behaviorType": "MoveTo",
+									"parameters": {
+										"x": "spr_spawner_clientes2.X",
+										"y": "spr_spawner_clientes2.Y",
+										"mode": "direct"
+									}
+								},
+								{
+									"id": "wait",
+									"objectClass": "System",
+									"sid": 651341213594590,
+									"parameters": {
+										"seconds": "6"
+									}
+								},
+								{
+									"id": "destroy",
+									"objectClass": "spr_cliente2",
+									"sid": 120078688404336
+								}
+							],
+							"sid": 186184396479583
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "else",
+									"objectClass": "System",
+									"sid": 685734776314757
+								},
+								{
+									"id": "is-boolean-instance-variable-set",
+									"objectClass": "Personaje",
+									"sid": 451030503637054,
+									"parameters": {
+										"instance-variable": "SinLechuga"
+									}
+								},
+								{
+									"id": "is-animation-playing",
+									"objectClass": "spr_cliente2",
+									"sid": 195234900980428,
+									"parameters": {
+										"animation": "\"SinLechuga\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "add-to-eventvar",
+									"objectClass": "System",
+									"sid": 567784527661592,
+									"parameters": {
+										"variable": "Monedas",
+										"value": "1"
+									}
+								},
+								{
+									"id": "spawn-another-object",
+									"objectClass": "Mesa2",
+									"sid": 684290353745550,
+									"parameters": {
+										"object": "spr_sinlechuga",
+										"layer": "4",
+										"image-point": "0",
+										"create-hierarchy": false,
+										"template-name": "\"\""
+									}
+								},
+								{
+									"id": "set-boolean-instvar",
+									"objectClass": "Personaje",
+									"sid": 374176115319571,
+									"parameters": {
+										"instance-variable": "SinLechuga",
+										"value": "false"
+									}
+								},
+								{
+									"id": "set-animation",
+									"objectClass": "Personaje",
+									"sid": 783317783435884,
+									"parameters": {
+										"animation": "\"Front\"",
+										"from": "beginning"
+									}
+								},
+								{
+									"id": "set-animation",
+									"objectClass": "spr_cliente2",
+									"sid": 760339131193706,
+									"parameters": {
+										"animation": "\"Normal\"",
+										"from": "beginning"
+									}
+								},
+								{
+									"id": "wait",
+									"objectClass": "System",
+									"sid": 491190692133394,
+									"parameters": {
+										"seconds": "10"
+									}
+								},
+								{
+									"id": "destroy",
+									"objectClass": "spr_sinlechuga",
+									"sid": 572467126289000
+								},
+								{
+									"id": "spawn-another-object",
+									"objectClass": "Mesa2",
+									"sid": 577477762821846,
+									"parameters": {
+										"object": "Plato2",
+										"layer": "4",
+										"image-point": "1",
+										"create-hierarchy": false,
+										"template-name": "\"\""
+									}
+								},
+								{
+									"id": "set-flipped",
+									"objectClass": "spr_cliente2",
+									"sid": 188801136624158,
+									"parameters": {
+										"state": "flipped"
+									}
+								},
+								{
+									"id": "move-to-position",
+									"objectClass": "spr_cliente2",
+									"sid": 398346699442055,
+									"behaviorType": "MoveTo",
+									"parameters": {
+										"x": "spr_spawner_clientes2.X",
+										"y": "spr_spawner_clientes2.Y",
+										"mode": "direct"
+									}
+								},
+								{
+									"id": "wait",
+									"objectClass": "System",
+									"sid": 245908556432496,
+									"parameters": {
+										"seconds": "6"
+									}
+								},
+								{
+									"id": "destroy",
+									"objectClass": "spr_cliente2",
+									"sid": 439437930173650
+								}
+							],
+							"sid": 370322723468397
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "else",
+									"objectClass": "System",
+									"sid": 687667566592182
+								},
+								{
+									"id": "is-boolean-instance-variable-set",
+									"objectClass": "Personaje",
+									"sid": 278675492075183,
+									"parameters": {
+										"instance-variable": "SinTomate"
+									}
+								},
+								{
+									"id": "is-animation-playing",
+									"objectClass": "spr_cliente2",
+									"sid": 537152639261336,
+									"parameters": {
+										"animation": "\"SinTomate\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "add-to-eventvar",
+									"objectClass": "System",
+									"sid": 355738291031379,
+									"parameters": {
+										"variable": "Monedas",
+										"value": "1"
+									}
+								},
+								{
+									"id": "spawn-another-object",
+									"objectClass": "Mesa2",
+									"sid": 821394941329615,
+									"parameters": {
+										"object": "spr_sintomate",
+										"layer": "4",
+										"image-point": "0",
+										"create-hierarchy": false,
+										"template-name": "\"\""
+									}
+								},
+								{
+									"id": "set-boolean-instvar",
+									"objectClass": "Personaje",
+									"sid": 135695879171938,
+									"parameters": {
+										"instance-variable": "SinTomate",
+										"value": "false"
+									}
+								},
+								{
+									"id": "set-animation",
+									"objectClass": "Personaje",
+									"sid": 164776352151164,
+									"parameters": {
+										"animation": "\"Front\"",
+										"from": "beginning"
+									}
+								},
+								{
+									"id": "set-animation",
+									"objectClass": "spr_cliente2",
+									"sid": 388903629405244,
+									"parameters": {
+										"animation": "\"Normal\"",
+										"from": "beginning"
+									}
+								},
+								{
+									"id": "wait",
+									"objectClass": "System",
+									"sid": 722449668054390,
+									"parameters": {
+										"seconds": "10"
+									}
+								},
+								{
+									"id": "destroy",
+									"objectClass": "spr_sintomate",
+									"sid": 909559604691971
+								},
+								{
+									"id": "spawn-another-object",
+									"objectClass": "Mesa2",
+									"sid": 215455508518531,
+									"parameters": {
+										"object": "Plato2",
+										"layer": "4",
+										"image-point": "1",
+										"create-hierarchy": false,
+										"template-name": "\"\""
+									}
+								},
+								{
+									"id": "set-flipped",
+									"objectClass": "spr_cliente2",
+									"sid": 182289303683445,
+									"parameters": {
+										"state": "flipped"
+									}
+								},
+								{
+									"id": "move-to-position",
+									"objectClass": "spr_cliente2",
+									"sid": 508040966720340,
+									"behaviorType": "MoveTo",
+									"parameters": {
+										"x": "spr_spawner_clientes2.X",
+										"y": "spr_spawner_clientes2.Y",
+										"mode": "direct"
+									}
+								},
+								{
+									"id": "wait",
+									"objectClass": "System",
+									"sid": 432161030867835,
+									"parameters": {
+										"seconds": "6"
+									}
+								},
+								{
+									"id": "destroy",
+									"objectClass": "spr_cliente2",
+									"sid": 346313059957362
+								}
+							],
+							"sid": 366098304265196
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "else",
+									"objectClass": "System",
+									"sid": 994092605186033
+								},
+								{
+									"id": "is-boolean-instance-variable-set",
+									"objectClass": "Personaje",
+									"sid": 390971444625983,
+									"parameters": {
+										"instance-variable": "SinCebolla"
+									}
+								},
+								{
+									"id": "is-animation-playing",
+									"objectClass": "spr_cliente2",
+									"sid": 635952782424192,
+									"parameters": {
+										"animation": "\"SinCebolla\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "add-to-eventvar",
+									"objectClass": "System",
+									"sid": 574258876684801,
+									"parameters": {
+										"variable": "Monedas",
+										"value": "1"
+									}
+								},
+								{
+									"id": "spawn-another-object",
+									"objectClass": "Mesa2",
+									"sid": 154875525313975,
+									"parameters": {
+										"object": "spr_sincebolla",
+										"layer": "4",
+										"image-point": "0",
+										"create-hierarchy": false,
+										"template-name": "\"\""
+									}
+								},
+								{
+									"id": "set-boolean-instvar",
+									"objectClass": "Personaje",
+									"sid": 576284365641562,
+									"parameters": {
+										"instance-variable": "SinCebolla",
+										"value": "false"
+									}
+								},
+								{
+									"id": "set-animation",
+									"objectClass": "Personaje",
+									"sid": 373415531178596,
+									"parameters": {
+										"animation": "\"Front\"",
+										"from": "beginning"
+									}
+								},
+								{
+									"id": "set-animation",
+									"objectClass": "spr_cliente2",
+									"sid": 309814659372595,
+									"parameters": {
+										"animation": "\"Normal\"",
+										"from": "beginning"
+									}
+								},
+								{
+									"id": "wait",
+									"objectClass": "System",
+									"sid": 115887083092133,
+									"parameters": {
+										"seconds": "10"
+									}
+								},
+								{
+									"id": "destroy",
+									"objectClass": "spr_sincebolla",
+									"sid": 690683277812443
+								},
+								{
+									"id": "spawn-another-object",
+									"objectClass": "Mesa2",
+									"sid": 275586773116453,
+									"parameters": {
+										"object": "Plato2",
+										"layer": "4",
+										"image-point": "1",
+										"create-hierarchy": false,
+										"template-name": "\"\""
+									}
+								},
+								{
+									"id": "set-flipped",
+									"objectClass": "spr_cliente2",
+									"sid": 755786175201648,
+									"parameters": {
+										"state": "flipped"
+									}
+								},
+								{
+									"id": "move-to-position",
+									"objectClass": "spr_cliente2",
+									"sid": 798152396376861,
+									"behaviorType": "MoveTo",
+									"parameters": {
+										"x": "spr_spawner_clientes2.X",
+										"y": "spr_spawner_clientes2.Y",
+										"mode": "direct"
+									}
+								},
+								{
+									"id": "wait",
+									"objectClass": "System",
+									"sid": 349217234330812,
+									"parameters": {
+										"seconds": "6"
+									}
+								},
+								{
+									"id": "destroy",
+									"objectClass": "spr_cliente2",
+									"sid": 196478975064223
+								}
+							],
+							"sid": 998535271080782
+						}
+					]
+				},
+				{
+					"eventType": "comment",
+					"text": "Servir 3"
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-key-pressed",
+							"objectClass": "Teclado",
+							"sid": 287462488577117,
+							"parameters": {
+								"key": 69
+							}
+						},
+						{
+							"id": "is-overlapping-another-object",
+							"objectClass": "Personaje",
+							"sid": 924897098221281,
+							"parameters": {
+								"object": "spr_espacio_cliente3"
+							}
+						}
+					],
+					"actions": [],
+					"sid": 117657993135106,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-boolean-instance-variable-set",
+									"objectClass": "Personaje",
+									"sid": 855774260979297,
+									"parameters": {
+										"instance-variable": "Servido"
+									}
+								},
+								{
+									"id": "is-animation-playing",
+									"objectClass": "spr_cliente3",
+									"sid": 354040306983000,
+									"parameters": {
+										"animation": "\"Completa\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "add-to-eventvar",
+									"objectClass": "System",
+									"sid": 618028593904323,
+									"parameters": {
+										"variable": "Monedas",
+										"value": "1"
+									}
+								},
+								{
+									"id": "spawn-another-object",
+									"objectClass": "Mesa3",
+									"sid": 336345554092779,
+									"parameters": {
+										"object": "Hamburguesa2",
+										"layer": "4",
+										"image-point": "1",
+										"create-hierarchy": false,
+										"template-name": "\"\""
+									}
+								},
+								{
+									"id": "set-boolean-instvar",
+									"objectClass": "Personaje",
+									"sid": 650484211217270,
+									"parameters": {
+										"instance-variable": "Servido",
+										"value": "false"
+									}
+								},
+								{
+									"id": "set-animation",
+									"objectClass": "Personaje",
+									"sid": 972684439773315,
+									"parameters": {
+										"animation": "\"Front\"",
+										"from": "beginning"
+									}
+								},
+								{
+									"id": "set-animation",
+									"objectClass": "spr_cliente3",
+									"sid": 631831813015617,
+									"parameters": {
+										"animation": "\"Normal\"",
+										"from": "beginning"
+									}
+								},
+								{
+									"id": "wait",
+									"objectClass": "System",
+									"sid": 155870571668090,
+									"parameters": {
+										"seconds": "10"
+									}
+								},
+								{
+									"id": "destroy",
+									"objectClass": "Hamburguesa2",
+									"sid": 773981472455608
+								},
+								{
+									"id": "spawn-another-object",
+									"objectClass": "Mesa3",
+									"sid": 383899054816045,
+									"parameters": {
+										"object": "Plato2",
+										"layer": "4",
+										"image-point": "1",
+										"create-hierarchy": false,
+										"template-name": "\"\""
+									}
+								},
+								{
+									"id": "set-flipped",
+									"objectClass": "spr_cliente3",
+									"sid": 760418131769524,
+									"parameters": {
+										"state": "flipped"
+									}
+								},
+								{
+									"id": "move-to-position",
+									"objectClass": "spr_cliente3",
+									"sid": 687234358566988,
+									"behaviorType": "MoveTo",
+									"parameters": {
+										"x": "spr_spawner_clientes3.X",
+										"y": "spr_spawner_clientes3.Y",
+										"mode": "direct"
+									}
+								},
+								{
+									"id": "wait",
+									"objectClass": "System",
+									"sid": 177410722269851,
+									"parameters": {
+										"seconds": "6"
+									}
+								},
+								{
+									"id": "destroy",
+									"objectClass": "spr_cliente3",
+									"sid": 364887541145255
+								}
+							],
+							"sid": 954425920285767
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "else",
+									"objectClass": "System",
+									"sid": 498040318676877
+								},
+								{
+									"id": "is-boolean-instance-variable-set",
+									"objectClass": "Personaje",
+									"sid": 166535097052510,
+									"parameters": {
+										"instance-variable": "SinLechuga"
+									}
+								},
+								{
+									"id": "is-animation-playing",
+									"objectClass": "spr_cliente3",
+									"sid": 643968045434510,
+									"parameters": {
+										"animation": "\"SinLechuga\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "add-to-eventvar",
+									"objectClass": "System",
+									"sid": 622979745136568,
+									"parameters": {
+										"variable": "Monedas",
+										"value": "1"
+									}
+								},
+								{
+									"id": "spawn-another-object",
+									"objectClass": "Mesa3",
+									"sid": 631378214806645,
+									"parameters": {
+										"object": "spr_sinlechuga",
+										"layer": "4",
+										"image-point": "0",
+										"create-hierarchy": false,
+										"template-name": "\"\""
+									}
+								},
+								{
+									"id": "set-boolean-instvar",
+									"objectClass": "Personaje",
+									"sid": 642082403303649,
+									"parameters": {
+										"instance-variable": "SinLechuga",
+										"value": "false"
+									}
+								},
+								{
+									"id": "set-animation",
+									"objectClass": "Personaje",
+									"sid": 597529069003010,
+									"parameters": {
+										"animation": "\"Front\"",
+										"from": "beginning"
+									}
+								},
+								{
+									"id": "set-animation",
+									"objectClass": "spr_cliente3",
+									"sid": 716882678951664,
+									"parameters": {
+										"animation": "\"Normal\"",
+										"from": "beginning"
+									}
+								},
+								{
+									"id": "wait",
+									"objectClass": "System",
+									"sid": 278312400254051,
+									"parameters": {
+										"seconds": "10"
+									}
+								},
+								{
+									"id": "destroy",
+									"objectClass": "spr_sinlechuga",
+									"sid": 988835117439907
+								},
+								{
+									"id": "spawn-another-object",
+									"objectClass": "Mesa3",
+									"sid": 454179534535845,
+									"parameters": {
+										"object": "Plato2",
+										"layer": "4",
+										"image-point": "1",
+										"create-hierarchy": false,
+										"template-name": "\"\""
+									}
+								},
+								{
+									"id": "set-flipped",
+									"objectClass": "spr_cliente3",
+									"sid": 195146068042750,
+									"parameters": {
+										"state": "flipped"
+									}
+								},
+								{
+									"id": "move-to-position",
+									"objectClass": "spr_cliente3",
+									"sid": 616643155408244,
+									"behaviorType": "MoveTo",
+									"parameters": {
+										"x": "spr_spawner_clientes3.X",
+										"y": "spr_spawner_clientes3.Y",
+										"mode": "direct"
+									}
+								},
+								{
+									"id": "wait",
+									"objectClass": "System",
+									"sid": 619637645328476,
+									"parameters": {
+										"seconds": "6"
+									}
+								},
+								{
+									"id": "destroy",
+									"objectClass": "spr_cliente3",
+									"sid": 455153129084458
+								}
+							],
+							"sid": 475898797069886
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "else",
+									"objectClass": "System",
+									"sid": 694053794806784
+								},
+								{
+									"id": "is-boolean-instance-variable-set",
+									"objectClass": "Personaje",
+									"sid": 865015370776859,
+									"parameters": {
+										"instance-variable": "SinTomate"
+									}
+								},
+								{
+									"id": "is-animation-playing",
+									"objectClass": "spr_cliente3",
+									"sid": 396644662564663,
+									"parameters": {
+										"animation": "\"SinTomate\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "add-to-eventvar",
+									"objectClass": "System",
+									"sid": 859644928012997,
+									"parameters": {
+										"variable": "Monedas",
+										"value": "1"
+									}
+								},
+								{
+									"id": "spawn-another-object",
+									"objectClass": "Mesa3",
+									"sid": 413972050108394,
+									"parameters": {
+										"object": "spr_sintomate",
+										"layer": "4",
+										"image-point": "0",
+										"create-hierarchy": false,
+										"template-name": "\"\""
+									}
+								},
+								{
+									"id": "set-boolean-instvar",
+									"objectClass": "Personaje",
+									"sid": 133105623939331,
+									"parameters": {
+										"instance-variable": "SinTomate",
+										"value": "false"
+									}
+								},
+								{
+									"id": "set-animation",
+									"objectClass": "Personaje",
+									"sid": 747681741167993,
+									"parameters": {
+										"animation": "\"Front\"",
+										"from": "beginning"
+									}
+								},
+								{
+									"id": "set-animation",
+									"objectClass": "spr_cliente3",
+									"sid": 311413860242979,
+									"parameters": {
+										"animation": "\"Normal\"",
+										"from": "beginning"
+									}
+								},
+								{
+									"id": "wait",
+									"objectClass": "System",
+									"sid": 462293754464394,
+									"parameters": {
+										"seconds": "10"
+									}
+								},
+								{
+									"id": "destroy",
+									"objectClass": "spr_sintomate",
+									"sid": 929187594145585
+								},
+								{
+									"id": "spawn-another-object",
+									"objectClass": "Mesa3",
+									"sid": 182454600919604,
+									"parameters": {
+										"object": "Plato2",
+										"layer": "4",
+										"image-point": "1",
+										"create-hierarchy": false,
+										"template-name": "\"\""
+									}
+								},
+								{
+									"id": "set-flipped",
+									"objectClass": "spr_cliente3",
+									"sid": 193613990438038,
+									"parameters": {
+										"state": "flipped"
+									}
+								},
+								{
+									"id": "move-to-position",
+									"objectClass": "spr_cliente3",
+									"sid": 928540438450062,
+									"behaviorType": "MoveTo",
+									"parameters": {
+										"x": "spr_spawner_clientes3.X",
+										"y": "spr_spawner_clientes3.Y",
+										"mode": "direct"
+									}
+								},
+								{
+									"id": "wait",
+									"objectClass": "System",
+									"sid": 518954065471802,
+									"parameters": {
+										"seconds": "6"
+									}
+								},
+								{
+									"id": "destroy",
+									"objectClass": "spr_cliente3",
+									"sid": 239972819681654
+								}
+							],
+							"sid": 582559788425675
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "else",
+									"objectClass": "System",
+									"sid": 564746958285850
+								},
+								{
+									"id": "is-boolean-instance-variable-set",
+									"objectClass": "Personaje",
+									"sid": 486233353155173,
+									"parameters": {
+										"instance-variable": "SinCebolla"
+									}
+								},
+								{
+									"id": "is-animation-playing",
+									"objectClass": "spr_cliente3",
+									"sid": 630102200085461,
+									"parameters": {
+										"animation": "\"SinCebolla\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "add-to-eventvar",
+									"objectClass": "System",
+									"sid": 965190861868983,
+									"parameters": {
+										"variable": "Monedas",
+										"value": "1"
+									}
+								},
+								{
+									"id": "spawn-another-object",
+									"objectClass": "Mesa3",
+									"sid": 989036745102291,
+									"parameters": {
+										"object": "spr_sincebolla",
+										"layer": "4",
+										"image-point": "0",
+										"create-hierarchy": false,
+										"template-name": "\"\""
+									}
+								},
+								{
+									"id": "set-boolean-instvar",
+									"objectClass": "Personaje",
+									"sid": 970125598283807,
+									"parameters": {
+										"instance-variable": "SinCebolla",
+										"value": "false"
+									}
+								},
+								{
+									"id": "set-animation",
+									"objectClass": "Personaje",
+									"sid": 146226014276418,
+									"parameters": {
+										"animation": "\"Front\"",
+										"from": "beginning"
+									}
+								},
+								{
+									"id": "set-animation",
+									"objectClass": "spr_cliente3",
+									"sid": 354880823670690,
+									"parameters": {
+										"animation": "\"Normal\"",
+										"from": "beginning"
+									}
+								},
+								{
+									"id": "wait",
+									"objectClass": "System",
+									"sid": 280942054644180,
+									"parameters": {
+										"seconds": "10"
+									}
+								},
+								{
+									"id": "destroy",
+									"objectClass": "spr_sincebolla",
+									"sid": 327264067606616
+								},
+								{
+									"id": "spawn-another-object",
+									"objectClass": "Mesa3",
+									"sid": 463438173123579,
+									"parameters": {
+										"object": "Plato2",
+										"layer": "4",
+										"image-point": "1",
+										"create-hierarchy": false,
+										"template-name": "\"\""
+									}
+								},
+								{
+									"id": "set-flipped",
+									"objectClass": "spr_cliente3",
+									"sid": 726136336440011,
+									"parameters": {
+										"state": "flipped"
+									}
+								},
+								{
+									"id": "move-to-position",
+									"objectClass": "spr_cliente3",
+									"sid": 941574967444335,
+									"behaviorType": "MoveTo",
+									"parameters": {
+										"x": "spr_spawner_clientes3.X",
+										"y": "spr_spawner_clientes3.Y",
+										"mode": "direct"
+									}
+								},
+								{
+									"id": "wait",
+									"objectClass": "System",
+									"sid": 753355674310561,
+									"parameters": {
+										"seconds": "6"
+									}
+								},
+								{
+									"id": "destroy",
+									"objectClass": "spr_cliente3",
+									"sid": 534165980463912
+								}
+							],
+							"sid": 449544919824403
 						}
 					]
 				}
@@ -13247,6 +14834,80 @@
 				}
 			],
 			"sid": 715596099621672
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-key-pressed",
+					"objectClass": "Teclado",
+					"sid": 170625960117496,
+					"parameters": {
+						"key": 69
+					}
+				},
+				{
+					"id": "is-overlapping-another-object",
+					"objectClass": "Personaje",
+					"sid": 717238483588394,
+					"parameters": {
+						"object": "spr_espacio_cliente"
+					}
+				},
+				{
+					"id": "compare-x",
+					"objectClass": "Plato2",
+					"sid": 586479188788252,
+					"parameters": {
+						"comparison": 0,
+						"x-co-ordinate": "Mesa.ImagePointX(1)"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-boolean-instvar",
+					"objectClass": "Personaje",
+					"sid": 592343626029255,
+					"parameters": {
+						"instance-variable": "Vacio",
+						"value": "false"
+					}
+				},
+				{
+					"id": "set-boolean-instvar",
+					"objectClass": "Personaje",
+					"sid": 328968529725461,
+					"parameters": {
+						"instance-variable": "Ocupado",
+						"value": "true"
+					}
+				},
+				{
+					"id": "set-boolean-instvar",
+					"objectClass": "Personaje",
+					"sid": 730497070104089,
+					"parameters": {
+						"instance-variable": "PlatoSucio",
+						"value": "true"
+					}
+				},
+				{
+					"id": "set-animation",
+					"objectClass": "Personaje",
+					"sid": 145735219721404,
+					"parameters": {
+						"animation": "\"FPlaSuc\"",
+						"from": "beginning"
+					}
+				},
+				{
+					"id": "destroy",
+					"objectClass": "Plato2",
+					"sid": 492501741749137
+				}
+			],
+			"sid": 313015062270769
 		}
 	],
 	"sid": 281322155169956
