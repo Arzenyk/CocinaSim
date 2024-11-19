@@ -1,16 +1,10 @@
 {
-	"name": "Pared",
+	"name": "spr_spawner_clientes2",
 	"plugin-id": "Sprite",
-	"sid": 570955813905623,
+	"sid": 275146229606948,
 	"isGlobal": false,
 	"instanceVariables": [],
-	"behaviorTypes": [
-		{
-			"behaviorId": "solid",
-			"name": "Solid",
-			"sid": 381581339740780
-		}
-	],
+	"behaviorTypes": [],
 	"effectTypes": [],
 	"animations": {
 		"items": [
@@ -25,25 +19,13 @@
 						"exportFormat": "lossless",
 						"exportQuality": 0.8,
 						"fileType": "image/png",
-						"imageSpriteId": 3886539,
-						"collisionPoly": {
-							"points": [
-								0,
-								0.3720000000000001,
-								1,
-								0.3820000000000001,
-								1,
-								0.6739999999999997,
-								0,
-								0.6719999999999997
-							]
-						},
+						"imageSpriteId": 3421462,
 						"useCollisionPoly": true,
 						"duration": 1,
 						"tag": ""
 					}
 				],
-				"sid": 428691177466765,
+				"sid": 209662691530021,
 				"name": "Animation 1",
 				"isLooping": false,
 				"isPingPong": false,

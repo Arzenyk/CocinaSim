@@ -1,16 +1,10 @@
 {
-	"name": "spr_cliente",
+	"name": "Mesa3",
 	"plugin-id": "Sprite",
-	"sid": 740579078724406,
+	"sid": 276715650270296,
 	"isGlobal": false,
 	"instanceVariables": [],
-	"behaviorTypes": [
-		{
-			"behaviorId": "MoveTo",
-			"name": "MoveTo",
-			"sid": 118886570009762
-		}
-	],
+	"behaviorTypes": [],
 	"effectTypes": [],
 	"animations": {
 		"items": [
@@ -25,14 +19,26 @@
 						"exportFormat": "lossless",
 						"exportQuality": 0.8,
 						"fileType": "image/png",
-						"imageSpriteId": 412637,
+						"imageSpriteId": 1942638,
+						"collisionPoly": {
+							"points": [
+								0,
+								0.43600000000000017,
+								0.998,
+								0.4280000000000001,
+								1,
+								0.5379999999999996,
+								0,
+								0.5359999999999996
+							]
+						},
 						"useCollisionPoly": true,
 						"duration": 1,
 						"tag": ""
 					}
 				],
-				"sid": 798635447521920,
-				"name": "Normal",
+				"sid": 255538086596532,
+				"name": "Vacia",
 				"isLooping": false,
 				"isPingPong": false,
 				"repeatCount": 1,
@@ -50,81 +56,14 @@
 						"exportFormat": "lossless",
 						"exportQuality": 0.8,
 						"fileType": "image/png",
-						"imageSpriteId": 836058,
-						"useCollisionPoly": true,
-						"duration": 1,
-						"tag": ""
-					},
-					{
-						"width": 250,
-						"height": 250,
-						"originX": 0.5,
-						"originY": 0.5,
-						"originalSource": "",
-						"exportFormat": "lossless",
-						"exportQuality": 0.8,
-						"fileType": "image/png",
-						"imageSpriteId": 9941294,
-						"useCollisionPoly": true,
-						"duration": 1,
-						"tag": ""
-					},
-					{
-						"width": 250,
-						"height": 250,
-						"originX": 0.5,
-						"originY": 0.5,
-						"originalSource": "",
-						"exportFormat": "lossless",
-						"exportQuality": 0.8,
-						"fileType": "image/png",
-						"imageSpriteId": 727009,
-						"useCollisionPoly": true,
-						"duration": 1,
-						"tag": ""
-					},
-					{
-						"width": 250,
-						"height": 250,
-						"originX": 0.5,
-						"originY": 0.5,
-						"originalSource": "",
-						"exportFormat": "lossless",
-						"exportQuality": 0.8,
-						"fileType": "image/png",
-						"imageSpriteId": 626132,
+						"imageSpriteId": 4845500,
 						"useCollisionPoly": true,
 						"duration": 1,
 						"tag": ""
 					}
 				],
-				"sid": 109404806744711,
-				"name": "Pensando",
-				"isLooping": true,
-				"isPingPong": false,
-				"repeatCount": 2,
-				"repeatTo": 0,
-				"speed": 2
-			},
-			{
-				"frames": [
-					{
-						"width": 250,
-						"height": 250,
-						"originX": 0.5,
-						"originY": 0.5,
-						"originalSource": "",
-						"exportFormat": "lossless",
-						"exportQuality": 0.8,
-						"fileType": "image/png",
-						"imageSpriteId": 1602673,
-						"useCollisionPoly": true,
-						"duration": 1,
-						"tag": ""
-					}
-				],
-				"sid": 517160182338422,
-				"name": "Impaciente",
+				"sid": 391652170628099,
+				"name": "Plato",
 				"isLooping": false,
 				"isPingPong": false,
 				"repeatCount": 1,
@@ -142,14 +81,14 @@
 						"exportFormat": "lossless",
 						"exportQuality": 0.8,
 						"fileType": "image/png",
-						"imageSpriteId": 9142220,
+						"imageSpriteId": 2143291,
 						"useCollisionPoly": true,
 						"duration": 1,
 						"tag": ""
 					}
 				],
-				"sid": 863543522688907,
-				"name": "Enojado",
+				"sid": 247035383835915,
+				"name": "Pan",
 				"isLooping": false,
 				"isPingPong": false,
 				"repeatCount": 1,
@@ -167,14 +106,14 @@
 						"exportFormat": "lossless",
 						"exportQuality": 0.8,
 						"fileType": "image/png",
-						"imageSpriteId": 6987169,
+						"imageSpriteId": 5437901,
 						"useCollisionPoly": true,
 						"duration": 1,
 						"tag": ""
 					}
 				],
-				"sid": 842021696972935,
-				"name": "Completa",
+				"sid": 641540702292241,
+				"name": "Carne",
 				"isLooping": false,
 				"isPingPong": false,
 				"repeatCount": 1,
@@ -192,14 +131,14 @@
 						"exportFormat": "lossless",
 						"exportQuality": 0.8,
 						"fileType": "image/png",
-						"imageSpriteId": 2510817,
+						"imageSpriteId": 2295464,
 						"useCollisionPoly": true,
 						"duration": 1,
 						"tag": ""
 					}
 				],
-				"sid": 866587761496312,
-				"name": "SinLechuga",
+				"sid": 346087646089958,
+				"name": "Lechuga",
 				"isLooping": false,
 				"isPingPong": false,
 				"repeatCount": 1,
@@ -217,14 +156,14 @@
 						"exportFormat": "lossless",
 						"exportQuality": 0.8,
 						"fileType": "image/png",
-						"imageSpriteId": 7933355,
+						"imageSpriteId": 1091328,
 						"useCollisionPoly": true,
 						"duration": 1,
 						"tag": ""
 					}
 				],
-				"sid": 455562063318264,
-				"name": "SinTomate",
+				"sid": 601376138821294,
+				"name": "Tomate",
 				"isLooping": false,
 				"isPingPong": false,
 				"repeatCount": 1,
@@ -242,14 +181,39 @@
 						"exportFormat": "lossless",
 						"exportQuality": 0.8,
 						"fileType": "image/png",
-						"imageSpriteId": 6183471,
+						"imageSpriteId": 2230974,
 						"useCollisionPoly": true,
 						"duration": 1,
 						"tag": ""
 					}
 				],
-				"sid": 250504361191674,
-				"name": "SinCebolla",
+				"sid": 385265347212414,
+				"name": "Cebolla",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			},
+			{
+				"frames": [
+					{
+						"width": 250,
+						"height": 250,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"fileType": "image/png",
+						"imageSpriteId": 9229883,
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					}
+				],
+				"sid": 696392081847152,
+				"name": "Final",
 				"isLooping": false,
 				"isPingPong": false,
 				"repeatCount": 1,

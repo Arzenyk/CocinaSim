@@ -1,14 +1,14 @@
 {
-	"name": "spr_cliente",
+	"name": "spr_cliente2",
 	"plugin-id": "Sprite",
-	"sid": 740579078724406,
+	"sid": 648145707515620,
 	"isGlobal": false,
 	"instanceVariables": [],
 	"behaviorTypes": [
 		{
 			"behaviorId": "MoveTo",
 			"name": "MoveTo",
-			"sid": 118886570009762
+			"sid": 150081703401196
 		}
 	],
 	"effectTypes": [],
@@ -25,13 +25,13 @@
 						"exportFormat": "lossless",
 						"exportQuality": 0.8,
 						"fileType": "image/png",
-						"imageSpriteId": 412637,
+						"imageSpriteId": 655420,
 						"useCollisionPoly": true,
 						"duration": 1,
 						"tag": ""
 					}
 				],
-				"sid": 798635447521920,
+				"sid": 638789234844048,
 				"name": "Normal",
 				"isLooping": false,
 				"isPingPong": false,
@@ -50,7 +50,7 @@
 						"exportFormat": "lossless",
 						"exportQuality": 0.8,
 						"fileType": "image/png",
-						"imageSpriteId": 836058,
+						"imageSpriteId": 7449593,
 						"useCollisionPoly": true,
 						"duration": 1,
 						"tag": ""
@@ -64,7 +64,7 @@
 						"exportFormat": "lossless",
 						"exportQuality": 0.8,
 						"fileType": "image/png",
-						"imageSpriteId": 9941294,
+						"imageSpriteId": 3167030,
 						"useCollisionPoly": true,
 						"duration": 1,
 						"tag": ""
@@ -78,7 +78,7 @@
 						"exportFormat": "lossless",
 						"exportQuality": 0.8,
 						"fileType": "image/png",
-						"imageSpriteId": 727009,
+						"imageSpriteId": 4560625,
 						"useCollisionPoly": true,
 						"duration": 1,
 						"tag": ""
@@ -92,13 +92,13 @@
 						"exportFormat": "lossless",
 						"exportQuality": 0.8,
 						"fileType": "image/png",
-						"imageSpriteId": 626132,
+						"imageSpriteId": 2956430,
 						"useCollisionPoly": true,
 						"duration": 1,
 						"tag": ""
 					}
 				],
-				"sid": 109404806744711,
+				"sid": 908577379399982,
 				"name": "Pensando",
 				"isLooping": true,
 				"isPingPong": false,
@@ -117,13 +117,13 @@
 						"exportFormat": "lossless",
 						"exportQuality": 0.8,
 						"fileType": "image/png",
-						"imageSpriteId": 1602673,
+						"imageSpriteId": 1158167,
 						"useCollisionPoly": true,
 						"duration": 1,
 						"tag": ""
 					}
 				],
-				"sid": 517160182338422,
+				"sid": 619614802376103,
 				"name": "Impaciente",
 				"isLooping": false,
 				"isPingPong": false,
@@ -142,13 +142,13 @@
 						"exportFormat": "lossless",
 						"exportQuality": 0.8,
 						"fileType": "image/png",
-						"imageSpriteId": 9142220,
+						"imageSpriteId": 1175263,
 						"useCollisionPoly": true,
 						"duration": 1,
 						"tag": ""
 					}
 				],
-				"sid": 863543522688907,
+				"sid": 582764149943818,
 				"name": "Enojado",
 				"isLooping": false,
 				"isPingPong": false,
@@ -167,13 +167,13 @@
 						"exportFormat": "lossless",
 						"exportQuality": 0.8,
 						"fileType": "image/png",
-						"imageSpriteId": 6987169,
+						"imageSpriteId": 444121,
 						"useCollisionPoly": true,
 						"duration": 1,
 						"tag": ""
 					}
 				],
-				"sid": 842021696972935,
+				"sid": 572429528295589,
 				"name": "Completa",
 				"isLooping": false,
 				"isPingPong": false,
@@ -192,13 +192,13 @@
 						"exportFormat": "lossless",
 						"exportQuality": 0.8,
 						"fileType": "image/png",
-						"imageSpriteId": 2510817,
+						"imageSpriteId": 3896377,
 						"useCollisionPoly": true,
 						"duration": 1,
 						"tag": ""
 					}
 				],
-				"sid": 866587761496312,
+				"sid": 564377410989533,
 				"name": "SinLechuga",
 				"isLooping": false,
 				"isPingPong": false,
@@ -217,13 +217,13 @@
 						"exportFormat": "lossless",
 						"exportQuality": 0.8,
 						"fileType": "image/png",
-						"imageSpriteId": 7933355,
+						"imageSpriteId": 5047684,
 						"useCollisionPoly": true,
 						"duration": 1,
 						"tag": ""
 					}
 				],
-				"sid": 455562063318264,
+				"sid": 601089561134940,
 				"name": "SinTomate",
 				"isLooping": false,
 				"isPingPong": false,
@@ -242,13 +242,13 @@
 						"exportFormat": "lossless",
 						"exportQuality": 0.8,
 						"fileType": "image/png",
-						"imageSpriteId": 6183471,
+						"imageSpriteId": 6814375,
 						"useCollisionPoly": true,
 						"duration": 1,
 						"tag": ""
 					}
 				],
-				"sid": 250504361191674,
+				"sid": 894800771577473,
 				"name": "SinCebolla",
 				"isLooping": false,
 				"isPingPong": false,

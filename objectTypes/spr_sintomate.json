@@ -1,16 +1,10 @@
 {
-	"name": "Pared",
+	"name": "spr_sintomate",
 	"plugin-id": "Sprite",
-	"sid": 570955813905623,
+	"sid": 683020155046600,
 	"isGlobal": false,
 	"instanceVariables": [],
-	"behaviorTypes": [
-		{
-			"behaviorId": "solid",
-			"name": "Solid",
-			"sid": 381581339740780
-		}
-	],
+	"behaviorTypes": [],
 	"effectTypes": [],
 	"animations": {
 		"items": [
@@ -25,25 +19,13 @@
 						"exportFormat": "lossless",
 						"exportQuality": 0.8,
 						"fileType": "image/png",
-						"imageSpriteId": 3886539,
-						"collisionPoly": {
-							"points": [
-								0,
-								0.3720000000000001,
-								1,
-								0.3820000000000001,
-								1,
-								0.6739999999999997,
-								0,
-								0.6719999999999997
-							]
-						},
+						"imageSpriteId": 4139817,
 						"useCollisionPoly": true,
 						"duration": 1,
 						"tag": ""
 					}
 				],
-				"sid": 428691177466765,
+				"sid": 505128765219337,
 				"name": "Animation 1",
 				"isLooping": false,
 				"isPingPong": false,

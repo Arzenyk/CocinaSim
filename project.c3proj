@@ -99,6 +99,13 @@
 		},
 		{
 			"type": "behavior",
+			"id": "Timer",
+			"name": "Timer",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
 			"id": "bound",
 			"name": "Bound to layout",
 			"author": "Scirra",
@@ -153,7 +160,20 @@
 			"spr_espacio_pedido4",
 			"PedidosArray",
 			"spr_pedidoSinTomate",
-			"spr_pedidoSinCebolla"
+			"spr_pedidoSinCebolla",
+			"Mesa2",
+			"Mesa3",
+			"spr_espacio_cliente2",
+			"spr_espacio_cliente3",
+			"spr_spawner_clientes2",
+			"spr_spawner_clientes3",
+			"spr_cliente2",
+			"spr_cliente3",
+			"spr_reloj",
+			"spr_cartel",
+			"spr_sinlechuga",
+			"spr_sintomate",
+			"spr_sincebolla"
 		],
 		"subfolders": [
 			{

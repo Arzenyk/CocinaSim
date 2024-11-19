@@ -43,13 +43,33 @@
 		},
 		{
 			"eventType": "variable",
-			"name": "spawnCliente",
+			"name": "spawnCliente1",
 			"type": "boolean",
 			"initialValue": "false",
 			"comment": "",
 			"isStatic": false,
 			"isConstant": false,
 			"sid": 270961996290443
+		},
+		{
+			"eventType": "variable",
+			"name": "spawnCliente2",
+			"type": "boolean",
+			"initialValue": "false",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 319194464010288
+		},
+		{
+			"eventType": "variable",
+			"name": "spawnCliente3",
+			"type": "boolean",
+			"initialValue": "false",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 724790429850836
 		},
 		{
 			"eventType": "variable",
@@ -65,7 +85,7 @@
 			"eventType": "variable",
 			"name": "Pedidos",
 			"type": "number",
-			"initialValue": "4",
+			"initialValue": "0",
 			"comment": "",
 			"isStatic": false,
 			"isConstant": false,
@@ -310,6 +330,56 @@
 			"isStatic": false,
 			"isConstant": false,
 			"sid": 632132194903617
+		},
+		{
+			"eventType": "variable",
+			"name": "Clientes",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 936140782768332
+		},
+		{
+			"eventType": "variable",
+			"name": "C1decidio",
+			"type": "boolean",
+			"initialValue": "false",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 455435520681239
+		},
+		{
+			"eventType": "variable",
+			"name": "C2decidio",
+			"type": "boolean",
+			"initialValue": "false",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 349225310837456
+		},
+		{
+			"eventType": "variable",
+			"name": "C3decidio",
+			"type": "boolean",
+			"initialValue": "false",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 182694750519231
+		},
+		{
+			"eventType": "variable",
+			"name": "AbiertoCerrado",
+			"type": "boolean",
+			"initialValue": "false",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 304948047181891
 		},
 		{
 			"eventType": "group",
@@ -6807,24 +6877,6 @@
 					}
 				},
 				{
-					"id": "wait",
-					"objectClass": "System",
-					"sid": 499597013462639,
-					"disabled": true,
-					"parameters": {
-						"seconds": "10"
-					}
-				},
-				{
-					"id": "set-boolean-eventvar",
-					"objectClass": "System",
-					"sid": 721223421249608,
-					"parameters": {
-						"variable": "spawnCliente",
-						"value": "true"
-					}
-				},
-				{
 					"id": "pin-to-object-properties",
 					"objectClass": "spr_hud",
 					"sid": 253776284458503,
@@ -6864,6 +6916,42 @@
 						"width": "0",
 						"height": "1",
 						"depth": "1"
+					}
+				},
+				{
+					"id": "pop",
+					"objectClass": "PedidosArray",
+					"sid": 908152370399646,
+					"parameters": {
+						"where": "back",
+						"axis": "x"
+					}
+				},
+				{
+					"id": "pop",
+					"objectClass": "PedidosArray",
+					"sid": 353841021748141,
+					"parameters": {
+						"where": "back",
+						"axis": "x"
+					}
+				},
+				{
+					"id": "pop",
+					"objectClass": "PedidosArray",
+					"sid": 542109790348492,
+					"parameters": {
+						"where": "back",
+						"axis": "x"
+					}
+				},
+				{
+					"id": "pop",
+					"objectClass": "PedidosArray",
+					"sid": 762284047040582,
+					"parameters": {
+						"where": "back",
+						"axis": "x"
 					}
 				}
 			],
@@ -8003,260 +8091,6 @@
 				}
 			],
 			"sid": 851926226923651
-		},
-		{
-			"eventType": "block",
-			"conditions": [
-				{
-					"id": "trigger-once-while-true",
-					"objectClass": "System",
-					"sid": 344216302071173
-				},
-				{
-					"id": "compare-boolean-eventvar",
-					"objectClass": "System",
-					"sid": 786403000297479,
-					"parameters": {
-						"variable": "spawnCliente"
-					}
-				}
-			],
-			"actions": [
-				{
-					"id": "set-collisions-enabled",
-					"objectClass": "spr_espacio_cliente",
-					"sid": 571085773900422,
-					"parameters": {
-						"collisions": "enabled"
-					}
-				},
-				{
-					"id": "spawn-another-object",
-					"objectClass": "spr_spawner_clientes",
-					"sid": 175482125351470,
-					"parameters": {
-						"object": "spr_cliente",
-						"layer": "4",
-						"image-point": "0",
-						"create-hierarchy": false,
-						"template-name": "\"\""
-					}
-				},
-				{
-					"id": "move-to-position",
-					"objectClass": "spr_cliente",
-					"sid": 836402605451476,
-					"behaviorType": "MoveTo",
-					"parameters": {
-						"x": "spr_espacio_cliente.X",
-						"y": "spr_espacio_cliente.Y",
-						"mode": "direct"
-					}
-				}
-			],
-			"sid": 954973990085984
-		},
-		{
-			"eventType": "block",
-			"conditions": [
-				{
-					"id": "on-arrived",
-					"objectClass": "spr_cliente",
-					"sid": 218519492653449,
-					"behaviorType": "MoveTo"
-				}
-			],
-			"actions": [
-				{
-					"id": "set-boolean-eventvar",
-					"objectClass": "System",
-					"sid": 962120350042406,
-					"parameters": {
-						"variable": "hayCliente",
-						"value": "true"
-					}
-				}
-			],
-			"sid": 919591883272378
-		},
-		{
-			"eventType": "block",
-			"conditions": [
-				{
-					"id": "on-key-pressed",
-					"objectClass": "Teclado",
-					"sid": 616760136119477,
-					"parameters": {
-						"key": 69
-					}
-				},
-				{
-					"id": "compare-boolean-eventvar",
-					"objectClass": "System",
-					"sid": 410593724332860,
-					"parameters": {
-						"variable": "hayCliente"
-					}
-				},
-				{
-					"id": "is-overlapping-another-object",
-					"objectClass": "Personaje",
-					"sid": 727230345057591,
-					"parameters": {
-						"object": "spr_espacio_cliente"
-					}
-				}
-			],
-			"actions": [
-				{
-					"id": "set-animation",
-					"objectClass": "spr_cliente",
-					"sid": 350963286424704,
-					"parameters": {
-						"animation": "\"Pensando\"",
-						"from": "beginning"
-					}
-				},
-				{
-					"id": "wait",
-					"objectClass": "System",
-					"sid": 302146792036292,
-					"parameters": {
-						"seconds": "5"
-					}
-				},
-				{
-					"id": "set-animation",
-					"objectClass": "spr_cliente",
-					"sid": 927284252219661,
-					"parameters": {
-						"animation": "\"Pedido\"",
-						"from": "beginning"
-					}
-				}
-			],
-			"sid": 211386966936828
-		},
-		{
-			"eventType": "block",
-			"conditions": [
-				{
-					"id": "compare-eventvar",
-					"objectClass": "System",
-					"sid": 669049467092087,
-					"parameters": {
-						"variable": "RandPedido",
-						"comparison": 5,
-						"value": "0"
-					}
-				}
-			],
-			"actions": [
-				{
-					"id": "add-to-eventvar",
-					"objectClass": "System",
-					"sid": 878020215605100,
-					"parameters": {
-						"variable": "Ped_Completa",
-						"value": "1"
-					}
-				}
-			],
-			"sid": 136971136805178,
-			"disabled": true
-		},
-		{
-			"eventType": "block",
-			"conditions": [
-				{
-					"id": "compare-eventvar",
-					"objectClass": "System",
-					"sid": 815443889242420,
-					"parameters": {
-						"variable": "RandPedido",
-						"comparison": 5,
-						"value": "1"
-					}
-				}
-			],
-			"actions": [
-				{
-					"id": "add-to-eventvar",
-					"objectClass": "System",
-					"sid": 191581906908952,
-					"parameters": {
-						"variable": "Ped_SCeb",
-						"value": "1"
-					}
-				}
-			],
-			"sid": 370867367038974,
-			"disabled": true
-		},
-		{
-			"eventType": "block",
-			"conditions": [
-				{
-					"id": "compare-eventvar",
-					"objectClass": "System",
-					"sid": 210007489975100,
-					"parameters": {
-						"variable": "RandPedido",
-						"comparison": 5,
-						"value": "2"
-					}
-				}
-			],
-			"actions": [
-				{
-					"id": "add-to-eventvar",
-					"objectClass": "System",
-					"sid": 249317916698815,
-					"parameters": {
-						"variable": "Ped_SLech",
-						"value": "1"
-					}
-				}
-			],
-			"sid": 609169502272401,
-			"disabled": true
-		},
-		{
-			"eventType": "block",
-			"conditions": [
-				{
-					"id": "compare-eventvar",
-					"objectClass": "System",
-					"sid": 138199325010105,
-					"parameters": {
-						"variable": "RandPedido",
-						"comparison": 5,
-						"value": "3"
-					}
-				}
-			],
-			"actions": [
-				{
-					"id": "add-to-eventvar",
-					"objectClass": "System",
-					"sid": 862189834901451,
-					"parameters": {
-						"variable": "Ped_STom",
-						"value": "1"
-					}
-				}
-			],
-			"sid": 669628769565938,
-			"disabled": true
-		},
-		{
-			"eventType": "group",
-			"disabled": false,
-			"title": "Pedidos",
-			"description": "",
-			"isActiveOnStart": true,
-			"children": [],
-			"sid": 946254625382433
 		},
 		{
 			"eventType": "group",
@@ -9903,74 +9737,1087 @@
 					}
 				}
 			],
-			"sid": 431050244202281
+			"sid": 431050244202281,
+			"disabled": true
 		},
 		{
-			"eventType": "block",
-			"conditions": [
+			"eventType": "group",
+			"disabled": false,
+			"title": "Reloj",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
 				{
-					"id": "on-key-pressed",
-					"objectClass": "Teclado",
-					"sid": 256066837973601,
-					"parameters": {
-						"key": 80
-					}
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-key-pressed",
+							"objectClass": "Teclado",
+							"sid": 990623573456427,
+							"parameters": {
+								"key": 79
+							}
+						},
+						{
+							"id": "compare-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 718166678087931,
+							"parameters": {
+								"variable": "AbiertoCerrado"
+							},
+							"isInverted": true
+						}
+					],
+					"actions": [
+						{
+							"id": "set-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 470812753319776,
+							"parameters": {
+								"variable": "AbiertoCerrado",
+								"value": "true"
+							}
+						},
+						{
+							"id": "start-timer",
+							"objectClass": "spr_reloj",
+							"sid": 188445048762215,
+							"behaviorType": "Timer",
+							"parameters": {
+								"duration": "72",
+								"type": "once",
+								"tag": "\"AbiertoCerrado\""
+							}
+						},
+						{
+							"id": "set-animation",
+							"objectClass": "spr_cartel",
+							"sid": 726593513117417,
+							"parameters": {
+								"animation": "\"Open\"",
+								"from": "beginning"
+							}
+						}
+					],
+					"sid": 752220512843569
 				},
 				{
-					"id": "compare-at-x",
-					"objectClass": "PedidosArray",
-					"sid": 737486092526855,
-					"disabled": true,
-					"parameters": {
-						"x": "RandPedido",
-						"comparison": 2,
-						"value": "5"
-					}
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-timer-running",
+							"objectClass": "spr_reloj",
+							"sid": 364111291496174,
+							"behaviorType": "Timer",
+							"parameters": {
+								"tag": "\"AbiertoCerrado\""
+							}
+						},
+						{
+							"id": "every-x-seconds",
+							"objectClass": "System",
+							"sid": 621395014188969,
+							"parameters": {
+								"interval-seconds": "0.2"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "rotate-clockwise",
+							"objectClass": "spr_reloj",
+							"sid": 603709675264245,
+							"parameters": {
+								"degrees": "1"
+							}
+						}
+					],
+					"sid": 957996626827229
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-timer-running",
+							"objectClass": "spr_reloj",
+							"sid": 880786041951446,
+							"behaviorType": "Timer",
+							"parameters": {
+								"tag": "\"AbiertoCerrado\""
+							}
+						},
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 445036509163933,
+							"parameters": {
+								"variable": "Clientes",
+								"comparison": 2,
+								"value": "3"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 417244358809205,
+							"parameters": {
+								"variable": "spawnCliente1",
+								"value": "true"
+							}
+						},
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 459396809671435,
+							"parameters": {
+								"seconds": "15"
+							}
+						},
+						{
+							"id": "set-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 379213694225557,
+							"parameters": {
+								"variable": "spawnCliente2",
+								"value": "true"
+							}
+						},
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 745124544711051,
+							"parameters": {
+								"seconds": "30"
+							}
+						},
+						{
+							"id": "set-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 873103377030896,
+							"parameters": {
+								"variable": "spawnCliente3",
+								"value": "true"
+							}
+						},
+						{
+							"id": "stop-timer",
+							"objectClass": "spr_reloj",
+							"sid": 419993541673041,
+							"behaviorType": "Timer",
+							"parameters": {
+								"tag": "\"AbiertoCerrado\""
+							}
+						}
+					],
+					"sid": 299592787954035
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-timer-paused",
+							"objectClass": "spr_reloj",
+							"sid": 924400036949124,
+							"behaviorType": "Timer",
+							"parameters": {
+								"tag": "\"AbiertoCerrado\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation",
+							"objectClass": "spr_cartel",
+							"sid": 698103209099169,
+							"parameters": {
+								"animation": "\"Closed\"",
+								"from": "beginning"
+							}
+						}
+					],
+					"sid": 296601427166897
 				}
 			],
-			"actions": [
+			"sid": 105215200043573
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Clientes",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
 				{
-					"id": "set-size",
-					"objectClass": "PedidosArray",
-					"sid": 814778820867107,
-					"disabled": true,
-					"parameters": {
-						"width": "4",
-						"height": "1",
-						"depth": "1"
-					}
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "every-x-seconds",
+							"objectClass": "System",
+							"sid": 493555630446191,
+							"parameters": {
+								"interval-seconds": "2"
+							}
+						},
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 415465585400178,
+							"parameters": {
+								"variable": "Clientes",
+								"comparison": 2,
+								"value": "3"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 721223421249608,
+							"parameters": {
+								"variable": "spawnCliente1",
+								"value": "true"
+							}
+						},
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 867006943616866,
+							"parameters": {
+								"seconds": "1"
+							}
+						},
+						{
+							"id": "set-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 885660180746281,
+							"parameters": {
+								"variable": "spawnCliente1",
+								"value": "false"
+							}
+						}
+					],
+					"sid": 470287751915857,
+					"disabled": true
 				},
 				{
-					"id": "set-eventvar-value",
-					"objectClass": "System",
-					"sid": 518184099014786,
-					"parameters": {
-						"variable": "RandPedido",
-						"value": "int(random(1, 5))"
-					}
+					"eventType": "comment",
+					"text": "Cliente 1"
 				},
 				{
-					"id": "push",
-					"objectClass": "PedidosArray",
-					"sid": 307481840068110,
-					"parameters": {
-						"where": "back",
-						"value": "pedidoString",
-						"axis": "x"
-					}
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "trigger-once-while-true",
+							"objectClass": "System",
+							"sid": 961557498226024,
+							"disabled": true
+						},
+						{
+							"id": "compare-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 269471779185765,
+							"parameters": {
+								"variable": "spawnCliente1"
+							}
+						},
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 717278298720337,
+							"parameters": {
+								"variable": "Clientes",
+								"comparison": 0,
+								"value": "0"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-collisions-enabled",
+							"objectClass": "spr_espacio_cliente",
+							"sid": 919033300989035,
+							"parameters": {
+								"collisions": "enabled"
+							}
+						},
+						{
+							"id": "spawn-another-object",
+							"objectClass": "spr_spawner_clientes",
+							"sid": 193278381571454,
+							"parameters": {
+								"object": "spr_cliente",
+								"layer": "4",
+								"image-point": "0",
+								"create-hierarchy": false,
+								"template-name": "\"\""
+							}
+						},
+						{
+							"id": "move-to-position",
+							"objectClass": "spr_cliente",
+							"sid": 847441345101709,
+							"behaviorType": "MoveTo",
+							"parameters": {
+								"x": "spr_espacio_cliente.X",
+								"y": "spr_espacio_cliente.Y",
+								"mode": "direct"
+							}
+						},
+						{
+							"id": "add-to-eventvar",
+							"objectClass": "System",
+							"sid": 818520548074357,
+							"parameters": {
+								"variable": "Clientes",
+								"value": "1"
+							}
+						}
+					],
+					"sid": 268451696529909
 				},
 				{
-					"id": "pop",
-					"objectClass": "PedidosArray",
-					"sid": 411652531500967,
-					"disabled": true,
-					"parameters": {
-						"where": "back",
-						"axis": "x"
-					}
+					"eventType": "comment",
+					"text": "Cliente 2"
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "trigger-once-while-true",
+							"objectClass": "System",
+							"sid": 753356244800614,
+							"disabled": true
+						},
+						{
+							"id": "compare-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 109630863143450,
+							"parameters": {
+								"variable": "spawnCliente2"
+							}
+						},
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 130370384479407,
+							"parameters": {
+								"variable": "Clientes",
+								"comparison": 0,
+								"value": "1"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-collisions-enabled",
+							"objectClass": "spr_espacio_cliente2",
+							"sid": 503654420359489,
+							"parameters": {
+								"collisions": "enabled"
+							}
+						},
+						{
+							"id": "spawn-another-object",
+							"objectClass": "spr_spawner_clientes2",
+							"sid": 193516866937983,
+							"parameters": {
+								"object": "spr_cliente2",
+								"layer": "4",
+								"image-point": "0",
+								"create-hierarchy": false,
+								"template-name": "\"\""
+							}
+						},
+						{
+							"id": "move-to-position",
+							"objectClass": "spr_cliente2",
+							"sid": 194837620387529,
+							"behaviorType": "MoveTo",
+							"parameters": {
+								"x": "spr_espacio_cliente2.X",
+								"y": "spr_espacio_cliente2.Y",
+								"mode": "direct"
+							}
+						},
+						{
+							"id": "add-to-eventvar",
+							"objectClass": "System",
+							"sid": 149196540553901,
+							"parameters": {
+								"variable": "Clientes",
+								"value": "1"
+							}
+						}
+					],
+					"sid": 378541111711584
+				},
+				{
+					"eventType": "comment",
+					"text": "Cliente 3"
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "trigger-once-while-true",
+							"objectClass": "System",
+							"sid": 763805641137197,
+							"disabled": true
+						},
+						{
+							"id": "compare-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 515845969665321,
+							"parameters": {
+								"variable": "spawnCliente3"
+							}
+						},
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 855473923284939,
+							"parameters": {
+								"variable": "Clientes",
+								"comparison": 0,
+								"value": "2"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-collisions-enabled",
+							"objectClass": "spr_espacio_cliente3",
+							"sid": 590733446688993,
+							"parameters": {
+								"collisions": "enabled"
+							}
+						},
+						{
+							"id": "spawn-another-object",
+							"objectClass": "spr_spawner_clientes3",
+							"sid": 901886350514390,
+							"parameters": {
+								"object": "spr_cliente3",
+								"layer": "4",
+								"image-point": "0",
+								"create-hierarchy": false,
+								"template-name": "\"\""
+							}
+						},
+						{
+							"id": "move-to-position",
+							"objectClass": "spr_cliente3",
+							"sid": 516062694091983,
+							"behaviorType": "MoveTo",
+							"parameters": {
+								"x": "spr_espacio_cliente3.X",
+								"y": "spr_espacio_cliente3.Y",
+								"mode": "direct"
+							}
+						},
+						{
+							"id": "add-to-eventvar",
+							"objectClass": "System",
+							"sid": 546453027876944,
+							"parameters": {
+								"variable": "Clientes",
+								"value": "1"
+							}
+						}
+					],
+					"sid": 487948902098150
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-arrived",
+							"objectClass": "spr_cliente",
+							"sid": 179626327058419,
+							"behaviorType": "MoveTo"
+						}
+					],
+					"actions": [
+						{
+							"id": "set-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 472388510512837,
+							"parameters": {
+								"variable": "hayCliente",
+								"value": "true"
+							}
+						}
+					],
+					"sid": 333106250391372
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-arrived",
+							"objectClass": "spr_cliente2",
+							"sid": 742084122210659,
+							"behaviorType": "MoveTo"
+						}
+					],
+					"actions": [
+						{
+							"id": "set-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 156656464942482,
+							"parameters": {
+								"variable": "hayCliente",
+								"value": "true"
+							}
+						}
+					],
+					"sid": 564568830257407
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-arrived",
+							"objectClass": "spr_cliente3",
+							"sid": 995638780200279,
+							"behaviorType": "MoveTo"
+						}
+					],
+					"actions": [
+						{
+							"id": "set-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 141598283284244,
+							"parameters": {
+								"variable": "hayCliente",
+								"value": "true"
+							}
+						}
+					],
+					"sid": 316632693501177
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-key-pressed",
+							"objectClass": "Teclado",
+							"sid": 803301292651611,
+							"parameters": {
+								"key": 69
+							}
+						},
+						{
+							"id": "compare-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 494481247803681,
+							"parameters": {
+								"variable": "hayCliente"
+							}
+						},
+						{
+							"id": "is-overlapping-another-object",
+							"objectClass": "Personaje",
+							"sid": 601529294278013,
+							"parameters": {
+								"object": "spr_espacio_cliente"
+							}
+						},
+						{
+							"id": "compare-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 264943247872698,
+							"parameters": {
+								"variable": "C1decidio"
+							},
+							"isInverted": true
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation",
+							"objectClass": "spr_cliente",
+							"sid": 503836684954050,
+							"parameters": {
+								"animation": "\"Pensando\"",
+								"from": "beginning"
+							}
+						},
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 118349004435706,
+							"parameters": {
+								"seconds": "5"
+							}
+						},
+						{
+							"id": "add-to-eventvar",
+							"objectClass": "System",
+							"sid": 912750733977008,
+							"parameters": {
+								"variable": "Pedidos",
+								"value": "1"
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 568839311233143,
+							"parameters": {
+								"variable": "RandPedido",
+								"value": "int(random(1, 5))"
+							}
+						},
+						{
+							"id": "set-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 167049176711038,
+							"parameters": {
+								"variable": "C1decidio",
+								"value": "true"
+							}
+						}
+					],
+					"sid": 559712637364684,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 759592521464464,
+									"parameters": {
+										"variable": "RandPedido",
+										"comparison": 0,
+										"value": "1"
+									}
+								}
+							],
+							"actions": [],
+							"sid": 811787276674574
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "else",
+									"objectClass": "System",
+									"sid": 440520551227229
+								},
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 912050794024158,
+									"parameters": {
+										"variable": "RandPedido",
+										"comparison": 0,
+										"value": "2"
+									}
+								}
+							],
+							"actions": [],
+							"sid": 533763051289917
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "else",
+									"objectClass": "System",
+									"sid": 900917109618072
+								},
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 912544530323781,
+									"parameters": {
+										"variable": "RandPedido",
+										"comparison": 0,
+										"value": "3"
+									}
+								}
+							],
+							"actions": [],
+							"sid": 402671363178392
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "else",
+									"objectClass": "System",
+									"sid": 970303549871124
+								},
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 625322097136516,
+									"parameters": {
+										"variable": "RandPedido",
+										"comparison": 0,
+										"value": "4"
+									}
+								}
+							],
+							"actions": [],
+							"sid": 769685845712613
+						}
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-key-pressed",
+							"objectClass": "Teclado",
+							"sid": 666159508602391,
+							"parameters": {
+								"key": 69
+							}
+						},
+						{
+							"id": "compare-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 104397111446468,
+							"parameters": {
+								"variable": "hayCliente"
+							}
+						},
+						{
+							"id": "is-overlapping-another-object",
+							"objectClass": "Personaje",
+							"sid": 794950416569514,
+							"parameters": {
+								"object": "spr_espacio_cliente2"
+							}
+						},
+						{
+							"id": "compare-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 549617313111795,
+							"parameters": {
+								"variable": "C2decidio"
+							},
+							"isInverted": true
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation",
+							"objectClass": "spr_cliente2",
+							"sid": 231348329642177,
+							"parameters": {
+								"animation": "\"Pensando\"",
+								"from": "beginning"
+							}
+						},
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 908025217536232,
+							"parameters": {
+								"seconds": "5"
+							}
+						},
+						{
+							"id": "add-to-eventvar",
+							"objectClass": "System",
+							"sid": 903024282504335,
+							"parameters": {
+								"variable": "Pedidos",
+								"value": "1"
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 449761962563697,
+							"parameters": {
+								"variable": "RandPedido",
+								"value": "int(random(1, 5))"
+							}
+						},
+						{
+							"id": "set-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 219785576010006,
+							"parameters": {
+								"variable": "C2decidio",
+								"value": "true"
+							}
+						}
+					],
+					"sid": 518942634110551,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 920847611565459,
+									"parameters": {
+										"variable": "RandPedido",
+										"comparison": 0,
+										"value": "1"
+									}
+								}
+							],
+							"actions": [],
+							"sid": 708413572787993
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "else",
+									"objectClass": "System",
+									"sid": 584829814657301
+								},
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 293655844452019,
+									"parameters": {
+										"variable": "RandPedido",
+										"comparison": 0,
+										"value": "2"
+									}
+								}
+							],
+							"actions": [],
+							"sid": 438619273166467
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "else",
+									"objectClass": "System",
+									"sid": 682595412892186
+								},
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 603422211848150,
+									"parameters": {
+										"variable": "RandPedido",
+										"comparison": 0,
+										"value": "3"
+									}
+								}
+							],
+							"actions": [],
+							"sid": 874762730700367
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "else",
+									"objectClass": "System",
+									"sid": 328207679954824
+								},
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 710366892638959,
+									"parameters": {
+										"variable": "RandPedido",
+										"comparison": 0,
+										"value": "4"
+									}
+								}
+							],
+							"actions": [],
+							"sid": 807131762394033
+						}
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-key-pressed",
+							"objectClass": "Teclado",
+							"sid": 738230004157522,
+							"parameters": {
+								"key": 69
+							}
+						},
+						{
+							"id": "compare-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 657412603025418,
+							"parameters": {
+								"variable": "hayCliente"
+							}
+						},
+						{
+							"id": "is-overlapping-another-object",
+							"objectClass": "Personaje",
+							"sid": 795942356252296,
+							"parameters": {
+								"object": "spr_espacio_cliente3"
+							}
+						},
+						{
+							"id": "compare-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 110797896986710,
+							"parameters": {
+								"variable": "C3decidio"
+							},
+							"isInverted": true
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation",
+							"objectClass": "spr_cliente3",
+							"sid": 719293465777802,
+							"parameters": {
+								"animation": "\"Pensando\"",
+								"from": "beginning"
+							}
+						},
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 813167286124373,
+							"parameters": {
+								"seconds": "5"
+							}
+						},
+						{
+							"id": "add-to-eventvar",
+							"objectClass": "System",
+							"sid": 834819170282353,
+							"parameters": {
+								"variable": "Pedidos",
+								"value": "1"
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 825218585398792,
+							"parameters": {
+								"variable": "RandPedido",
+								"value": "int(random(1, 5))"
+							}
+						},
+						{
+							"id": "set-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 181325625453337,
+							"parameters": {
+								"variable": "C3decidio",
+								"value": "true"
+							}
+						}
+					],
+					"sid": 666651983493873,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 507946086928217,
+									"parameters": {
+										"variable": "RandPedido",
+										"comparison": 0,
+										"value": "1"
+									}
+								}
+							],
+							"actions": [],
+							"sid": 301371409305328
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "else",
+									"objectClass": "System",
+									"sid": 622535594288485
+								},
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 633272036590752,
+									"parameters": {
+										"variable": "RandPedido",
+										"comparison": 0,
+										"value": "2"
+									}
+								}
+							],
+							"actions": [],
+							"sid": 837088958643218
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "else",
+									"objectClass": "System",
+									"sid": 995586195162807
+								},
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 825231945049828,
+									"parameters": {
+										"variable": "RandPedido",
+										"comparison": 0,
+										"value": "3"
+									}
+								}
+							],
+							"actions": [],
+							"sid": 745852320335431
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "else",
+									"objectClass": "System",
+									"sid": 632629618712382
+								},
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 814097119676068,
+									"parameters": {
+										"variable": "RandPedido",
+										"comparison": 0,
+										"value": "4"
+									}
+								}
+							],
+							"actions": [],
+							"sid": 418475070170849
+						}
+					]
 				}
 			],
-			"sid": 172794633016857,
+			"sid": 716740114030060
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Pedidos",
+			"description": "",
+			"isActiveOnStart": true,
 			"children": [
 				{
 					"eventType": "block",
@@ -9978,760 +10825,2428 @@
 						{
 							"id": "compare-eventvar",
 							"objectClass": "System",
-							"sid": 910320278400805,
+							"sid": 884757919306195,
 							"parameters": {
-								"variable": "RandPedido",
-								"comparison": 0,
-								"value": "1"
+								"variable": "Pedidos",
+								"comparison": 4,
+								"value": "0"
 							}
 						}
 					],
-					"actions": [
+					"actions": [],
+					"sid": 563811842115164,
+					"children": [
 						{
-							"id": "set-eventvar-value",
-							"objectClass": "System",
-							"sid": 375080586043804,
-							"parameters": {
-								"variable": "pedidoString",
-								"value": "\"Completa\""
-							}
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 726578454869765,
+									"parameters": {
+										"variable": "C1decidio"
+									}
+								},
+								{
+									"id": "trigger-once-while-true",
+									"objectClass": "System",
+									"sid": 664708004852721,
+									"disabled": true
+								}
+							],
+							"actions": [
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 280069725723935,
+									"parameters": {
+										"variable": "RandPedido",
+										"value": "int(random(1, 5))"
+									}
+								}
+							],
+							"sid": 165737524535770,
+							"disabled": true
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "else",
+									"objectClass": "System",
+									"sid": 498067088924000
+								},
+								{
+									"id": "compare-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 501981376965418,
+									"parameters": {
+										"variable": "C2decidio"
+									}
+								},
+								{
+									"id": "trigger-once-while-true",
+									"objectClass": "System",
+									"sid": 479510258163697,
+									"disabled": true
+								}
+							],
+							"actions": [
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 786203788413730,
+									"parameters": {
+										"variable": "RandPedido",
+										"value": "int(random(1, 5))"
+									}
+								}
+							],
+							"sid": 532530216452297,
+							"disabled": true
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "else",
+									"objectClass": "System",
+									"sid": 866518104303987
+								},
+								{
+									"id": "compare-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 835173219964578,
+									"parameters": {
+										"variable": "C3decidio"
+									}
+								},
+								{
+									"id": "trigger-once-while-true",
+									"objectClass": "System",
+									"sid": 297539017692387,
+									"disabled": true
+								}
+							],
+							"actions": [
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 322289217166670,
+									"parameters": {
+										"variable": "RandPedido",
+										"value": "int(random(1, 5))"
+									}
+								}
+							],
+							"sid": 390308194374858,
+							"disabled": true
+						},
+						{
+							"eventType": "comment",
+							"text": "Cliente 1"
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 663668811524466,
+									"parameters": {
+										"variable": "RandPedido",
+										"comparison": 0,
+										"value": "1"
+									}
+								},
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 968052435252047,
+									"parameters": {
+										"variable": "Clientes",
+										"comparison": 0,
+										"value": "1"
+									}
+								},
+								{
+									"id": "compare-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 299366659300602,
+									"parameters": {
+										"variable": "C1decidio"
+									}
+								},
+								{
+									"id": "trigger-once-while-true",
+									"objectClass": "System",
+									"sid": 674082844459155
+								}
+							],
+							"actions": [
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 928211551628808,
+									"parameters": {
+										"variable": "pedidoString",
+										"value": "\"Completa\""
+									}
+								},
+								{
+									"id": "push",
+									"objectClass": "PedidosArray",
+									"sid": 137272662633829,
+									"parameters": {
+										"where": "back",
+										"value": "pedidoString",
+										"axis": "x"
+									}
+								},
+								{
+									"id": "set-animation",
+									"objectClass": "spr_cliente",
+									"sid": 570014062223965,
+									"parameters": {
+										"animation": "\"Completa\"",
+										"from": "beginning"
+									}
+								},
+								{
+									"id": "wait",
+									"objectClass": "System",
+									"sid": 244753472756984,
+									"disabled": true,
+									"parameters": {
+										"seconds": "5"
+									}
+								},
+								{
+									"id": "set-animation",
+									"objectClass": "spr_cliente",
+									"sid": 826393585816964,
+									"disabled": true,
+									"parameters": {
+										"animation": "\"Impaciente\"",
+										"from": "beginning"
+									}
+								},
+								{
+									"id": "wait",
+									"objectClass": "System",
+									"sid": 908074728375478,
+									"disabled": true,
+									"parameters": {
+										"seconds": "5"
+									}
+								},
+								{
+									"id": "set-animation",
+									"objectClass": "spr_cliente",
+									"sid": 733435260234983,
+									"disabled": true,
+									"parameters": {
+										"animation": "\"Enojado\"",
+										"from": "beginning"
+									}
+								}
+							],
+							"sid": 486465488914633
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "else",
+									"objectClass": "System",
+									"sid": 947974797633947
+								},
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 424177011572152,
+									"parameters": {
+										"variable": "RandPedido",
+										"comparison": 0,
+										"value": "2"
+									}
+								},
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 651244338234095,
+									"parameters": {
+										"variable": "Clientes",
+										"comparison": 0,
+										"value": "1"
+									}
+								},
+								{
+									"id": "compare-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 551965245132460,
+									"parameters": {
+										"variable": "C1decidio"
+									}
+								},
+								{
+									"id": "trigger-once-while-true",
+									"objectClass": "System",
+									"sid": 128802202013318
+								}
+							],
+							"actions": [
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 195235622306992,
+									"parameters": {
+										"variable": "pedidoString",
+										"value": "\"SinLechuga\""
+									}
+								},
+								{
+									"id": "push",
+									"objectClass": "PedidosArray",
+									"sid": 572363686145430,
+									"parameters": {
+										"where": "back",
+										"value": "pedidoString",
+										"axis": "x"
+									}
+								},
+								{
+									"id": "set-animation",
+									"objectClass": "spr_cliente",
+									"sid": 825370112344720,
+									"parameters": {
+										"animation": "\"SinLechuga\"",
+										"from": "beginning"
+									}
+								},
+								{
+									"id": "wait",
+									"objectClass": "System",
+									"sid": 631480203305550,
+									"disabled": true,
+									"parameters": {
+										"seconds": "5"
+									}
+								},
+								{
+									"id": "set-animation",
+									"objectClass": "spr_cliente",
+									"sid": 221403171499852,
+									"disabled": true,
+									"parameters": {
+										"animation": "\"Impaciente\"",
+										"from": "beginning"
+									}
+								},
+								{
+									"id": "wait",
+									"objectClass": "System",
+									"sid": 142165256947092,
+									"disabled": true,
+									"parameters": {
+										"seconds": "5"
+									}
+								},
+								{
+									"id": "set-animation",
+									"objectClass": "spr_cliente",
+									"sid": 369375436035342,
+									"disabled": true,
+									"parameters": {
+										"animation": "\"Enojado\"",
+										"from": "beginning"
+									}
+								}
+							],
+							"sid": 413776604773259
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "else",
+									"objectClass": "System",
+									"sid": 610684380938923
+								},
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 445721253922944,
+									"parameters": {
+										"variable": "RandPedido",
+										"comparison": 0,
+										"value": "3"
+									}
+								},
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 367715675495797,
+									"parameters": {
+										"variable": "Clientes",
+										"comparison": 0,
+										"value": "1"
+									}
+								},
+								{
+									"id": "compare-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 773627743588846,
+									"parameters": {
+										"variable": "C1decidio"
+									}
+								},
+								{
+									"id": "trigger-once-while-true",
+									"objectClass": "System",
+									"sid": 249721705618053
+								}
+							],
+							"actions": [
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 515001683110354,
+									"parameters": {
+										"variable": "pedidoString",
+										"value": "\"SinTomate\""
+									}
+								},
+								{
+									"id": "push",
+									"objectClass": "PedidosArray",
+									"sid": 801725116899612,
+									"parameters": {
+										"where": "back",
+										"value": "pedidoString",
+										"axis": "x"
+									}
+								},
+								{
+									"id": "set-animation",
+									"objectClass": "spr_cliente",
+									"sid": 217613075505427,
+									"parameters": {
+										"animation": "\"SinTomate\"",
+										"from": "beginning"
+									}
+								},
+								{
+									"id": "wait",
+									"objectClass": "System",
+									"sid": 631773395606248,
+									"disabled": true,
+									"parameters": {
+										"seconds": "5"
+									}
+								},
+								{
+									"id": "set-animation",
+									"objectClass": "spr_cliente",
+									"sid": 966982725374780,
+									"disabled": true,
+									"parameters": {
+										"animation": "\"Impaciente\"",
+										"from": "beginning"
+									}
+								},
+								{
+									"id": "wait",
+									"objectClass": "System",
+									"sid": 585740790751552,
+									"disabled": true,
+									"parameters": {
+										"seconds": "5"
+									}
+								},
+								{
+									"id": "set-animation",
+									"objectClass": "spr_cliente",
+									"sid": 255659202837755,
+									"disabled": true,
+									"parameters": {
+										"animation": "\"Enojado\"",
+										"from": "beginning"
+									}
+								}
+							],
+							"sid": 315557323570904
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "else",
+									"objectClass": "System",
+									"sid": 342555770078665
+								},
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 383285611781683,
+									"parameters": {
+										"variable": "RandPedido",
+										"comparison": 0,
+										"value": "4"
+									}
+								},
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 994862117097662,
+									"parameters": {
+										"variable": "Clientes",
+										"comparison": 0,
+										"value": "1"
+									}
+								},
+								{
+									"id": "compare-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 523194016223207,
+									"parameters": {
+										"variable": "C1decidio"
+									}
+								},
+								{
+									"id": "trigger-once-while-true",
+									"objectClass": "System",
+									"sid": 897181048005030
+								}
+							],
+							"actions": [
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 492761156392716,
+									"parameters": {
+										"variable": "pedidoString",
+										"value": "\"SinCebolla\""
+									}
+								},
+								{
+									"id": "push",
+									"objectClass": "PedidosArray",
+									"sid": 360118185383152,
+									"parameters": {
+										"where": "back",
+										"value": "pedidoString",
+										"axis": "x"
+									}
+								},
+								{
+									"id": "set-animation",
+									"objectClass": "spr_cliente",
+									"sid": 205306893220637,
+									"parameters": {
+										"animation": "\"SinCebolla\"",
+										"from": "beginning"
+									}
+								},
+								{
+									"id": "wait",
+									"objectClass": "System",
+									"sid": 321673099637902,
+									"disabled": true,
+									"parameters": {
+										"seconds": "5"
+									}
+								},
+								{
+									"id": "set-animation",
+									"objectClass": "spr_cliente",
+									"sid": 792766000172138,
+									"disabled": true,
+									"parameters": {
+										"animation": "\"Impaciente\"",
+										"from": "beginning"
+									}
+								},
+								{
+									"id": "wait",
+									"objectClass": "System",
+									"sid": 847956844190854,
+									"disabled": true,
+									"parameters": {
+										"seconds": "5"
+									}
+								},
+								{
+									"id": "set-animation",
+									"objectClass": "spr_cliente",
+									"sid": 247930531744058,
+									"disabled": true,
+									"parameters": {
+										"animation": "\"Enojado\"",
+										"from": "beginning"
+									}
+								}
+							],
+							"sid": 960405209092619
+						},
+						{
+							"eventType": "comment",
+							"text": "Cliente 2"
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 388062292078319,
+									"parameters": {
+										"variable": "RandPedido",
+										"comparison": 0,
+										"value": "1"
+									}
+								},
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 170306344507965,
+									"parameters": {
+										"variable": "Clientes",
+										"comparison": 0,
+										"value": "2"
+									}
+								},
+								{
+									"id": "compare-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 368831657522108,
+									"parameters": {
+										"variable": "C2decidio"
+									}
+								},
+								{
+									"id": "trigger-once-while-true",
+									"objectClass": "System",
+									"sid": 801350580139516
+								}
+							],
+							"actions": [
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 816727962862322,
+									"parameters": {
+										"variable": "pedidoString",
+										"value": "\"Completa\""
+									}
+								},
+								{
+									"id": "push",
+									"objectClass": "PedidosArray",
+									"sid": 156957219516371,
+									"parameters": {
+										"where": "back",
+										"value": "pedidoString",
+										"axis": "x"
+									}
+								},
+								{
+									"id": "set-animation",
+									"objectClass": "spr_cliente2",
+									"sid": 897235299303461,
+									"parameters": {
+										"animation": "\"Completa\"",
+										"from": "beginning"
+									}
+								}
+							],
+							"sid": 399137775291783
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "else",
+									"objectClass": "System",
+									"sid": 996982475552872
+								},
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 328963880943004,
+									"parameters": {
+										"variable": "RandPedido",
+										"comparison": 0,
+										"value": "2"
+									}
+								},
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 742324316385540,
+									"parameters": {
+										"variable": "Clientes",
+										"comparison": 0,
+										"value": "2"
+									}
+								},
+								{
+									"id": "compare-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 695833990205825,
+									"parameters": {
+										"variable": "C2decidio"
+									}
+								},
+								{
+									"id": "trigger-once-while-true",
+									"objectClass": "System",
+									"sid": 584152563644728
+								}
+							],
+							"actions": [
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 292831442284854,
+									"parameters": {
+										"variable": "pedidoString",
+										"value": "\"SinLechuga\""
+									}
+								},
+								{
+									"id": "push",
+									"objectClass": "PedidosArray",
+									"sid": 279741534636562,
+									"parameters": {
+										"where": "back",
+										"value": "pedidoString",
+										"axis": "x"
+									}
+								},
+								{
+									"id": "set-animation",
+									"objectClass": "spr_cliente2",
+									"sid": 150565626093083,
+									"parameters": {
+										"animation": "\"SinLechuga\"",
+										"from": "beginning"
+									}
+								}
+							],
+							"sid": 805311264028502
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "else",
+									"objectClass": "System",
+									"sid": 999622286650195
+								},
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 847333189777065,
+									"parameters": {
+										"variable": "RandPedido",
+										"comparison": 0,
+										"value": "3"
+									}
+								},
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 868839831691674,
+									"parameters": {
+										"variable": "Clientes",
+										"comparison": 0,
+										"value": "2"
+									}
+								},
+								{
+									"id": "compare-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 474598006426799,
+									"parameters": {
+										"variable": "C2decidio"
+									}
+								},
+								{
+									"id": "trigger-once-while-true",
+									"objectClass": "System",
+									"sid": 923221524929356
+								}
+							],
+							"actions": [
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 989273371466079,
+									"parameters": {
+										"variable": "pedidoString",
+										"value": "\"SinTomate\""
+									}
+								},
+								{
+									"id": "push",
+									"objectClass": "PedidosArray",
+									"sid": 180783559325153,
+									"parameters": {
+										"where": "back",
+										"value": "pedidoString",
+										"axis": "x"
+									}
+								},
+								{
+									"id": "set-animation",
+									"objectClass": "spr_cliente2",
+									"sid": 508056493359318,
+									"parameters": {
+										"animation": "\"SinTomate\"",
+										"from": "beginning"
+									}
+								}
+							],
+							"sid": 335564886815050
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "else",
+									"objectClass": "System",
+									"sid": 851728898339010
+								},
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 675662073580934,
+									"parameters": {
+										"variable": "RandPedido",
+										"comparison": 0,
+										"value": "4"
+									}
+								},
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 243310894903959,
+									"parameters": {
+										"variable": "Clientes",
+										"comparison": 0,
+										"value": "2"
+									}
+								},
+								{
+									"id": "compare-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 464573043613579,
+									"parameters": {
+										"variable": "C2decidio"
+									}
+								},
+								{
+									"id": "trigger-once-while-true",
+									"objectClass": "System",
+									"sid": 127298910519145
+								}
+							],
+							"actions": [
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 641895205547086,
+									"parameters": {
+										"variable": "pedidoString",
+										"value": "\"SinCebolla\""
+									}
+								},
+								{
+									"id": "push",
+									"objectClass": "PedidosArray",
+									"sid": 979320655946854,
+									"parameters": {
+										"where": "back",
+										"value": "pedidoString",
+										"axis": "x"
+									}
+								},
+								{
+									"id": "set-animation",
+									"objectClass": "spr_cliente2",
+									"sid": 652844060431494,
+									"parameters": {
+										"animation": "\"SinCebolla\"",
+										"from": "beginning"
+									}
+								}
+							],
+							"sid": 384754734831134
+						},
+						{
+							"eventType": "comment",
+							"text": "Cliente 3"
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 445266453477491,
+									"parameters": {
+										"variable": "RandPedido",
+										"comparison": 0,
+										"value": "1"
+									}
+								},
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 416193225206654,
+									"parameters": {
+										"variable": "Clientes",
+										"comparison": 0,
+										"value": "3"
+									}
+								},
+								{
+									"id": "compare-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 818204708835993,
+									"parameters": {
+										"variable": "C3decidio"
+									}
+								},
+								{
+									"id": "trigger-once-while-true",
+									"objectClass": "System",
+									"sid": 745280338013499
+								}
+							],
+							"actions": [
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 308863965090622,
+									"parameters": {
+										"variable": "pedidoString",
+										"value": "\"Completa\""
+									}
+								},
+								{
+									"id": "push",
+									"objectClass": "PedidosArray",
+									"sid": 599576629121547,
+									"parameters": {
+										"where": "back",
+										"value": "pedidoString",
+										"axis": "x"
+									}
+								},
+								{
+									"id": "set-animation",
+									"objectClass": "spr_cliente3",
+									"sid": 431179388037806,
+									"parameters": {
+										"animation": "\"Completa\"",
+										"from": "beginning"
+									}
+								}
+							],
+							"sid": 925254952008570
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "else",
+									"objectClass": "System",
+									"sid": 366823649688196
+								},
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 591660393122246,
+									"parameters": {
+										"variable": "RandPedido",
+										"comparison": 0,
+										"value": "2"
+									}
+								},
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 449313392671180,
+									"parameters": {
+										"variable": "Clientes",
+										"comparison": 0,
+										"value": "3"
+									}
+								},
+								{
+									"id": "compare-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 420059724636973,
+									"parameters": {
+										"variable": "C3decidio"
+									}
+								},
+								{
+									"id": "trigger-once-while-true",
+									"objectClass": "System",
+									"sid": 593799918612353
+								}
+							],
+							"actions": [
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 134838220864672,
+									"parameters": {
+										"variable": "pedidoString",
+										"value": "\"SinLechuga\""
+									}
+								},
+								{
+									"id": "push",
+									"objectClass": "PedidosArray",
+									"sid": 456870118670924,
+									"parameters": {
+										"where": "back",
+										"value": "pedidoString",
+										"axis": "x"
+									}
+								},
+								{
+									"id": "set-animation",
+									"objectClass": "spr_cliente3",
+									"sid": 402594546515560,
+									"parameters": {
+										"animation": "\"SinLechuga\"",
+										"from": "beginning"
+									}
+								}
+							],
+							"sid": 230381020727645
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "else",
+									"objectClass": "System",
+									"sid": 541277663041786
+								},
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 167836716760284,
+									"parameters": {
+										"variable": "RandPedido",
+										"comparison": 0,
+										"value": "3"
+									}
+								},
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 582667644365628,
+									"parameters": {
+										"variable": "Clientes",
+										"comparison": 0,
+										"value": "3"
+									}
+								},
+								{
+									"id": "compare-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 253048855025172,
+									"parameters": {
+										"variable": "C3decidio"
+									}
+								},
+								{
+									"id": "trigger-once-while-true",
+									"objectClass": "System",
+									"sid": 877693331029248
+								}
+							],
+							"actions": [
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 809959853882398,
+									"parameters": {
+										"variable": "pedidoString",
+										"value": "\"SinTomate\""
+									}
+								},
+								{
+									"id": "push",
+									"objectClass": "PedidosArray",
+									"sid": 850380463382967,
+									"parameters": {
+										"where": "back",
+										"value": "pedidoString",
+										"axis": "x"
+									}
+								},
+								{
+									"id": "set-animation",
+									"objectClass": "spr_cliente3",
+									"sid": 232350710477633,
+									"parameters": {
+										"animation": "\"SinTomate\"",
+										"from": "beginning"
+									}
+								}
+							],
+							"sid": 442312000754411
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "else",
+									"objectClass": "System",
+									"sid": 445391286585930
+								},
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 951782548862306,
+									"parameters": {
+										"variable": "RandPedido",
+										"comparison": 0,
+										"value": "4"
+									}
+								},
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 429243496522082,
+									"parameters": {
+										"variable": "Clientes",
+										"comparison": 0,
+										"value": "3"
+									}
+								},
+								{
+									"id": "compare-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 446777325531881,
+									"parameters": {
+										"variable": "C3decidio"
+									}
+								},
+								{
+									"id": "trigger-once-while-true",
+									"objectClass": "System",
+									"sid": 279971621939401
+								}
+							],
+							"actions": [
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 450119950541059,
+									"parameters": {
+										"variable": "pedidoString",
+										"value": "\"SinCebolla\""
+									}
+								},
+								{
+									"id": "push",
+									"objectClass": "PedidosArray",
+									"sid": 754868503952640,
+									"parameters": {
+										"where": "back",
+										"value": "pedidoString",
+										"axis": "x"
+									}
+								},
+								{
+									"id": "set-animation",
+									"objectClass": "spr_cliente3",
+									"sid": 320605677736096,
+									"parameters": {
+										"animation": "\"SinCebolla\"",
+										"from": "beginning"
+									}
+								}
+							],
+							"sid": 379382378386399
+						},
+						{
+							"eventType": "comment",
+							"text": "Primer pedido"
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-at-x",
+									"objectClass": "PedidosArray",
+									"sid": 928907054334396,
+									"parameters": {
+										"x": "0",
+										"comparison": 0,
+										"value": "\"Completa\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "spawn-another-object",
+									"objectClass": "spr_espacio_pedido1",
+									"sid": 598622383372321,
+									"parameters": {
+										"object": "spr_pedidoCompleta",
+										"layer": "6",
+										"image-point": "0",
+										"create-hierarchy": false,
+										"template-name": "\"\""
+									}
+								},
+								{
+									"id": "set-visible",
+									"objectClass": "spr_espacio_pedido1",
+									"sid": 737908199507125,
+									"parameters": {
+										"visibility": "invisible"
+									}
+								}
+							],
+							"sid": 839036447303663
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-at-x",
+									"objectClass": "PedidosArray",
+									"sid": 390638894411918,
+									"parameters": {
+										"x": "0",
+										"comparison": 0,
+										"value": "\"SinLechuga\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "spawn-another-object",
+									"objectClass": "spr_espacio_pedido1",
+									"sid": 423361822915144,
+									"parameters": {
+										"object": "spr_pedidoSinLechuga",
+										"layer": "6",
+										"image-point": "0",
+										"create-hierarchy": false,
+										"template-name": "\"\""
+									}
+								},
+								{
+									"id": "set-visible",
+									"objectClass": "spr_espacio_pedido1",
+									"sid": 454538308644073,
+									"parameters": {
+										"visibility": "invisible"
+									}
+								}
+							],
+							"sid": 174834970224161
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-at-x",
+									"objectClass": "PedidosArray",
+									"sid": 333506830726830,
+									"parameters": {
+										"x": "0",
+										"comparison": 0,
+										"value": "\"SinTomate\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "spawn-another-object",
+									"objectClass": "spr_espacio_pedido1",
+									"sid": 388417441614283,
+									"parameters": {
+										"object": "spr_pedidoSinTomate",
+										"layer": "6",
+										"image-point": "0",
+										"create-hierarchy": false,
+										"template-name": "\"\""
+									}
+								},
+								{
+									"id": "set-visible",
+									"objectClass": "spr_espacio_pedido1",
+									"sid": 922895787953533,
+									"parameters": {
+										"visibility": "invisible"
+									}
+								}
+							],
+							"sid": 744914392730033
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-at-x",
+									"objectClass": "PedidosArray",
+									"sid": 427954309850346,
+									"parameters": {
+										"x": "0",
+										"comparison": 0,
+										"value": "\"SinCebolla\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "spawn-another-object",
+									"objectClass": "spr_espacio_pedido1",
+									"sid": 220834197209335,
+									"parameters": {
+										"object": "spr_pedidoSinCebolla",
+										"layer": "6",
+										"image-point": "0",
+										"create-hierarchy": false,
+										"template-name": "\"\""
+									}
+								},
+								{
+									"id": "set-visible",
+									"objectClass": "spr_espacio_pedido1",
+									"sid": 374590387663165,
+									"parameters": {
+										"visibility": "invisible"
+									}
+								}
+							],
+							"sid": 728317527720555
+						},
+						{
+							"eventType": "comment",
+							"text": "Segundo pedido"
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-at-x",
+									"objectClass": "PedidosArray",
+									"sid": 901339674618871,
+									"parameters": {
+										"x": "1",
+										"comparison": 0,
+										"value": "\"Completa\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "spawn-another-object",
+									"objectClass": "spr_espacio_pedido2",
+									"sid": 644697035644289,
+									"parameters": {
+										"object": "spr_pedidoCompleta",
+										"layer": "6",
+										"image-point": "0",
+										"create-hierarchy": false,
+										"template-name": "\"\""
+									}
+								},
+								{
+									"id": "set-visible",
+									"objectClass": "spr_espacio_pedido2",
+									"sid": 867670863734840,
+									"parameters": {
+										"visibility": "invisible"
+									}
+								}
+							],
+							"sid": 155824166236610
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-at-x",
+									"objectClass": "PedidosArray",
+									"sid": 327153806608085,
+									"parameters": {
+										"x": "1",
+										"comparison": 0,
+										"value": "\"SinLechuga\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "spawn-another-object",
+									"objectClass": "spr_espacio_pedido2",
+									"sid": 316807263178143,
+									"parameters": {
+										"object": "spr_pedidoSinLechuga",
+										"layer": "6",
+										"image-point": "0",
+										"create-hierarchy": false,
+										"template-name": "\"\""
+									}
+								},
+								{
+									"id": "set-visible",
+									"objectClass": "spr_espacio_pedido2",
+									"sid": 405128459906378,
+									"parameters": {
+										"visibility": "invisible"
+									}
+								}
+							],
+							"sid": 341220409017484
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-at-x",
+									"objectClass": "PedidosArray",
+									"sid": 797277670334823,
+									"parameters": {
+										"x": "1",
+										"comparison": 0,
+										"value": "\"SinTomate\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "spawn-another-object",
+									"objectClass": "spr_espacio_pedido2",
+									"sid": 685329569255913,
+									"parameters": {
+										"object": "spr_pedidoSinTomate",
+										"layer": "6",
+										"image-point": "0",
+										"create-hierarchy": false,
+										"template-name": "\"\""
+									}
+								},
+								{
+									"id": "set-visible",
+									"objectClass": "spr_espacio_pedido2",
+									"sid": 783138110653309,
+									"parameters": {
+										"visibility": "invisible"
+									}
+								}
+							],
+							"sid": 284076055727987
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-at-x",
+									"objectClass": "PedidosArray",
+									"sid": 569148278958468,
+									"parameters": {
+										"x": "1",
+										"comparison": 0,
+										"value": "\"SinCebolla\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "spawn-another-object",
+									"objectClass": "spr_espacio_pedido2",
+									"sid": 272018587662546,
+									"parameters": {
+										"object": "spr_pedidoSinCebolla",
+										"layer": "6",
+										"image-point": "0",
+										"create-hierarchy": false,
+										"template-name": "\"\""
+									}
+								},
+								{
+									"id": "set-visible",
+									"objectClass": "spr_espacio_pedido2",
+									"sid": 119548824179527,
+									"parameters": {
+										"visibility": "invisible"
+									}
+								}
+							],
+							"sid": 984415865683063
+						},
+						{
+							"eventType": "comment",
+							"text": "Tercer pedido"
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-at-x",
+									"objectClass": "PedidosArray",
+									"sid": 903238569751047,
+									"parameters": {
+										"x": "2",
+										"comparison": 0,
+										"value": "\"Completa\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "spawn-another-object",
+									"objectClass": "spr_espacio_pedido3",
+									"sid": 172970001950033,
+									"parameters": {
+										"object": "spr_pedidoCompleta",
+										"layer": "6",
+										"image-point": "0",
+										"create-hierarchy": false,
+										"template-name": "\"\""
+									}
+								},
+								{
+									"id": "set-visible",
+									"objectClass": "spr_espacio_pedido3",
+									"sid": 996169001859878,
+									"parameters": {
+										"visibility": "invisible"
+									}
+								}
+							],
+							"sid": 953762569770276
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-at-x",
+									"objectClass": "PedidosArray",
+									"sid": 979112623478675,
+									"parameters": {
+										"x": "2",
+										"comparison": 0,
+										"value": "\"SinLechuga\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "spawn-another-object",
+									"objectClass": "spr_espacio_pedido3",
+									"sid": 775117958988299,
+									"parameters": {
+										"object": "spr_pedidoSinLechuga",
+										"layer": "6",
+										"image-point": "0",
+										"create-hierarchy": false,
+										"template-name": "\"\""
+									}
+								},
+								{
+									"id": "set-visible",
+									"objectClass": "spr_espacio_pedido3",
+									"sid": 505946786913373,
+									"parameters": {
+										"visibility": "invisible"
+									}
+								}
+							],
+							"sid": 267917420750283
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-at-x",
+									"objectClass": "PedidosArray",
+									"sid": 717060171427321,
+									"parameters": {
+										"x": "2",
+										"comparison": 0,
+										"value": "\"SinTomate\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "spawn-another-object",
+									"objectClass": "spr_espacio_pedido3",
+									"sid": 692642399509868,
+									"parameters": {
+										"object": "spr_pedidoSinTomate",
+										"layer": "6",
+										"image-point": "0",
+										"create-hierarchy": false,
+										"template-name": "\"\""
+									}
+								},
+								{
+									"id": "set-visible",
+									"objectClass": "spr_espacio_pedido3",
+									"sid": 900986271108327,
+									"parameters": {
+										"visibility": "invisible"
+									}
+								}
+							],
+							"sid": 405687878466642
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-at-x",
+									"objectClass": "PedidosArray",
+									"sid": 210748413568702,
+									"parameters": {
+										"x": "2",
+										"comparison": 0,
+										"value": "\"SinCebolla\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "spawn-another-object",
+									"objectClass": "spr_espacio_pedido3",
+									"sid": 332809491141075,
+									"parameters": {
+										"object": "spr_pedidoSinCebolla",
+										"layer": "6",
+										"image-point": "0",
+										"create-hierarchy": false,
+										"template-name": "\"\""
+									}
+								},
+								{
+									"id": "set-visible",
+									"objectClass": "spr_espacio_pedido3",
+									"sid": 998159794958094,
+									"parameters": {
+										"visibility": "invisible"
+									}
+								}
+							],
+							"sid": 229086945556386
+						},
+						{
+							"eventType": "comment",
+							"text": "Cuarto pedido"
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-at-x",
+									"objectClass": "PedidosArray",
+									"sid": 981634559006964,
+									"parameters": {
+										"x": "3",
+										"comparison": 0,
+										"value": "\"Completa\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "spawn-another-object",
+									"objectClass": "spr_espacio_pedido4",
+									"sid": 573500865190204,
+									"parameters": {
+										"object": "spr_pedidoCompleta",
+										"layer": "6",
+										"image-point": "0",
+										"create-hierarchy": false,
+										"template-name": "\"\""
+									}
+								},
+								{
+									"id": "set-visible",
+									"objectClass": "spr_espacio_pedido4",
+									"sid": 215913803504586,
+									"parameters": {
+										"visibility": "invisible"
+									}
+								}
+							],
+							"sid": 797054263069904
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-at-x",
+									"objectClass": "PedidosArray",
+									"sid": 175308612611044,
+									"parameters": {
+										"x": "3",
+										"comparison": 0,
+										"value": "\"SinLechuga\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "spawn-another-object",
+									"objectClass": "spr_espacio_pedido4",
+									"sid": 106827891423084,
+									"parameters": {
+										"object": "spr_pedidoSinLechuga",
+										"layer": "6",
+										"image-point": "0",
+										"create-hierarchy": false,
+										"template-name": "\"\""
+									}
+								},
+								{
+									"id": "set-visible",
+									"objectClass": "spr_espacio_pedido4",
+									"sid": 193342225979342,
+									"parameters": {
+										"visibility": "invisible"
+									}
+								}
+							],
+							"sid": 483150074921437
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-at-x",
+									"objectClass": "PedidosArray",
+									"sid": 852606661764757,
+									"parameters": {
+										"x": "3",
+										"comparison": 0,
+										"value": "\"SinTomate\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "spawn-another-object",
+									"objectClass": "spr_espacio_pedido4",
+									"sid": 719248788896760,
+									"parameters": {
+										"object": "spr_pedidoSinTomate",
+										"layer": "6",
+										"image-point": "0",
+										"create-hierarchy": false,
+										"template-name": "\"\""
+									}
+								},
+								{
+									"id": "set-visible",
+									"objectClass": "spr_espacio_pedido4",
+									"sid": 855287450942858,
+									"parameters": {
+										"visibility": "invisible"
+									}
+								}
+							],
+							"sid": 967522055851000
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-at-x",
+									"objectClass": "PedidosArray",
+									"sid": 591634533560839,
+									"parameters": {
+										"x": "3",
+										"comparison": 0,
+										"value": "\"SinCebolla\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "spawn-another-object",
+									"objectClass": "spr_espacio_pedido4",
+									"sid": 478610357529609,
+									"parameters": {
+										"object": "spr_pedidoSinCebolla",
+										"layer": "6",
+										"image-point": "0",
+										"create-hierarchy": false,
+										"template-name": "\"\""
+									}
+								},
+								{
+									"id": "set-visible",
+									"objectClass": "spr_espacio_pedido4",
+									"sid": 304861872630793,
+									"parameters": {
+										"visibility": "invisible"
+									}
+								}
+							],
+							"sid": 974440254748354
 						}
-					],
-					"sid": 169550882445653
+					]
 				},
 				{
 					"eventType": "block",
 					"conditions": [
 						{
-							"id": "else",
-							"objectClass": "System",
-							"sid": 889906902423332
-						},
-						{
-							"id": "compare-eventvar",
-							"objectClass": "System",
-							"sid": 795763502794555,
+							"id": "on-key-pressed",
+							"objectClass": "Teclado",
+							"sid": 577599964495026,
 							"parameters": {
-								"variable": "RandPedido",
-								"comparison": 0,
-								"value": "2"
-							}
-						}
-					],
-					"actions": [
-						{
-							"id": "set-eventvar-value",
-							"objectClass": "System",
-							"sid": 461310628617605,
-							"parameters": {
-								"variable": "pedidoString",
-								"value": "\"SinLechuga\""
-							}
-						}
-					],
-					"sid": 843835847055379
-				},
-				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "else",
-							"objectClass": "System",
-							"sid": 886225540526034
-						},
-						{
-							"id": "compare-eventvar",
-							"objectClass": "System",
-							"sid": 938234091104753,
-							"parameters": {
-								"variable": "RandPedido",
-								"comparison": 0,
-								"value": "3"
-							}
-						}
-					],
-					"actions": [
-						{
-							"id": "set-eventvar-value",
-							"objectClass": "System",
-							"sid": 850026378458244,
-							"parameters": {
-								"variable": "pedidoString",
-								"value": "\"SinTomate\""
-							}
-						}
-					],
-					"sid": 889662995555180
-				},
-				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "else",
-							"objectClass": "System",
-							"sid": 566425556117539
-						},
-						{
-							"id": "compare-eventvar",
-							"objectClass": "System",
-							"sid": 462712754419497,
-							"parameters": {
-								"variable": "RandPedido",
-								"comparison": 0,
-								"value": "4"
-							}
-						}
-					],
-					"actions": [
-						{
-							"id": "set-eventvar-value",
-							"objectClass": "System",
-							"sid": 520465387687759,
-							"parameters": {
-								"variable": "pedidoString",
-								"value": "\"SinCebolla\""
-							}
-						}
-					],
-					"sid": 478607449632102
-				},
-				{
-					"eventType": "comment",
-					"text": "Primer pedido"
-				},
-				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "compare-at-x",
-							"objectClass": "PedidosArray",
-							"sid": 744526107667077,
-							"parameters": {
-								"x": "0",
-								"comparison": 0,
-								"value": "\"Completa\""
-							}
-						}
-					],
-					"actions": [
-						{
-							"id": "spawn-another-object",
-							"objectClass": "spr_espacio_pedido1",
-							"sid": 861045285125982,
-							"parameters": {
-								"object": "spr_pedidoCompleta",
-								"layer": "6",
-								"image-point": "0",
-								"create-hierarchy": false,
-								"template-name": "\"\""
+								"key": 69
 							}
 						},
 						{
-							"id": "set-visible",
-							"objectClass": "spr_espacio_pedido1",
-							"sid": 828558651389060,
+							"id": "is-overlapping-another-object",
+							"objectClass": "Personaje",
+							"sid": 435523693299937,
 							"parameters": {
-								"visibility": "invisible"
+								"object": "spr_espacio_cliente"
 							}
 						}
 					],
-					"sid": 775852078424581
-				},
-				{
-					"eventType": "block",
-					"conditions": [
+					"actions": [],
+					"sid": 677344276365472,
+					"children": [
 						{
-							"id": "compare-at-x",
-							"objectClass": "PedidosArray",
-							"sid": 198835806024919,
-							"parameters": {
-								"x": "0",
-								"comparison": 0,
-								"value": "\"SinLechuga\""
-							}
-						}
-					],
-					"actions": [
-						{
-							"id": "spawn-another-object",
-							"objectClass": "spr_espacio_pedido1",
-							"sid": 842250532731902,
-							"parameters": {
-								"object": "spr_pedidoSinLechuga",
-								"layer": "6",
-								"image-point": "0",
-								"create-hierarchy": false,
-								"template-name": "\"\""
-							}
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-boolean-instance-variable-set",
+									"objectClass": "Personaje",
+									"sid": 878423895358139,
+									"parameters": {
+										"instance-variable": "Servido"
+									}
+								},
+								{
+									"id": "is-animation-playing",
+									"objectClass": "spr_cliente",
+									"sid": 430868568726124,
+									"parameters": {
+										"animation": "\"Completa\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "spawn-another-object",
+									"objectClass": "Mesa",
+									"sid": 111473167650608,
+									"parameters": {
+										"object": "Hamburguesa2",
+										"layer": "4",
+										"image-point": "0",
+										"create-hierarchy": false,
+										"template-name": "\"\""
+									}
+								},
+								{
+									"id": "set-boolean-instvar",
+									"objectClass": "Personaje",
+									"sid": 482534119925623,
+									"parameters": {
+										"instance-variable": "Servido",
+										"value": "false"
+									}
+								},
+								{
+									"id": "set-animation",
+									"objectClass": "Personaje",
+									"sid": 712515982489442,
+									"parameters": {
+										"animation": "\"Front\"",
+										"from": "beginning"
+									}
+								},
+								{
+									"id": "set-animation",
+									"objectClass": "spr_cliente",
+									"sid": 760036863694542,
+									"parameters": {
+										"animation": "\"Normal\"",
+										"from": "beginning"
+									}
+								},
+								{
+									"id": "wait",
+									"objectClass": "System",
+									"sid": 123057181377599,
+									"parameters": {
+										"seconds": "10"
+									}
+								},
+								{
+									"id": "destroy",
+									"objectClass": "Hamburguesa2",
+									"sid": 511486104812757
+								},
+								{
+									"id": "set-flipped",
+									"objectClass": "spr_cliente",
+									"sid": 413334225141020,
+									"parameters": {
+										"state": "flipped"
+									}
+								},
+								{
+									"id": "move-to-position",
+									"objectClass": "spr_cliente",
+									"sid": 540593182758219,
+									"behaviorType": "MoveTo",
+									"parameters": {
+										"x": "spr_spawner_clientes.X",
+										"y": "spr_spawner_clientes.Y",
+										"mode": "direct"
+									}
+								},
+								{
+									"id": "wait",
+									"objectClass": "System",
+									"sid": 275755443846377,
+									"parameters": {
+										"seconds": "6"
+									}
+								},
+								{
+									"id": "destroy",
+									"objectClass": "spr_cliente",
+									"sid": 141137231730966
+								}
+							],
+							"sid": 583981549181948
 						},
 						{
-							"id": "set-visible",
-							"objectClass": "spr_espacio_pedido1",
-							"sid": 359058340607205,
-							"parameters": {
-								"visibility": "invisible"
-							}
-						}
-					],
-					"sid": 522360738473138
-				},
-				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "compare-at-x",
-							"objectClass": "PedidosArray",
-							"sid": 404377411468265,
-							"parameters": {
-								"x": "0",
-								"comparison": 0,
-								"value": "\"SinTomate\""
-							}
-						}
-					],
-					"actions": [
-						{
-							"id": "spawn-another-object",
-							"objectClass": "spr_espacio_pedido1",
-							"sid": 848119605337578,
-							"parameters": {
-								"object": "spr_pedidoSinTomate",
-								"layer": "6",
-								"image-point": "0",
-								"create-hierarchy": false,
-								"template-name": "\"\""
-							}
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "else",
+									"objectClass": "System",
+									"sid": 532413911075865
+								},
+								{
+									"id": "is-boolean-instance-variable-set",
+									"objectClass": "Personaje",
+									"sid": 183704068864734,
+									"parameters": {
+										"instance-variable": "SinLechuga"
+									}
+								},
+								{
+									"id": "is-animation-playing",
+									"objectClass": "spr_cliente",
+									"sid": 652672319509453,
+									"parameters": {
+										"animation": "\"SinLechuga\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "spawn-another-object",
+									"objectClass": "Mesa",
+									"sid": 464362915408788,
+									"parameters": {
+										"object": "spr_sinlechuga",
+										"layer": "4",
+										"image-point": "0",
+										"create-hierarchy": false,
+										"template-name": "\"\""
+									}
+								},
+								{
+									"id": "set-boolean-instvar",
+									"objectClass": "Personaje",
+									"sid": 394786245869486,
+									"parameters": {
+										"instance-variable": "SinLechuga",
+										"value": "false"
+									}
+								},
+								{
+									"id": "set-animation",
+									"objectClass": "Personaje",
+									"sid": 877835866754241,
+									"parameters": {
+										"animation": "\"Front\"",
+										"from": "beginning"
+									}
+								},
+								{
+									"id": "set-animation",
+									"objectClass": "spr_cliente",
+									"sid": 485978643100671,
+									"parameters": {
+										"animation": "\"Normal\"",
+										"from": "beginning"
+									}
+								},
+								{
+									"id": "wait",
+									"objectClass": "System",
+									"sid": 259968357709825,
+									"parameters": {
+										"seconds": "10"
+									}
+								},
+								{
+									"id": "destroy",
+									"objectClass": "spr_sinlechuga",
+									"sid": 191787899542065
+								},
+								{
+									"id": "set-flipped",
+									"objectClass": "spr_cliente",
+									"sid": 624335560675575,
+									"parameters": {
+										"state": "flipped"
+									}
+								},
+								{
+									"id": "move-to-position",
+									"objectClass": "spr_cliente",
+									"sid": 249946578388319,
+									"behaviorType": "MoveTo",
+									"parameters": {
+										"x": "spr_spawner_clientes.X",
+										"y": "spr_spawner_clientes.Y",
+										"mode": "direct"
+									}
+								},
+								{
+									"id": "wait",
+									"objectClass": "System",
+									"sid": 481168374997526,
+									"parameters": {
+										"seconds": "6"
+									}
+								},
+								{
+									"id": "destroy",
+									"objectClass": "spr_cliente",
+									"sid": 957921585013969
+								}
+							],
+							"sid": 694356008658234
 						},
 						{
-							"id": "set-visible",
-							"objectClass": "spr_espacio_pedido1",
-							"sid": 533439479686132,
-							"parameters": {
-								"visibility": "invisible"
-							}
-						}
-					],
-					"sid": 422412261439951
-				},
-				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "compare-at-x",
-							"objectClass": "PedidosArray",
-							"sid": 790220007454879,
-							"parameters": {
-								"x": "0",
-								"comparison": 0,
-								"value": "\"SinCebolla\""
-							}
-						}
-					],
-					"actions": [
-						{
-							"id": "spawn-another-object",
-							"objectClass": "spr_espacio_pedido1",
-							"sid": 941517418809138,
-							"parameters": {
-								"object": "spr_pedidoSinCebolla",
-								"layer": "6",
-								"image-point": "0",
-								"create-hierarchy": false,
-								"template-name": "\"\""
-							}
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "else",
+									"objectClass": "System",
+									"sid": 758004340896299
+								},
+								{
+									"id": "is-boolean-instance-variable-set",
+									"objectClass": "Personaje",
+									"sid": 515534541304636,
+									"parameters": {
+										"instance-variable": "SinTomate"
+									}
+								},
+								{
+									"id": "is-animation-playing",
+									"objectClass": "spr_cliente",
+									"sid": 905364841130860,
+									"parameters": {
+										"animation": "\"SinTomate\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "spawn-another-object",
+									"objectClass": "Mesa",
+									"sid": 619099891209593,
+									"parameters": {
+										"object": "spr_sintomate",
+										"layer": "4",
+										"image-point": "0",
+										"create-hierarchy": false,
+										"template-name": "\"\""
+									}
+								},
+								{
+									"id": "set-boolean-instvar",
+									"objectClass": "Personaje",
+									"sid": 329080327970221,
+									"parameters": {
+										"instance-variable": "SinTomate",
+										"value": "false"
+									}
+								},
+								{
+									"id": "set-animation",
+									"objectClass": "Personaje",
+									"sid": 156015439099517,
+									"parameters": {
+										"animation": "\"Front\"",
+										"from": "beginning"
+									}
+								},
+								{
+									"id": "set-animation",
+									"objectClass": "spr_cliente",
+									"sid": 597691636040524,
+									"parameters": {
+										"animation": "\"Normal\"",
+										"from": "beginning"
+									}
+								},
+								{
+									"id": "wait",
+									"objectClass": "System",
+									"sid": 756546427659549,
+									"parameters": {
+										"seconds": "10"
+									}
+								},
+								{
+									"id": "destroy",
+									"objectClass": "spr_sintomate",
+									"sid": 341115450722755
+								},
+								{
+									"id": "set-flipped",
+									"objectClass": "spr_cliente",
+									"sid": 859203607128188,
+									"parameters": {
+										"state": "flipped"
+									}
+								},
+								{
+									"id": "move-to-position",
+									"objectClass": "spr_cliente",
+									"sid": 530313115358678,
+									"behaviorType": "MoveTo",
+									"parameters": {
+										"x": "spr_spawner_clientes.X",
+										"y": "spr_spawner_clientes.Y",
+										"mode": "direct"
+									}
+								},
+								{
+									"id": "wait",
+									"objectClass": "System",
+									"sid": 837025733769106,
+									"parameters": {
+										"seconds": "6"
+									}
+								},
+								{
+									"id": "destroy",
+									"objectClass": "spr_cliente",
+									"sid": 510204410906414
+								}
+							],
+							"sid": 103217325302998
 						},
 						{
-							"id": "set-visible",
-							"objectClass": "spr_espacio_pedido1",
-							"sid": 440983488087512,
-							"parameters": {
-								"visibility": "invisible"
-							}
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "else",
+									"objectClass": "System",
+									"sid": 718797549864798
+								},
+								{
+									"id": "is-boolean-instance-variable-set",
+									"objectClass": "Personaje",
+									"sid": 113933738082111,
+									"parameters": {
+										"instance-variable": "SinCebolla"
+									}
+								},
+								{
+									"id": "is-animation-playing",
+									"objectClass": "spr_cliente",
+									"sid": 221124747464357,
+									"parameters": {
+										"animation": "\"SinCebolla\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "spawn-another-object",
+									"objectClass": "Mesa",
+									"sid": 330248785679630,
+									"parameters": {
+										"object": "spr_sincebolla",
+										"layer": "4",
+										"image-point": "0",
+										"create-hierarchy": false,
+										"template-name": "\"\""
+									}
+								},
+								{
+									"id": "set-boolean-instvar",
+									"objectClass": "Personaje",
+									"sid": 658507200125497,
+									"parameters": {
+										"instance-variable": "SinCebolla",
+										"value": "false"
+									}
+								},
+								{
+									"id": "set-animation",
+									"objectClass": "Personaje",
+									"sid": 560627706836455,
+									"parameters": {
+										"animation": "\"Front\"",
+										"from": "beginning"
+									}
+								},
+								{
+									"id": "set-animation",
+									"objectClass": "spr_cliente",
+									"sid": 467116594184992,
+									"parameters": {
+										"animation": "\"Normal\"",
+										"from": "beginning"
+									}
+								},
+								{
+									"id": "wait",
+									"objectClass": "System",
+									"sid": 284383486016769,
+									"parameters": {
+										"seconds": "10"
+									}
+								},
+								{
+									"id": "destroy",
+									"objectClass": "spr_sincebolla",
+									"sid": 736458190011152
+								},
+								{
+									"id": "set-flipped",
+									"objectClass": "spr_cliente",
+									"sid": 561280521865988,
+									"parameters": {
+										"state": "flipped"
+									}
+								},
+								{
+									"id": "move-to-position",
+									"objectClass": "spr_cliente",
+									"sid": 756026824687583,
+									"behaviorType": "MoveTo",
+									"parameters": {
+										"x": "spr_spawner_clientes.X",
+										"y": "spr_spawner_clientes.Y",
+										"mode": "direct"
+									}
+								},
+								{
+									"id": "wait",
+									"objectClass": "System",
+									"sid": 568117668959652,
+									"parameters": {
+										"seconds": "6"
+									}
+								},
+								{
+									"id": "destroy",
+									"objectClass": "spr_cliente",
+									"sid": 589882235878890
+								}
+							],
+							"sid": 910884905583714
 						}
-					],
-					"sid": 883355059151071
-				},
-				{
-					"eventType": "comment",
-					"text": "Segundo pedido"
-				},
-				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "compare-at-x",
-							"objectClass": "PedidosArray",
-							"sid": 777577534050471,
-							"parameters": {
-								"x": "1",
-								"comparison": 0,
-								"value": "1"
-							}
-						}
-					],
-					"actions": [
-						{
-							"id": "spawn-another-object",
-							"objectClass": "spr_espacio_pedido2",
-							"sid": 869543000501869,
-							"parameters": {
-								"object": "spr_pedidoCompleta",
-								"layer": "6",
-								"image-point": "0",
-								"create-hierarchy": false,
-								"template-name": "\"\""
-							}
-						},
-						{
-							"id": "set-visible",
-							"objectClass": "spr_espacio_pedido2",
-							"sid": 796611531213993,
-							"parameters": {
-								"visibility": "invisible"
-							}
-						}
-					],
-					"sid": 617590203443201,
-					"disabled": true
-				},
-				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "compare-at-x",
-							"objectClass": "PedidosArray",
-							"sid": 493003474366491,
-							"parameters": {
-								"x": "1",
-								"comparison": 0,
-								"value": "2"
-							}
-						}
-					],
-					"actions": [
-						{
-							"id": "spawn-another-object",
-							"objectClass": "spr_espacio_pedido2",
-							"sid": 195685054735034,
-							"parameters": {
-								"object": "spr_pedidoSinLechuga",
-								"layer": "6",
-								"image-point": "0",
-								"create-hierarchy": false,
-								"template-name": "\"\""
-							}
-						},
-						{
-							"id": "set-visible",
-							"objectClass": "spr_espacio_pedido2",
-							"sid": 266346892814270,
-							"parameters": {
-								"visibility": "invisible"
-							}
-						}
-					],
-					"sid": 971086174371288,
-					"disabled": true
-				},
-				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "compare-at-x",
-							"objectClass": "PedidosArray",
-							"sid": 547181462519979,
-							"parameters": {
-								"x": "1",
-								"comparison": 0,
-								"value": "3"
-							}
-						}
-					],
-					"actions": [
-						{
-							"id": "spawn-another-object",
-							"objectClass": "spr_espacio_pedido2",
-							"sid": 360751424598826,
-							"parameters": {
-								"object": "spr_pedidoSinTomate",
-								"layer": "6",
-								"image-point": "0",
-								"create-hierarchy": false,
-								"template-name": "\"\""
-							}
-						},
-						{
-							"id": "set-visible",
-							"objectClass": "spr_espacio_pedido2",
-							"sid": 126787732180482,
-							"parameters": {
-								"visibility": "invisible"
-							}
-						}
-					],
-					"sid": 338873044567545,
-					"disabled": true
-				},
-				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "compare-at-x",
-							"objectClass": "PedidosArray",
-							"sid": 492744467547297,
-							"parameters": {
-								"x": "1",
-								"comparison": 0,
-								"value": "4"
-							}
-						}
-					],
-					"actions": [
-						{
-							"id": "spawn-another-object",
-							"objectClass": "spr_espacio_pedido2",
-							"sid": 341203609036307,
-							"parameters": {
-								"object": "spr_pedidoSinCebolla",
-								"layer": "6",
-								"image-point": "0",
-								"create-hierarchy": false,
-								"template-name": "\"\""
-							}
-						},
-						{
-							"id": "set-visible",
-							"objectClass": "spr_espacio_pedido2",
-							"sid": 267716457805513,
-							"parameters": {
-								"visibility": "invisible"
-							}
-						}
-					],
-					"sid": 999485003924082,
-					"disabled": true
-				},
-				{
-					"eventType": "comment",
-					"text": "Tercer pedido"
-				},
-				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "compare-at-x",
-							"objectClass": "PedidosArray",
-							"sid": 356558038199669,
-							"parameters": {
-								"x": "2",
-								"comparison": 0,
-								"value": "1"
-							}
-						}
-					],
-					"actions": [
-						{
-							"id": "spawn-another-object",
-							"objectClass": "spr_espacio_pedido3",
-							"sid": 787377919502725,
-							"parameters": {
-								"object": "spr_pedidoCompleta",
-								"layer": "6",
-								"image-point": "0",
-								"create-hierarchy": false,
-								"template-name": "\"\""
-							}
-						},
-						{
-							"id": "set-visible",
-							"objectClass": "spr_espacio_pedido3",
-							"sid": 625551170290562,
-							"parameters": {
-								"visibility": "invisible"
-							}
-						}
-					],
-					"sid": 869181921948951,
-					"disabled": true
-				},
-				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "compare-at-x",
-							"objectClass": "PedidosArray",
-							"sid": 483369231887122,
-							"parameters": {
-								"x": "2",
-								"comparison": 0,
-								"value": "2"
-							}
-						}
-					],
-					"actions": [
-						{
-							"id": "spawn-another-object",
-							"objectClass": "spr_espacio_pedido3",
-							"sid": 750303586944126,
-							"parameters": {
-								"object": "spr_pedidoSinLechuga",
-								"layer": "6",
-								"image-point": "0",
-								"create-hierarchy": false,
-								"template-name": "\"\""
-							}
-						},
-						{
-							"id": "set-visible",
-							"objectClass": "spr_espacio_pedido3",
-							"sid": 372206344257356,
-							"parameters": {
-								"visibility": "invisible"
-							}
-						}
-					],
-					"sid": 834064667397149,
-					"disabled": true
-				},
-				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "compare-at-x",
-							"objectClass": "PedidosArray",
-							"sid": 215947699126332,
-							"parameters": {
-								"x": "2",
-								"comparison": 0,
-								"value": "3"
-							}
-						}
-					],
-					"actions": [
-						{
-							"id": "spawn-another-object",
-							"objectClass": "spr_espacio_pedido3",
-							"sid": 620571454166831,
-							"parameters": {
-								"object": "spr_pedidoSinTomate",
-								"layer": "6",
-								"image-point": "0",
-								"create-hierarchy": false,
-								"template-name": "\"\""
-							}
-						},
-						{
-							"id": "set-visible",
-							"objectClass": "spr_espacio_pedido3",
-							"sid": 425119598905764,
-							"parameters": {
-								"visibility": "invisible"
-							}
-						}
-					],
-					"sid": 846111871121705,
-					"disabled": true
-				},
-				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "compare-at-x",
-							"objectClass": "PedidosArray",
-							"sid": 534320150581187,
-							"parameters": {
-								"x": "2",
-								"comparison": 0,
-								"value": "4"
-							}
-						}
-					],
-					"actions": [
-						{
-							"id": "spawn-another-object",
-							"objectClass": "spr_espacio_pedido3",
-							"sid": 132569528102933,
-							"parameters": {
-								"object": "spr_pedidoSinCebolla",
-								"layer": "6",
-								"image-point": "0",
-								"create-hierarchy": false,
-								"template-name": "\"\""
-							}
-						},
-						{
-							"id": "set-visible",
-							"objectClass": "spr_espacio_pedido3",
-							"sid": 432628359383478,
-							"parameters": {
-								"visibility": "invisible"
-							}
-						}
-					],
-					"sid": 334270876542527,
-					"disabled": true
-				},
-				{
-					"eventType": "comment",
-					"text": "Cuarto pedido"
-				},
-				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "compare-at-x",
-							"objectClass": "PedidosArray",
-							"sid": 261132861309182,
-							"parameters": {
-								"x": "3",
-								"comparison": 0,
-								"value": "1"
-							}
-						}
-					],
-					"actions": [
-						{
-							"id": "spawn-another-object",
-							"objectClass": "spr_espacio_pedido4",
-							"sid": 713018275589942,
-							"parameters": {
-								"object": "spr_pedidoCompleta",
-								"layer": "6",
-								"image-point": "0",
-								"create-hierarchy": false,
-								"template-name": "\"\""
-							}
-						},
-						{
-							"id": "set-visible",
-							"objectClass": "spr_espacio_pedido4",
-							"sid": 715175653702482,
-							"parameters": {
-								"visibility": "invisible"
-							}
-						}
-					],
-					"sid": 204341156100831,
-					"disabled": true
-				},
-				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "compare-at-x",
-							"objectClass": "PedidosArray",
-							"sid": 484566084488934,
-							"parameters": {
-								"x": "3",
-								"comparison": 0,
-								"value": "2"
-							}
-						}
-					],
-					"actions": [
-						{
-							"id": "spawn-another-object",
-							"objectClass": "spr_espacio_pedido4",
-							"sid": 175909162435340,
-							"parameters": {
-								"object": "spr_pedidoSinLechuga",
-								"layer": "6",
-								"image-point": "0",
-								"create-hierarchy": false,
-								"template-name": "\"\""
-							}
-						},
-						{
-							"id": "set-visible",
-							"objectClass": "spr_espacio_pedido4",
-							"sid": 879191673311578,
-							"parameters": {
-								"visibility": "invisible"
-							}
-						}
-					],
-					"sid": 506296352259855,
-					"disabled": true
-				},
-				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "compare-at-x",
-							"objectClass": "PedidosArray",
-							"sid": 710043767341878,
-							"parameters": {
-								"x": "3",
-								"comparison": 0,
-								"value": "3"
-							}
-						}
-					],
-					"actions": [
-						{
-							"id": "spawn-another-object",
-							"objectClass": "spr_espacio_pedido4",
-							"sid": 224286448334704,
-							"parameters": {
-								"object": "spr_pedidoSinTomate",
-								"layer": "6",
-								"image-point": "0",
-								"create-hierarchy": false,
-								"template-name": "\"\""
-							}
-						},
-						{
-							"id": "set-visible",
-							"objectClass": "spr_espacio_pedido4",
-							"sid": 132104716070671,
-							"parameters": {
-								"visibility": "invisible"
-							}
-						}
-					],
-					"sid": 877789948192621,
-					"disabled": true
-				},
-				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "compare-at-x",
-							"objectClass": "PedidosArray",
-							"sid": 669995167741265,
-							"parameters": {
-								"x": "3",
-								"comparison": 0,
-								"value": "4"
-							}
-						}
-					],
-					"actions": [
-						{
-							"id": "spawn-another-object",
-							"objectClass": "spr_espacio_pedido4",
-							"sid": 807384692568911,
-							"parameters": {
-								"object": "spr_pedidoSinCebolla",
-								"layer": "6",
-								"image-point": "0",
-								"create-hierarchy": false,
-								"template-name": "\"\""
-							}
-						},
-						{
-							"id": "set-visible",
-							"objectClass": "spr_espacio_pedido4",
-							"sid": 703636828294041,
-							"parameters": {
-								"visibility": "invisible"
-							}
-						}
-					],
-					"sid": 114805600906040,
-					"disabled": true
+					]
 				}
-			]
+			],
+			"sid": 266319060553300
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "key-is-down",
+					"objectClass": "Teclado",
+					"sid": 282366525299423,
+					"parameters": {
+						"key": 49
+					}
+				},
+				{
+					"id": "is-boolean-instance-variable-set",
+					"objectClass": "Personaje",
+					"sid": 785665834837421,
+					"parameters": {
+						"instance-variable": "Vacio"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-boolean-instvar",
+					"objectClass": "Personaje",
+					"sid": 542609931476608,
+					"parameters": {
+						"instance-variable": "Servido",
+						"value": "true"
+					}
+				},
+				{
+					"id": "set-animation",
+					"objectClass": "Personaje",
+					"sid": 584178552177308,
+					"parameters": {
+						"animation": "\"FPlaSer\"",
+						"from": "beginning"
+					}
+				}
+			],
+			"sid": 668628864677568
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "key-is-down",
+					"objectClass": "Teclado",
+					"sid": 938996775836450,
+					"parameters": {
+						"key": 50
+					}
+				},
+				{
+					"id": "is-boolean-instance-variable-set",
+					"objectClass": "Personaje",
+					"sid": 484297559094806,
+					"parameters": {
+						"instance-variable": "Vacio"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-boolean-instvar",
+					"objectClass": "Personaje",
+					"sid": 647824938048356,
+					"parameters": {
+						"instance-variable": "SinLechuga",
+						"value": "true"
+					}
+				},
+				{
+					"id": "set-animation",
+					"objectClass": "Personaje",
+					"sid": 794438376834710,
+					"parameters": {
+						"animation": "\"FSSLech\"",
+						"from": "beginning"
+					}
+				}
+			],
+			"sid": 584901628063427
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "key-is-down",
+					"objectClass": "Teclado",
+					"sid": 511915487744465,
+					"parameters": {
+						"key": 51
+					}
+				},
+				{
+					"id": "is-boolean-instance-variable-set",
+					"objectClass": "Personaje",
+					"sid": 768251217059089,
+					"parameters": {
+						"instance-variable": "Vacio"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-boolean-instvar",
+					"objectClass": "Personaje",
+					"sid": 754937164929629,
+					"parameters": {
+						"instance-variable": "SinTomate",
+						"value": "true"
+					}
+				},
+				{
+					"id": "set-animation",
+					"objectClass": "Personaje",
+					"sid": 782586130920480,
+					"parameters": {
+						"animation": "\"FSSTom\"",
+						"from": "beginning"
+					}
+				}
+			],
+			"sid": 409119323716371
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "key-is-down",
+					"objectClass": "Teclado",
+					"sid": 418130902200924,
+					"parameters": {
+						"key": 52
+					}
+				},
+				{
+					"id": "is-boolean-instance-variable-set",
+					"objectClass": "Personaje",
+					"sid": 635415983076056,
+					"parameters": {
+						"instance-variable": "Vacio"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-boolean-instvar",
+					"objectClass": "Personaje",
+					"sid": 659688074436041,
+					"parameters": {
+						"instance-variable": "SinCebolla",
+						"value": "true"
+					}
+				},
+				{
+					"id": "set-animation",
+					"objectClass": "Personaje",
+					"sid": 872522108452500,
+					"parameters": {
+						"animation": "\"FSSCeb\"",
+						"from": "beginning"
+					}
+				}
+			],
+			"sid": 715596099621672
 		}
 	],
 	"sid": 281322155169956
