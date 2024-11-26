@@ -179,7 +179,10 @@
 			"spr_fondoMonedas",
 			"spr_stars",
 			"spr_stars2",
-			"spr_stars3"
+			"spr_stars3",
+			"txtEstadisticas",
+			"spr_chanchito",
+			"txt_chanchito"
 		],
 		"subfolders": [
 			{
@@ -274,14 +277,16 @@
 	"layouts": {
 		"items": [
 			"Cocina",
-			"CocinaV2"
+			"CocinaV2",
+			"cerrado"
 		],
 		"subfolders": []
 	},
 	"eventSheets": {
 		"items": [
 			"CocinaSheet",
-			"SheetV2"
+			"SheetV2",
+			"Event sheet 1"
 		],
 		"subfolders": []
 	},

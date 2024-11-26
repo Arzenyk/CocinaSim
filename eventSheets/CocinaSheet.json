@@ -412,6 +412,16 @@
 			"sid": 674540099140389
 		},
 		{
+			"eventType": "variable",
+			"name": "chanchito",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 381028818652706
+		},
+		{
 			"eventType": "group",
 			"disabled": false,
 			"title": "ControlJugador",
@@ -10832,9 +10842,9 @@
 						{
 							"id": "wait",
 							"objectClass": "System",
-							"sid": 504450041696185,
+							"sid": 654556350130780,
 							"parameters": {
-								"seconds": "40"
+								"seconds": "20"
 							}
 						},
 						{
@@ -10849,9 +10859,9 @@
 						{
 							"id": "wait",
 							"objectClass": "System",
-							"sid": 438838187310358,
+							"sid": 753979173919466,
 							"parameters": {
-								"seconds": "40"
+								"seconds": "20"
 							}
 						},
 						{
@@ -10862,15 +10872,6 @@
 								"variable": "spawnCliente3",
 								"value": "true"
 							}
-						},
-						{
-							"id": "stop-timer",
-							"objectClass": "spr_reloj",
-							"sid": 419993541673041,
-							"behaviorType": "Timer",
-							"parameters": {
-								"tag": "\"AbiertoCerrado\""
-							}
 						}
 					],
 					"sid": 299592787954035
@@ -10879,27 +10880,54 @@
 					"eventType": "block",
 					"conditions": [
 						{
-							"id": "is-timer-paused",
+							"id": "is-between-angles",
 							"objectClass": "spr_reloj",
-							"sid": 924400036949124,
-							"behaviorType": "Timer",
+							"sid": 604882760878414,
 							"parameters": {
-								"tag": "\"AbiertoCerrado\""
+								"first-angle": "359",
+								"second-angle": "360"
 							}
 						}
 					],
 					"actions": [
 						{
+							"id": "add-remove-animation",
+							"objectClass": "spr_cartel",
+							"sid": 215896176910905,
+							"disabled": true,
+							"parameters": {
+								"which": "remove",
+								"name": "\"Open\""
+							}
+						},
+						{
 							"id": "set-animation",
 							"objectClass": "spr_cartel",
-							"sid": 698103209099169,
+							"sid": 761963505655821,
 							"parameters": {
 								"animation": "\"Closed\"",
 								"from": "beginning"
 							}
+						},
+						{
+							"id": "stop-timer",
+							"objectClass": "spr_reloj",
+							"sid": 758237840054571,
+							"behaviorType": "Timer",
+							"parameters": {
+								"tag": "\"AbiertoCerrado\""
+							}
+						},
+						{
+							"id": "go-to-layout",
+							"objectClass": "System",
+							"sid": 985809116826056,
+							"parameters": {
+								"layout": "cerrado"
+							}
 						}
 					],
-					"sid": 296601427166897
+					"sid": 655002688615608
 				}
 			],
 			"sid": 105215200043573
@@ -16734,9 +16762,9 @@
 				{
 					"id": "key-is-down",
 					"objectClass": "Teclado",
-					"sid": 716294046076977,
+					"sid": 764264026387070,
 					"parameters": {
-						"key": 52
+						"key": 53
 					}
 				},
 				{
@@ -16784,22 +16812,30 @@
 				{
 					"id": "is-overlapping-another-object",
 					"objectClass": "Personaje",
-					"sid": 717238483588394,
+					"sid": 511641572853463,
 					"parameters": {
-						"object": "spr_espacio_cliente"
+						"object": "spr_espacio_cliente2"
 					}
 				},
 				{
 					"id": "compare-x",
 					"objectClass": "Plato2",
-					"sid": 586479188788252,
+					"sid": 708786112939740,
 					"parameters": {
 						"comparison": 0,
-						"x-co-ordinate": "Mesa.ImagePointX(1)"
+						"x-co-ordinate": "Mesa2.ImagePointX(1)"
 					}
 				}
 			],
 			"actions": [
+				{
+					"id": "signal",
+					"objectClass": "System",
+					"sid": 153491461667664,
+					"parameters": {
+						"tag": "\"reset\""
+					}
+				},
 				{
 					"id": "set-boolean-instvar",
 					"objectClass": "Personaje",
@@ -17325,6 +17361,16 @@
 			"sid": 869159273290790
 		},
 		{
+			"eventType": "comment",
+			"text": "Cliente 1",
+			"background-color": [
+				0.6784313725490196,
+				1,
+				0.7333333333333333,
+				1
+			]
+		},
+		{
 			"eventType": "block",
 			"conditions": [
 				{
@@ -17344,6 +17390,11 @@
 					"parameters": {
 						"variable": "C1decidio"
 					}
+				},
+				{
+					"id": "trigger-once-while-true",
+					"objectClass": "System",
+					"sid": 294688855279211
 				}
 			],
 			"actions": [
@@ -17371,48 +17422,6 @@
 						"animation": "\"Completa\"",
 						"from": "beginning"
 					}
-				},
-				{
-					"id": "wait",
-					"objectClass": "System",
-					"sid": 276106620351918,
-					"parameters": {
-						"seconds": "20"
-					}
-				},
-				{
-					"id": "set-animation",
-					"objectClass": "spr_cliente",
-					"sid": 852716956284180,
-					"parameters": {
-						"animation": "\"ImpCompleta\"",
-						"from": "beginning"
-					}
-				},
-				{
-					"id": "wait",
-					"objectClass": "System",
-					"sid": 414371887690306,
-					"parameters": {
-						"seconds": "30"
-					}
-				},
-				{
-					"id": "set-animation",
-					"objectClass": "spr_cliente",
-					"sid": 781825903975244,
-					"parameters": {
-						"animation": "\"Enojado\"",
-						"from": "beginning"
-					}
-				},
-				{
-					"id": "wait",
-					"objectClass": "System",
-					"sid": 766400546624979,
-					"parameters": {
-						"seconds": "5"
-					}
 				}
 			],
 			"sid": 702093181367920,
@@ -17421,440 +17430,77 @@
 					"eventType": "block",
 					"conditions": [
 						{
-							"id": "trigger-once-while-true",
-							"objectClass": "System",
-							"sid": 277878356518634
-						},
-						{
-							"id": "is-animation-playing",
-							"objectClass": "spr_cliente",
-							"sid": 531658899970663,
+							"id": "is-overlapping-another-object",
+							"objectClass": "Personaje",
+							"sid": 992209251294604,
 							"parameters": {
-								"animation": "\"Enojado\""
-							}
+								"object": "spr_espacio_cliente"
+							},
+							"isInverted": true
 						}
 					],
 					"actions": [
 						{
-							"id": "destroy",
-							"objectClass": "spr_stars",
-							"sid": 662844695771765
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 324452359384621,
+							"parameters": {
+								"seconds": "20"
+							}
 						},
 						{
-							"id": "move-to-object",
+							"id": "set-animation",
 							"objectClass": "spr_cliente",
-							"sid": 821261882295292,
-							"behaviorType": "MoveTo",
+							"sid": 385257702118567,
 							"parameters": {
-								"object": "spr_spawner_clientes",
-								"image-point": "0",
-								"mode": "direct"
+								"animation": "\"ImpCompleta\"",
+								"from": "beginning"
 							}
 						},
 						{
-							"id": "set-visible",
-							"objectClass": "spr_espacio_pedido1",
-							"sid": 322159044071761,
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 148416303640211,
 							"parameters": {
-								"visibility": "visible"
+								"seconds": "30"
 							}
 						},
 						{
-							"id": "set-visible",
-							"objectClass": "spr_pedidoCompleta",
-							"sid": 756880129708275,
-							"parameters": {
-								"visibility": "invisible"
-							}
-						},
-						{
-							"id": "set-flipped",
+							"id": "set-animation",
 							"objectClass": "spr_cliente",
-							"sid": 669685235382104,
+							"sid": 810180152258444,
 							"parameters": {
-								"state": "flipped"
+								"animation": "\"Enojado\"",
+								"from": "beginning"
+							}
+						},
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 124896543672452,
+							"parameters": {
+								"seconds": "5"
 							}
 						},
 						{
 							"id": "subtract-from-eventvar",
 							"objectClass": "System",
-							"sid": 393543615231221,
+							"sid": 654051872902349,
 							"parameters": {
 								"variable": "Estrellas",
 								"value": "1"
 							}
 						},
 						{
-							"id": "wait",
+							"id": "signal",
 							"objectClass": "System",
-							"sid": 952918838301989,
+							"sid": 681049499179721,
 							"parameters": {
-								"seconds": "4"
-							}
-						},
-						{
-							"id": "destroy",
-							"objectClass": "spr_cliente",
-							"sid": 162852949817672
-						}
-					],
-					"sid": 393905748755160
-				}
-			]
-		},
-		{
-			"eventType": "block",
-			"conditions": [
-				{
-					"id": "compare-eventvar",
-					"objectClass": "System",
-					"sid": 203288850486596,
-					"parameters": {
-						"variable": "Clientes",
-						"comparison": 0,
-						"value": "2"
-					}
-				},
-				{
-					"id": "compare-boolean-eventvar",
-					"objectClass": "System",
-					"sid": 887848612758359,
-					"parameters": {
-						"variable": "C2decidio"
-					}
-				}
-			],
-			"actions": [
-				{
-					"id": "set-visible",
-					"objectClass": "spr_espacio_pedido2",
-					"sid": 754949521226477,
-					"parameters": {
-						"visibility": "invisible"
-					}
-				},
-				{
-					"id": "set-visible",
-					"objectClass": "spr_pedidoSinLechuga",
-					"sid": 404935952423449,
-					"parameters": {
-						"visibility": "visible"
-					}
-				},
-				{
-					"id": "set-animation",
-					"objectClass": "spr_cliente2",
-					"sid": 507166636547181,
-					"parameters": {
-						"animation": "\"SinLechuga\"",
-						"from": "beginning"
-					}
-				},
-				{
-					"id": "wait",
-					"objectClass": "System",
-					"sid": 629400546579632,
-					"parameters": {
-						"seconds": "20"
-					}
-				},
-				{
-					"id": "set-animation",
-					"objectClass": "spr_cliente2",
-					"sid": 403010921649538,
-					"parameters": {
-						"animation": "\"ImpSinLechuga\"",
-						"from": "beginning"
-					}
-				},
-				{
-					"id": "wait",
-					"objectClass": "System",
-					"sid": 996089637264042,
-					"parameters": {
-						"seconds": "30"
-					}
-				},
-				{
-					"id": "set-animation",
-					"objectClass": "spr_cliente2",
-					"sid": 764478928222904,
-					"parameters": {
-						"animation": "\"Enojado\"",
-						"from": "beginning"
-					}
-				},
-				{
-					"id": "wait",
-					"objectClass": "System",
-					"sid": 861813432150577,
-					"parameters": {
-						"seconds": "5"
-					}
-				}
-			],
-			"sid": 201069116333545,
-			"children": [
-				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "trigger-once-while-true",
-							"objectClass": "System",
-							"sid": 960991284719941
-						},
-						{
-							"id": "is-animation-playing",
-							"objectClass": "spr_cliente2",
-							"sid": 552338880626245,
-							"parameters": {
-								"animation": "\"Enojado\""
+								"tag": "\"enojado1\""
 							}
 						}
 					],
-					"actions": [
-						{
-							"id": "destroy",
-							"objectClass": "spr_stars2",
-							"sid": 744863256704919
-						},
-						{
-							"id": "move-to-object",
-							"objectClass": "spr_cliente2",
-							"sid": 990186275425977,
-							"behaviorType": "MoveTo",
-							"parameters": {
-								"object": "spr_spawner_clientes2",
-								"image-point": "0",
-								"mode": "direct"
-							}
-						},
-						{
-							"id": "set-visible",
-							"objectClass": "spr_espacio_pedido2",
-							"sid": 648073118578211,
-							"parameters": {
-								"visibility": "visible"
-							}
-						},
-						{
-							"id": "set-visible",
-							"objectClass": "spr_pedidoSinLechuga",
-							"sid": 568057534483370,
-							"parameters": {
-								"visibility": "invisible"
-							}
-						},
-						{
-							"id": "set-flipped",
-							"objectClass": "spr_cliente2",
-							"sid": 898391766484841,
-							"parameters": {
-								"state": "flipped"
-							}
-						},
-						{
-							"id": "subtract-from-eventvar",
-							"objectClass": "System",
-							"sid": 264230503983266,
-							"parameters": {
-								"variable": "Estrellas",
-								"value": "1"
-							}
-						},
-						{
-							"id": "wait",
-							"objectClass": "System",
-							"sid": 374742143853587,
-							"parameters": {
-								"seconds": "4"
-							}
-						},
-						{
-							"id": "destroy",
-							"objectClass": "spr_cliente2",
-							"sid": 309823773203730
-						}
-					],
-					"sid": 528496962796899
-				}
-			]
-		},
-		{
-			"eventType": "block",
-			"conditions": [
-				{
-					"id": "compare-eventvar",
-					"objectClass": "System",
-					"sid": 484136147480766,
-					"parameters": {
-						"variable": "Clientes",
-						"comparison": 0,
-						"value": "3"
-					}
-				},
-				{
-					"id": "compare-boolean-eventvar",
-					"objectClass": "System",
-					"sid": 251431292071704,
-					"parameters": {
-						"variable": "C3decidio"
-					}
-				}
-			],
-			"actions": [
-				{
-					"id": "set-visible",
-					"objectClass": "spr_espacio_pedido3",
-					"sid": 657314921364583,
-					"parameters": {
-						"visibility": "invisible"
-					}
-				},
-				{
-					"id": "set-visible",
-					"objectClass": "spr_pedidoSinTomate",
-					"sid": 116146116043236,
-					"parameters": {
-						"visibility": "visible"
-					}
-				},
-				{
-					"id": "set-animation",
-					"objectClass": "spr_cliente3",
-					"sid": 944602704044377,
-					"parameters": {
-						"animation": "\"SinTomate\"",
-						"from": "beginning"
-					}
-				},
-				{
-					"id": "wait",
-					"objectClass": "System",
-					"sid": 688997725625808,
-					"parameters": {
-						"seconds": "20"
-					}
-				},
-				{
-					"id": "set-animation",
-					"objectClass": "spr_cliente3",
-					"sid": 217460697480577,
-					"parameters": {
-						"animation": "\"ImpSinTomate\"",
-						"from": "beginning"
-					}
-				},
-				{
-					"id": "wait",
-					"objectClass": "System",
-					"sid": 708696107660991,
-					"parameters": {
-						"seconds": "30"
-					}
-				},
-				{
-					"id": "set-animation",
-					"objectClass": "spr_cliente3",
-					"sid": 250973862116989,
-					"parameters": {
-						"animation": "\"Enojado\"",
-						"from": "beginning"
-					}
-				},
-				{
-					"id": "wait",
-					"objectClass": "System",
-					"sid": 279787598656348,
-					"parameters": {
-						"seconds": "5"
-					}
-				}
-			],
-			"sid": 107895456516958,
-			"children": [
-				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "trigger-once-while-true",
-							"objectClass": "System",
-							"sid": 134330593921221
-						},
-						{
-							"id": "is-animation-playing",
-							"objectClass": "spr_cliente3",
-							"sid": 259655866956625,
-							"parameters": {
-								"animation": "\"Enojado\""
-							}
-						}
-					],
-					"actions": [
-						{
-							"id": "destroy",
-							"objectClass": "spr_stars3",
-							"sid": 358805166359788
-						},
-						{
-							"id": "move-to-object",
-							"objectClass": "spr_cliente3",
-							"sid": 829158913872418,
-							"behaviorType": "MoveTo",
-							"parameters": {
-								"object": "spr_spawner_clientes3",
-								"image-point": "0",
-								"mode": "direct"
-							}
-						},
-						{
-							"id": "set-visible",
-							"objectClass": "spr_espacio_pedido3",
-							"sid": 913608422595295,
-							"parameters": {
-								"visibility": "visible"
-							}
-						},
-						{
-							"id": "set-visible",
-							"objectClass": "spr_pedidoSinTomate",
-							"sid": 760058436296563,
-							"parameters": {
-								"visibility": "invisible"
-							}
-						},
-						{
-							"id": "set-flipped",
-							"objectClass": "spr_cliente3",
-							"sid": 582241303943679,
-							"parameters": {
-								"state": "flipped"
-							}
-						},
-						{
-							"id": "subtract-from-eventvar",
-							"objectClass": "System",
-							"sid": 385726097988387,
-							"parameters": {
-								"variable": "Estrellas",
-								"value": "1"
-							}
-						},
-						{
-							"id": "wait",
-							"objectClass": "System",
-							"sid": 634282800980011,
-							"parameters": {
-								"seconds": "4"
-							}
-						},
-						{
-							"id": "destroy",
-							"objectClass": "spr_cliente3",
-							"sid": 771472587945732
-						}
-					],
-					"sid": 417507801922517
+					"sid": 797542560855587
 				}
 			]
 		},
@@ -17874,7 +17520,7 @@
 				{
 					"id": "on-key-pressed",
 					"objectClass": "Teclado",
-					"sid": 443871341450242,
+					"sid": 544901415675536,
 					"parameters": {
 						"key": 69
 					}
@@ -17882,14 +17528,22 @@
 				{
 					"id": "is-overlapping-another-object",
 					"objectClass": "Personaje",
-					"sid": 800973630061176,
+					"sid": 891354564042414,
 					"parameters": {
 						"object": "spr_espacio_cliente"
+					}
+				},
+				{
+					"id": "is-animation-playing",
+					"objectClass": "spr_cliente",
+					"sid": 295002341065204,
+					"parameters": {
+						"animation": "\"Completa\""
 					}
 				}
 			],
 			"actions": [],
-			"sid": 888612731943463,
+			"sid": 407302212492269,
 			"children": [
 				{
 					"eventType": "block",
@@ -17897,17 +17551,22 @@
 						{
 							"id": "is-boolean-instance-variable-set",
 							"objectClass": "Personaje",
-							"sid": 879362201444434,
+							"sid": 379881383817811,
 							"parameters": {
 								"instance-variable": "Servido"
 							}
+						},
+						{
+							"id": "trigger-once-while-true",
+							"objectClass": "System",
+							"sid": 623902561247667
 						}
 					],
 					"actions": [
 						{
 							"id": "add-to-eventvar",
 							"objectClass": "System",
-							"sid": 270106788819941,
+							"sid": 870124939083438,
 							"parameters": {
 								"variable": "Monedas",
 								"value": "10"
@@ -17916,7 +17575,7 @@
 						{
 							"id": "set-animation",
 							"objectClass": "spr_cliente",
-							"sid": 864309817483865,
+							"sid": 989955197738560,
 							"parameters": {
 								"animation": "\"Normal\"",
 								"from": "beginning"
@@ -17925,20 +17584,33 @@
 						{
 							"id": "wait",
 							"objectClass": "System",
-							"sid": 228857331448996,
+							"sid": 284935367026711,
 							"parameters": {
 								"seconds": "10"
 							}
 						},
 						{
+							"id": "set-visible",
+							"objectClass": "spr_espacio_pedido1",
+							"sid": 559521510977277,
+							"parameters": {
+								"visibility": "visible"
+							}
+						},
+						{
+							"id": "destroy",
+							"objectClass": "spr_pedidoCompleta",
+							"sid": 210181455667715
+						},
+						{
 							"id": "destroy",
 							"objectClass": "Hamburguesa2",
-							"sid": 523209829932536
+							"sid": 757994758894810
 						},
 						{
 							"id": "spawn-another-object",
 							"objectClass": "Mesa",
-							"sid": 152244688201257,
+							"sid": 442005841441792,
 							"parameters": {
 								"object": "Plato2",
 								"layer": "4",
@@ -17950,7 +17622,7 @@
 						{
 							"id": "set-flipped",
 							"objectClass": "spr_cliente",
-							"sid": 869745532747700,
+							"sid": 394647161243743,
 							"parameters": {
 								"state": "flipped"
 							}
@@ -17958,7 +17630,7 @@
 						{
 							"id": "move-to-position",
 							"objectClass": "spr_cliente",
-							"sid": 230310856682096,
+							"sid": 323634595011252,
 							"behaviorType": "MoveTo",
 							"parameters": {
 								"x": "spr_spawner_clientes.X",
@@ -17967,7 +17639,7 @@
 							}
 						}
 					],
-					"sid": 403456382445935
+					"sid": 322763818592471
 				},
 				{
 					"eventType": "block",
@@ -17975,12 +17647,17 @@
 						{
 							"id": "else",
 							"objectClass": "System",
-							"sid": 204443580535716
+							"sid": 924369039927719
+						},
+						{
+							"id": "trigger-once-while-true",
+							"objectClass": "System",
+							"sid": 250352825273803
 						},
 						{
 							"id": "is-boolean-instance-variable-set",
 							"objectClass": "Personaje",
-							"sid": 571823280683687,
+							"sid": 701786987985381,
 							"parameters": {
 								"instance-variable": "CompQuemada"
 							}
@@ -17988,23 +17665,26 @@
 					],
 					"actions": [
 						{
-							"id": "destroy",
-							"objectClass": "spr_stars",
-							"sid": 839519280656311
-						},
-						{
 							"id": "set-animation",
 							"objectClass": "spr_cliente",
-							"sid": 818361796741628,
+							"sid": 140207909706164,
 							"parameters": {
 								"animation": "\"Enojado\"",
 								"from": "beginning"
 							}
 						},
 						{
+							"id": "signal",
+							"objectClass": "System",
+							"sid": 484173243940591,
+							"parameters": {
+								"tag": "\"enojado1\""
+							}
+						},
+						{
 							"id": "spawn-another-object",
 							"objectClass": "Mesa",
-							"sid": 512638152226875,
+							"sid": 559253375880080,
 							"parameters": {
 								"object": "Hamburguesa2",
 								"layer": "4",
@@ -18016,83 +17696,127 @@
 						{
 							"id": "set-animation",
 							"objectClass": "Hamburguesa2",
-							"sid": 642513079024130,
+							"sid": 890994149846647,
 							"parameters": {
 								"animation": "\"Animation 2\"",
 								"from": "beginning"
 							}
 						},
 						{
-							"id": "set-animation",
+							"id": "set-boolean-instvar",
 							"objectClass": "Personaje",
-							"sid": 238382714022541,
+							"sid": 635087817874235,
 							"parameters": {
-								"animation": "\"Front\"",
-								"from": "beginning"
+								"instance-variable": "Vacio",
+								"value": "true"
 							}
 						},
 						{
-							"id": "set-flipped",
-							"objectClass": "spr_cliente",
-							"sid": 152405251991551,
+							"id": "set-boolean-instvar",
+							"objectClass": "Personaje",
+							"sid": 995038531824465,
 							"parameters": {
-								"state": "flipped"
+								"instance-variable": "Ocupado",
+								"value": "false"
 							}
 						},
 						{
-							"id": "move-to-object",
-							"objectClass": "spr_cliente",
-							"sid": 446881936813343,
-							"behaviorType": "MoveTo",
+							"id": "set-boolean-instvar",
+							"objectClass": "Personaje",
+							"sid": 272680810581933,
 							"parameters": {
-								"object": "spr_spawner_clientes",
-								"image-point": "0",
-								"mode": "direct"
+								"instance-variable": "CompQuemada",
+								"value": "false"
 							}
-						},
-						{
-							"id": "set-visible",
-							"objectClass": "spr_espacio_pedido1",
-							"sid": 964123544706346,
-							"parameters": {
-								"visibility": "visible"
-							}
-						},
-						{
-							"id": "set-visible",
-							"objectClass": "spr_pedidoCompleta",
-							"sid": 955040489292248,
-							"parameters": {
-								"visibility": "invisible"
-							}
-						},
-						{
-							"id": "wait",
-							"objectClass": "System",
-							"sid": 683632187397213,
-							"parameters": {
-								"seconds": "4"
-							}
-						},
-						{
-							"id": "destroy",
-							"objectClass": "spr_cliente",
-							"sid": 596345629615633
 						}
 					],
-					"sid": 175289545661377
+					"sid": 111344705810862
 				}
 			]
 		},
 		{
-			"eventType": "comment",
-			"text": "SERVIR 2",
-			"background-color": [
-				0.6941176470588235,
-				0.984313725490196,
-				0.7019607843137254,
-				1
-			]
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-signal",
+					"objectClass": "System",
+					"sid": 361224909438748,
+					"parameters": {
+						"tag": "\"enojado1\""
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-visible",
+					"objectClass": "spr_espacio_pedido1",
+					"sid": 843055579838025,
+					"parameters": {
+						"visibility": "visible"
+					}
+				},
+				{
+					"id": "destroy",
+					"objectClass": "spr_pedidoCompleta",
+					"sid": 874688624857773
+				},
+				{
+					"id": "destroy",
+					"objectClass": "spr_stars",
+					"sid": 557351158085608
+				},
+				{
+					"id": "add-remove-animation",
+					"objectClass": "spr_cliente",
+					"sid": 332801957832400,
+					"parameters": {
+						"which": "remove",
+						"name": "\"Completa\""
+					}
+				},
+				{
+					"id": "set-animation",
+					"objectClass": "spr_cliente",
+					"sid": 322542246849891,
+					"parameters": {
+						"animation": "\"Enojado\"",
+						"from": "beginning"
+					}
+				},
+				{
+					"id": "set-flipped",
+					"objectClass": "spr_cliente",
+					"sid": 556922756316786,
+					"parameters": {
+						"state": "flipped"
+					}
+				},
+				{
+					"id": "move-to-object",
+					"objectClass": "spr_cliente",
+					"sid": 275266527778649,
+					"behaviorType": "MoveTo",
+					"parameters": {
+						"object": "spr_spawner_clientes",
+						"image-point": "0",
+						"mode": "direct"
+					}
+				},
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 750073498130257,
+					"parameters": {
+						"seconds": "5"
+					}
+				},
+				{
+					"id": "destroy",
+					"objectClass": "spr_cliente",
+					"sid": 993173587394495
+				}
+			],
+			"sid": 283938327075830
 		},
 		{
 			"eventType": "block",
@@ -18100,7 +17824,7 @@
 				{
 					"id": "on-key-pressed",
 					"objectClass": "Teclado",
-					"sid": 589028172761438,
+					"sid": 614758428160570,
 					"parameters": {
 						"key": 69
 					}
@@ -18108,140 +17832,239 @@
 				{
 					"id": "is-overlapping-another-object",
 					"objectClass": "Personaje",
-					"sid": 301241442822808,
+					"sid": 179505990885096,
 					"parameters": {
-						"object": "spr_espacio_cliente2"
+						"object": "spr_espacio_cliente"
+					}
+				},
+				{
+					"id": "is-overlapping-another-object",
+					"objectClass": "Mesa",
+					"sid": 503759856841269,
+					"parameters": {
+						"object": "Hamburguesa2"
+					}
+				},
+				{
+					"id": "is-boolean-instance-variable-set",
+					"objectClass": "Personaje",
+					"sid": 228893277413822,
+					"parameters": {
+						"instance-variable": "Vacio"
+					}
+				},
+				{
+					"id": "is-animation-playing",
+					"objectClass": "Hamburguesa2",
+					"sid": 695237817190410,
+					"parameters": {
+						"animation": "\"Animation 2\""
 					}
 				}
 			],
-			"actions": [],
-			"sid": 588414164204584,
+			"actions": [
+				{
+					"id": "set-boolean-instvar",
+					"objectClass": "Personaje",
+					"sid": 797163245701918,
+					"parameters": {
+						"instance-variable": "CompQuemada",
+						"value": "true"
+					}
+				},
+				{
+					"id": "set-animation",
+					"objectClass": "Personaje",
+					"sid": 913292179534611,
+					"parameters": {
+						"animation": "\"FPlaSerQue\"",
+						"from": "beginning"
+					}
+				},
+				{
+					"id": "set-boolean-instvar",
+					"objectClass": "Personaje",
+					"sid": 149984847357470,
+					"parameters": {
+						"instance-variable": "Vacio",
+						"value": "false"
+					}
+				},
+				{
+					"id": "set-boolean-instvar",
+					"objectClass": "Personaje",
+					"sid": 627836154431484,
+					"parameters": {
+						"instance-variable": "Ocupado",
+						"value": "true"
+					}
+				},
+				{
+					"id": "destroy",
+					"objectClass": "Hamburguesa2",
+					"sid": 627825217686467
+				}
+			],
+			"sid": 326372539350103
+		},
+		{
+			"eventType": "comment",
+			"text": "Cliente 2",
+			"background-color": [
+				0.6784313725490196,
+				1,
+				0.7333333333333333,
+				1
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 850575665814874,
+					"parameters": {
+						"variable": "Clientes",
+						"comparison": 0,
+						"value": "2"
+					}
+				},
+				{
+					"id": "compare-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 133772043719280,
+					"parameters": {
+						"variable": "C2decidio"
+					}
+				},
+				{
+					"id": "trigger-once-while-true",
+					"objectClass": "System",
+					"sid": 528292514886863
+				}
+			],
+			"actions": [
+				{
+					"id": "set-visible",
+					"objectClass": "spr_espacio_pedido2",
+					"sid": 503427479508163,
+					"parameters": {
+						"visibility": "invisible"
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "spr_pedidoSinLechuga",
+					"sid": 709417753840499,
+					"parameters": {
+						"visibility": "visible"
+					}
+				},
+				{
+					"id": "set-animation",
+					"objectClass": "spr_cliente2",
+					"sid": 472771395643725,
+					"parameters": {
+						"animation": "\"SinLechuga\"",
+						"from": "beginning"
+					}
+				}
+			],
+			"sid": 677763172604967,
 			"children": [
 				{
 					"eventType": "block",
 					"conditions": [
 						{
-							"id": "is-boolean-instance-variable-set",
+							"id": "is-overlapping-another-object",
 							"objectClass": "Personaje",
-							"sid": 508824047304113,
+							"sid": 442365313679510,
 							"parameters": {
-								"instance-variable": "SinLechuga"
-							}
+								"object": "spr_espacio_cliente2"
+							},
+							"isInverted": true
 						}
 					],
 					"actions": [
 						{
-							"id": "destroy",
-							"objectClass": "spr_espacio_pedido2",
-							"sid": 673322904363252
-						},
-						{
-							"id": "destroy",
-							"objectClass": "spr_pedidoSinLechuga",
-							"sid": 299020740745781
-						},
-						{
-							"id": "add-to-eventvar",
+							"id": "wait",
 							"objectClass": "System",
-							"sid": 424597325197094,
+							"sid": 441850912421681,
 							"parameters": {
-								"variable": "Monedas",
-								"value": "10"
-							}
-						},
-						{
-							"id": "spawn-another-object",
-							"objectClass": "Mesa2",
-							"sid": 421350141022400,
-							"parameters": {
-								"object": "spr_sinlechuga",
-								"layer": "4",
-								"image-point": "0",
-								"create-hierarchy": false,
-								"template-name": "\"\""
-							}
-						},
-						{
-							"id": "set-boolean-instvar",
-							"objectClass": "Personaje",
-							"sid": 470377654578924,
-							"parameters": {
-								"instance-variable": "SinLechuga",
-								"value": "false"
-							}
-						},
-						{
-							"id": "set-animation",
-							"objectClass": "Personaje",
-							"sid": 604306720035007,
-							"parameters": {
-								"animation": "\"Front\"",
-								"from": "beginning"
+								"seconds": "20"
 							}
 						},
 						{
 							"id": "set-animation",
 							"objectClass": "spr_cliente2",
-							"sid": 406238354026730,
+							"sid": 238576536898987,
 							"parameters": {
-								"animation": "\"Normal\"",
+								"animation": "\"ImpSinLechuga\"",
 								"from": "beginning"
 							}
 						},
 						{
 							"id": "wait",
 							"objectClass": "System",
-							"sid": 223010035082078,
+							"sid": 877116712614877,
 							"parameters": {
-								"seconds": "10"
+								"seconds": "30"
 							}
 						},
 						{
-							"id": "destroy",
-							"objectClass": "spr_sinlechuga",
-							"sid": 486290259350607
-						},
-						{
-							"id": "spawn-another-object",
-							"objectClass": "Mesa2",
-							"sid": 972283281321363,
-							"parameters": {
-								"object": "Plato2",
-								"layer": "4",
-								"image-point": "1",
-								"create-hierarchy": false,
-								"template-name": "\"\""
-							}
-						},
-						{
-							"id": "set-flipped",
+							"id": "add-remove-animation",
 							"objectClass": "spr_cliente2",
-							"sid": 751200174981012,
+							"sid": 200145686973040,
 							"parameters": {
-								"state": "flipped"
+								"which": "remove",
+								"name": "\"SinLechuga\""
 							}
 						},
 						{
-							"id": "move-to-position",
+							"id": "add-remove-animation",
 							"objectClass": "spr_cliente2",
-							"sid": 850808460331202,
-							"behaviorType": "MoveTo",
+							"sid": 600991735170534,
 							"parameters": {
-								"x": "spr_spawner_clientes2.X",
-								"y": "spr_spawner_clientes2.Y",
-								"mode": "direct"
+								"which": "remove",
+								"name": "\"ImpSinLechuga\""
+							}
+						},
+						{
+							"id": "set-animation",
+							"objectClass": "spr_cliente2",
+							"sid": 694948934586645,
+							"parameters": {
+								"animation": "\"Enojado\"",
+								"from": "beginning"
+							}
+						},
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 662863226480531,
+							"parameters": {
+								"seconds": "5"
+							}
+						},
+						{
+							"id": "signal",
+							"objectClass": "System",
+							"sid": 630456091424991,
+							"parameters": {
+								"tag": "\"enojado2\""
 							}
 						}
 					],
-					"sid": 161325757338690
+					"sid": 771141031476831
 				}
 			]
 		},
 		{
 			"eventType": "comment",
-			"text": "SERVIR 3",
+			"text": "SERVIR 2",
 			"background-color": [
-				0.7019607843137254,
+				0.6784313725490196,
 				1,
 				0.7333333333333333,
 				1
@@ -18253,7 +18076,7 @@
 				{
 					"id": "on-key-pressed",
 					"objectClass": "Teclado",
-					"sid": 744475313239349,
+					"sid": 143567537074508,
 					"parameters": {
 						"key": 69
 					}
@@ -18261,14 +18084,22 @@
 				{
 					"id": "is-overlapping-another-object",
 					"objectClass": "Personaje",
-					"sid": 734570509792777,
+					"sid": 338060062537172,
 					"parameters": {
-						"object": "spr_espacio_cliente3"
+						"object": "spr_espacio_cliente2"
+					}
+				},
+				{
+					"id": "is-animation-playing",
+					"objectClass": "spr_cliente2",
+					"sid": 202352687066423,
+					"parameters": {
+						"animation": "\"SinLechuga\""
 					}
 				}
 			],
 			"actions": [],
-			"sid": 480840403315743,
+			"sid": 491117509799108,
 			"children": [
 				{
 					"eventType": "block",
@@ -18276,66 +18107,39 @@
 						{
 							"id": "is-boolean-instance-variable-set",
 							"objectClass": "Personaje",
-							"sid": 396915043098463,
+							"sid": 708699105443735,
 							"parameters": {
-								"instance-variable": "SinTomate"
+								"instance-variable": "SinLechuga"
 							}
+						},
+						{
+							"id": "trigger-once-while-true",
+							"objectClass": "System",
+							"sid": 237021464249681
 						}
 					],
 					"actions": [
 						{
-							"id": "destroy",
-							"objectClass": "spr_espacio_pedido3",
-							"sid": 491574562051409
-						},
-						{
-							"id": "destroy",
-							"objectClass": "spr_pedidoSinTomate",
-							"sid": 863619848099024
+							"id": "signal",
+							"objectClass": "System",
+							"sid": 972826624051334,
+							"parameters": {
+								"tag": "\"reset\""
+							}
 						},
 						{
 							"id": "add-to-eventvar",
 							"objectClass": "System",
-							"sid": 971414663654836,
+							"sid": 319840025044006,
 							"parameters": {
 								"variable": "Monedas",
 								"value": "10"
 							}
 						},
 						{
-							"id": "spawn-another-object",
-							"objectClass": "Mesa3",
-							"sid": 984761851382042,
-							"parameters": {
-								"object": "spr_sintomate",
-								"layer": "4",
-								"image-point": "0",
-								"create-hierarchy": false,
-								"template-name": "\"\""
-							}
-						},
-						{
-							"id": "set-boolean-instvar",
-							"objectClass": "Personaje",
-							"sid": 355073272128302,
-							"parameters": {
-								"instance-variable": "SinTomate",
-								"value": "false"
-							}
-						},
-						{
 							"id": "set-animation",
-							"objectClass": "Personaje",
-							"sid": 235087612111128,
-							"parameters": {
-								"animation": "\"Front\"",
-								"from": "beginning"
-							}
-						},
-						{
-							"id": "set-animation",
-							"objectClass": "spr_cliente3",
-							"sid": 900185582031495,
+							"objectClass": "spr_cliente2",
+							"sid": 545721264960711,
 							"parameters": {
 								"animation": "\"Normal\"",
 								"from": "beginning"
@@ -18344,20 +18148,562 @@
 						{
 							"id": "wait",
 							"objectClass": "System",
-							"sid": 846073902895806,
+							"sid": 252801523623263,
 							"parameters": {
 								"seconds": "10"
 							}
 						},
 						{
+							"id": "set-visible",
+							"objectClass": "spr_espacio_pedido2",
+							"sid": 312548461725319,
+							"parameters": {
+								"visibility": "visible"
+							}
+						},
+						{
 							"id": "destroy",
-							"objectClass": "spr_sintomate",
-							"sid": 410414663805173
+							"objectClass": "spr_pedidoSinLechuga",
+							"sid": 596339605301509
+						},
+						{
+							"id": "spawn-another-object",
+							"objectClass": "Mesa2",
+							"sid": 595467925520235,
+							"parameters": {
+								"object": "Plato2",
+								"layer": "4",
+								"image-point": "1",
+								"create-hierarchy": false,
+								"template-name": "\"\""
+							}
+						},
+						{
+							"id": "set-flipped",
+							"objectClass": "spr_cliente2",
+							"sid": 179324668911111,
+							"parameters": {
+								"state": "flipped"
+							}
+						},
+						{
+							"id": "move-to-position",
+							"objectClass": "spr_cliente2",
+							"sid": 642755836058006,
+							"behaviorType": "MoveTo",
+							"parameters": {
+								"x": "spr_spawner_clientes2.X",
+								"y": "spr_spawner_clientes2.Y",
+								"mode": "direct"
+							}
+						}
+					],
+					"sid": 311964334025344
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "else",
+							"objectClass": "System",
+							"sid": 255511046099308
+						},
+						{
+							"id": "is-boolean-instance-variable-set",
+							"objectClass": "Personaje",
+							"sid": 849909332229267,
+							"parameters": {
+								"instance-variable": "CompQuemada"
+							}
+						},
+						{
+							"id": "trigger-once-while-true",
+							"objectClass": "System",
+							"sid": 748509625469809
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation",
+							"objectClass": "spr_cliente2",
+							"sid": 330880889094238,
+							"parameters": {
+								"animation": "\"Enojado\"",
+								"from": "beginning"
+							}
+						},
+						{
+							"id": "signal",
+							"objectClass": "System",
+							"sid": 947835146727908,
+							"parameters": {
+								"tag": "\"enojado2\""
+							}
+						},
+						{
+							"id": "signal",
+							"objectClass": "System",
+							"sid": 780034287055038,
+							"parameters": {
+								"tag": "\"reset\""
+							}
+						},
+						{
+							"id": "spawn-another-object",
+							"objectClass": "Mesa2",
+							"sid": 187000926909890,
+							"parameters": {
+								"object": "Hamburguesa2",
+								"layer": "4",
+								"image-point": "1",
+								"create-hierarchy": false,
+								"template-name": "\"\""
+							}
+						},
+						{
+							"id": "set-animation",
+							"objectClass": "Hamburguesa2",
+							"sid": 724710444484538,
+							"parameters": {
+								"animation": "\"Animation 2\"",
+								"from": "beginning"
+							}
+						}
+					],
+					"sid": 147602189354505
+				}
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-signal",
+					"objectClass": "System",
+					"sid": 201180459159141,
+					"parameters": {
+						"tag": "\"enojado2\""
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-visible",
+					"objectClass": "spr_espacio_pedido2",
+					"sid": 341553565809621,
+					"parameters": {
+						"visibility": "visible"
+					}
+				},
+				{
+					"id": "destroy",
+					"objectClass": "spr_pedidoSinLechuga",
+					"sid": 582226581697633
+				},
+				{
+					"id": "subtract-from-eventvar",
+					"objectClass": "System",
+					"sid": 497240213847415,
+					"disabled": true,
+					"parameters": {
+						"variable": "Estrellas",
+						"value": "1"
+					}
+				},
+				{
+					"id": "destroy",
+					"objectClass": "spr_stars2",
+					"sid": 451889668725933,
+					"disabled": true
+				},
+				{
+					"id": "add-remove-animation",
+					"objectClass": "spr_cliente2",
+					"sid": 950834582211678,
+					"parameters": {
+						"which": "remove",
+						"name": "\"SinLechuga\""
+					}
+				},
+				{
+					"id": "set-animation",
+					"objectClass": "spr_cliente2",
+					"sid": 173421691073550,
+					"parameters": {
+						"animation": "\"Enojado\"",
+						"from": "beginning"
+					}
+				},
+				{
+					"id": "set-flipped",
+					"objectClass": "spr_cliente2",
+					"sid": 970141963704516,
+					"parameters": {
+						"state": "flipped"
+					}
+				},
+				{
+					"id": "move-to-object",
+					"objectClass": "spr_cliente2",
+					"sid": 983288880113061,
+					"behaviorType": "MoveTo",
+					"parameters": {
+						"object": "spr_spawner_clientes2",
+						"image-point": "0",
+						"mode": "direct"
+					}
+				},
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 489167071361464,
+					"parameters": {
+						"seconds": "5"
+					}
+				},
+				{
+					"id": "destroy",
+					"objectClass": "spr_cliente2",
+					"sid": 670833834050136
+				}
+			],
+			"sid": 427809219119047
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-key-pressed",
+					"objectClass": "Teclado",
+					"sid": 124557277462729,
+					"parameters": {
+						"key": 69
+					}
+				},
+				{
+					"id": "is-overlapping-another-object",
+					"objectClass": "Personaje",
+					"sid": 748183660467655,
+					"parameters": {
+						"object": "spr_espacio_cliente2"
+					}
+				},
+				{
+					"id": "is-overlapping-another-object",
+					"objectClass": "Mesa2",
+					"sid": 305782550490273,
+					"parameters": {
+						"object": "Hamburguesa2"
+					}
+				},
+				{
+					"id": "is-boolean-instance-variable-set",
+					"objectClass": "Personaje",
+					"sid": 766330133847218,
+					"parameters": {
+						"instance-variable": "Vacio"
+					}
+				},
+				{
+					"id": "is-animation-playing",
+					"objectClass": "Hamburguesa2",
+					"sid": 202234816854348,
+					"parameters": {
+						"animation": "\"Animation 2\""
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-boolean-instvar",
+					"objectClass": "Personaje",
+					"sid": 390700623952104,
+					"parameters": {
+						"instance-variable": "CompQuemada",
+						"value": "true"
+					}
+				},
+				{
+					"id": "set-animation",
+					"objectClass": "Personaje",
+					"sid": 165734262010512,
+					"parameters": {
+						"animation": "\"FPlaSerQue\"",
+						"from": "beginning"
+					}
+				},
+				{
+					"id": "set-boolean-instvar",
+					"objectClass": "Personaje",
+					"sid": 268145481925324,
+					"parameters": {
+						"instance-variable": "Vacio",
+						"value": "false"
+					}
+				},
+				{
+					"id": "set-boolean-instvar",
+					"objectClass": "Personaje",
+					"sid": 354940765231867,
+					"parameters": {
+						"instance-variable": "Ocupado",
+						"value": "true"
+					}
+				},
+				{
+					"id": "destroy",
+					"objectClass": "Hamburguesa2",
+					"sid": 718176868235349
+				}
+			],
+			"sid": 328790964287838
+		},
+		{
+			"eventType": "comment",
+			"text": "Cliente 3",
+			"background-color": [
+				0.6784313725490196,
+				1,
+				0.7333333333333333,
+				1
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 781949942644684,
+					"parameters": {
+						"variable": "Clientes",
+						"comparison": 0,
+						"value": "3"
+					}
+				},
+				{
+					"id": "compare-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 191339143899099,
+					"parameters": {
+						"variable": "C3decidio"
+					}
+				},
+				{
+					"id": "trigger-once-while-true",
+					"objectClass": "System",
+					"sid": 297467601742932
+				}
+			],
+			"actions": [
+				{
+					"id": "set-visible",
+					"objectClass": "spr_espacio_pedido3",
+					"sid": 418653408865123,
+					"parameters": {
+						"visibility": "invisible"
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "spr_pedidoSinTomate",
+					"sid": 419082976795219,
+					"parameters": {
+						"visibility": "visible"
+					}
+				},
+				{
+					"id": "set-animation",
+					"objectClass": "spr_cliente3",
+					"sid": 246061671455912,
+					"parameters": {
+						"animation": "\"SinTomate\"",
+						"from": "beginning"
+					}
+				}
+			],
+			"sid": 620129790445775,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-overlapping-another-object",
+							"objectClass": "Personaje",
+							"sid": 318411028035069,
+							"parameters": {
+								"object": "spr_espacio_cliente3"
+							},
+							"isInverted": true
+						}
+					],
+					"actions": [
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 176826523174416,
+							"parameters": {
+								"seconds": "20"
+							}
+						},
+						{
+							"id": "set-animation",
+							"objectClass": "spr_cliente3",
+							"sid": 853507505346399,
+							"parameters": {
+								"animation": "\"ImpSinTomate\"",
+								"from": "beginning"
+							}
+						},
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 301493741444353,
+							"parameters": {
+								"seconds": "30"
+							}
+						},
+						{
+							"id": "add-remove-animation",
+							"objectClass": "spr_cliente2",
+							"sid": 820804172760691,
+							"parameters": {
+								"which": "remove",
+								"name": "\"SinTomate\""
+							}
+						},
+						{
+							"id": "set-animation",
+							"objectClass": "spr_cliente3",
+							"sid": 308891287197743,
+							"parameters": {
+								"animation": "\"Enojado\"",
+								"from": "beginning"
+							}
+						},
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 369749171478411,
+							"parameters": {
+								"seconds": "5"
+							}
+						},
+						{
+							"id": "signal",
+							"objectClass": "System",
+							"sid": 675925719610023,
+							"parameters": {
+								"tag": "\"enojado3\""
+							}
+						}
+					],
+					"sid": 227454297585302
+				}
+			]
+		},
+		{
+			"eventType": "comment",
+			"text": "SERVIR 3",
+			"background-color": [
+				0.6784313725490196,
+				1,
+				0.7333333333333333,
+				1
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-key-pressed",
+					"objectClass": "Teclado",
+					"sid": 618309436477403,
+					"parameters": {
+						"key": 69
+					}
+				},
+				{
+					"id": "is-overlapping-another-object",
+					"objectClass": "Personaje",
+					"sid": 584809958826411,
+					"parameters": {
+						"object": "spr_espacio_cliente3"
+					}
+				},
+				{
+					"id": "is-animation-playing",
+					"objectClass": "spr_cliente3",
+					"sid": 730240069359243,
+					"parameters": {
+						"animation": "\"SinTomate\""
+					}
+				}
+			],
+			"actions": [],
+			"sid": 116104845513747,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-boolean-instance-variable-set",
+							"objectClass": "Personaje",
+							"sid": 826289729232472,
+							"parameters": {
+								"instance-variable": "SinTomate"
+							}
+						},
+						{
+							"id": "trigger-once-while-true",
+							"objectClass": "System",
+							"sid": 496803964992541
+						}
+					],
+					"actions": [
+						{
+							"id": "add-to-eventvar",
+							"objectClass": "System",
+							"sid": 603600345601687,
+							"parameters": {
+								"variable": "Monedas",
+								"value": "10"
+							}
+						},
+						{
+							"id": "set-animation",
+							"objectClass": "spr_cliente3",
+							"sid": 548661748981317,
+							"parameters": {
+								"animation": "\"Normal\"",
+								"from": "beginning"
+							}
+						},
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 365684519419314,
+							"parameters": {
+								"seconds": "10"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "spr_espacio_pedido3",
+							"sid": 586408547569137,
+							"parameters": {
+								"visibility": "visible"
+							}
+						},
+						{
+							"id": "destroy",
+							"objectClass": "spr_pedidoSinTomate",
+							"sid": 783936761581868
 						},
 						{
 							"id": "spawn-another-object",
 							"objectClass": "Mesa3",
-							"sid": 185941914374427,
+							"sid": 624674484349723,
 							"parameters": {
 								"object": "Plato2",
 								"layer": "4",
@@ -18369,7 +18715,7 @@
 						{
 							"id": "set-flipped",
 							"objectClass": "spr_cliente3",
-							"sid": 396131575929517,
+							"sid": 939471415319927,
 							"parameters": {
 								"state": "flipped"
 							}
@@ -18377,7 +18723,7 @@
 						{
 							"id": "move-to-position",
 							"objectClass": "spr_cliente3",
-							"sid": 342991090994844,
+							"sid": 663223111211519,
 							"behaviorType": "MoveTo",
 							"parameters": {
 								"x": "spr_spawner_clientes3.X",
@@ -18386,9 +18732,555 @@
 							}
 						}
 					],
-					"sid": 554969272901662
+					"sid": 904867775508923
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "else",
+							"objectClass": "System",
+							"sid": 508855357095932
+						},
+						{
+							"id": "is-boolean-instance-variable-set",
+							"objectClass": "Personaje",
+							"sid": 699325286510504,
+							"parameters": {
+								"instance-variable": "CompQuemada"
+							}
+						},
+						{
+							"id": "trigger-once-while-true",
+							"objectClass": "System",
+							"sid": 359526358591125
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation",
+							"objectClass": "spr_cliente3",
+							"sid": 446027141521413,
+							"parameters": {
+								"animation": "\"Enojado\"",
+								"from": "beginning"
+							}
+						},
+						{
+							"id": "signal",
+							"objectClass": "System",
+							"sid": 612300187435377,
+							"parameters": {
+								"tag": "\"enojado3\""
+							}
+						},
+						{
+							"id": "signal",
+							"objectClass": "System",
+							"sid": 956595771682354,
+							"parameters": {
+								"tag": "\"reset\""
+							}
+						},
+						{
+							"id": "spawn-another-object",
+							"objectClass": "Mesa3",
+							"sid": 673655406840321,
+							"parameters": {
+								"object": "Hamburguesa2",
+								"layer": "4",
+								"image-point": "1",
+								"create-hierarchy": false,
+								"template-name": "\"\""
+							}
+						},
+						{
+							"id": "set-animation",
+							"objectClass": "Hamburguesa2",
+							"sid": 947539192058163,
+							"parameters": {
+								"animation": "\"Animation 2\"",
+								"from": "beginning"
+							}
+						},
+						{
+							"id": "subtract-from-eventvar",
+							"objectClass": "System",
+							"sid": 422642098761333,
+							"parameters": {
+								"variable": "Estrellas",
+								"value": "1"
+							}
+						}
+					],
+					"sid": 846022340229087
 				}
 			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-signal",
+					"objectClass": "System",
+					"sid": 678494167188526,
+					"parameters": {
+						"tag": "\"enojado3\""
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-visible",
+					"objectClass": "spr_espacio_pedido3",
+					"sid": 239687674145905,
+					"parameters": {
+						"visibility": "visible"
+					}
+				},
+				{
+					"id": "destroy",
+					"objectClass": "spr_pedidoSinTomate",
+					"sid": 213567927402727
+				},
+				{
+					"id": "destroy",
+					"objectClass": "spr_stars3",
+					"sid": 893707795444407
+				},
+				{
+					"id": "add-remove-animation",
+					"objectClass": "spr_cliente3",
+					"sid": 537808561585014,
+					"parameters": {
+						"which": "remove",
+						"name": "\"SinTomate\""
+					}
+				},
+				{
+					"id": "set-animation",
+					"objectClass": "spr_cliente3",
+					"sid": 716805346871890,
+					"parameters": {
+						"animation": "\"Enojado\"",
+						"from": "beginning"
+					}
+				},
+				{
+					"id": "set-flipped",
+					"objectClass": "spr_cliente3",
+					"sid": 609476064141650,
+					"parameters": {
+						"state": "flipped"
+					}
+				},
+				{
+					"id": "move-to-object",
+					"objectClass": "spr_cliente3",
+					"sid": 152065134390472,
+					"behaviorType": "MoveTo",
+					"parameters": {
+						"object": "spr_spawner_clientes3",
+						"image-point": "0",
+						"mode": "direct"
+					}
+				},
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 530622996820856,
+					"parameters": {
+						"seconds": "5"
+					}
+				},
+				{
+					"id": "destroy",
+					"objectClass": "spr_cliente3",
+					"sid": 385157993332836
+				}
+			],
+			"sid": 534625661321195
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-key-pressed",
+					"objectClass": "Teclado",
+					"sid": 581959119727913,
+					"parameters": {
+						"key": 69
+					}
+				},
+				{
+					"id": "is-overlapping-another-object",
+					"objectClass": "Personaje",
+					"sid": 683618824282226,
+					"parameters": {
+						"object": "spr_espacio_cliente3"
+					}
+				},
+				{
+					"id": "is-overlapping-another-object",
+					"objectClass": "Mesa3",
+					"sid": 896498479994344,
+					"parameters": {
+						"object": "Hamburguesa2"
+					}
+				},
+				{
+					"id": "is-boolean-instance-variable-set",
+					"objectClass": "Personaje",
+					"sid": 249789867231157,
+					"parameters": {
+						"instance-variable": "Vacio"
+					}
+				},
+				{
+					"id": "is-animation-playing",
+					"objectClass": "Hamburguesa2",
+					"sid": 331328853492426,
+					"parameters": {
+						"animation": "\"Animation 2\""
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-boolean-instvar",
+					"objectClass": "Personaje",
+					"sid": 715792368213145,
+					"parameters": {
+						"instance-variable": "CompQuemada",
+						"value": "true"
+					}
+				},
+				{
+					"id": "set-animation",
+					"objectClass": "Personaje",
+					"sid": 462343021888959,
+					"parameters": {
+						"animation": "\"FPlaSerQue\"",
+						"from": "beginning"
+					}
+				},
+				{
+					"id": "set-boolean-instvar",
+					"objectClass": "Personaje",
+					"sid": 928022992460121,
+					"parameters": {
+						"instance-variable": "Vacio",
+						"value": "false"
+					}
+				},
+				{
+					"id": "set-boolean-instvar",
+					"objectClass": "Personaje",
+					"sid": 651962604477047,
+					"parameters": {
+						"instance-variable": "Ocupado",
+						"value": "true"
+					}
+				},
+				{
+					"id": "destroy",
+					"objectClass": "Hamburguesa2",
+					"sid": 868540998968301
+				}
+			],
+			"sid": 500439551350603
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Reset Vars",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-signal",
+							"objectClass": "System",
+							"sid": 163438567305821,
+							"parameters": {
+								"tag": "\"reset\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation",
+							"objectClass": "Personaje",
+							"sid": 324603395261967,
+							"parameters": {
+								"animation": "\"Front\"",
+								"from": "beginning"
+							}
+						},
+						{
+							"id": "set-boolean-instvar",
+							"objectClass": "Personaje",
+							"sid": 105775837296782,
+							"parameters": {
+								"instance-variable": "Vacio",
+								"value": "true"
+							}
+						},
+						{
+							"id": "set-boolean-instvar",
+							"objectClass": "Personaje",
+							"sid": 263700475088453,
+							"parameters": {
+								"instance-variable": "CarneCocida",
+								"value": "false"
+							}
+						},
+						{
+							"id": "set-boolean-instvar",
+							"objectClass": "Personaje",
+							"sid": 717525822268458,
+							"parameters": {
+								"instance-variable": "CarneCruda",
+								"value": "false"
+							}
+						},
+						{
+							"id": "set-boolean-instvar",
+							"objectClass": "Personaje",
+							"sid": 458909076232231,
+							"parameters": {
+								"instance-variable": "CarneQuemada",
+								"value": "false"
+							}
+						},
+						{
+							"id": "set-boolean-instvar",
+							"objectClass": "Personaje",
+							"sid": 534547140180547,
+							"parameters": {
+								"instance-variable": "CebCor",
+								"value": "false"
+							}
+						},
+						{
+							"id": "set-boolean-instvar",
+							"objectClass": "Personaje",
+							"sid": 935883400813696,
+							"parameters": {
+								"instance-variable": "Cebolla",
+								"value": "false"
+							}
+						},
+						{
+							"id": "set-boolean-instvar",
+							"objectClass": "Personaje",
+							"sid": 382798134076013,
+							"parameters": {
+								"instance-variable": "CompQuemada",
+								"value": "false"
+							}
+						},
+						{
+							"id": "set-boolean-instvar",
+							"objectClass": "Personaje",
+							"sid": 166425884658546,
+							"parameters": {
+								"instance-variable": "Cuchillo",
+								"value": "false"
+							}
+						},
+						{
+							"id": "set-boolean-instvar",
+							"objectClass": "Personaje",
+							"sid": 748735549814538,
+							"parameters": {
+								"instance-variable": "LecCor",
+								"value": "false"
+							}
+						},
+						{
+							"id": "set-boolean-instvar",
+							"objectClass": "Personaje",
+							"sid": 404893777401386,
+							"parameters": {
+								"instance-variable": "Lechuga",
+								"value": "false"
+							}
+						},
+						{
+							"id": "set-boolean-instvar",
+							"objectClass": "Personaje",
+							"sid": 197341857337319,
+							"parameters": {
+								"instance-variable": "Ocupado",
+								"value": "false"
+							}
+						},
+						{
+							"id": "set-boolean-instvar",
+							"objectClass": "Personaje",
+							"sid": 371997740043547,
+							"parameters": {
+								"instance-variable": "Pan",
+								"value": "false"
+							}
+						},
+						{
+							"id": "set-boolean-instvar",
+							"objectClass": "Personaje",
+							"sid": 294934818534449,
+							"parameters": {
+								"instance-variable": "Plato",
+								"value": "false"
+							}
+						},
+						{
+							"id": "set-boolean-instvar",
+							"objectClass": "Personaje",
+							"sid": 574607576842313,
+							"parameters": {
+								"instance-variable": "PlatoSucio",
+								"value": "false"
+							}
+						},
+						{
+							"id": "set-boolean-instvar",
+							"objectClass": "Personaje",
+							"sid": 862906509989234,
+							"parameters": {
+								"instance-variable": "SinCebolla",
+								"value": "false"
+							}
+						},
+						{
+							"id": "set-boolean-instvar",
+							"objectClass": "Personaje",
+							"sid": 810170528591766,
+							"parameters": {
+								"instance-variable": "SinLechuga",
+								"value": "false"
+							}
+						},
+						{
+							"id": "set-boolean-instvar",
+							"objectClass": "Personaje",
+							"sid": 649422621457091,
+							"parameters": {
+								"instance-variable": "SinTomate",
+								"value": "false"
+							}
+						},
+						{
+							"id": "set-boolean-instvar",
+							"objectClass": "Personaje",
+							"sid": 139133335955026,
+							"parameters": {
+								"instance-variable": "Tomate",
+								"value": "false"
+							}
+						},
+						{
+							"id": "set-boolean-instvar",
+							"objectClass": "Personaje",
+							"sid": 967214567202948,
+							"parameters": {
+								"instance-variable": "TomCor",
+								"value": "false"
+							}
+						},
+						{
+							"id": "set-boolean-instvar",
+							"objectClass": "Personaje",
+							"sid": 956841026313869,
+							"parameters": {
+								"instance-variable": "Servido",
+								"value": "false"
+							}
+						},
+						{
+							"id": "set-animation",
+							"objectClass": "CuchilloMesada",
+							"sid": 100721572893319,
+							"parameters": {
+								"animation": "\"Cuchillo\"",
+								"from": "beginning"
+							}
+						}
+					],
+					"sid": 905952399880848
+				}
+			],
+			"sid": 351824316363493
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-key-pressed",
+					"objectClass": "Teclado",
+					"sid": 292490402311923,
+					"parameters": {
+						"key": 69
+					}
+				},
+				{
+					"id": "is-overlapping-another-object",
+					"objectClass": "Personaje",
+					"sid": 809411856184834,
+					"parameters": {
+						"object": "spr_chanchito"
+					}
+				},
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 942892865369579,
+					"parameters": {
+						"variable": "Monedas",
+						"comparison": 4,
+						"value": "0"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-text",
+					"objectClass": "txt_chanchito",
+					"sid": 871120004327839,
+					"parameters": {
+						"text": "Monedas"
+					}
+				},
+				{
+					"id": "add-to-eventvar",
+					"objectClass": "System",
+					"sid": 680102504781429,
+					"parameters": {
+						"variable": "chanchito",
+						"value": "Monedas"
+					}
+				},
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 750772046947509,
+					"parameters": {
+						"seconds": "1.0"
+					}
+				},
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 181247042767137,
+					"parameters": {
+						"variable": "Monedas",
+						"value": "0"
+					}
+				}
+			],
+			"sid": 101143770985464
 		}
 	],
 	"sid": 281322155169956
