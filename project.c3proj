@@ -1,6 +1,6 @@
 {
 	"projectFormatVersion": 1,
-	"savedWithRelease": 40702,
+	"savedWithRelease": 41600,
 	"name": "CocinaSim",
 	"runtime": "c3",
 	"useWorker": "auto",
@@ -176,7 +176,10 @@
 			"spr_sincebolla",
 			"spr_monedas",
 			"txt_monedas",
-			"spr_fondoMonedas"
+			"spr_fondoMonedas",
+			"spr_stars",
+			"spr_stars2",
+			"spr_stars3"
 		],
 		"subfolders": [
 			{
@@ -433,7 +436,6 @@
 		"preloadSounds": true,
 		"cordovaiOSScheme": "app",
 		"cordovaAndroidScheme": "https",
-		"autoReloadScriptsOnPreview": false,
 		"exportFileStructure": "folders",
 		"uidAllocationMode": "increment"
 	},

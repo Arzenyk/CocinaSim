@@ -136,6 +136,13 @@
 			"desc": "",
 			"show": true,
 			"sid": 541126807351423
+		},
+		{
+			"name": "CompQuemada",
+			"type": "boolean",
+			"desc": "",
+			"show": true,
+			"sid": 929688666727334
 		}
 	],
 	"behaviorTypes": [
@@ -1875,7 +1882,7 @@
 										"exportFormat": "lossless",
 										"exportQuality": 0.8,
 										"fileType": "image/png",
-										"imageSpriteId": 1019856,
+										"imageSpriteId": 5475593,
 										"collisionPoly": {
 											"points": [
 												0.0031446540880503146,
@@ -1894,7 +1901,7 @@
 									}
 								],
 								"sid": 879152894601727,
-								"name": "FPlaSer",
+								"name": "FPlaSerQue",
 								"isLooping": false,
 								"isPingPong": false,
 								"repeatCount": 1,
@@ -1931,7 +1938,7 @@
 									}
 								],
 								"sid": 535744327446306,
-								"name": "BPlaSer",
+								"name": "BPlaSerQue",
 								"isLooping": false,
 								"isPingPong": false,
 								"repeatCount": 1,
@@ -1949,7 +1956,7 @@
 										"exportFormat": "lossless",
 										"exportQuality": 0.8,
 										"fileType": "image/png",
-										"imageSpriteId": 709841,
+										"imageSpriteId": 9877187,
 										"collisionPoly": {
 											"points": [
 												0.0031446540880503146,
@@ -1968,7 +1975,7 @@
 									}
 								],
 								"sid": 109488538905702,
-								"name": "LPlaSer",
+								"name": "LPlaSerQue",
 								"isLooping": false,
 								"isPingPong": false,
 								"repeatCount": 1,
@@ -1986,7 +1993,7 @@
 										"exportFormat": "lossless",
 										"exportQuality": 0.8,
 										"fileType": "image/png",
-										"imageSpriteId": 9238130,
+										"imageSpriteId": 4312933,
 										"collisionPoly": {
 											"points": [
 												0.0031446540880503146,
@@ -2005,7 +2012,7 @@
 									}
 								],
 								"sid": 991232637133443,
-								"name": "RPlaSer",
+								"name": "RPlaSerQue",
 								"isLooping": false,
 								"isPingPong": false,
 								"repeatCount": 1,
@@ -2013,7 +2020,162 @@
 								"speed": 5
 							}
 						],
-						"subfolders": [],
+						"subfolders": [
+							{
+								"items": [
+									{
+										"frames": [
+											{
+												"width": 159,
+												"height": 251,
+												"originX": 0.5345911949685535,
+												"originY": 0.49800796812749004,
+												"originalSource": "",
+												"exportFormat": "lossless",
+												"exportQuality": 0.8,
+												"fileType": "image/png",
+												"imageSpriteId": 5481571,
+												"collisionPoly": {
+													"points": [
+														0.0031446540880503146,
+														0.4960159362549799,
+														1,
+														0.4860557768924303,
+														1,
+														0.9940239043824701,
+														0,
+														1
+													]
+												},
+												"useCollisionPoly": true,
+												"duration": 1,
+												"tag": ""
+											}
+										],
+										"sid": 604420031129181,
+										"name": "FPlaSer2",
+										"isLooping": false,
+										"isPingPong": false,
+										"repeatCount": 1,
+										"repeatTo": 0,
+										"speed": 5
+									},
+									{
+										"frames": [
+											{
+												"width": 159,
+												"height": 251,
+												"originX": 0.46540880503144655,
+												"originY": 0.49800796812749004,
+												"originalSource": "",
+												"exportFormat": "lossless",
+												"exportQuality": 0.8,
+												"fileType": "image/png",
+												"imageSpriteId": 7269597,
+												"collisionPoly": {
+													"points": [
+														0.0031446540880503146,
+														0.4960159362549799,
+														1,
+														0.4860557768924303,
+														1,
+														0.9940239043824701,
+														0,
+														1
+													]
+												},
+												"useCollisionPoly": true,
+												"duration": 1,
+												"tag": ""
+											}
+										],
+										"sid": 209482637563514,
+										"name": "BPlaSer2",
+										"isLooping": false,
+										"isPingPong": false,
+										"repeatCount": 1,
+										"repeatTo": 0,
+										"speed": 5
+									},
+									{
+										"frames": [
+											{
+												"width": 126,
+												"height": 251,
+												"originX": 0.5793650793650794,
+												"originY": 0.49800796812749004,
+												"originalSource": "",
+												"exportFormat": "lossless",
+												"exportQuality": 0.8,
+												"fileType": "image/png",
+												"imageSpriteId": 3089343,
+												"collisionPoly": {
+													"points": [
+														0.0031446540880503146,
+														0.4960159362549799,
+														1,
+														0.4860557768924303,
+														1,
+														0.9940239043824701,
+														0,
+														1
+													]
+												},
+												"useCollisionPoly": true,
+												"duration": 1,
+												"tag": ""
+											}
+										],
+										"sid": 160869437839991,
+										"name": "LPlaSer2",
+										"isLooping": false,
+										"isPingPong": false,
+										"repeatCount": 1,
+										"repeatTo": 0,
+										"speed": 5
+									},
+									{
+										"frames": [
+											{
+												"width": 126,
+												"height": 251,
+												"originX": 0.42063492063492064,
+												"originY": 0.49800796812749004,
+												"originalSource": "",
+												"exportFormat": "lossless",
+												"exportQuality": 0.8,
+												"fileType": "image/png",
+												"imageSpriteId": 3712039,
+												"collisionPoly": {
+													"points": [
+														0.0031446540880503146,
+														0.4960159362549799,
+														1,
+														0.4860557768924303,
+														1,
+														0.9940239043824701,
+														0,
+														1
+													]
+												},
+												"useCollisionPoly": true,
+												"duration": 1,
+												"tag": ""
+											}
+										],
+										"sid": 621300170105355,
+										"name": "RPlaSer2",
+										"isLooping": false,
+										"isPingPong": false,
+										"repeatCount": 1,
+										"repeatTo": 0,
+										"speed": 5
+									}
+								],
+								"subfolders": [],
+								"name": "Servido"
+							}
+						],
 						"name": "Servido"
 					},
 					{
