@@ -4371,9 +4371,9 @@
 								{
 									"id": "set-animation",
 									"objectClass": "Personaje",
-									"sid": 833423003927239,
+									"sid": 825928770624390,
 									"parameters": {
-										"animation": "\"BPlaSer\"",
+										"animation": "\"BPlaSer2\"",
 										"from": "beginning"
 									}
 								},
@@ -4422,9 +4422,9 @@
 								{
 									"id": "set-animation",
 									"objectClass": "Personaje",
-									"sid": 786410585759522,
+									"sid": 239951646543848,
 									"parameters": {
-										"animation": "\"LPlaSer\"",
+										"animation": "\"LPlaSer2\"",
 										"from": "beginning"
 									}
 								},
@@ -4473,9 +4473,9 @@
 								{
 									"id": "set-animation",
 									"objectClass": "Personaje",
-									"sid": 285880357883737,
+									"sid": 799090957974050,
 									"parameters": {
-										"animation": "\"FPlaSer\"",
+										"animation": "\"FPlaSer2\"",
 										"from": "beginning"
 									}
 								},
@@ -4524,9 +4524,9 @@
 								{
 									"id": "set-animation",
 									"objectClass": "Personaje",
-									"sid": 466885512761086,
+									"sid": 867810191589653,
 									"parameters": {
-										"animation": "\"RPlaSer\"",
+										"animation": "\"RPlaSer2\"",
 										"from": "beginning"
 									}
 								},
@@ -9774,6 +9774,24 @@
 							}
 						},
 						{
+							"id": "compare-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 703679056268095,
+							"parameters": {
+								"variable": "Mes_CarQue"
+							},
+							"isInverted": true
+						},
+						{
+							"id": "compare-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 882154565716741,
+							"parameters": {
+								"variable": "Mes_CarCru"
+							},
+							"isInverted": true
+						},
+						{
 							"id": "is-boolean-instance-variable-set",
 							"objectClass": "Personaje",
 							"sid": 486995107807881,
@@ -9795,9 +9813,9 @@
 						{
 							"id": "set-animation",
 							"objectClass": "Personaje",
-							"sid": 805546330688134,
+							"sid": 870249162041700,
 							"parameters": {
-								"animation": "\"FPlaSer\"",
+								"animation": "\"FPlaSer2\"",
 								"from": "beginning"
 							}
 						},
@@ -9829,6 +9847,15 @@
 							}
 						},
 						{
+							"id": "set-boolean-instvar",
+							"objectClass": "Personaje",
+							"sid": 493639893186557,
+							"parameters": {
+								"instance-variable": "Plato",
+								"value": "false"
+							}
+						},
+						{
 							"id": "set-boolean-eventvar",
 							"objectClass": "System",
 							"sid": 647721925189920,
@@ -9839,6 +9866,139 @@
 						}
 					],
 					"sid": 447436336526970
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 596368885948700,
+							"parameters": {
+								"variable": "MesadaVacia"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 868100156873168,
+							"parameters": {
+								"variable": "Mes_Plato",
+								"value": "false"
+							}
+						},
+						{
+							"id": "set-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 192884438098122,
+							"parameters": {
+								"variable": "Mes_Ceb",
+								"value": "false"
+							}
+						},
+						{
+							"id": "set-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 263900400039357,
+							"parameters": {
+								"variable": "Mes_Lech",
+								"value": "false"
+							}
+						},
+						{
+							"id": "set-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 483983291760389,
+							"parameters": {
+								"variable": "Mes_Tom",
+								"value": "false"
+							}
+						},
+						{
+							"id": "set-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 479181395930174,
+							"parameters": {
+								"variable": "Mes_Pan",
+								"value": "false"
+							}
+						},
+						{
+							"id": "set-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 879134169550385,
+							"parameters": {
+								"variable": "Mes_CarCoc",
+								"value": "false"
+							}
+						},
+						{
+							"id": "set-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 831860293902426,
+							"parameters": {
+								"variable": "Mes_CarCru",
+								"value": "false"
+							}
+						},
+						{
+							"id": "set-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 738965000092460,
+							"parameters": {
+								"variable": "Mes_CarQue",
+								"value": "false"
+							}
+						},
+						{
+							"id": "destroy",
+							"objectClass": "PlatoFinal",
+							"sid": 578357874108750
+						},
+						{
+							"id": "destroy",
+							"objectClass": "PanFinal",
+							"sid": 663603961463021
+						},
+						{
+							"id": "destroy",
+							"objectClass": "PanArriba",
+							"sid": 907245075315396
+						},
+						{
+							"id": "destroy",
+							"objectClass": "CarneCocidaFinal",
+							"sid": 615957681481556
+						},
+						{
+							"id": "destroy",
+							"objectClass": "CarneCrudaFinal",
+							"sid": 440313222090128
+						},
+						{
+							"id": "destroy",
+							"objectClass": "CarneQuemadaFinal",
+							"sid": 493563180271662
+						},
+						{
+							"id": "destroy",
+							"objectClass": "LechugaFinal",
+							"sid": 468476173990224
+						},
+						{
+							"id": "destroy",
+							"objectClass": "TomateFinal",
+							"sid": 866315245151324
+						},
+						{
+							"id": "destroy",
+							"objectClass": "CebollaFinal",
+							"sid": 777669954805238
+						}
+					],
+					"sid": 697822214117284
 				},
 				{
 					"eventType": "comment",
@@ -9905,6 +10065,15 @@
 							}
 						},
 						{
+							"id": "compare-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 858316738878983,
+							"parameters": {
+								"variable": "Mes_Lech"
+							},
+							"isInverted": true
+						},
+						{
 							"id": "is-boolean-instance-variable-set",
 							"objectClass": "Personaje",
 							"sid": 844042580522710,
@@ -9957,6 +10126,15 @@
 							"parameters": {
 								"animation": "\"Vacio\"",
 								"from": "beginning"
+							}
+						},
+						{
+							"id": "set-boolean-instvar",
+							"objectClass": "Personaje",
+							"sid": 989908453411757,
+							"parameters": {
+								"instance-variable": "Plato",
+								"value": "false"
 							}
 						},
 						{
@@ -10169,6 +10347,15 @@
 							}
 						},
 						{
+							"id": "compare-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 397291593772099,
+							"parameters": {
+								"variable": "Mes_Tom"
+							},
+							"isInverted": true
+						},
+						{
 							"id": "is-boolean-instance-variable-set",
 							"objectClass": "Personaje",
 							"sid": 452956969395739,
@@ -10221,6 +10408,15 @@
 							"parameters": {
 								"animation": "\"Vacio\"",
 								"from": "beginning"
+							}
+						},
+						{
+							"id": "set-boolean-instvar",
+							"objectClass": "Personaje",
+							"sid": 836532522326246,
+							"parameters": {
+								"instance-variable": "Plato",
+								"value": "false"
 							}
 						},
 						{
@@ -10433,6 +10629,15 @@
 							}
 						},
 						{
+							"id": "compare-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 262759656075315,
+							"parameters": {
+								"variable": "Mes_Ceb"
+							},
+							"isInverted": true
+						},
+						{
 							"id": "is-boolean-instance-variable-set",
 							"objectClass": "Personaje",
 							"sid": 501780918277963,
@@ -10485,6 +10690,15 @@
 							"parameters": {
 								"animation": "\"Vacio\"",
 								"from": "beginning"
+							}
+						},
+						{
+							"id": "set-boolean-instvar",
+							"objectClass": "Personaje",
+							"sid": 568780372728361,
+							"parameters": {
+								"instance-variable": "Plato",
+								"value": "false"
 							}
 						},
 						{
@@ -10705,6 +10919,24 @@
 							}
 						},
 						{
+							"id": "compare-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 312315422398391,
+							"parameters": {
+								"variable": "Mes_CarCoc"
+							},
+							"isInverted": true
+						},
+						{
+							"id": "compare-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 851239801012729,
+							"parameters": {
+								"variable": "Mes_CarCru"
+							},
+							"isInverted": true
+						},
+						{
 							"id": "is-boolean-instance-variable-set",
 							"objectClass": "Personaje",
 							"sid": 385108749288953,
@@ -10757,6 +10989,15 @@
 							"parameters": {
 								"animation": "\"Vacio\"",
 								"from": "beginning"
+							}
+						},
+						{
+							"id": "set-boolean-instvar",
+							"objectClass": "Personaje",
+							"sid": 129830111495962,
+							"parameters": {
+								"instance-variable": "Plato",
+								"value": "false"
 							}
 						},
 						{
