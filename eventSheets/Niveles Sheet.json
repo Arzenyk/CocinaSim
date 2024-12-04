@@ -1,0 +1,416 @@
+{
+	"name": "Niveles Sheet",
+	"events": [
+		{
+			"eventType": "variable",
+			"name": "Nivel",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 392410097196383
+		},
+		{
+			"eventType": "comment",
+			"text": "Nivel 1"
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 301468843733637,
+					"parameters": {
+						"variable": "Nivel",
+						"comparison": 5,
+						"value": "0"
+					}
+				},
+				{
+					"id": "cursor-is-over-object",
+					"objectClass": "Mouse",
+					"sid": 737028359202181,
+					"parameters": {
+						"object": "spr_nivel1"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-cursor-style",
+					"objectClass": "Mouse",
+					"sid": 737822039584269,
+					"parameters": {
+						"cursor-style": "hand"
+					}
+				}
+			],
+			"sid": 890268339612501
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 908611607692923,
+					"parameters": {
+						"variable": "Nivel",
+						"comparison": 5,
+						"value": "0"
+					}
+				},
+				{
+					"id": "cursor-is-over-object",
+					"objectClass": "Mouse",
+					"sid": 741058455933805,
+					"parameters": {
+						"object": "spr_nivel1"
+					},
+					"isInverted": true
+				}
+			],
+			"actions": [
+				{
+					"id": "set-cursor-style",
+					"objectClass": "Mouse",
+					"sid": 997158770549913,
+					"parameters": {
+						"cursor-style": "normal"
+					}
+				}
+			],
+			"sid": 908945217048514
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-object-clicked",
+					"objectClass": "Mouse",
+					"sid": 784601239850483,
+					"parameters": {
+						"mouse-button": "left",
+						"click-type": "clicked",
+						"object-clicked": "spr_nivel1"
+					}
+				},
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 417987223005105,
+					"parameters": {
+						"variable": "Nivel",
+						"comparison": 5,
+						"value": "0"
+					}
+				}
+			],
+			"actions": [],
+			"sid": 370384146671275
+		},
+		{
+			"eventType": "comment",
+			"text": "Nivel 2"
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 449922082868167,
+					"parameters": {
+						"variable": "Nivel",
+						"comparison": 5,
+						"value": "1"
+					}
+				},
+				{
+					"id": "cursor-is-over-object",
+					"objectClass": "Mouse",
+					"sid": 843058136774275,
+					"parameters": {
+						"object": "spr_nivel2"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-cursor-style",
+					"objectClass": "Mouse",
+					"sid": 492037193077708,
+					"parameters": {
+						"cursor-style": "hand"
+					}
+				}
+			],
+			"sid": 702146773607526
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 867615980150253,
+					"parameters": {
+						"variable": "Nivel",
+						"comparison": 5,
+						"value": "1"
+					}
+				},
+				{
+					"id": "cursor-is-over-object",
+					"objectClass": "Mouse",
+					"sid": 300092958652330,
+					"parameters": {
+						"object": "spr_nivel2"
+					},
+					"isInverted": true
+				}
+			],
+			"actions": [
+				{
+					"id": "set-cursor-style",
+					"objectClass": "Mouse",
+					"sid": 799070470303459,
+					"parameters": {
+						"cursor-style": "normal"
+					}
+				}
+			],
+			"sid": 449435985653838
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-object-clicked",
+					"objectClass": "Mouse",
+					"sid": 311323824524432,
+					"parameters": {
+						"mouse-button": "left",
+						"click-type": "clicked",
+						"object-clicked": "spr_nivel2"
+					}
+				},
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 868822736792427,
+					"parameters": {
+						"variable": "Nivel",
+						"comparison": 5,
+						"value": "1"
+					}
+				}
+			],
+			"actions": [],
+			"sid": 212525378712913
+		},
+		{
+			"eventType": "comment",
+			"text": "Nivel 3"
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 990520662129311,
+					"parameters": {
+						"variable": "Nivel",
+						"comparison": 5,
+						"value": "2"
+					}
+				},
+				{
+					"id": "cursor-is-over-object",
+					"objectClass": "Mouse",
+					"sid": 511524506869008,
+					"parameters": {
+						"object": "spr_nivel3"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-cursor-style",
+					"objectClass": "Mouse",
+					"sid": 940761847130379,
+					"parameters": {
+						"cursor-style": "hand"
+					}
+				}
+			],
+			"sid": 912543293881758
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 652517255445128,
+					"parameters": {
+						"variable": "Nivel",
+						"comparison": 5,
+						"value": "2"
+					}
+				},
+				{
+					"id": "cursor-is-over-object",
+					"objectClass": "Mouse",
+					"sid": 869180618677796,
+					"parameters": {
+						"object": "spr_nivel3"
+					},
+					"isInverted": true
+				}
+			],
+			"actions": [
+				{
+					"id": "set-cursor-style",
+					"objectClass": "Mouse",
+					"sid": 664956837592685,
+					"parameters": {
+						"cursor-style": "normal"
+					}
+				}
+			],
+			"sid": 210381585117777
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-object-clicked",
+					"objectClass": "Mouse",
+					"sid": 410590649648474,
+					"parameters": {
+						"mouse-button": "left",
+						"click-type": "clicked",
+						"object-clicked": "spr_nivel3"
+					}
+				},
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 948186452565366,
+					"parameters": {
+						"variable": "Nivel",
+						"comparison": 5,
+						"value": "2"
+					}
+				}
+			],
+			"actions": [],
+			"sid": 343337564142489
+		},
+		{
+			"eventType": "comment",
+			"text": "Nivel 4"
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 713652360611096,
+					"parameters": {
+						"variable": "Nivel",
+						"comparison": 5,
+						"value": "3"
+					}
+				},
+				{
+					"id": "cursor-is-over-object",
+					"objectClass": "Mouse",
+					"sid": 749630917476474,
+					"parameters": {
+						"object": "spr_nivel4"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-cursor-style",
+					"objectClass": "Mouse",
+					"sid": 134451416063305,
+					"parameters": {
+						"cursor-style": "hand"
+					}
+				}
+			],
+			"sid": 383859424537829
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 831684119050452,
+					"parameters": {
+						"variable": "Nivel",
+						"comparison": 5,
+						"value": "3"
+					}
+				},
+				{
+					"id": "cursor-is-over-object",
+					"objectClass": "Mouse",
+					"sid": 759776054572612,
+					"parameters": {
+						"object": "spr_nivel4"
+					},
+					"isInverted": true
+				}
+			],
+			"actions": [
+				{
+					"id": "set-cursor-style",
+					"objectClass": "Mouse",
+					"sid": 475882294550223,
+					"parameters": {
+						"cursor-style": "normal"
+					}
+				}
+			],
+			"sid": 708785991906657
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-object-clicked",
+					"objectClass": "Mouse",
+					"sid": 697117653794549,
+					"parameters": {
+						"mouse-button": "left",
+						"click-type": "clicked",
+						"object-clicked": "spr_nivel4"
+					}
+				},
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 347334732944994,
+					"parameters": {
+						"variable": "Nivel",
+						"comparison": 5,
+						"value": "3"
+					}
+				}
+			],
+			"actions": [],
+			"sid": 599562668826071
+		}
+	],
+	"sid": 943868219800147
+}

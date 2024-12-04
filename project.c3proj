@@ -182,7 +182,18 @@
 			"spr_stars3",
 			"txtEstadisticas",
 			"spr_chanchito",
-			"txt_chanchito"
+			"txt_chanchito",
+			"spr_nivel1",
+			"spr_linea",
+			"spr_fondo",
+			"spr_nivel2",
+			"spr_nivel3",
+			"spr_nivel4",
+			"spr_linea2",
+			"spr_linea3",
+			"p_bar_cliente1",
+			"p_bar_cliente2",
+			"p_bar_cliente3"
 		],
 		"subfolders": [
 			{
@@ -278,7 +289,9 @@
 		"items": [
 			"Cocina",
 			"CocinaV2",
-			"cerrado"
+			"cerrado",
+			"Niveles",
+			"Tutorial"
 		],
 		"subfolders": []
 	},
@@ -286,7 +299,8 @@
 		"items": [
 			"CocinaSheet",
 			"SheetV2",
-			"Event sheet 1"
+			"Event sheet 1",
+			"Niveles Sheet"
 		],
 		"subfolders": []
 	},

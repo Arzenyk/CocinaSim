@@ -3004,6 +3004,15 @@
 									}
 								},
 								{
+									"id": "set-boolean-instvar",
+									"objectClass": "Personaje",
+									"sid": 118584993734793,
+									"parameters": {
+										"instance-variable": "Ocupado",
+										"value": "false"
+									}
+								},
+								{
 									"id": "set-visible",
 									"objectClass": "BarraTabla",
 									"sid": 747148209647743,
@@ -3169,6 +3178,15 @@
 									}
 								},
 								{
+									"id": "set-boolean-instvar",
+									"objectClass": "Personaje",
+									"sid": 831974079720515,
+									"parameters": {
+										"instance-variable": "Ocupado",
+										"value": "true"
+									}
+								},
+								{
 									"id": "set-visible",
 									"objectClass": "BarraTabla",
 									"sid": 721465863854825,
@@ -3223,6 +3241,24 @@
 									"parameters": {
 										"animation": "\"Lechuga\"",
 										"from": "beginning"
+									}
+								},
+								{
+									"id": "set-boolean-instvar",
+									"objectClass": "Personaje",
+									"sid": 537550242508530,
+									"parameters": {
+										"instance-variable": "Vacio",
+										"value": "true"
+									}
+								},
+								{
+									"id": "set-boolean-instvar",
+									"objectClass": "Personaje",
+									"sid": 361322805256951,
+									"parameters": {
+										"instance-variable": "Ocupado",
+										"value": "false"
 									}
 								}
 							],
@@ -3515,6 +3551,15 @@
 									}
 								},
 								{
+									"id": "set-boolean-instvar",
+									"objectClass": "Personaje",
+									"sid": 226200540553920,
+									"parameters": {
+										"instance-variable": "Ocupado",
+										"value": "false"
+									}
+								},
+								{
 									"id": "set-visible",
 									"objectClass": "BarraTabla",
 									"sid": 818034842831116,
@@ -3680,6 +3725,15 @@
 									}
 								},
 								{
+									"id": "set-boolean-instvar",
+									"objectClass": "Personaje",
+									"sid": 683114195599182,
+									"parameters": {
+										"instance-variable": "Ocupado",
+										"value": "true"
+									}
+								},
+								{
 									"id": "set-visible",
 									"objectClass": "BarraTabla",
 									"sid": 550557093467680,
@@ -3734,6 +3788,24 @@
 									"parameters": {
 										"animation": "\"Tomate\"",
 										"from": "beginning"
+									}
+								},
+								{
+									"id": "set-boolean-instvar",
+									"objectClass": "Personaje",
+									"sid": 988209437489239,
+									"parameters": {
+										"instance-variable": "Vacio",
+										"value": "true"
+									}
+								},
+								{
+									"id": "set-boolean-instvar",
+									"objectClass": "Personaje",
+									"sid": 274320521039217,
+									"parameters": {
+										"instance-variable": "Ocupado",
+										"value": "false"
 									}
 								}
 							],
@@ -3982,6 +4054,15 @@
 									}
 								},
 								{
+									"id": "set-boolean-instvar",
+									"objectClass": "Personaje",
+									"sid": 111537790509656,
+									"parameters": {
+										"instance-variable": "Ocupado",
+										"value": "false"
+									}
+								},
+								{
 									"id": "set-visible",
 									"objectClass": "BarraTabla",
 									"sid": 940478801221089,
@@ -4149,6 +4230,15 @@
 								{
 									"id": "set-boolean-instvar",
 									"objectClass": "Personaje",
+									"sid": 141513369939959,
+									"parameters": {
+										"instance-variable": "Ocupado",
+										"value": "true"
+									}
+								},
+								{
+									"id": "set-boolean-instvar",
+									"objectClass": "Personaje",
 									"sid": 913884760188637,
 									"disabled": true,
 									"parameters": {
@@ -4220,6 +4310,24 @@
 									"parameters": {
 										"instance-variable": "Cebolla",
 										"value": "false"
+									}
+								},
+								{
+									"id": "set-boolean-instvar",
+									"objectClass": "Personaje",
+									"sid": 570220357742547,
+									"parameters": {
+										"instance-variable": "Ocupado",
+										"value": "false"
+									}
+								},
+								{
+									"id": "set-boolean-instvar",
+									"objectClass": "Personaje",
+									"sid": 339379972560814,
+									"parameters": {
+										"instance-variable": "Vacio",
+										"value": "true"
 									}
 								}
 							],
@@ -5497,6 +5605,15 @@
 									}
 								},
 								{
+									"id": "set-boolean-instvar",
+									"objectClass": "Personaje",
+									"sid": 680735785882843,
+									"parameters": {
+										"instance-variable": "Ocupado",
+										"value": "false"
+									}
+								},
+								{
 									"id": "set-boolean-eventvar",
 									"objectClass": "System",
 									"sid": 220453989437903,
@@ -6162,6 +6279,23 @@
 									"parameters": {
 										"animation": "\"Cuchillo\"",
 										"from": "beginning"
+									}
+								},
+								{
+									"id": "wait",
+									"objectClass": "System",
+									"sid": 805809646676558,
+									"parameters": {
+										"seconds": "1.0"
+									}
+								},
+								{
+									"id": "set-boolean-instvar",
+									"objectClass": "Personaje",
+									"sid": 462806546336410,
+									"parameters": {
+										"instance-variable": "Ocupado",
+										"value": "false"
 									}
 								}
 							],
@@ -7225,6 +7359,24 @@
 									}
 								},
 								{
+									"id": "set-boolean-instvar",
+									"objectClass": "Personaje",
+									"sid": 992951225979948,
+									"parameters": {
+										"instance-variable": "Ocupado",
+										"value": "true"
+									}
+								},
+								{
+									"id": "set-boolean-instvar",
+									"objectClass": "Personaje",
+									"sid": 348715668307344,
+									"parameters": {
+										"instance-variable": "Vacio",
+										"value": "false"
+									}
+								},
+								{
 									"id": "set-animation",
 									"objectClass": "Personaje",
 									"sid": 564120988797849,
@@ -7413,6 +7565,15 @@
 							}
 						},
 						{
+							"id": "set-boolean-instvar",
+							"objectClass": "Personaje",
+							"sid": 156655625684766,
+							"parameters": {
+								"instance-variable": "Ocupado",
+								"value": "false"
+							}
+						},
+						{
 							"id": "wait",
 							"objectClass": "System",
 							"sid": 129239435301394,
@@ -7526,6 +7687,7 @@
 					"id": "pin-to-object-properties",
 					"objectClass": "txt_debug",
 					"sid": 468866588787135,
+					"disabled": true,
 					"behaviorType": "Pin",
 					"parameters": {
 						"pin-to": "Personaje",
@@ -8934,6 +9096,15 @@
 							}
 						},
 						{
+							"id": "set-boolean-instvar",
+							"objectClass": "Personaje",
+							"sid": 704779331364283,
+							"parameters": {
+								"instance-variable": "Ocupado",
+								"value": "false"
+							}
+						},
+						{
 							"id": "set-boolean-eventvar",
 							"objectClass": "System",
 							"sid": 808499719018093,
@@ -9015,6 +9186,15 @@
 							}
 						},
 						{
+							"id": "set-boolean-instvar",
+							"objectClass": "Personaje",
+							"sid": 832540111654973,
+							"parameters": {
+								"instance-variable": "Ocupado",
+								"value": "false"
+							}
+						},
+						{
 							"id": "set-boolean-eventvar",
 							"objectClass": "System",
 							"sid": 210980785011473,
@@ -9093,6 +9273,15 @@
 							"parameters": {
 								"instance-variable": "Vacio",
 								"value": "true"
+							}
+						},
+						{
+							"id": "set-boolean-instvar",
+							"objectClass": "Personaje",
+							"sid": 978469945882587,
+							"parameters": {
+								"instance-variable": "Ocupado",
+								"value": "false"
 							}
 						},
 						{
@@ -9186,6 +9375,15 @@
 							}
 						},
 						{
+							"id": "set-boolean-instvar",
+							"objectClass": "Personaje",
+							"sid": 727567904017510,
+							"parameters": {
+								"instance-variable": "Ocupado",
+								"value": "false"
+							}
+						},
+						{
 							"id": "set-boolean-eventvar",
 							"objectClass": "System",
 							"sid": 955706139044730,
@@ -9264,6 +9462,15 @@
 							"parameters": {
 								"instance-variable": "Vacio",
 								"value": "true"
+							}
+						},
+						{
+							"id": "set-boolean-instvar",
+							"objectClass": "Personaje",
+							"sid": 433586217014541,
+							"parameters": {
+								"instance-variable": "Ocupado",
+								"value": "false"
 							}
 						},
 						{
@@ -9357,6 +9564,15 @@
 							}
 						},
 						{
+							"id": "set-boolean-instvar",
+							"objectClass": "Personaje",
+							"sid": 277048509251056,
+							"parameters": {
+								"instance-variable": "Ocupado",
+								"value": "false"
+							}
+						},
+						{
 							"id": "set-boolean-eventvar",
 							"objectClass": "System",
 							"sid": 874991140272880,
@@ -9444,6 +9660,15 @@
 							"parameters": {
 								"instance-variable": "Vacio",
 								"value": "true"
+							}
+						},
+						{
+							"id": "set-boolean-instvar",
+							"objectClass": "Personaje",
+							"sid": 284905409395433,
+							"parameters": {
+								"instance-variable": "Ocupado",
+								"value": "false"
 							}
 						},
 						{
@@ -10695,10 +10920,9 @@
 				{
 					"id": "set-text",
 					"objectClass": "txt_debug",
-					"sid": 632187176034849,
-					"disabled": true,
+					"sid": 565605417261476,
 					"parameters": {
-						"text": "\"Array Pedidos: \" & PedidosArray.At(0) & \", \" & PedidosArray.At(1) & \", \" & PedidosArray.At(2) & \", \" & PedidosArray.At(3) & \" | Largo: \" & PedidosArray.Width & \" | RandPedido: \" & pedidoString"
+						"text": "\"CC: \" & Personaje.CarneCocida & newline &\r\n\"CCr: \" & Personaje.CarneCruda & newline &\r\n\"CQ: \" & Personaje.CarneQuemada & newline &\r\n\"CebCor: \" & Personaje.CebCor & newline &\r\n\"Cebolla: \" & Personaje.Cebolla & newline &\r\n\"CompQuemada: \" & Personaje.CompQuemada & newline &\r\n\"Cuchillo: \" & Personaje.Cuchillo & newline &\r\n\"LecCor: \" & Personaje.LecCor & newline &\r\n\"Lechuga: \" & Personaje.Lechuga & newline &\r\n\"Ocupado: \" & Personaje.Ocupado & newline &\r\n\"Pan: \" & Personaje.Pan & newline &\r\n\"Plato: \" & Personaje.Plato & newline &\r\n\"PlatoSucio: \" & Personaje.PlatoSucio & newline &\r\n\"Servido: \" & Personaje.Servido & newline &\r\n\"SinCebolla: \" & Personaje.SinCebolla & newline &\r\n\"SinLechuga: \" & Personaje.SinLechuga & newline &\r\n\"SinTomate: \" & Personaje.SinTomate & newline &\r\n\"Tomate: \" & Personaje.Tomate & newline &\r\n\"TomCor: \" & Personaje.TomCor & newline &\r\n\"Vacio: \" & Personaje.Vacio\r\n"
 					}
 				},
 				{
@@ -17573,6 +17797,14 @@
 							}
 						},
 						{
+							"id": "set-visible",
+							"objectClass": "p_bar_cliente1",
+							"sid": 971502049460945,
+							"parameters": {
+								"visibility": "visible"
+							}
+						},
+						{
 							"id": "set-animation",
 							"objectClass": "spr_cliente",
 							"sid": 989955197738560,
@@ -17582,11 +17814,83 @@
 							}
 						},
 						{
+							"id": "set-progress",
+							"objectClass": "p_bar_cliente1",
+							"sid": 650711166691472,
+							"parameters": {
+								"value": "p_bar_cliente1.Progress + 2"
+							}
+						},
+						{
+							"id": "set-progress",
+							"objectClass": "p_bar_cliente1",
+							"sid": 437349445625870,
+							"parameters": {
+								"value": "p_bar_cliente1.Progress + 2"
+							}
+						},
+						{
 							"id": "wait",
 							"objectClass": "System",
-							"sid": 284935367026711,
+							"sid": 679125829612713,
 							"parameters": {
-								"seconds": "10"
+								"seconds": "1"
+							}
+						},
+						{
+							"id": "set-progress",
+							"objectClass": "p_bar_cliente1",
+							"sid": 424274469889769,
+							"parameters": {
+								"value": "p_bar_cliente1.Progress + 2"
+							}
+						},
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 942577248295307,
+							"parameters": {
+								"seconds": "1"
+							}
+						},
+						{
+							"id": "set-progress",
+							"objectClass": "p_bar_cliente1",
+							"sid": 951154553063337,
+							"parameters": {
+								"value": "p_bar_cliente1.Progress + 2"
+							}
+						},
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 664830245939777,
+							"parameters": {
+								"seconds": "1"
+							}
+						},
+						{
+							"id": "set-progress",
+							"objectClass": "p_bar_cliente1",
+							"sid": 418929336062915,
+							"parameters": {
+								"value": "p_bar_cliente1.Progress + 2"
+							}
+						},
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 740086016339152,
+							"parameters": {
+								"seconds": "1"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "p_bar_cliente1",
+							"sid": 360143769340316,
+							"parameters": {
+								"visibility": "invisible"
 							}
 						},
 						{
@@ -18130,7 +18434,7 @@
 						{
 							"id": "add-to-eventvar",
 							"objectClass": "System",
-							"sid": 319840025044006,
+							"sid": 985106505547450,
 							"parameters": {
 								"variable": "Monedas",
 								"value": "10"
@@ -18139,18 +18443,98 @@
 						{
 							"id": "set-animation",
 							"objectClass": "spr_cliente2",
-							"sid": 545721264960711,
+							"sid": 492168449689640,
 							"parameters": {
 								"animation": "\"Normal\"",
 								"from": "beginning"
 							}
 						},
 						{
+							"id": "set-visible",
+							"objectClass": "p_bar_cliente2",
+							"sid": 971502049460945,
+							"parameters": {
+								"visibility": "visible"
+							}
+						},
+						{
+							"id": "set-progress",
+							"objectClass": "p_bar_cliente2",
+							"sid": 650711166691472,
+							"parameters": {
+								"value": "p_bar_cliente2.Progress + 2"
+							}
+						},
+						{
+							"id": "set-progress",
+							"objectClass": "p_bar_cliente2",
+							"sid": 437349445625870,
+							"parameters": {
+								"value": "p_bar_cliente2.Progress + 2"
+							}
+						},
+						{
 							"id": "wait",
 							"objectClass": "System",
-							"sid": 252801523623263,
+							"sid": 679125829612713,
 							"parameters": {
-								"seconds": "10"
+								"seconds": "1"
+							}
+						},
+						{
+							"id": "set-progress",
+							"objectClass": "p_bar_cliente2",
+							"sid": 424274469889769,
+							"parameters": {
+								"value": "p_bar_cliente2.Progress + 2"
+							}
+						},
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 942577248295307,
+							"parameters": {
+								"seconds": "1"
+							}
+						},
+						{
+							"id": "set-progress",
+							"objectClass": "p_bar_cliente2",
+							"sid": 951154553063337,
+							"parameters": {
+								"value": "p_bar_cliente2.Progress + 2"
+							}
+						},
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 664830245939777,
+							"parameters": {
+								"seconds": "1"
+							}
+						},
+						{
+							"id": "set-progress",
+							"objectClass": "p_bar_cliente2",
+							"sid": 418929336062915,
+							"parameters": {
+								"value": "p_bar_cliente2.Progress + 2"
+							}
+						},
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 740086016339152,
+							"parameters": {
+								"seconds": "1"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "p_bar_cliente2",
+							"sid": 360143769340316,
+							"parameters": {
+								"visibility": "invisible"
 							}
 						},
 						{
@@ -18680,11 +19064,91 @@
 							}
 						},
 						{
+							"id": "set-visible",
+							"objectClass": "p_bar_cliente3",
+							"sid": 971502049460945,
+							"parameters": {
+								"visibility": "visible"
+							}
+						},
+						{
+							"id": "set-progress",
+							"objectClass": "p_bar_cliente3",
+							"sid": 650711166691472,
+							"parameters": {
+								"value": "p_bar_cliente3.Progress + 2"
+							}
+						},
+						{
+							"id": "set-progress",
+							"objectClass": "p_bar_cliente3",
+							"sid": 437349445625870,
+							"parameters": {
+								"value": "p_bar_cliente3.Progress + 2"
+							}
+						},
+						{
 							"id": "wait",
 							"objectClass": "System",
-							"sid": 365684519419314,
+							"sid": 679125829612713,
 							"parameters": {
-								"seconds": "10"
+								"seconds": "1"
+							}
+						},
+						{
+							"id": "set-progress",
+							"objectClass": "p_bar_cliente3",
+							"sid": 424274469889769,
+							"parameters": {
+								"value": "p_bar_cliente3.Progress + 2"
+							}
+						},
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 942577248295307,
+							"parameters": {
+								"seconds": "1"
+							}
+						},
+						{
+							"id": "set-progress",
+							"objectClass": "p_bar_cliente3",
+							"sid": 951154553063337,
+							"parameters": {
+								"value": "p_bar_cliente3.Progress + 2"
+							}
+						},
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 664830245939777,
+							"parameters": {
+								"seconds": "1"
+							}
+						},
+						{
+							"id": "set-progress",
+							"objectClass": "p_bar_cliente3",
+							"sid": 418929336062915,
+							"parameters": {
+								"value": "p_bar_cliente3.Progress + 2"
+							}
+						},
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 740086016339152,
+							"parameters": {
+								"seconds": "1"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "p_bar_cliente3",
+							"sid": 360143769340316,
+							"parameters": {
+								"visibility": "invisible"
 							}
 						},
 						{
