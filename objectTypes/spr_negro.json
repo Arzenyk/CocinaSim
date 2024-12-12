@@ -1,7 +1,7 @@
 {
-	"name": "spr_espacio_cliente3",
+	"name": "spr_negro",
 	"plugin-id": "Sprite",
-	"sid": 307341080574806,
+	"sid": 403912044547014,
 	"isGlobal": false,
 	"instanceVariables": [],
 	"behaviorTypes": [],
@@ -19,13 +19,13 @@
 						"exportFormat": "lossless",
 						"exportQuality": 0.8,
 						"fileType": "image/png",
-						"imageSpriteId": 9976984,
+						"imageSpriteId": 7146437,
 						"useCollisionPoly": true,
 						"duration": 1,
 						"tag": ""
 					}
 				],
-				"sid": 974135375308432,
+				"sid": 478402365701633,
 				"name": "Animation 1",
 				"isLooping": false,
 				"isPingPong": false,

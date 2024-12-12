@@ -1,6 +1,6 @@
 {
 	"projectFormatVersion": 1,
-	"savedWithRelease": 41600,
+	"savedWithRelease": 41602,
 	"name": "CocinaSim",
 	"runtime": "c3",
 	"useWorker": "auto",
@@ -193,7 +193,10 @@
 			"spr_linea3",
 			"p_bar_cliente1",
 			"p_bar_cliente2",
-			"p_bar_cliente3"
+			"p_bar_cliente3",
+			"spr_negro",
+			"spr_tutorialHorno",
+			"txt_Carnes"
 		],
 		"subfolders": [
 			{

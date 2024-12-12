@@ -73,13 +73,33 @@
 		},
 		{
 			"eventType": "variable",
-			"name": "hayCliente",
+			"name": "hayCliente1",
 			"type": "boolean",
 			"initialValue": "false",
 			"comment": "",
 			"isStatic": false,
 			"isConstant": false,
 			"sid": 290762656061492
+		},
+		{
+			"eventType": "variable",
+			"name": "hayCliente2",
+			"type": "boolean",
+			"initialValue": "false",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 383471813337983
+		},
+		{
+			"eventType": "variable",
+			"name": "hayCliente3",
+			"type": "boolean",
+			"initialValue": "false",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 226675490535964
 		},
 		{
 			"eventType": "variable",
@@ -6132,6 +6152,71 @@
 								}
 							],
 							"sid": 435468040195720
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-overlapping-another-object",
+									"objectClass": "Personaje",
+									"sid": 113539288010684,
+									"parameters": {
+										"object": "Horno"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-visible",
+									"objectClass": "txt_Carnes",
+									"sid": 573153073090832,
+									"parameters": {
+										"visibility": "visible"
+									}
+								},
+								{
+									"id": "set-visible",
+									"objectClass": "spr_tutorialHorno",
+									"sid": 297476485964056,
+									"parameters": {
+										"visibility": "visible"
+									}
+								}
+							],
+							"sid": 780800821168833
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-overlapping-another-object",
+									"objectClass": "Personaje",
+									"sid": 164395055595585,
+									"parameters": {
+										"object": "Horno"
+									},
+									"isInverted": true
+								}
+							],
+							"actions": [
+								{
+									"id": "set-visible",
+									"objectClass": "txt_Carnes",
+									"sid": 963180338525300,
+									"parameters": {
+										"visibility": "invisible"
+									}
+								},
+								{
+									"id": "set-visible",
+									"objectClass": "spr_tutorialHorno",
+									"sid": 220018507109018,
+									"parameters": {
+										"visibility": "invisible"
+									}
+								}
+							],
+							"sid": 364452474483947
 						}
 					],
 					"sid": 374090898614383
@@ -7486,6 +7571,15 @@
 						{
 							"id": "set-boolean-instvar",
 							"objectClass": "Personaje",
+							"sid": 866020652329958,
+							"parameters": {
+								"instance-variable": "CompQuemada",
+								"value": "false"
+							}
+						},
+						{
+							"id": "set-boolean-instvar",
+							"objectClass": "Personaje",
 							"sid": 433154004084572,
 							"parameters": {
 								"instance-variable": "Cuchillo",
@@ -7570,6 +7664,42 @@
 							"sid": 156655625684766,
 							"parameters": {
 								"instance-variable": "Ocupado",
+								"value": "false"
+							}
+						},
+						{
+							"id": "set-boolean-instvar",
+							"objectClass": "Personaje",
+							"sid": 264442962805435,
+							"parameters": {
+								"instance-variable": "SinCebolla",
+								"value": "false"
+							}
+						},
+						{
+							"id": "set-boolean-instvar",
+							"objectClass": "Personaje",
+							"sid": 435246869742208,
+							"parameters": {
+								"instance-variable": "SinLechuga",
+								"value": "false"
+							}
+						},
+						{
+							"id": "set-boolean-instvar",
+							"objectClass": "Personaje",
+							"sid": 685961403361080,
+							"parameters": {
+								"instance-variable": "SinTomate",
+								"value": "false"
+							}
+						},
+						{
+							"id": "set-boolean-instvar",
+							"objectClass": "Personaje",
+							"sid": 859745913058398,
+							"parameters": {
+								"instance-variable": "PlatoSucio",
 								"value": "false"
 							}
 						},
@@ -7817,28 +7947,80 @@
 				{
 					"id": "on-any-key-pressed",
 					"objectClass": "Teclado",
-					"sid": 701583767431440
+					"sid": 701583767431440,
+					"disabled": true
+				},
+				{
+					"id": "is-moving",
+					"objectClass": "Personaje",
+					"sid": 689790796120851,
+					"behaviorType": "TileMovement"
 				}
 			],
 			"actions": [
 				{
-					"id": "set-visible",
+					"id": "set-opacity",
 					"objectClass": "UI",
-					"sid": 261859779191172,
+					"sid": 690099461091818,
 					"parameters": {
-						"visibility": "invisible"
+						"opacity": "20"
 					}
 				},
 				{
-					"id": "set-visible",
+					"id": "set-opacity",
 					"objectClass": "Tutorial",
-					"sid": 195562417466077,
+					"sid": 883941662486459,
 					"parameters": {
-						"visibility": "invisible"
+						"opacity": "20"
 					}
 				}
 			],
 			"sid": 210370087290794
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-any-key-released",
+					"objectClass": "Teclado",
+					"sid": 592570413647157,
+					"disabled": true
+				},
+				{
+					"id": "is-moving",
+					"objectClass": "Personaje",
+					"sid": 704910701387552,
+					"behaviorType": "TileMovement",
+					"isInverted": true
+				}
+			],
+			"actions": [
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 165866453591159,
+					"parameters": {
+						"seconds": "1"
+					}
+				},
+				{
+					"id": "set-opacity",
+					"objectClass": "UI",
+					"sid": 117909981684493,
+					"parameters": {
+						"opacity": "100"
+					}
+				},
+				{
+					"id": "set-opacity",
+					"objectClass": "Tutorial",
+					"sid": 225203786047747,
+					"parameters": {
+						"opacity": "100"
+					}
+				}
+			],
+			"sid": 275329282952445
 		},
 		{
 			"eventType": "block",
@@ -9087,6 +9269,14 @@
 							}
 						},
 						{
+							"id": "set-visible",
+							"objectClass": "CebollaFinal",
+							"sid": 841589825462280,
+							"parameters": {
+								"visibility": "visible"
+							}
+						},
+						{
 							"id": "set-boolean-instvar",
 							"objectClass": "Personaje",
 							"sid": 768647538405867,
@@ -9177,6 +9367,14 @@
 							}
 						},
 						{
+							"id": "set-visible",
+							"objectClass": "LechugaFinal",
+							"sid": 680419020195267,
+							"parameters": {
+								"visibility": "visible"
+							}
+						},
+						{
 							"id": "set-boolean-instvar",
 							"objectClass": "Personaje",
 							"sid": 499442986489183,
@@ -9264,6 +9462,14 @@
 							"parameters": {
 								"x": "Mesada.X",
 								"y": "Mesada.Y"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "TomateFinal",
+							"sid": 725965526465790,
+							"parameters": {
+								"visibility": "visible"
 							}
 						},
 						{
@@ -9366,6 +9572,22 @@
 							}
 						},
 						{
+							"id": "set-visible",
+							"objectClass": "PanFinal",
+							"sid": 366993675261489,
+							"parameters": {
+								"visibility": "visible"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "PanArriba",
+							"sid": 329622756561919,
+							"parameters": {
+								"visibility": "visible"
+							}
+						},
+						{
 							"id": "set-boolean-instvar",
 							"objectClass": "Personaje",
 							"sid": 885555791223366,
@@ -9453,6 +9675,14 @@
 							"parameters": {
 								"x": "Mesada.X",
 								"y": "Mesada.Y"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "CarneCocidaFinal",
+							"sid": 830124981593685,
+							"parameters": {
+								"visibility": "visible"
 							}
 						},
 						{
@@ -9555,6 +9785,14 @@
 							}
 						},
 						{
+							"id": "set-visible",
+							"objectClass": "CarneCrudaFinal",
+							"sid": 178093553791969,
+							"parameters": {
+								"visibility": "visible"
+							}
+						},
+						{
 							"id": "set-boolean-instvar",
 							"objectClass": "Personaje",
 							"sid": 616939465547459,
@@ -9651,6 +9889,14 @@
 							"parameters": {
 								"x": "Mesada.X",
 								"y": "Mesada.Y"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "CarneQuemadaFinal",
+							"sid": 212121648553728,
+							"parameters": {
+								"visibility": "visible"
 							}
 						},
 						{
@@ -9953,49 +10199,93 @@
 							}
 						},
 						{
-							"id": "destroy",
+							"id": "set-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 807456384793177,
+							"parameters": {
+								"variable": "Mes_Carne",
+								"value": "false"
+							}
+						},
+						{
+							"id": "set-visible",
 							"objectClass": "PlatoFinal",
-							"sid": 578357874108750
+							"sid": 711500457808018,
+							"parameters": {
+								"visibility": "invisible"
+							}
 						},
 						{
-							"id": "destroy",
+							"id": "set-visible",
 							"objectClass": "PanFinal",
-							"sid": 663603961463021
+							"sid": 617095357184474,
+							"parameters": {
+								"visibility": "invisible"
+							}
 						},
 						{
-							"id": "destroy",
+							"id": "set-visible",
 							"objectClass": "PanArriba",
-							"sid": 907245075315396
+							"sid": 983997545058550,
+							"parameters": {
+								"visibility": "invisible"
+							}
 						},
 						{
-							"id": "destroy",
+							"id": "set-visible",
 							"objectClass": "CarneCocidaFinal",
-							"sid": 615957681481556
+							"sid": 938195556470124,
+							"parameters": {
+								"visibility": "invisible"
+							}
 						},
 						{
-							"id": "destroy",
+							"id": "set-visible",
 							"objectClass": "CarneCrudaFinal",
-							"sid": 440313222090128
+							"sid": 912444401395191,
+							"parameters": {
+								"visibility": "invisible"
+							}
 						},
 						{
-							"id": "destroy",
+							"id": "set-visible",
 							"objectClass": "CarneQuemadaFinal",
-							"sid": 493563180271662
+							"sid": 933683474559970,
+							"parameters": {
+								"visibility": "invisible"
+							}
 						},
 						{
-							"id": "destroy",
+							"id": "set-visible",
 							"objectClass": "LechugaFinal",
-							"sid": 468476173990224
+							"sid": 944599164544017,
+							"parameters": {
+								"visibility": "invisible"
+							}
 						},
 						{
-							"id": "destroy",
+							"id": "set-visible",
 							"objectClass": "TomateFinal",
-							"sid": 866315245151324
+							"sid": 675616732976619,
+							"parameters": {
+								"visibility": "invisible"
+							}
 						},
 						{
-							"id": "destroy",
+							"id": "set-visible",
 							"objectClass": "CebollaFinal",
-							"sid": 777669954805238
+							"sid": 165874560190713,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "toggle-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 488545429450084,
+							"parameters": {
+								"variable": "MesadaVacia"
+							}
 						}
 					],
 					"sid": 697822214117284
@@ -10235,49 +10525,93 @@
 							}
 						},
 						{
-							"id": "destroy",
+							"id": "set-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 777367919126572,
+							"parameters": {
+								"variable": "Mes_Carne",
+								"value": "false"
+							}
+						},
+						{
+							"id": "set-visible",
 							"objectClass": "PlatoFinal",
-							"sid": 821265754035396
+							"sid": 911828034859515,
+							"parameters": {
+								"visibility": "invisible"
+							}
 						},
 						{
-							"id": "destroy",
+							"id": "set-visible",
 							"objectClass": "PanFinal",
-							"sid": 501984097241524
+							"sid": 853714151721940,
+							"parameters": {
+								"visibility": "invisible"
+							}
 						},
 						{
-							"id": "destroy",
+							"id": "set-visible",
 							"objectClass": "PanArriba",
-							"sid": 815828901656932
+							"sid": 554983216400276,
+							"parameters": {
+								"visibility": "invisible"
+							}
 						},
 						{
-							"id": "destroy",
+							"id": "set-visible",
 							"objectClass": "CarneCocidaFinal",
-							"sid": 758482802601693
+							"sid": 474482687925752,
+							"parameters": {
+								"visibility": "invisible"
+							}
 						},
 						{
-							"id": "destroy",
+							"id": "set-visible",
 							"objectClass": "CarneCrudaFinal",
-							"sid": 766661073165874
+							"sid": 700134721020536,
+							"parameters": {
+								"visibility": "invisible"
+							}
 						},
 						{
-							"id": "destroy",
+							"id": "set-visible",
 							"objectClass": "CarneQuemadaFinal",
-							"sid": 928964067326431
+							"sid": 757240744401262,
+							"parameters": {
+								"visibility": "invisible"
+							}
 						},
 						{
-							"id": "destroy",
+							"id": "set-visible",
 							"objectClass": "LechugaFinal",
-							"sid": 110549413481892
+							"sid": 198437124099984,
+							"parameters": {
+								"visibility": "invisible"
+							}
 						},
 						{
-							"id": "destroy",
+							"id": "set-visible",
 							"objectClass": "TomateFinal",
-							"sid": 789045522076566
+							"sid": 308197213227504,
+							"parameters": {
+								"visibility": "invisible"
+							}
 						},
 						{
-							"id": "destroy",
+							"id": "set-visible",
 							"objectClass": "CebollaFinal",
-							"sid": 251073150461440
+							"sid": 672659833301912,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "toggle-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 829604756865577,
+							"parameters": {
+								"variable": "MesadaVacia"
+							}
 						}
 					],
 					"sid": 830067588004172
@@ -10517,49 +10851,93 @@
 							}
 						},
 						{
-							"id": "destroy",
+							"id": "set-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 103168432779885,
+							"parameters": {
+								"variable": "Mes_Carne",
+								"value": "false"
+							}
+						},
+						{
+							"id": "set-visible",
 							"objectClass": "PlatoFinal",
-							"sid": 634621400692645
+							"sid": 268580475830835,
+							"parameters": {
+								"visibility": "invisible"
+							}
 						},
 						{
-							"id": "destroy",
+							"id": "set-visible",
 							"objectClass": "PanFinal",
-							"sid": 891660837302190
+							"sid": 191095162978131,
+							"parameters": {
+								"visibility": "invisible"
+							}
 						},
 						{
-							"id": "destroy",
+							"id": "set-visible",
 							"objectClass": "PanArriba",
-							"sid": 267815779982176
+							"sid": 857549043661333,
+							"parameters": {
+								"visibility": "invisible"
+							}
 						},
 						{
-							"id": "destroy",
+							"id": "set-visible",
 							"objectClass": "CarneCocidaFinal",
-							"sid": 658394888917173
+							"sid": 651960127025375,
+							"parameters": {
+								"visibility": "invisible"
+							}
 						},
 						{
-							"id": "destroy",
+							"id": "set-visible",
 							"objectClass": "CarneCrudaFinal",
-							"sid": 853471894447439
+							"sid": 480235900703926,
+							"parameters": {
+								"visibility": "invisible"
+							}
 						},
 						{
-							"id": "destroy",
+							"id": "set-visible",
 							"objectClass": "CarneQuemadaFinal",
-							"sid": 232621936133827
+							"sid": 857677208576721,
+							"parameters": {
+								"visibility": "invisible"
+							}
 						},
 						{
-							"id": "destroy",
+							"id": "set-visible",
 							"objectClass": "LechugaFinal",
-							"sid": 779171984326507
+							"sid": 985266340734777,
+							"parameters": {
+								"visibility": "invisible"
+							}
 						},
 						{
-							"id": "destroy",
+							"id": "set-visible",
 							"objectClass": "TomateFinal",
-							"sid": 149717546624963
+							"sid": 235489950226857,
+							"parameters": {
+								"visibility": "invisible"
+							}
 						},
 						{
-							"id": "destroy",
+							"id": "set-visible",
 							"objectClass": "CebollaFinal",
-							"sid": 363633619413047
+							"sid": 227126014704726,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "toggle-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 491395246022017,
+							"parameters": {
+								"variable": "MesadaVacia"
+							}
 						}
 					],
 					"sid": 735349369394314
@@ -10799,49 +11177,93 @@
 							}
 						},
 						{
-							"id": "destroy",
+							"id": "set-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 995324132481873,
+							"parameters": {
+								"variable": "Mes_Carne",
+								"value": "false"
+							}
+						},
+						{
+							"id": "set-visible",
 							"objectClass": "PlatoFinal",
-							"sid": 423279715579805
+							"sid": 724688527886211,
+							"parameters": {
+								"visibility": "invisible"
+							}
 						},
 						{
-							"id": "destroy",
+							"id": "set-visible",
 							"objectClass": "PanFinal",
-							"sid": 187655709616770
+							"sid": 987920726114955,
+							"parameters": {
+								"visibility": "invisible"
+							}
 						},
 						{
-							"id": "destroy",
+							"id": "set-visible",
 							"objectClass": "PanArriba",
-							"sid": 183180895174517
+							"sid": 497915309336134,
+							"parameters": {
+								"visibility": "invisible"
+							}
 						},
 						{
-							"id": "destroy",
+							"id": "set-visible",
 							"objectClass": "CarneCocidaFinal",
-							"sid": 765999984926859
+							"sid": 138195729517766,
+							"parameters": {
+								"visibility": "invisible"
+							}
 						},
 						{
-							"id": "destroy",
+							"id": "set-visible",
 							"objectClass": "CarneCrudaFinal",
-							"sid": 702191196581180
+							"sid": 265440085459414,
+							"parameters": {
+								"visibility": "invisible"
+							}
 						},
 						{
-							"id": "destroy",
+							"id": "set-visible",
 							"objectClass": "CarneQuemadaFinal",
-							"sid": 479537603473826
+							"sid": 681438913393510,
+							"parameters": {
+								"visibility": "invisible"
+							}
 						},
 						{
-							"id": "destroy",
+							"id": "set-visible",
 							"objectClass": "LechugaFinal",
-							"sid": 638853542211335
+							"sid": 427151403750977,
+							"parameters": {
+								"visibility": "invisible"
+							}
 						},
 						{
-							"id": "destroy",
+							"id": "set-visible",
 							"objectClass": "TomateFinal",
-							"sid": 388638942145806
+							"sid": 281991727678189,
+							"parameters": {
+								"visibility": "invisible"
+							}
 						},
 						{
-							"id": "destroy",
+							"id": "set-visible",
 							"objectClass": "CebollaFinal",
-							"sid": 440964853274141
+							"sid": 801301530826821,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "toggle-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 217977648289530,
+							"parameters": {
+								"variable": "MesadaVacia"
+							}
 						}
 					],
 					"sid": 674383585752105
@@ -11098,49 +11520,93 @@
 							}
 						},
 						{
-							"id": "destroy",
+							"id": "set-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 869069849675210,
+							"parameters": {
+								"variable": "Mes_Carne",
+								"value": "false"
+							}
+						},
+						{
+							"id": "set-visible",
 							"objectClass": "PlatoFinal",
-							"sid": 349308436384528
+							"sid": 536827725348457,
+							"parameters": {
+								"visibility": "invisible"
+							}
 						},
 						{
-							"id": "destroy",
+							"id": "set-visible",
 							"objectClass": "PanFinal",
-							"sid": 864389094163224
+							"sid": 770160032950627,
+							"parameters": {
+								"visibility": "invisible"
+							}
 						},
 						{
-							"id": "destroy",
+							"id": "set-visible",
 							"objectClass": "PanArriba",
-							"sid": 502296621608560
+							"sid": 545336945707174,
+							"parameters": {
+								"visibility": "invisible"
+							}
 						},
 						{
-							"id": "destroy",
+							"id": "set-visible",
 							"objectClass": "CarneCocidaFinal",
-							"sid": 372329364263573
+							"sid": 571316574468026,
+							"parameters": {
+								"visibility": "invisible"
+							}
 						},
 						{
-							"id": "destroy",
+							"id": "set-visible",
 							"objectClass": "CarneCrudaFinal",
-							"sid": 764143967374677
+							"sid": 273071535303056,
+							"parameters": {
+								"visibility": "invisible"
+							}
 						},
 						{
-							"id": "destroy",
+							"id": "set-visible",
 							"objectClass": "CarneQuemadaFinal",
-							"sid": 969078287283084
+							"sid": 828714490971720,
+							"parameters": {
+								"visibility": "invisible"
+							}
 						},
 						{
-							"id": "destroy",
+							"id": "set-visible",
 							"objectClass": "LechugaFinal",
-							"sid": 680762141738436
+							"sid": 610721818291079,
+							"parameters": {
+								"visibility": "invisible"
+							}
 						},
 						{
-							"id": "destroy",
+							"id": "set-visible",
 							"objectClass": "TomateFinal",
-							"sid": 463944721186064
+							"sid": 914454883129660,
+							"parameters": {
+								"visibility": "invisible"
+							}
 						},
 						{
-							"id": "destroy",
+							"id": "set-visible",
 							"objectClass": "CebollaFinal",
-							"sid": 505130004042005
+							"sid": 984593325845100,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "toggle-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 534738983646866,
+							"parameters": {
+								"variable": "MesadaVacia"
+							}
 						}
 					],
 					"sid": 658552119832206
@@ -11263,9 +11729,9 @@
 						{
 							"id": "rotate-clockwise",
 							"objectClass": "spr_reloj",
-							"sid": 603709675264245,
+							"sid": 848740418990205,
 							"parameters": {
-								"degrees": "1"
+								"degrees": "0.1"
 							}
 						}
 					],
@@ -11703,7 +12169,7 @@
 							"objectClass": "System",
 							"sid": 472388510512837,
 							"parameters": {
-								"variable": "hayCliente",
+								"variable": "hayCliente1",
 								"value": "true"
 							}
 						}
@@ -11727,7 +12193,7 @@
 							"objectClass": "System",
 							"sid": 156656464942482,
 							"parameters": {
-								"variable": "hayCliente",
+								"variable": "hayCliente1",
 								"value": "true"
 							}
 						}
@@ -11751,7 +12217,7 @@
 							"objectClass": "System",
 							"sid": 141598283284244,
 							"parameters": {
-								"variable": "hayCliente",
+								"variable": "hayCliente1",
 								"value": "true"
 							}
 						}
@@ -11775,7 +12241,7 @@
 							"objectClass": "System",
 							"sid": 494481247803681,
 							"parameters": {
-								"variable": "hayCliente"
+								"variable": "hayCliente1"
 							}
 						},
 						{
@@ -11950,7 +12416,7 @@
 							"objectClass": "System",
 							"sid": 104397111446468,
 							"parameters": {
-								"variable": "hayCliente"
+								"variable": "hayCliente1"
 							}
 						},
 						{
@@ -12125,7 +12591,7 @@
 							"objectClass": "System",
 							"sid": 657412603025418,
 							"parameters": {
-								"variable": "hayCliente"
+								"variable": "hayCliente1"
 							}
 						},
 						{
@@ -17269,6 +17735,88 @@
 				{
 					"id": "on-key-pressed",
 					"objectClass": "Teclado",
+					"sid": 729126008757830,
+					"parameters": {
+						"key": 69
+					}
+				},
+				{
+					"id": "is-overlapping-another-object",
+					"objectClass": "Personaje",
+					"sid": 436277994034663,
+					"parameters": {
+						"object": "spr_espacio_cliente"
+					}
+				},
+				{
+					"id": "compare-x",
+					"objectClass": "Plato2",
+					"sid": 354206650560355,
+					"parameters": {
+						"comparison": 0,
+						"x-co-ordinate": "Mesa.ImagePointX(1)"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "signal",
+					"objectClass": "System",
+					"sid": 520982532188592,
+					"parameters": {
+						"tag": "\"reset\""
+					}
+				},
+				{
+					"id": "set-boolean-instvar",
+					"objectClass": "Personaje",
+					"sid": 476712894667109,
+					"parameters": {
+						"instance-variable": "Vacio",
+						"value": "false"
+					}
+				},
+				{
+					"id": "set-boolean-instvar",
+					"objectClass": "Personaje",
+					"sid": 904824319161585,
+					"parameters": {
+						"instance-variable": "Ocupado",
+						"value": "true"
+					}
+				},
+				{
+					"id": "set-boolean-instvar",
+					"objectClass": "Personaje",
+					"sid": 962827817985699,
+					"parameters": {
+						"instance-variable": "PlatoSucio",
+						"value": "true"
+					}
+				},
+				{
+					"id": "set-animation",
+					"objectClass": "Personaje",
+					"sid": 131694800823154,
+					"parameters": {
+						"animation": "\"FPlaSuc\"",
+						"from": "beginning"
+					}
+				},
+				{
+					"id": "destroy",
+					"objectClass": "Plato2",
+					"sid": 542700966106022
+				}
+			],
+			"sid": 251078646638967
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-key-pressed",
+					"objectClass": "Teclado",
 					"sid": 170625960117496,
 					"parameters": {
 						"key": 69
@@ -17344,6 +17892,88 @@
 				}
 			],
 			"sid": 313015062270769
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-key-pressed",
+					"objectClass": "Teclado",
+					"sid": 491626790272177,
+					"parameters": {
+						"key": 69
+					}
+				},
+				{
+					"id": "is-overlapping-another-object",
+					"objectClass": "Personaje",
+					"sid": 420396024576091,
+					"parameters": {
+						"object": "spr_espacio_cliente3"
+					}
+				},
+				{
+					"id": "compare-x",
+					"objectClass": "Plato2",
+					"sid": 178543524863269,
+					"parameters": {
+						"comparison": 0,
+						"x-co-ordinate": "Mesa3.ImagePointX(1)"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "signal",
+					"objectClass": "System",
+					"sid": 764743219932491,
+					"parameters": {
+						"tag": "\"reset\""
+					}
+				},
+				{
+					"id": "set-boolean-instvar",
+					"objectClass": "Personaje",
+					"sid": 787321694524491,
+					"parameters": {
+						"instance-variable": "Vacio",
+						"value": "false"
+					}
+				},
+				{
+					"id": "set-boolean-instvar",
+					"objectClass": "Personaje",
+					"sid": 945280951482759,
+					"parameters": {
+						"instance-variable": "Ocupado",
+						"value": "true"
+					}
+				},
+				{
+					"id": "set-boolean-instvar",
+					"objectClass": "Personaje",
+					"sid": 428772156008320,
+					"parameters": {
+						"instance-variable": "PlatoSucio",
+						"value": "true"
+					}
+				},
+				{
+					"id": "set-animation",
+					"objectClass": "Personaje",
+					"sid": 627565428269314,
+					"parameters": {
+						"animation": "\"FPlaSuc\"",
+						"from": "beginning"
+					}
+				},
+				{
+					"id": "destroy",
+					"objectClass": "Plato2",
+					"sid": 185409058160278
+				}
+			],
+			"sid": 185483420530522
 		},
 		{
 			"eventType": "block",
@@ -17544,7 +18174,7 @@
 					"objectClass": "System",
 					"sid": 914163677361753,
 					"parameters": {
-						"variable": "hayCliente",
+						"variable": "hayCliente1",
 						"value": "true"
 					}
 				}
@@ -17565,9 +18195,9 @@
 				{
 					"id": "set-boolean-eventvar",
 					"objectClass": "System",
-					"sid": 693978305223583,
+					"sid": 515366854171374,
 					"parameters": {
-						"variable": "hayCliente",
+						"variable": "hayCliente2",
 						"value": "true"
 					}
 				}
@@ -17588,9 +18218,9 @@
 				{
 					"id": "set-boolean-eventvar",
 					"objectClass": "System",
-					"sid": 550780552853171,
+					"sid": 808282606471748,
 					"parameters": {
-						"variable": "hayCliente",
+						"variable": "hayCliente3",
 						"value": "true"
 					}
 				}
@@ -17613,7 +18243,7 @@
 					"objectClass": "System",
 					"sid": 578372381895178,
 					"parameters": {
-						"variable": "hayCliente"
+						"variable": "hayCliente1"
 					}
 				},
 				{
@@ -17630,6 +18260,15 @@
 					"sid": 252401686657996,
 					"parameters": {
 						"variable": "C1decidio"
+					},
+					"isInverted": true
+				},
+				{
+					"id": "is-animation-playing",
+					"objectClass": "spr_cliente",
+					"sid": 489514948254888,
+					"parameters": {
+						"animation": "\"Enojado\""
 					},
 					"isInverted": true
 				}
@@ -17687,9 +18326,9 @@
 				{
 					"id": "compare-boolean-eventvar",
 					"objectClass": "System",
-					"sid": 127288220483502,
+					"sid": 432531155030962,
 					"parameters": {
-						"variable": "hayCliente"
+						"variable": "hayCliente2"
 					}
 				},
 				{
@@ -17763,9 +18402,9 @@
 				{
 					"id": "compare-boolean-eventvar",
 					"objectClass": "System",
-					"sid": 895345045493930,
+					"sid": 969487153663276,
 					"parameters": {
-						"variable": "hayCliente"
+						"variable": "hayCliente3"
 					}
 				},
 				{
@@ -17839,12 +18478,75 @@
 			"eventType": "block",
 			"conditions": [
 				{
+					"id": "is-overlapping-another-object",
+					"objectClass": "Personaje",
+					"sid": 995303434418273,
+					"parameters": {
+						"object": "spr_espacio_cliente"
+					},
+					"isInverted": true
+				},
+				{
+					"id": "is-animation-playing",
+					"objectClass": "spr_cliente",
+					"sid": 244174364728176,
+					"parameters": {
+						"animation": "\"Normal\""
+					}
+				},
+				{
+					"id": "compare-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 649354494943126,
+					"parameters": {
+						"variable": "hayCliente1"
+					}
+				},
+				{
+					"id": "trigger-once-while-true",
+					"objectClass": "System",
+					"sid": 851300021537096
+				},
+				{
+					"id": "compare-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 459578817559627,
+					"parameters": {
+						"variable": "C1decidio"
+					},
+					"isInverted": true
+				}
+			],
+			"actions": [
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 421470048757653,
+					"parameters": {
+						"seconds": "20"
+					}
+				},
+				{
+					"id": "signal",
+					"objectClass": "System",
+					"sid": 202863153833596,
+					"parameters": {
+						"tag": "\"enojado1\""
+					}
+				}
+			],
+			"sid": 926346708215283
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
 					"id": "compare-eventvar",
 					"objectClass": "System",
-					"sid": 485894856609765,
+					"sid": 331336456326148,
 					"parameters": {
 						"variable": "Clientes",
-						"comparison": 0,
+						"comparison": 5,
 						"value": "1"
 					}
 				},
@@ -17908,9 +18610,9 @@
 						{
 							"id": "wait",
 							"objectClass": "System",
-							"sid": 324452359384621,
+							"sid": 432594182564298,
 							"parameters": {
-								"seconds": "20"
+								"seconds": "40"
 							}
 						},
 						{
@@ -17925,9 +18627,9 @@
 						{
 							"id": "wait",
 							"objectClass": "System",
-							"sid": 148416303640211,
+							"sid": 903159148079318,
 							"parameters": {
-								"seconds": "30"
+								"seconds": "60"
 							}
 						},
 						{
@@ -17942,9 +18644,9 @@
 						{
 							"id": "wait",
 							"objectClass": "System",
-							"sid": 124896543672452,
+							"sid": 732183808896850,
 							"parameters": {
-								"seconds": "5"
+								"seconds": "30"
 							}
 						},
 						{
@@ -18181,6 +18883,33 @@
 								"x": "spr_spawner_clientes.X",
 								"y": "spr_spawner_clientes.Y",
 								"mode": "direct"
+							}
+						},
+						{
+							"id": "set-animation",
+							"objectClass": "Personaje",
+							"sid": 253057169218338,
+							"parameters": {
+								"animation": "\"Front\"",
+								"from": "beginning"
+							}
+						},
+						{
+							"id": "set-boolean-instvar",
+							"objectClass": "Personaje",
+							"sid": 526754296645031,
+							"parameters": {
+								"instance-variable": "Vacio",
+								"value": "true"
+							}
+						},
+						{
+							"id": "set-boolean-instvar",
+							"objectClass": "Personaje",
+							"sid": 120907655290445,
+							"parameters": {
+								"instance-variable": "Ocupado",
+								"value": "false"
 							}
 						}
 					],
@@ -18468,10 +19197,10 @@
 				{
 					"id": "compare-eventvar",
 					"objectClass": "System",
-					"sid": 850575665814874,
+					"sid": 658683182707142,
 					"parameters": {
 						"variable": "Clientes",
-						"comparison": 0,
+						"comparison": 5,
 						"value": "2"
 					}
 				},
@@ -19099,10 +19828,10 @@
 				{
 					"id": "compare-eventvar",
 					"objectClass": "System",
-					"sid": 781949942644684,
+					"sid": 492593522461013,
 					"parameters": {
 						"variable": "Clientes",
-						"comparison": 0,
+						"comparison": 5,
 						"value": "3"
 					}
 				},

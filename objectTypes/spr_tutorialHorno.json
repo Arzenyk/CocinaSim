@@ -1,7 +1,7 @@
 {
-	"name": "spr_espacio_cliente3",
+	"name": "spr_tutorialHorno",
 	"plugin-id": "Sprite",
-	"sid": 307341080574806,
+	"sid": 861556443767826,
 	"isGlobal": false,
 	"instanceVariables": [],
 	"behaviorTypes": [],
@@ -11,7 +11,7 @@
 			{
 				"frames": [
 					{
-						"width": 250,
+						"width": 500,
 						"height": 250,
 						"originX": 0.5,
 						"originY": 0.5,
@@ -19,13 +19,13 @@
 						"exportFormat": "lossless",
 						"exportQuality": 0.8,
 						"fileType": "image/png",
-						"imageSpriteId": 9976984,
+						"imageSpriteId": 9305780,
 						"useCollisionPoly": true,
 						"duration": 1,
 						"tag": ""
 					}
 				],
-				"sid": 974135375308432,
+				"sid": 961817928281408,
 				"name": "Animation 1",
 				"isLooping": false,
 				"isPingPong": false,
