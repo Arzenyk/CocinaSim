@@ -1,0 +1,229 @@
+{
+	"name": "Tutorial Sheet",
+	"events": [
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Control Jugador",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "key-is-down",
+							"objectClass": "Teclado",
+							"sid": 990285384922514,
+							"parameters": {
+								"key": 87
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation",
+							"objectClass": "Personaje",
+							"sid": 235534198280761,
+							"parameters": {
+								"animation": "\"BPlaVac\"",
+								"from": "beginning"
+							}
+						},
+						{
+							"id": "simulate-control",
+							"objectClass": "Personaje",
+							"sid": 381563563374726,
+							"behaviorType": "TileMovement",
+							"parameters": {
+								"control": "up"
+							}
+						}
+					],
+					"sid": 500858786557437
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "key-is-down",
+							"objectClass": "Teclado",
+							"sid": 529722189431325,
+							"parameters": {
+								"key": 65
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation",
+							"objectClass": "Personaje",
+							"sid": 703553656684659,
+							"parameters": {
+								"animation": "\"LPlaVac\"",
+								"from": "beginning"
+							}
+						},
+						{
+							"id": "simulate-control",
+							"objectClass": "Personaje",
+							"sid": 660307008670927,
+							"behaviorType": "TileMovement",
+							"parameters": {
+								"control": "left"
+							}
+						}
+					],
+					"sid": 542572346551771
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "key-is-down",
+							"objectClass": "Teclado",
+							"sid": 107211463202646,
+							"parameters": {
+								"key": 83
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation",
+							"objectClass": "Personaje",
+							"sid": 107781185217942,
+							"parameters": {
+								"animation": "\"FPlaVac\"",
+								"from": "beginning"
+							}
+						},
+						{
+							"id": "simulate-control",
+							"objectClass": "Personaje",
+							"sid": 574948511346048,
+							"behaviorType": "TileMovement",
+							"parameters": {
+								"control": "down"
+							}
+						}
+					],
+					"sid": 592692378291377
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "key-is-down",
+							"objectClass": "Teclado",
+							"sid": 569806883381787,
+							"parameters": {
+								"key": 68
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation",
+							"objectClass": "Personaje",
+							"sid": 969111350502105,
+							"parameters": {
+								"animation": "\"RPlaVac\"",
+								"from": "beginning"
+							}
+						},
+						{
+							"id": "simulate-control",
+							"objectClass": "Personaje",
+							"sid": 987802793302688,
+							"behaviorType": "TileMovement",
+							"parameters": {
+								"control": "right"
+							}
+						}
+					],
+					"sid": 840809944211250
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-key-pressed",
+							"objectClass": "Teclado",
+							"sid": 704089722072198,
+							"parameters": {
+								"key": 69
+							}
+						},
+						{
+							"id": "is-boolean-instance-variable-set",
+							"objectClass": "Personaje",
+							"sid": 271087063119478,
+							"disabled": true,
+							"parameters": {
+								"instance-variable": "Vacio"
+							}
+						},
+						{
+							"id": "is-overlapping-another-object",
+							"objectClass": "Personaje",
+							"sid": 864184925816286,
+							"parameters": {
+								"object": "CajaCebolla"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-boolean-instvar",
+							"objectClass": "Personaje",
+							"sid": 562507628479271,
+							"disabled": true,
+							"parameters": {
+								"instance-variable": "Ocupado",
+								"value": "true"
+							}
+						},
+						{
+							"id": "set-boolean-instvar",
+							"objectClass": "Personaje",
+							"sid": 671295032739766,
+							"disabled": true,
+							"parameters": {
+								"instance-variable": "Vacio",
+								"value": "false"
+							}
+						},
+						{
+							"id": "spawn-another-object",
+							"objectClass": "Personaje",
+							"sid": 797406733464114,
+							"parameters": {
+								"object": "Cebolla",
+								"layer": "1",
+								"image-point": "1",
+								"create-hierarchy": false,
+								"template-name": "\"\""
+							}
+						},
+						{
+							"id": "spawn-another-object",
+							"objectClass": "Personaje",
+							"sid": 200218472227704,
+							"parameters": {
+								"object": "Cebolla2",
+								"layer": "1",
+								"image-point": "1",
+								"create-hierarchy": false,
+								"template-name": "\"\""
+							}
+						}
+					],
+					"sid": 843840596213528
+				}
+			],
+			"sid": 778193138710130
+		}
+	],
+	"sid": 894513499518501
+}

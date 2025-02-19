@@ -3,6 +3,7 @@
 	"plugin-id": "Sprite",
 	"sid": 167424590875716,
 	"isGlobal": false,
+	"editorNewInstanceIsReplica": true,
 	"instanceVariables": [
 		{
 			"name": "Vacio",
@@ -1588,6 +1589,13 @@
 											]
 										},
 										"useCollisionPoly": true,
+										"imagePoints": [
+											{
+												"name": "Ingrediente",
+												"x": 0.49056603773584906,
+												"y": 0.848605577689243
+											}
+										],
 										"duration": 1,
 										"tag": ""
 									}
@@ -1662,6 +1670,13 @@
 											]
 										},
 										"useCollisionPoly": true,
+										"imagePoints": [
+											{
+												"name": "Ingrediente",
+												"x": 0.4126984126984127,
+												"y": 0.7051792828685259
+											}
+										],
 										"duration": 1,
 										"tag": ""
 									}
@@ -1699,6 +1714,13 @@
 											]
 										},
 										"useCollisionPoly": true,
+										"imagePoints": [
+											{
+												"name": "Ingrediente",
+												"x": 0.5793650793650794,
+												"y": 0.7171314741035857
+											}
+										],
 										"duration": 1,
 										"tag": ""
 									}

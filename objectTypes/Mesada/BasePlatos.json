@@ -3,6 +3,7 @@
 	"plugin-id": "Sprite",
 	"sid": 105157435576560,
 	"isGlobal": false,
+	"editorNewInstanceIsReplica": true,
 	"instanceVariables": [
 		{
 			"name": "Cantidad",

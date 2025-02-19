@@ -3,6 +3,7 @@
 	"plugin-id": "progressbar",
 	"sid": 979579785934737,
 	"isGlobal": false,
+	"editorNewInstanceIsReplica": true,
 	"instanceVariables": [],
 	"behaviorTypes": []
 }

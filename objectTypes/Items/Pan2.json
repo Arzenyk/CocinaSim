@@ -3,6 +3,7 @@
 	"plugin-id": "Sprite",
 	"sid": 306044831280613,
 	"isGlobal": false,
+	"editorNewInstanceIsReplica": true,
 	"instanceVariables": [],
 	"behaviorTypes": [],
 	"effectTypes": [],
